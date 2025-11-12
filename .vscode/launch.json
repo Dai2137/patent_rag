@@ -17,21 +17,25 @@
             }
         }
 
+        ,
+
         ////// 2. streamlit専用です。
-        // {
-        //     "name": "Python: Streamlit",
-        //     "type": "debugpy",
-        //     "request": "launch",
-        //     "console": "integratedTerminal",
-        //     "env":{
-        //         "PYTHONPATH": "${workspaceFolder}/src"
-        //     },
-        //     "module": "streamlit",
-        //     "args": [
-        //         "run",
-        //         "${file}"
-        //     ],
-        // }
+        {
+            "name": "Python: Streamlit (gui.py)",
+            "type": "debugpy",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "env":{
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "module": "streamlit",
+            "args": [
+                "run",
+                "src/gui.py",
+                "--server.runOnSave=false"
+            ],
+            "justMyCode": true
+        }
 
 
     ]

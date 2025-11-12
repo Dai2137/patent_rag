@@ -41,7 +41,12 @@ uv run src/main.py
 ```bash
 uv run streamlit run src/gui.py
 ```
-Streamlitをデバッグ実行したい場合は、`.vscode/launch.json` を編集してから、gui.pyでF5キーを押してください。
+
+### デバッグ
+VSCodeのデバッガを使用したデバッグ方法については、**[DEBUG.md](DEBUG.md)** を参照してください。
+- UI連携のデバッグ（Streamlitアプリ全体）
+- ロジック単体のデバッグ（RetrieverやGenerator）
+の両方をサポートしています。
 
 ---
 
@@ -50,7 +55,10 @@ Streamlitをデバッグ実行したい場合は、`.vscode/launch.json` を編�
 最新構成（主要ファイル / 代表例のみ。大量データ配下は一部省略）
 ```
 GENIAC04/
-├─ README.md
+├─ README.md                      # このファイル
+├─ DEBUG.md                       # デバッグガイド
+├─ debug_retriever.py             # 検索ロジック単体デバッグ用
+├─ debug_generator.py             # 生成ロジック単体デバッグ用
 ├─ pyproject.toml                 # uv パッケージ管理
 ├─ uv.lock                        # uv ロックファイル
 ├─ sample.py                      # 初回動作確認用（uv run sample.py）

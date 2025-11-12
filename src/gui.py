@@ -15,6 +15,7 @@ from infra.config import cfg
 from infra.loader.common_loader import CommonLoader
 from ui.gui.page1 import page_1
 from ui.gui.page2 import page_2
+from ui.gui.page3 import page_3
 from ui.gui.page99 import page_99
 
 # 定数
@@ -81,7 +82,7 @@ def main():
     st.set_page_config(layout="wide")
     init_session_state()
     setup_sidebar()
-    pg = st.navigation([page_1, page_2, page_99])
+    pg = st.navigation([page_1, page_2, page_3, page_99])
     pg.run()
 
 

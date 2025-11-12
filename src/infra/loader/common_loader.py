@@ -29,8 +29,8 @@ class CommonLoader:
         """
         path = Path(path) # 原則、strではなくPathで持つ
 
-        if "JP2024524707A" in path.as_posix():
-            return self.other_loader.load_JP2024524707A(path)
+        # if "JP2024524707A" in path.as_posix():
+        #     return self.other_loader.load_JP2024524707A(path)
 
         tree: ET.ElementTree[ET.Element] = ET.parse(str(path))
 

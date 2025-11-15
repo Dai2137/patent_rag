@@ -1,4 +1,8 @@
 from dataclasses import dataclass
+from pathlib import Path
+
+# プロジェクトルート (/home/sonozuka/staging/patent_rag) を取得
+_PROJECT_ROOT = Path(__file__).parent.parent.parent
 
 
 @dataclass
@@ -15,9 +19,9 @@ class Config:
     chunk_overlap = 100
     top_n = 3
 
-    # Chroma
-    persist_dir = "data_store/chroma/gemini_v0.2"
-    # persist_dir = "data_store/chroma/openai_v1.0"
+    # Chroma - プロジェクトルートからの絶対パスを使用
+    persist_dir = str(_PROJECT_ROOT / "data_store" / "chroma" / "gemini_v0.2")
+    # persist_dir = str(_PROJECT_ROOT / "data_store" / "chroma" / "openai_v1.0")
 
     # LLM
     llm_type = "gemini" # "openai" or "gemini"

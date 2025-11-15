@@ -1,26 +1,3 @@
 {
-    "cSpell.words": [
-        "BHJP",
-        "clsf",
-        "docinfo",
-        "elems",
-        "Fterm",
-        "geniac",
-        "himotuki",
-        "jpcom",
-        "jppat",
-        "jputl",
-        "JPWO",
-        "localname",
-        "ncols",
-        "nonblock",
-        "nsmap",
-        "patcit",
-        "ｐｏｌｙ",
-        "regi",
-        "sonozuka",
-        "syutugan",
-        "ＷＰＲＥ"
-    ],
-    "debugpy.debugJustMyCode": true
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
 }

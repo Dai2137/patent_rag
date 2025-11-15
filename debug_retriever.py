@@ -20,8 +20,10 @@ from src.infra.loader.common_loader import CommonLoader
 from src.model.patent import Patent
 
 # 定数
-KNOWLEDGE_DIR = "eval/knowledge"
-TEST_QUERY_FILE = "eval/knowledge/result_1/0/JP2010000001A/text.txt"
+# プロジェクトルート (/home/sonozuka/staging/patent_rag) から相対パスを構築
+_PROJECT_ROOT = Path(__file__).parent
+KNOWLEDGE_DIR = str(_PROJECT_ROOT / "eval" / "knowledge")
+TEST_QUERY_FILE = str(_PROJECT_ROOT / "eval" / "knowledge" / "result_1" / "0" / "JP2010000001A" / "text.txt")
 
 
 def main():

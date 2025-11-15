@@ -20,7 +20,9 @@ from ui.gui.page99 import page_99
 
 # 定数
 # TODO: GUI関連の定数の適切な定義場所を考える。移動する。
-KNOWLEDGE_DIR = "eval/knowledge"
+# プロジェクトルート (/home/sonozuka/staging/patent_rag) から相対パスを構築
+_PROJECT_ROOT = Path(__file__).parent.parent
+KNOWLEDGE_DIR = str(_PROJECT_ROOT / "eval" / "knowledge")
 
 
 # セッションステート

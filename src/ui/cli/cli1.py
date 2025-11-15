@@ -21,6 +21,8 @@ def test_retriever():
     query_paths = list(Path("eval/query/result_4").rglob("text.txt"))
     query_ids, knowledge_ids, reasons = rag.run_retriever(query_paths)
 
-    # CSV出力
+    # CSV出力（ディレクトリが存在しない場合は作成）
     df = pd.DataFrame({"query_id": query_ids, "knowledge_id": knowledge_ids, "reason": reasons})
-    df.to_csv("eval/rag_output.csv", index=False)
+    output_path = Path("eval/rag_output.csv")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(output_path, index=False)

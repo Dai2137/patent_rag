@@ -63,6 +63,8 @@ def step1():
         if st.session_state.file_id != uploaded_file.file_id:
             reset_session_state()
             st.session_state.file_id = uploaded_file.file_id
+            # ディレクトリが存在しない場合は作成
+            QUERY_PATH.parent.mkdir(parents=True, exist_ok=True)
             with open(QUERY_PATH, "w", encoding="utf-8") as f:
                 f.write(file_content)
             st.success("ファイルがアップロードされました。検索結果や画面表示を初期化しました。")

@@ -14,6 +14,7 @@ from streamlit.runtime.uploaded_file_manager import UploadedFile
 
 from model.patent import Patent
 from ui.gui.utils import create_matched_md, retrieve
+from ui.gui import query_detail
 
 # 定数
 # TODO: 切り替え可能にする？ 別の場所で管理する？
@@ -75,10 +76,11 @@ def step2():
     if st.button("検索", type="primary"):
         query: Patent = st.session_state.loader.run(QUERY_PATH)
         st.session_state.query = query
-        st.session_state.df_retrieved = retrieve(st.session_state.retriever, query)
+        query_detail.query_detail()
+    #     st.session_state.df_retrieved = retrieve(st.session_state.retriever, query)
 
-    if not st.session_state.df_retrieved.empty:
-        st.dataframe(st.session_state.df_retrieved[["query_id", "knowledge_id", "retrieved_chunk"]])
+    # if not st.session_state.df_retrieved.empty:
+    #     st.dataframe(st.session_state.df_retrieved[["query_id", "knowledge_id", "retrieved_chunk"]])
 
 
 def step3():

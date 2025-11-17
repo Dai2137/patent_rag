@@ -24,10 +24,13 @@ from dotenv import load_dotenv
 import os
 from pathlib import Path
 # to_dataframe() で BigQuery の型を適切に扱うために推奨
-# pip install db-dtypes 
+# pip install db-dtypes
 
 # .envファイルから環境変数を読み込む (1回だけ)
 load_dotenv()
+
+# プロジェクトルート（このファイルは src/bigquery/ にあるので3階層上）
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # ----------------------------------------------------
 # ▼▼▼ ユーザー設定 ▼▼▼
@@ -37,7 +40,7 @@ TABLE_ID = os.getenv("TABLE_ID")
 # ▲▲▲ ユーザー設定 ▲▲▲
 # ----------------------------------------------------
 
-def search_similar_patents(target_patent_number, output_csv='similar_patents_vector.csv', top_k=1000):
+def search_similar_patents(target_patent_number, output_csv=None, top_k=1000):
     """
     指定した特許番号に類似する特許を VECTOR_SEARCH で検索し、CSVファイルに保存
 
@@ -45,8 +48,8 @@ def search_similar_patents(target_patent_number, output_csv='similar_patents_vec
     -----------
     target_patent_number : str
         基準とする特許番号（例: 'JP-2023123456-A'）
-    output_csv : str
-        出力CSVファイル名
+    output_csv : str, optional
+        出力CSVファイル名。Noneの場合は自動生成される
     top_k : int
         取得する類似特許の件数（デフォルト: 1000）
 
@@ -55,7 +58,12 @@ def search_similar_patents(target_patent_number, output_csv='similar_patents_vec
     pd.DataFrame
         類似特許の検索結果
     """
-    
+
+    # output_csvが指定されていない場合はデフォルト値を設定
+    if output_csv is None:
+        output_csv = PROJECT_ROOT / 'eval' / 'topk' / f'similar_patents_{target_patent_number}.csv'
+        print(f"出力CSVパスが指定されていないため、デフォルト値を使用します: {output_csv}")
+
     # --- 1. 設定の検証 ---
     if not all([PROJECT_ID, DATASET_ID, TABLE_ID]):
         raise ValueError(
@@ -106,33 +114,6 @@ def search_similar_patents(target_patent_number, output_csv='similar_patents_vec
     WHERE T.base.publication_number != '{target_patent_number}'
     ORDER BY distance ASC
     """
-
-    # query = f"""
-    # -- 検索パラメータを宣言
-    # DECLARE target_patent_number STRING DEFAULT '{target_patent_number}';
-    # DECLARE top_k INT64 DEFAULT {top_k};
-
-    # -- VECTOR_SEARCH を使った検索クエリ
-    # SELECT
-    #   base.publication_number,
-    #   distance AS cosine_distance,
-    #   1 - distance AS cosine_similarity
-    # FROM
-    #   VECTOR_SEARCH(
-    #     TABLE {search_table_full_id},                           -- 検索対象テーブル (インデックス付き)
-    #     'embedding_v1',                                         -- 検索対象カラム
-    #     (
-    #       -- ターゲット特許のベクトルを取得
-    #       -- ※元データ（公開データセット）から取得
-    #       SELECT embedding_v1
-    #       FROM `patents-public-data.google_patents_research.publications`
-    #       WHERE publication_number = target_patent_number
-    #     ),
-    #     top_k => {top_k},                                         -- 上位K件
-    #     options => '{{ "use_brute_force": false }}'             -- インデックス使用
-    #   )
-    # ORDER BY distance ASC;
-    # """
     
     job_config = bigquery.QueryJobConfig()
 
@@ -155,8 +136,8 @@ def search_similar_patents(target_patent_number, output_csv='similar_patents_vec
     # --- 4. CSVファイルに保存 ---
     output_path = Path(output_csv)
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(output_csv, index=False, encoding='utf-8-sig')
-    print(f"CSVファイルに保存: {output_csv}")
+    df.to_csv(str(output_path), index=False, encoding='utf-8-sig')
+    print(f"CSVファイルに保存: {output_path.absolute()}")
 
     # --- 5. 統計情報の表示 ---
     print("\n--- 統計情報 ---")
@@ -171,17 +152,18 @@ def search_similar_patents(target_patent_number, output_csv='similar_patents_vec
 
 # --- 使用例 ---
 if __name__ == "__main__":
+    pass
     # 基準とする特許番号
-    target_patent = 'JP-S4926374-B1'  # ← この値は上記のデバッグ行によって上書きされます
+    # target_patent = 'JP-S4926374-B1'  # ← この値は上記のデバッグ行によって上書きされます
 
-    # VECTOR_SEARCHを使った検索
-    print("=== VECTOR_SEARCHを使った高速検索 ===")
+    # # VECTOR_SEARCHを使った検索
+    # print("=== VECTOR_SEARCHを使った高速検索 ===")
     
-    try:
-        results_df = search_similar_patents(
-            target_patent_number=target_patent,
-            output_csv=f'similar_patents_vector_{target_patent}.csv',
-            top_k=1000
-        )
-    except Exception as e:
-        print(f"スクリプトの実行に失敗しました: {e}")
+    # try:
+    #     results_df = search_similar_patents(
+    #         target_patent_number=target_patent,
+    #         output_csv=f'eval/topk/similar_patents_vector_{target_patent}.csv',
+    #         top_k=1000
+    #     )
+    # except Exception as e:
+    #     print(f"スクリプトの実行に失敗しました: {e}")

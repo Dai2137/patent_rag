@@ -15,10 +15,14 @@ from streamlit.runtime.uploaded_file_manager import UploadedFile
 from model.patent import Patent
 from ui.gui.utils import create_matched_md  # , retrieve
 from ui.gui import query_detail
+from ui.gui import ai_judge_detail
+
+# プロジェクトルート（このファイルは src/ui/gui/ にあるので3階層上）
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 
 # 定数
 # TODO: 切り替え可能にする？ 別の場所で管理する？
-QUERY_PATH = Path("data/gui/uploaded_query.txt")
+QUERY_PATH = PROJECT_ROOT / "eval" / "uploaded" / "uploaded_query.txt"
 MAX_CHAR = 300
 
 
@@ -42,8 +46,8 @@ def page_1():
     st.header("2. 情報探索 + 一致箇所表示")
     step2()
 
-    # 3. 一致箇所表示
-    st.header("3. 一致箇所表示")
+    # 3. AI審査
+    st.header("3. AI審査")
     step3()
 
     # 4. 判断根拠出力
@@ -77,26 +81,19 @@ def step2():
         query: Patent = st.session_state.loader.run(QUERY_PATH)
         st.session_state.query = query
         query_detail.query_detail()
-    #     st.session_state.df_retrieved = retrieve(st.session_state.retriever, query)
-
-    # if not st.session_state.df_retrieved.empty:
-    #     st.dataframe(st.session_state.df_retrieved[["query_id", "knowledge_id", "retrieved_chunk"]])
 
 
 def step3():
     st.write(f"一致箇所をハイライトし、その前後{MAX_CHAR}文字まで含めて表示します。")
     n_chunk = len(st.session_state.df_retrieved)
     st.session_state.n_chunk = n_chunk
-    if st.button("表示", type="primary"):
-        st.session_state.matched_chunk_markdowns = []  # クリア
-        for i in range(n_chunk):
-            markdown_text = create_matched_md(i, st.session_state.loader, MAX_CHAR)
-            st.session_state.matched_chunk_markdowns.append(markdown_text)
+    if st.button("AI審査", type="primary"):
+        ai_judge_detail.ai_judge_detail()
 
-    if st.session_state.matched_chunk_markdowns:
-        for i, md in enumerate(st.session_state.matched_chunk_markdowns):
-            st.markdown(f"##### 一致箇所 {i + 1}/{n_chunk}")
-            st.markdown(md, unsafe_allow_html=True)
+    # if st.session_state.matched_chunk_markdowns:
+    #     for i, md in enumerate(st.session_state.matched_chunk_markdowns):
+    #         st.markdown(f"##### 一致箇所 {i + 1}/{n_chunk}")
+    #         st.markdown(md, unsafe_allow_html=True)
 
 
 def step4():

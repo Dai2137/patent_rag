@@ -10,7 +10,7 @@ import pandas as pd
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 
 # page1と同じQUERY_PATHを使用
-QUERY_PATH = PROJECT_ROOT / "data" / "gui" / "uploaded_query.txt"
+QUERY_PATH = PROJECT_ROOT / "eval" / "uploaded" / "uploaded_query.txt"
     # CSVファイル名の設定
 OUTPUT_CSV_PATH = PROJECT_ROOT / "eval" / "topk"
     
@@ -59,7 +59,7 @@ def query_detail():
         step=100
     )
     
-    output_csv_path =  OUTPUT_CSV_PATH / f"similar_patents_{query_patent}.csv"
+    output_csv_path =  OUTPUT_CSV_PATH / f"{query_patent}.csv"
 
     # 検索実行ボタン
     if  not search_button_pressed:

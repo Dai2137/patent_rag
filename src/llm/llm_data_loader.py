@@ -30,14 +30,34 @@ ABSTRACT_CLAIM_PATH = PROJECT_ROOT / "eval" / "absract_claims"
 
 # 本番では変更
 TOP_K = 5  # 上位K件の類似特許を取得
+print(f"注意：LLM Data Loader: TOP_K = {TOP_K}")
 
 def entry():
     # ステップ１でアップロードしたxmlを読み込む
     
     query = st.session_state.loader.run(QUERY_PATH)
+    save_abstract_claims_query(query)
     query_patent_number_a = format_patent_number_for_bigquery(query)
-    found_lookup = load_patent_b(query_patent_number_a)
-    print(found_lookup)
+    top_k, found_lookup_dict_list = load_patent_b(query_patent_number_a)
+    
+def save_abstract_claims_query(query):
+    """queryの特許の要約と請求項を取得し、JSONファイルとして保存する"""
+    doc_number = query.publication.doc_number
+    abstract = query.abstract
+    claims = query.claims
+
+    output_dict_json = {
+        "top_k": "query",
+        "doc_number": doc_number,
+        "abstract": abstract,
+        "claims": claims
+    }
+    json_file_name = f"q_{doc_number}.json"
+    abs_path = ABSTRACT_CLAIM_PATH / json_file_name
+    # mkdirs if not exists
+    ABSTRACT_CLAIM_PATH.mkdir(parents=True, exist_ok=True)
+    with open(abs_path, 'w', encoding='utf-8') as f:
+        json.dump(output_dict_json, f, ensure_ascii=False, indent=4)
 
 
 def load_patent_b(patent_number_a: Patent):
@@ -84,22 +104,25 @@ def load_patent_b(patent_number_a: Patent):
     found_lookup = find_document(publication_numbers, year_part)
     abstract_claim_list_dict = get_abstract_claims(found_lookup)
     save_abstract_claims_as_json(abstract_claim_list_dict)
-    return abstract_claim_list_dict
+
+    top_k = len(abstract_claim_list_dict)
+    return top_k, abstract_claim_list_dict
 
 import json
 
 def save_abstract_claims_as_json(abstract_claims_list_dict):
     """abstract_claims_list_dictをJSONファイルとして保存する"""
-    for abstract_claim_dict in abstract_claims_list_dict:
+    for top_k, abstract_claim_dict in enumerate(abstract_claims_list_dict):
         doc_number = abstract_claim_dict[0][0]
         abstract = abstract_claim_dict[0][1]
         claims = abstract_claim_dict[0][2]
         output_dict_json = {
+            "top_k": top_k + 1,
             "doc_number": doc_number,
             "abstract": abstract,
             "claims": claims
         }
-        json_file_name = f"{doc_number}.json"
+        json_file_name = f"{top_k + 1}_{doc_number}.json"
         abs_path = ABSTRACT_CLAIM_PATH / json_file_name
         # mkdirs if not exists
         ABSTRACT_CLAIM_PATH.mkdir(parents=True, exist_ok=True)

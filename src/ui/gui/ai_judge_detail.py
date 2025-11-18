@@ -1,7 +1,7 @@
 import streamlit as st
 from pathlib import Path
 import pandas as pd
-from llm.llm_data_loader import entry, patent_to_dict
+from llm.llm_data_loader import entry
 
 # プロジェクトルート（このファイルは src/ui/gui/ にあるので4階層上）
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent

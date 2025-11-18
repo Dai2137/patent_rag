@@ -127,6 +127,175 @@ def format_patent_number_for_bigquery(patent: Patent) -> str:
         return formatted_number
     print("該当する特許番号が見つかりませんでした。")
     return ""
+
+
+def normalize_patent_id(patent_id):
+    """
+    特許IDを解析し、DB検索用の固定長フォーマット（西暦4桁 + 0埋め6桁）に変換する。
+    
+    戻り値:
+        変換成功時 -> "2010058462" のような文字列
+        対象外/不可 -> None
+    """
+    parts = patent_id.split('-')
+    
+    # フォーマットチェック
+    if len(parts) < 3:
+        return (None, None)
+
+    raw_number = parts[1]  # 真ん中 (例: H076, 2011005843)
+    kind_code = parts[2]   # 末尾 (例: A, B2)
+
+    # 1. まず種別コードでフィルタリング（特許A, Bのみ対象）
+    if not re.match(r'^[AB]', kind_code):
+        return (None, None)
+
+    # 変換結果を格納する変数
+    year_part = None   # 西暦4桁 (int)
+    number_part = None # 番号部分 (str)
+
+    # --- パターン解析 ---
+
+    # パターンA: WO (国際公開再公表) -> WO2014030240
+    match_wo = re.match(r'^WO(\d{4})(\d+)$', raw_number)
+    if match_wo:
+        year_part = int(match_wo.group(1))
+        number_part = match_wo.group(2)
+
+    # パターンB: 和暦 (H076, S606174)
+    elif re.match(r'^([HSMTR])(\d{2})(\d+)$', raw_number):
+        match_imp = re.match(r'^([HSMTR])(\d{2})(\d+)$', raw_number)
+        era = match_imp.group(1)
+        year_part = era + match_imp.group(2)
+        number_part = match_imp.group(3)
+        
+        # 西暦変換
+        # if era == 'S': year_part = 1925 + year_num
+        # elif era == 'H': year_part = 1988 + year_num
+        # elif era == 'R': year_part = 2018 + year_num
+
+    # パターンC: 西暦4桁付き (2011005843)
+    elif re.match(r'^(19|20)\d{2}(\d+)$', raw_number) and len(raw_number) >= 10:
+        year_part = raw_number[:4]
+        number_part = raw_number[4:]
+
+    # パターンD: 年号なし登録番号 (5021568)
+    # これは「年号4桁+6桁」のルールには当てはまらないため、そのままの番号を使う
+    elif re.match(r'^\d+$', raw_number):
+        return_number = raw_number.zfill(6)
+        return (year_part, return_number)
+
+    # --- 整形処理 (年号がある場合) ---
+    if year_part is not None and number_part is not None:
+        # 番号部分を6桁にゼロ埋めする (例: "6" -> "000006")
+        padded_number = number_part.zfill(6)
+        # 結合して返す
+        return (year_part, padded_number)
+    
+    return (None, None)
+
+# # --- テスト実行 ---
+# ids = [
+# #    "JP-2010058462-A",    # ユーザー指定フォーマットの基準
+#     "JP-H076-A",          # 問題の短い番号: H07(1995) + 6
+# #   "JP-WO2014030240-A1", # WO + 2014 + 030240
+#     "JP-S606174-Y2",      # 実用新案 -> 除外されるべき(None)
+# #    "JP-5021568-B2",      # 登録番号 -> そのまま返す
+#     "JP-H084831-A"        # H08(1996) + 4831
+# ]
+
+# print(f"{'INPUT ID':<20} | {'SEARCH KEY (Normalized)'}")
+# print("-" * 50)
+
+# search_keys = []
+# for pid in ids:
+#     key = normalize_patent_id(pid)
+#     print(f"{pid:<20} | {str(key)}")
+#     if key:
+#         search_keys.append(key)
+
+
+
+
+def parse_patent_info(patent_id):
+    """
+    特許IDを解析し、コア番号の抽出と、特許(A/B)かどうかの判定を行う
+    """
+    # 1. ハイフンで分割
+    parts = patent_id.split('-')
+    
+    # 想定外のフォーマット（JP-xxxx-xx の形式でない場合）
+    if len(parts) < 3:
+        return {
+            "original": patent_id,
+            "core_number": None,
+            "kind_code": None,
+            "is_target_patent": False,
+            "note": "Format Error"
+        }
+    
+    raw_number = parts[1]  # 真ん中 (例: H084831)
+    kind_code = parts[2]   # 末尾 (例: Y2)
+    
+    # 2. コア番号の抽出（ご提示のロジックを活用）
+    core_number = raw_number
+    
+    # パターンA: 和暦付き (例: H084831, S606174) -> 年号除去
+    match_imperial = re.match(r'^([HSMTR]\d{2})(\d+)$', raw_number)
+    if match_imperial:
+        core_number = match_imperial.group(2)
+        
+    # パターンB: 西暦4桁付き (例: 2011005843) -> 年号除去
+    # 条件: 19xx or 20xx で始まり、かつ全体が10桁以上
+    elif re.match(r'^(19|20)\d{2}(\d+)$', raw_number) and len(raw_number) >= 10:
+        core_number = raw_number[4:]
+
+    # 3. 種別コードによるフィルタリング（ここを追加）
+    # 今回の要件: 特許(A, B系)のみ対象。実用新案(Y, U)などは除外。
+    # Kind Codeが "A" または "B" で始まるものをTrueとする
+    is_target = False
+    if re.match(r'^[AB]', kind_code):
+        is_target = True
+
+    return {
+        "original": patent_id,
+        "core_number": core_number,
+        "kind_code": kind_code,
+        "is_target_patent": is_target
+    }
+
+# # --- テスト実行 ---
+
+# ids = [
+#     "JP-5021568-B2",    # [対象] 年号なし登録特許
+#     "JP-H084831-Y2",    # [除外] 和暦付き実用新案 (Y2) -> 番号抽出はするが対象外
+#     "JP-2011005843-A",  # [対象] 西暦付き公開特許
+#     "JP-S606174-Y2",    # [除外] 和暦付き実用新案 (昭和)
+#     "JP-2023123456-A",  # [対象] 最近の公開特許
+#     "JP-INVALID-FMT"    # [エラー] フォーマット不正
+# ]
+
+# print(f"{'ORIGINAL ID':<20} | {'CORE':<10} | {'KIND':<5} | {'TARGET?'}")
+# print("-" * 55)
+
+# valid_entries = []
+
+# for pid in ids:
+#     info = parse_patent_info(pid)
+    
+#     # 表示用処理
+#     core = info['core_number'] if info['core_number'] else "N/A"
+#     kind = info['kind_code'] if info['kind_code'] else "N/A"
+#     is_target = "YES" if info['is_target_patent'] else "NO"
+    
+#     print(f"{pid:<20} | {core:<10} | {kind:<5} | {is_target}")
+
+#     # 実際に検索に使うリストを作成する場合
+#     if info['is_target_patent']:
+#         valid_entries.append(info)
+
+
+
  
 def format_patent_number_for_bigquery_compose_id(patent: Patent) -> str:
     """

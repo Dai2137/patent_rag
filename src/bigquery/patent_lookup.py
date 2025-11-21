@@ -132,6 +132,12 @@ def get_abstract_claims_by_query(top_k_df):
         results = list(query_job.result())
         for row in results:
             row_dict = {row["doc_number"]: (row["abstract"], row["claims"])}
+            # find n-th row in top_k_df where publication_number == row["doc_number"]
+            # get index of that row
+            n_th_row_index = top_k_df.index[top_k_df['number'] == row["doc_number"]].tolist()[0]
+            # pandas series to dict
+            row_dict = dict(row)
+            row_dict["top_k"] = n_th_row_index + 1
             abstraccts_claims_list.append(copy.deepcopy(row_dict))
 
         if DEBUG:# デバッグモード注意

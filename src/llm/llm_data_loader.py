@@ -61,13 +61,8 @@ def llm_execution(abstraccts_claims_list):
     query_json_dict = read_json("q")
 
     all_results = []
-    for row_tuple_dict in abstraccts_claims_list:
-        abstract_claims_tuple = next(iter(row_tuple_dict.values()))
-        target_dict = {
-            "abstract": abstract_claims_tuple[0],
-            "claims": abstract_claims_tuple[1]
-        }   
-        result = llm_entry(query_json_dict, target_dict)
+    for row_dict in abstraccts_claims_list:
+        result = llm_entry(query_json_dict, row_dict)
         all_results.append(result)
 
     return all_results
@@ -136,31 +131,6 @@ def load_patent_b(patent_number_a: Patent):
     abstraccts_claims_list =get_abstract_claims_by_query(top_k_df)
 
     return abstraccts_claims_list
-    # dfの全行をループし、pabulication_numberを取得
-    # publication_numbers = []
-    # year_part = []
-    # counter = 0
-#     for _, row in df.iterrows():
-#         if counter >= TOP_K:
-#             break
-#         publication_number = row.get('publication_number', None)
-#         pulication_number_for_search = publication_number.replace('-', '')
-
-
-#         year, doc_number = normalize_patent_id(publication_number)
-#         if not doc_number:
-#             continue
-#         publication_numbers.append(doc_number)
-#         year_part.append(year)
-#         counter += 1
-
-    # abstract_claim_list_dict = get_abstract_claims(found_lookup)
-    # save_abstract_claims_as_json(abstract_claim_list_dict)
-
-#     top_k = len(abstract_claim_list_dict)
-#     return top_k, abstract_claim_list_dict
-
-# import json
 
 def save_abstract_claims_as_json(abstract_claims_list_dict):
     """abstract_claims_list_dictをJSONファイルとして保存する"""
@@ -245,16 +215,6 @@ def find_document(publication_numbers, year_parts):
                 # 最も近い候補を取得
                 best_match = sorted_df.iloc[0]
                 final_lookup_entrys.append(best_match.to_dict())
- 
-                # # 許容範囲の設定（例: ±3年以内なら採用する）
-                # YEAR_TOLERANCE = 10
-                
-                # if min_diff <= YEAR_TOLERANCE:
-                #     print(f"Found closest match: {best_match['doc_number']} (Diff: {min_diff} years)")
-                #     final_lookup_entrys.append(best_match.to_dict())
-                # else:
-                #     # 差が大きすぎる場合は、別の特許の可能性が高いため採用しない（あるいは警告ログを出して採用しない）
-                #     print(f"Skipping {pub_num}: Closest match {best_match['doc_number']} is {min_diff} years away.")
     return final_lookup_entrys
 
 

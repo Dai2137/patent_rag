@@ -43,7 +43,7 @@ def page_1():
     step1()
 
     # 2. 情報探索
-    st.header("2. 情報探索 + 一致箇所表示")
+    st.header("2. 類似文献の検索")
     step2()
 
     # 3. AI審査
@@ -68,18 +68,26 @@ def step1():
         if st.session_state.file_id != uploaded_file.file_id:
             reset_session_state()
             st.session_state.file_id = uploaded_file.file_id
+            
+            query: Patent = st.session_state.loader.run(QUERY_PATH)
+            st.session_state.query = query
+            public_doc_number = st.session_state.query.publication.doc_number
+            #このevalの下にpublic_doc_numberをつかって、今後、すべての中間生成物をこのディレクトリ名に保存していく
+            #このため、このディレクトリはあらゆる段階でつかわれるのでconfigrationnなどで最適な設計を考える必要がある
+
             # ディレクトリが存在しない場合は作成
             QUERY_PATH.parent.mkdir(parents=True, exist_ok=True)
             with open(QUERY_PATH, "w", encoding="utf-8") as f:
                 f.write(file_content)
-            st.success("ファイルがアップロードされました。検索結果や画面表示を初期化しました。")
-
+            st.success(f"{QUERY_PATH} にファイルがアップロードされました。検索結果や画面表示を初期化しました。")
 
 def step2():
-    st.write("出願の公開番号（query_id）、出願に紐づく公知例の公開番号（knowledge_id）、公知例の一致箇所（retrieved_chunk）を表示します。")
+    st.write("出願の公開番号（query_id）について、Google Patents Public Dataの埋め込みベクトルを用いて類似文献を検索し、上位の文献を表示します。")
+    st.write("Google Patents Public Dataは、高精度かつ効率のよい埋め込みベクトルを提供しており、特許文献の意味的な類似性を捉えることができます。")
+    st.write("このため、独自に膨大な文献のベクトル化が不要となり、コスト的に効率的な検索が可能です。")
     if st.button("検索", type="primary"):
-        query: Patent = st.session_state.loader.run(QUERY_PATH)
-        st.session_state.query = query
+        # query: Patent = st.session_state.loader.run(QUERY_PATH)
+        # st.session_state.query = query
         query_detail.query_detail()
 
 

@@ -130,6 +130,13 @@ def load_patent_b(patent_number_a: Patent):
 
     abstraccts_claims_list =get_abstract_claims_by_query(top_k_df)
 
+    json_file_name = f"top_k_{patent_number_a}.json"
+    abs_path = ABSTRACT_CLAIM_PATH / json_file_name
+    # mkdirs if not exists
+    ABSTRACT_CLAIM_PATH.mkdir(parents=True, exist_ok=True)
+    with open(abs_path, 'w', encoding='utf-8') as f:
+        json.dump(abstraccts_claims_list, f, ensure_ascii=False, indent=4)
+
     return abstraccts_claims_list
 
 def save_abstract_claims_as_json(abstract_claims_list_dict):

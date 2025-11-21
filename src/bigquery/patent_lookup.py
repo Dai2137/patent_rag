@@ -1,6 +1,7 @@
 """BigQueryでpatent_lookupテーブルを作成"""
 
 from google.cloud import bigquery
+import copy
 
 PROJECT_ID = "llmatch-471107"
 DATASET_ID = "dataset_lookup"
@@ -88,29 +89,29 @@ def find_documents_batch(publication_numbers):
 
 DEBUG = False
 
-def get_abstract_claims_by_query(lookup_info):
-    """lookup_infoの内容に基づいて、各ドキュメントの要約と請求項を取得し、lookup_infoを更新する"""
+def get_abstract_claims_by_query(top_k_df):
+    
     client = bigquery.Client(project=PROJECT_ID)
 
+    name_table_dict = {}
     abstraccts_claims_list = []
 
-    for table_name, doc_infos in lookup_info.items():
+    for _, row in top_k_df.iterrows():
+        table_name = row['table_name']
+        publication_number = row['number']
+        if table_name is None:
+            continue
+        # table_nameをキーにして、publication_numberをリストでまとめる
+        if table_name not in name_table_dict:
+            name_table_dict[table_name] = []
+        name_table_dict[table_name].append(publication_number)
+
+
+    for table_name, name_list in name_table_dict.items():
         # doc_infosからpathを取得し、クエリ対象の文献番号リストを作成
         # '/tmp/tmpn5es9j7o/result_16/3/JP2025021568A/text.txt'
         # JP2025021568Aを取得
-        table_name_two_digits = table_name.zfill(2)
-        table_name = f"result_{table_name_two_digits}"
-
-        doc_numbers_of_path = []
-        doc_year_number_list = []
-
-        for doc_info in doc_infos:
-            path = doc_info['path']
-            path_doc_number = path.split('/')[-2]  # パスの最後から2番目の部分が文献番号
-            doc_numbers_of_path.append(path_doc_number)
-
-            doc_year_number = doc_info['doc_number']
-            doc_year_number_list.append(doc_year_number)
+        table_name = f"result_{table_name}"
 
         query = f"""
             SELECT 
@@ -123,18 +124,20 @@ def get_abstract_claims_by_query(lookup_info):
 
         job_config = bigquery.QueryJobConfig(
             query_parameters=[
-                bigquery.ArrayQueryParameter("doc_numbers_array", "STRING", doc_year_number_list)
+                bigquery.ArrayQueryParameter("doc_numbers_array", "STRING", name_list)
             ]
         )
 
         query_job = client.query(query, job_config=job_config)
         results = list(query_job.result())
-        abstraccts_claims_list.append(results)
+        for row in results:
+            row_dict = {row["doc_number"]: (row["abstract"], row["claims"])}
+            abstraccts_claims_list.append(copy.deepcopy(row_dict))
 
         if DEBUG:# デバッグモード注意
             print("DEBUG: get_abstract_claims_by_query ")
             return abstraccts_claims_list
-        
+    
     return abstraccts_claims_list
 
 

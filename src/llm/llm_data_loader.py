@@ -51,19 +51,23 @@ def entry(action=None):
         st.session_state.query = query
     save_abstract_claims_query(query)
     query_patent_number_a = format_patent_number_for_bigquery(query)
-    top_k_df = load_patent_b(query_patent_number_a)
-    results = llm_execution(top_k_df)
+    abstraccts_claims_list = load_patent_b(query_patent_number_a)
+    results = llm_execution(abstraccts_claims_list)
     return results
     
-def llm_execution(top_k):
+def llm_execution(abstraccts_claims_list):
     """LLM実行部分"""
     # q_*.jsonを見つける.pathlibで見つける。glonbを使う
     query_json_dict = read_json("q")
 
     all_results = []
-    for k in range(1, top_k + 1):
-        target_json_dict = read_json(str(k))
-        result = llm_entry(query_json_dict, target_json_dict)
+    for row_tuple_dict in abstraccts_claims_list:
+        abstract_claims_tuple = next(iter(row_tuple_dict.values()))
+        target_dict = {
+            "abstract": abstract_claims_tuple[0],
+            "claims": abstract_claims_tuple[1]
+        }   
+        result = llm_entry(query_json_dict, target_dict)
         all_results.append(result)
 
     return all_results
@@ -128,6 +132,10 @@ def load_patent_b(patent_number_a: Patent):
     
     df = pd.read_csv(csv_file_path)
     top_k_df = search_path(df, top_k=TOP_K)
+
+    abstraccts_claims_list =get_abstract_claims_by_query(top_k_df)
+
+    return abstraccts_claims_list
     # dfの全行をループし、pabulication_numberを取得
     # publication_numbers = []
     # year_part = []
@@ -146,9 +154,8 @@ def load_patent_b(patent_number_a: Patent):
 #         year_part.append(year)
 #         counter += 1
 
-#     found_lookup = find_document(publication_numbers, year_part)
-#     abstract_claim_list_dict = get_abstract_claims(found_lookup)
-#     save_abstract_claims_as_json(abstract_claim_list_dict)
+    # abstract_claim_list_dict = get_abstract_claims(found_lookup)
+    # save_abstract_claims_as_json(abstract_claim_list_dict)
 
 #     top_k = len(abstract_claim_list_dict)
 #     return top_k, abstract_claim_list_dict

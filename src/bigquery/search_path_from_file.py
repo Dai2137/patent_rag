@@ -31,12 +31,13 @@ def search_path(top_k_df: pd.DataFrame, top_k=None) -> pd.DataFrame:
     # top_k_dfにpathカラムを追加、NaNで初期化
     top_k_df['table_name'] = None
     top_k_df['name'] = None
+    top_k_number = None
 
     if top_k is None:
         top_k = len(top_k_df)
 
     top_k_counter = 0
-    for _, row in top_k_df.iterrows():
+    for idx, row in top_k_df.iterrows():
         if top_k_counter >= top_k:
             break
         publication_number = row['publication_number']
@@ -51,7 +52,8 @@ def search_path(top_k_df: pd.DataFrame, top_k=None) -> pd.DataFrame:
         # 正規表現で高速に抽出: 最初の非数字部分をスキップし、数字部分と残りを取得
         match = re.match(r'^\D*(\d+)(.*)$', publication_number)
         if match:
-            int_publication_number = int(match.group(1))
+            publication_number_str = match.group(1)
+            int_publication_number = int(publication_number_str)
             #最初の４文字は年号なので、year_4_digit変数に格納し、
             year_4_digit = str(int_publication_number)[:4]
             # int_publication_number = int(str(int_publication_number)[4:])   
@@ -87,9 +89,12 @@ def search_path(top_k_df: pd.DataFrame, top_k=None) -> pd.DataFrame:
 
         # 最初の一致行からtable_nameを取得
         table_name = matched_rows[0, 1]
-        row['table_name'] = str(table_name)
-        row['publication_number'] = publication_number
+        top_k_df.loc[idx, 'table_name'] = str(table_name)
+        top_k_df.loc[idx, 'name'] = publication_number
+        top_k_df.loc[idx, 'number'] = publication_number_str
 
         top_k_counter += 1
+    # top_k_dfから、table_nameがNoneでない行だけを抽出して返す
+    top_k_df = top_k_df[top_k_df['table_name'].notna()].reset_index(drop=True)
 
     return top_k_df

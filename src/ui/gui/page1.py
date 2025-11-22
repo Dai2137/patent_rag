@@ -12,6 +12,7 @@ import pandas as pd
 import streamlit as st
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 
+from infra.config import PathManager
 from model.patent import Patent
 # from ui.gui.utils import create_matched_md  # , retrieve
 from ui.gui import query_detail
@@ -60,26 +61,54 @@ def page_1():
 
 
 def step1():
-    file_content = ""
     uploaded_file: UploadedFile | None = st.file_uploader("1. XML形式の出願を１件アップロードしてください。", type=["xml", "txt"])
     if uploaded_file is not None:
+        # アップロードされたファイルの中身を読み込む
         file_content: str = uploaded_file.read().decode("utf-8")
         st.text_area("ファイルの中身:", file_content, height=200)
-        if st.session_state.file_id != uploaded_file.file_id:
-            reset_session_state()
-            st.session_state.file_id = uploaded_file.file_id
-            
-            query: Patent = st.session_state.loader.run(QUERY_PATH)
-            st.session_state.query = query
-            public_doc_number = st.session_state.query.publication.doc_number
-            #このevalの下にpublic_doc_numberをつかって、今後、すべての中間生成物をこのディレクトリ名に保存していく
-            #このため、このディレクトリはあらゆる段階でつかわれるのでconfigrationnなどで最適な設計を考える必要がある
 
-            # ディレクトリが存在しない場合は作成
-            QUERY_PATH.parent.mkdir(parents=True, exist_ok=True)
-            with open(QUERY_PATH, "w", encoding="utf-8") as f:
+        if st.session_state.get("file_content") != file_content:
+            # --- Phase 1: 一時ディレクトリに保存 ---
+            temp_path = PathManager.get_temp_path("uploaded_query.txt")
+            with open(temp_path, "w", encoding="utf-8") as f:
                 f.write(file_content)
-            st.success(f"{QUERY_PATH} にファイルがアップロードされました。検索結果や画面表示を初期化しました。")
+
+            try:
+                with st.spinner("XMLを解析中..."):
+                    # XMLをparseしてdoc_numberを取得
+                    query: Patent = st.session_state.loader.run(temp_path)
+                    public_doc_number = query.publication.doc_number
+
+                    if not public_doc_number:
+                        st.error("特許番号(doc_number)が取得できませんでした。")
+                        return
+
+                # --- Phase 2: 正規のディレクトリにコピー ---
+                permanent_path = PathManager.move_to_permanent(temp_path, public_doc_number)
+
+                # アップロードディレクトリのパスを取得
+                uploaded_dir = PathManager.get_uploaded_query_path(public_doc_number)
+
+                # Session Stateの更新
+                reset_session_state()
+                st.session_state.file_content = file_content
+                st.session_state.query = query
+                st.session_state.project_dir = permanent_path.parent
+                st.session_state.source_file = permanent_path
+                st.session_state.uploaded_dir = uploaded_dir
+
+                st.success(f"✓ 初期化完了: 特許ID {public_doc_number}")
+                st.info(f"📁 データ保存先: {st.session_state.project_dir}")
+
+            except Exception as e:
+                st.error(f"処理中にエラーが発生しました: {e}")
+                import traceback
+                st.code(traceback.format_exc())
+
+        else:
+            # すでにロード済み
+            if "query" in st.session_state and st.session_state.query:
+                st.success(f"✓ ロード済み: 特許ID {st.session_state.query.publication.doc_number}")
 
 def step2():
     st.write("出願の公開番号（query_id）について、Google Patents Public Dataの埋め込みベクトルを用いて類似文献を検索し、上位の文献を表示します。")

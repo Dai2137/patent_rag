@@ -114,9 +114,13 @@ def step2():
     st.write("出願の公開番号（query_id）について、Google Patents Public Dataの埋め込みベクトルを用いて類似文献を検索し、上位の文献を表示します。")
     st.write("Google Patents Public Dataは、高精度かつ効率のよい埋め込みベクトルを提供しており、特許文献の意味的な類似性を捉えることができます。")
     st.write("このため、独自に膨大な文献のベクトル化が不要となり、コスト的に効率的な検索が可能です。")
+
+    # session stateの検証
+    if "query" not in st.session_state or st.session_state.query is None:
+        st.warning("⚠️ 先にステップ1でファイルをアップロードしてください。")
+        return
+
     if st.button("検索", type="primary"):
-        # query: Patent = st.session_state.loader.run(QUERY_PATH)
-        # st.session_state.query = query
         query_detail.query_detail()
 
 

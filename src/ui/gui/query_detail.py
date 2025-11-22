@@ -3,22 +3,15 @@ from pathlib import Path
 
 from bigquery.big_query_topk import search_similar_patents
 from ui.gui.utils import format_patent_number_for_bigquery
+from infra.config import PathManager, DirNames
 import inspect
 import pandas as pd
-
-# プロジェクトルート（このファイルは src/ui/gui/ にあるので4階層上）
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
-
-# page1と同じQUERY_PATHを使用
-QUERY_PATH = PROJECT_ROOT / "eval" / "uploaded" / "uploaded_query.txt"
-    # CSVファイル名の設定
-OUTPUT_CSV_PATH = PROJECT_ROOT / "eval" / "topk"
     
 def query_detail():
-        # 呼び出し元の情報を取得
+    # 呼び出し元の情報を取得
     frame = inspect.currentframe()
     caller_frame = frame.f_back
-    
+
     # 呼び出し元の関数名
     # step2から呼び出される
     expected_caller_name = "step2"
@@ -33,14 +26,20 @@ def query_detail():
 
     # アップロードされた特許番号を取得
     query_patent_number = ""
+    doc_number = None
 
-    # アップロード済みファイルがあれば読み込む
-    if QUERY_PATH.exists() and hasattr(st.session_state, 'loader'):
+    # session stateから取得
+    if "query" in st.session_state and st.session_state.query:
         try:
-            query = st.session_state.loader.run(QUERY_PATH)
+            query = st.session_state.query
+            doc_number = query.publication.doc_number
             query_patent_number = format_patent_number_for_bigquery(query)
         except Exception as e:
-            st.warning(f"保存されたファイルからの特許番号取得に失敗しました: {e}")
+            st.error(f"特許番号の取得に失敗しました: {e}")
+            return
+    else:
+        st.error("❌ 先にステップ1でファイルをアップロードしてください。")
+        return
 
     # 特許番号の入力フィールド
     st.subheader("類似特許検索の詳細設定")
@@ -58,12 +57,17 @@ def query_detail():
         value=1000,
         step=100
     )
-    
-    output_csv_path =  OUTPUT_CSV_PATH / f"{query_patent}.csv"
+
+    # PathManagerを使って正しいディレクトリを取得
+    if not doc_number:
+        st.error("特許番号が取得できませんでした。")
+        return
+
+    output_csv_path = PathManager.get_file(doc_number, DirNames.TOPK, f"{query_patent}.csv")
 
     # 検索実行ボタン
-    if  not search_button_pressed:
-        if not output_csv_path.exists:
+    if not search_button_pressed:
+        if not output_csv_path.exists():
             return
         search_results_df = pd.read_csv(output_csv_path)
         show_result(search_results_df, output_csv_path)

@@ -179,9 +179,6 @@ def page_1():
         # Step 2以降の共通レンダリング
         render_common_steps()
 
-    elif mode == "2. 既存文献の表示" and "query" in st.session_state and not st.session_state.get("current_doc_number"):
-        st.warning("⚠️ セッションが無効です。再読み込みしてください。")
-
 
 def render_common_steps():
     """

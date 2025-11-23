@@ -64,9 +64,13 @@ def llm_execution(abstraccts_claims_list, doc_number):
         # 先行技術のdoc_numberを結果に追加
         if result and isinstance(result, dict):
             result['prior_art_doc_number'] = row_dict.get('doc_number', f'先行技術 #{i + 1}')
+        # result is Noneの場合もある
+        if result is not None:
+            all_results.append(result)
 
-        all_results.append(result)
-
+        if all_results is None:
+            continue
+        
         # 結果をJSONファイルとして保存
         json_file_name = f"{i + 1}_{row_dict['doc_number']}.json"
         abs_path = ai_judge_dir / json_file_name

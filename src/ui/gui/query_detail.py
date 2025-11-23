@@ -14,15 +14,15 @@ def query_detail():
 
     # 呼び出し元の関数名
     # step2から呼び出される
-    expected_caller_name = "step2"
+    expected_caller_name = 'render_common_steps'
     search_button_pressed = False
     caller_name = caller_frame.f_code.co_name
     if caller_name == expected_caller_name:
         search_button_pressed = True
-    print(caller_name)
+    # print(caller_name)
 
     """検索結果の詳細画面"""
-    st.write("検索結果詳細")
+    #st.write("検索結果詳細")
 
     # アップロードされた特許番号を取得
     query_patent_number = ""

@@ -9,6 +9,8 @@ import pandas as pd
 
 from infra.config import PathManager
 from ui.gui import query_detail, ai_judge_detail
+from ui.gui.search_results_list import search_results_list
+from ui.gui.prior_art_detail import prior_art_detail
 
 
 def render_common_steps():
@@ -29,16 +31,13 @@ def render_common_steps():
         search_results_df = st.session_state.search_results_df
         st.info(f"💾 検索結果: {len(search_results_df):,}件 取得済み")
 
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("📋 詳細リストを表示", key="goto_search_list"):
-                st.switch_page("ui/gui/search_results_list.py")
-        with col2:
-            if st.button("🔄 検索をやり直す", key="rerun_search"):
-                if "query" not in st.session_state or st.session_state.query is None:
-                    st.warning("⚠️ 検索を実行するには、先にファイルをアップロードしてください。")
-                else:
-                    query_detail.query_detail()
+        if st.button("📋 詳細リストを表示", key="goto_search_list"):
+            st.switch_page(search_results_list)
+        if st.button("🔄 検索をやり直す", key="rerun_search"):
+            if "query" not in st.session_state or st.session_state.query is None:
+                st.warning("⚠️ 検索を実行するには、先にファイルをアップロードしてください。")
+            else:
+                query_detail.query_detail()
     else:
         if st.button("検索実行", type="primary", key="run_new_search"):
             if "query" not in st.session_state or st.session_state.query is None:
@@ -66,13 +65,10 @@ def render_common_steps():
                     continue
 
                 doc_num = result.get('prior_art_doc_number', f"先行技術 #{idx+1}")
-                c1, c2 = st.columns([4, 1])
-                with c1:
-                    st.write(f"**{idx+1}. {doc_num}**")
-                with c2:
-                    if st.button("詳細", key=f"ai_detail_{idx}"):
-                        st.session_state.selected_prior_art_idx = idx
-                        st.switch_page("ui/gui/prior_art_detail.py")
+                st.write(f"**{idx+1}. {doc_num}**")
+                if st.button("詳細", key=f"ai_detail_{idx}"):
+                    st.session_state.selected_prior_art_idx = idx
+                    st.switch_page(prior_art_detail)
 
         if st.button("🔄 AI審査をやり直す", key="rerun_ai_judge"):
             run_ai_judge()

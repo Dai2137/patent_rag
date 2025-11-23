@@ -10,7 +10,7 @@
 - 詳細な進捗表示と結果保存 (llm_pipeline.py)
 """
 
-# import google.generativeai as genai
+import google.generativeai as genai
 import os
 from typing import Dict, List, Optional
 from dataclasses import dataclass, asdict

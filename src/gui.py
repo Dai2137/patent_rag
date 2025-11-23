@@ -59,7 +59,7 @@ def init_session_state():
 def setup_sidebar():
     """サイドバーにモデル選択機能を追加"""
     with st.sidebar:
-        st.header("⚙️ 設定")
+#        st.header("⚙️ 設定")
 
         # モデル選択
         st.subheader("LLMモデル選択")
@@ -87,31 +87,24 @@ def main():
     setup_sidebar()
 
     # ページ定義
+    page_1_obj = st.Page(page_1, title="page 1", icon="📄")
+    query_detail_obj = st.Page(query_detail, title="類似文献検索結果", icon="🔍")
+    search_results_obj = st.Page(search_results_list, title="検索結果一覧", icon="📊")
+    ai_judge_obj = st.Page(ai_judge_detail, title="AI審査詳細", icon="⚖️")
+    prior_art_obj = st.Page(prior_art_detail, title="先行技術詳細", icon="📑")
+
     pages = [
-        st.Page(page_1, title="page 1", icon="📄"),
-        st.Page(page_2, title="page 2", icon="📋"),
-        st.Page(query_detail, title="類似文献検索結果", icon="🔍"),
-        st.Page(search_results_list, title="検索結果一覧", icon="📊"),
-        st.Page(ai_judge_detail, title="AI審査詳細", icon="⚖️"),
-        st.Page(prior_art_detail, title="先行技術詳細", icon="📑"),
-        st.Page(page_99, title="page 99", icon="🔧")
+        page_1_obj,
+        query_detail_obj,
+        search_results_obj,
+        ai_judge_obj,
+        prior_art_obj,
     ]
+
+    # ページオブジェクトをSession Stateに保存し、他のファイルから参照可能にする
+    st.session_state.page_map = {p.title: p for p in pages}
+
     pg = st.navigation(pages)
-
-# --- 既存のページ定義 ---
-    # (例: page1 がメインページだと仮定します)
-    home_page = st.Page("ui/gui/page1.py", title="メインステップ", icon="🏠")
-
-    # --- 【追加】遷移先のページを定義 ---
-    # メインファイル(gui.py)からの相対パスを指定します
-    search_results_page = st.Page("ui/gui/search_results_list.py", title="検索結果詳細", url_path="search_results")
-    
-    # もし前回の step3 の詳細ページも未登録なら追加してください
-    prior_art_page = st.Page("ui/gui/prior_art_detail.py", title="先行技術詳細", url_path="prior_art")
-
-    # --- ナビゲーションに登録 ---
-    # リストの中に、上で定義したページ変数をすべて含めます
-    pg = st.navigation([home_page, search_results_page, prior_art_page])
     pg.run()
 
 

@@ -9,6 +9,8 @@ from infra.config import PROJECT_ROOT, PathManager, DirNames
 from model.patent import Patent
 from ui.gui import query_detail
 from ui.gui import ai_judge_detail
+from ui.gui.search_results_list import search_results_list
+from ui.gui.prior_art_detail import prior_art_detail
 
 # 定数
 MAX_CHAR = 300
@@ -119,7 +121,8 @@ def handle_new_upload(uploaded_file: UploadedFile):
         st.error(f"❌ アップロード処理に失敗しました: {e}")
 
 def page_1():
-    st.title("GENIAC-PRIZE prototype:東京大学松尾岩沢研究室コミュニティ")
+    st.title("GENIAC-PRIZE prototype")
+    st.subheader("東京大学松尾岩沢研究室コミュニティ")
 
     mode = st.sidebar.radio("モード選択", ("1. 新規アップロード", "2. 既存文献の表示"))
 
@@ -193,13 +196,14 @@ def render_common_steps():
 
     if has_search_results:
         st.info(f"�� 検索結果: {len(st.session_state.search_results_df):,}件 取得済み")
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("📋 詳細リストを表示", key="goto_search_list"):
-                st.switch_page("ui/gui/search_results_list.py")
-        with col2:
-            if st.button("🔄 検索をやり直す", key="rerun_search"):
-                query_detail.query_detail()
+
+        if st.button("📋 詳細リストを表示", key="goto_search_list"):
+            if "検索結果一覧" in st.session_state.page_map:
+                st.switch_page(st.session_state.page_map["検索結果一覧"])
+            else:
+                st.error("ページが見つかりません: 検索結果一覧")
+        if st.button("🔄 検索をやり直す", key="rerun_search"):
+            query_detail.query_detail()
     else:
         st.write("Google Patents Public Dataを用いて類似文献を検索します。")
         if st.button("検索実行", type="primary", key="run_new_search"):
@@ -211,22 +215,40 @@ def render_common_steps():
     has_ai_results = 'ai_judge_results' in st.session_state and st.session_state.ai_judge_results
 
     if has_ai_results:
-        st.info(f"💾 審査結果: {len(st.session_state.ai_judge_results)}件 取得済み")
+        # 有効な結果をカウント
+        valid_results = [r for r in st.session_state.ai_judge_results if r is not None and not (isinstance(r, dict) and 'error' in r)]
 
-        with st.expander("審査結果一覧を開く", expanded=True):
-            for idx, result in enumerate(st.session_state.ai_judge_results):
-                if isinstance(result, dict) and 'error' in result:
-                    st.error(f"No.{idx+1}: エラー")
-                    continue
+        if len(valid_results) == 0:
+            st.warning("⚠️ AI審査の結果がありません。AI審査をやり直してください。")
+        else:
+            st.info(f"💾 審査結果: {len(valid_results)}件 取得済み")
 
-                doc_num = result.get('prior_art_doc_number', f"Doc #{idx+1}")
-                c1, c2 = st.columns([4, 1])
-                with c1:
-                    st.write(f"**{idx+1}. {doc_num}**")
-                with c2:
-                    if st.button("詳細", key=f"ai_detail_{idx}"):
-                        st.session_state.selected_prior_art_idx = idx
-                        st.switch_page("ui/gui/prior_art_detail.py")
+            with st.expander("審査結果一覧を開く", expanded=True):
+                display_idx = 1
+                for idx, result in enumerate(st.session_state.ai_judge_results):
+
+                    # result が None の場合はスキップ（メッセージ表示なし）
+                    if result is None:
+                        continue
+
+                    # エラーの場合もスキップ（メッセージ表示なし）
+                    if isinstance(result, dict) and 'error' in result:
+                        continue
+
+                    # 有効なデータのみ表示
+                    doc_num = result.get('prior_art_doc_number', f"Doc #{display_idx}")
+                    c1, c2 = st.columns([4, 1])
+                    with c1:
+                        st.write(f"**{display_idx}. {doc_num}**")
+                    with c2:
+                        if st.button("詳細", key=f"ai_detail_{idx}"):
+                            st.session_state.selected_prior_art_idx = idx
+                            if "先行技術詳細" in st.session_state.page_map:
+                                st.switch_page(st.session_state.page_map["先行技術詳細"])
+                            else:
+                                st.error("ページが見つかりません: 先行技術詳細")
+
+                    display_idx += 1
 
         if st.button("🔄 AI審査をやり直す", key="rerun_ai_judge"):
              run_ai_judge()

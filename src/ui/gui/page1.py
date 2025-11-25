@@ -161,7 +161,7 @@ def page_1():
             with col1:
                 selected_doc = st.selectbox("出願IDを選択してください", projects)
             with col2:
-                if st.button("読込", type="primary", use_container_width=True):
+                if st.button("読込", type="primary", width="stretch"):
                     if selected_doc:
                         with st.spinner("ロード中..."):
                             if load_project_by_id(selected_doc):
@@ -257,19 +257,49 @@ def render_common_steps():
             else:
                 run_ai_judge()
 
+    ai_judge_results = st.session_state.get("ai_judge_results")
+    if ai_judge_results and type(ai_judge_results) is list :
+
+        claim_rejected_results = []
+        for ai_result in ai_judge_results:
+            # doc_number = ai_result["doc_number"]  
+            # final_decision = ai_result["inventiveness"]
+
+            claim_rejected = False 
+            for claim in ai_result["inventiveness"]:
+                inventiveness = ai_result["inventiveness"][claim]
+                inventive_bool = inventiveness['inventive']
+                if inventive_bool:
+                    continue
+                claim_rejected = True
+            if claim_rejected:
+                claim_rejected_results.append(ai_result)
+        if claim_rejected_results:
+            st.warning(f"⚠️ 請求項 {len(claim_rejected_results)}件 は進歩性が認められませんでした。")
+            
+            rejected_dict ={
+                'doc_number': [r['doc_number'] for r in claim_rejected_results],
+                'top_k': [r['top_k'] for r in claim_rejected_results],
+            }
+            rejected_df = pd.DataFrame(rejected_dict)
+            st.dataframe(rejected_df)
+            print()
+        else:
+            st.success("✅ 全ての請求項で進歩性が認められました。")
+
     # --- Step 4: 判断根拠出力 ---
     st.header("4. 判断根拠出力")
 
     if not has_ai_results:
         st.write("⚠️ AI審査を実行すると表示されます。")
     else:
-        n_chunk_default = len(st.session_state.ai_judge_results)
+        ai_judge_results = st.session_state.ai_judge_results
 
         if st.button("根拠テキスト生成", type="primary"):
-            if "retrieved_docs" not in st.session_state or not st.session_state.retrieved_docs:
-                 st.error("文献データ(retrieved_docs)がメモリにありません。再検索が必要な可能性があります。")
-            else:
-                generate_reasons(n_chunk_default)
+            # if "retrieved_docs" not in st.session_state or not st.session_state.retrieved_docs:
+            #      st.error("文献データ(retrieved_docs)がメモリにありません。再検索が必要な可能性があります。")
+            # else:
+            generate_reasons(ai_judge_results)
 
         if "reasons" in st.session_state and st.session_state.reasons:
             for i, reason in enumerate(st.session_state.reasons):
@@ -287,13 +317,20 @@ def run_ai_judge():
             st.success("✅ AI審査が完了しました。")
             st.rerun()
 
-def generate_reasons(n_chunk):
+def generate_reasons(ai_judge_results):
     """根拠生成ロジック"""
     st.session_state.reasons = []
     status_text = st.empty()
     progress = st.progress(0)
+    final_decision = ai_judge_results[0]["final_decision"] 
+    conversation_history = ai_judge_results[0]["conversation_history"] 
+    inventiveness_keys = dict(ai_judge_results[0]["inventiveness"]).keys()
+    for key in inventiveness_keys:
+        if key.startswith('claim'):
+            st.session_state.query.claims.append(key.upper())
 
-    actual_limit = min(n_chunk, len(st.session_state.retrieved_docs))
+     # 動作確認用ダミーアクセス
+    (['doc_number', 'top_k', 'application_structure', 'prior_art_structure', 'applicant_arguments', 'examiner_review', 'final_decision', 'conversation_history', 'inventiveness', 'prior_art_doc_number'])
 
     for i in range(actual_limit):
         status_text.text(f"{i + 1} / {actual_limit} 件目を生成中です...")

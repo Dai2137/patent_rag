@@ -16,14 +16,10 @@ def display_single_result(result, idx):
         st.error(f"エラーが発生しました: {result['error']}")
         return
 
-    st.markdown("---")
-    st.markdown(f"## 🔍 出願文献と紐付き候補文献 #{idx + 1} との比較")
-    st.markdown("---")
+    st.markdown(f"## 🔍 出願文献と紐付き候補文献 類似度トップ{idx + 1} との比較")
 
     # ヘッダー部分
-    st.markdown("🚀" * 40)
-    st.markdown("### 特許審査プロセス開始 (統合版)")
-    st.markdown("🚀" * 40)
+    st.markdown("### AI特許審査プロセス")
 
     # conversation_historyがある場合は、それを使って表示
     if 'conversation_history' in result and result['conversation_history']:
@@ -35,15 +31,11 @@ def display_single_result(result, idx):
 
     # 最終判断を強調表示
     if 'final_decision' in result:
-        st.markdown("---")
-        st.markdown("✅" * 40)
         st.markdown("### 特許審査プロセス完了")
         with st.chat_message("assistant", avatar="⚖️"):
             st.markdown(result['final_decision'])
-        st.markdown("✅" * 40)
 
     # 進歩性の判断結果をサマリー表示
-    if 'inventiveness' in result:
         st.markdown("---")
         st.subheader("📊 判断サマリー")
         display_inventiveness_summary(result['inventiveness'])
@@ -84,9 +76,7 @@ def display_step_message(msg):
     avatar = avatar_map.get(role, '💬')
 
     # ステップヘッダー
-    st.markdown("=" * 80)
     st.markdown(f"### {avatar} ステップ{step}: {role}")
-    st.markdown("=" * 80)
 
     # メッセージ内容を表示
     with st.chat_message("assistant", avatar=avatar):
@@ -104,10 +94,7 @@ def display_step_message(msg):
                         st.markdown(f"- {req}")
         elif isinstance(content, str):
             # テキストメッセージの場合
-            st.markdown("✅ 生成完了:")
-            st.markdown("---")
             st.markdown(content)
-            st.markdown("---")
 
 def display_legacy_format(result):
     """
@@ -181,7 +168,7 @@ def display_inventiveness_summary(inventiveness):
 
     if summary_data:
         df = pd.DataFrame(summary_data)
-        st.dataframe(df, use_container_width=True)
+        st.dataframe(df, width="stretch")
 
 def ai_judge_detail(action="show_page"):
     """AI審査結果の詳細画面"""

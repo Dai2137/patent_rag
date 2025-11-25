@@ -74,7 +74,7 @@ def search_results_list():
         # データフレームをスクロール可能な形式で表示
         st.dataframe(
             filtered_df,
-            use_container_width=True,
+            width="stretch",
             height=600,
             hide_index=False
         )

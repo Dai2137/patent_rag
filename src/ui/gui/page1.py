@@ -11,6 +11,7 @@ from ui.gui import query_detail
 from ui.gui import ai_judge_detail
 from ui.gui.search_results_list import search_results_list
 from ui.gui.prior_art_detail import prior_art_detail
+from bigquery.patent_lookup import get_full_patent_info_by_doc_numbers
 
 # 定数
 MAX_CHAR = 300
@@ -199,7 +200,7 @@ def render_common_steps():
                 st.switch_page(st.session_state.page_map["検索結果一覧"])
             else:
                 st.error("ページが見つかりません: 検索結果一覧")
-        if st.button("🔄 検索をやり直す", key="rerun_search"):
+        if st.button("🔄 検索をやり直す", type="primary", key="rerun_search"):
             query_detail.query_detail()
     else:
         st.write("Google Patents Public Dataを用いて類似文献を検索します。")
@@ -221,31 +222,104 @@ def render_common_steps():
             st.info(f"💾 審査結果: {len(valid_results)}件 取得済み")
 
             with st.expander("審査結果一覧を開く", expanded=True):
+                # DataFrameのデータを準備
+                df_data = []
+                valid_indices = []  # 有効な結果の元のインデックスを保存
+
                 display_idx = 1
                 for idx, result in enumerate(st.session_state.ai_judge_results):
-
-                    # result が None の場合はスキップ（メッセージ表示なし）
+                    # result が None の場合はスキップ
                     if result is None:
                         continue
 
-                    # エラーの場合もスキップ（メッセージ表示なし）
+                    # エラーの場合もスキップ
                     if isinstance(result, dict) and 'error' in result:
                         continue
 
-                    # 有効なデータのみ表示
-                    doc_num = result.get('prior_art_doc_number', f"Doc #{display_idx}")
-                    c1, c2 = st.columns([4, 1])
-                    with c1:
-                        st.write(f"**{display_idx}. {doc_num}**")
-                    with c2:
-                        if st.button("詳細", key=f"ai_detail_{idx}"):
-                            st.session_state.selected_prior_art_idx = idx
-                            if "先行技術詳細" in st.session_state.page_map:
-                                st.switch_page(st.session_state.page_map["先行技術詳細"])
-                            else:
-                                st.error("ページが見つかりません: 先行技術詳細")
+                    # 紐付き候補の有無を判定
+                    claim_rejected = False
+                    if 'inventiveness' in result:
+                        for claim in result["inventiveness"]:
+                            inventiveness = result["inventiveness"][claim]
+                            inventive_bool = inventiveness.get('inventive', True)
+                            if not inventive_bool:
+                                claim_rejected = True
+                                break
 
+                    # 公報番号を取得
+                    doc_num = result.get('prior_art_doc_number', f"Doc #{display_idx}")
+
+                    # DataFrameの行データを追加
+                    df_data.append({
+                        '順位': display_idx,
+                        '公報番号': doc_num,
+                        '紐付き候補の有無': '有' if claim_rejected else '無'
+                    })
+
+                    valid_indices.append(idx)
                     display_idx += 1
+
+                # DataFrameを作成して表示
+                if df_data:
+                    df = pd.DataFrame(df_data)
+
+                    # 保存用のDataFrameを作成（紐付き候補の有無をTrue/Falseに変換）
+                    df_to_save = df.copy()
+                    df_to_save['紐付き候補の有無_bool'] = df_to_save['紐付き候補の有無'].map({'有': True, '無': False})
+
+                    # DataFrameを保存
+                    from datetime import datetime
+                    doc_number = st.session_state.current_doc_number
+                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                    save_path = PathManager.get_file(doc_number, DirNames.AI_JUDGE_TABLE, f"ai_judge_table_{timestamp}.csv")
+                    df_to_save.to_csv(save_path, index=False, encoding='utf-8-sig')
+
+                    # CSVダウンロードボタン
+                    csv = df.to_csv(index=False, encoding='utf-8-sig')
+                    st.download_button(
+                        label="📥 CSV形式でダウンロード",
+                        data=csv,
+                        file_name='ai_judge_results.csv',
+                        mime='text/csv',
+                    )
+
+                    # データ行数に応じてスクロール可能なコンテナを使用
+                    # 10行を超える場合のみ固定高さでスクロール可能にする
+                    use_scrollable = len(df_data) > 10
+                    container = st.container(height=450) if use_scrollable else st.container()
+
+                    with container:
+                        # ヘッダー行
+                        header_cols = st.columns([1, 3, 2, 2])
+                        with header_cols[0]:
+                            st.markdown("**順位**")
+                        with header_cols[1]:
+                            st.markdown("**公報番号**")
+                        with header_cols[2]:
+                            st.markdown("**紐付き候補の有無**")
+                        with header_cols[3]:
+                            st.markdown("**AI審査の詳細表示**")
+
+                        st.divider()
+
+                        # データ行
+                        for i, row_data in enumerate(df_data):
+                            idx = valid_indices[i]
+                            cols = st.columns([1, 3, 2, 2])
+
+                            with cols[0]:
+                                st.write(row_data['順位'])
+                            with cols[1]:
+                                st.write(row_data['公報番号'])
+                            with cols[2]:
+                                st.write(row_data['紐付き候補の有無'])
+                            with cols[3]:
+                                if st.button("詳細", key=f"ai_detail_{idx}", use_container_width=True):
+                                    st.session_state.selected_prior_art_idx = idx
+                                    if "先行技術詳細" in st.session_state.page_map:
+                                        st.switch_page(st.session_state.page_map["先行技術詳細"])
+                                    else:
+                                        st.error("ページが見つかりません: 先行技術詳細")
 
         if st.button("🔄 AI審査をやり直す", type="primary", key="rerun_ai_judge"):
              run_ai_judge()
@@ -259,8 +333,9 @@ def render_common_steps():
 
     ai_judge_results = st.session_state.get("ai_judge_results")
     if ai_judge_results and type(ai_judge_results) is list :
-
+        st.session_state.rejected_df = None
         claim_rejected_results = []
+        
         for ai_result in ai_judge_results:
             # doc_number = ai_result["doc_number"]  
             # final_decision = ai_result["inventiveness"]
@@ -275,15 +350,18 @@ def render_common_steps():
             if claim_rejected:
                 claim_rejected_results.append(ai_result)
         if claim_rejected_results:
-            st.warning(f"⚠️ 請求項 {len(claim_rejected_results)}件 は進歩性が認められませんでした。")
-            
+            st.warning(f"💡  参照文献の総数 (m) = {len(claim_rejected_results)}件 文献が紐づきの候補の件数。")
+
             rejected_dict ={
                 'doc_number': [r['doc_number'] for r in claim_rejected_results],
                 'top_k': [r['top_k'] for r in claim_rejected_results],
             }
             rejected_df = pd.DataFrame(rejected_dict)
+
+            # セッションステートに保存
+            st.session_state.rejected_df = rejected_df
+
             st.dataframe(rejected_df)
-            print()
         else:
             st.success("✅ 全ての請求項で進歩性が認められました。")
 
@@ -319,6 +397,73 @@ def run_ai_judge():
 
 def generate_reasons(ai_judge_results):
     """根拠生成ロジック"""
+    query_object = st.session_state.query
+    rejected_df = st.session_state.get("rejected_df")
+    if not st.session_state.get("rejected_df"):
+        st.error("進歩性が否定された文献がありません。")
+        # 審査のための、top_kからA分類のドキュメントを９件表示する。
+        return
+    # rejected_dfを９件まで表示する
+    #９件に満たない場合は、top_kから不足している分を補完する
+    # title, abstract, claims, descriptionをペアで取得する
+
+    query_title = query_object[0].title
+    query_abstract = query_object[0].abstract
+    query_claims = query_object[0].claims
+    query_description = query_object[0].description
+
+    competition_rule_max_m = 9
+    print(competition_rule_max_m, ": mMaxの設定")
+    actual_limit = min(competition_rule_max_m, len(rejected_df))
+
+    # rejected_dfから全てのdoc_numberを取得
+    doc_numbers_to_fetch = rejected_df.head(actual_limit)['doc_number'].tolist()
+
+    # BigQueryから一括で特許情報を取得
+    with st.spinner("BigQueryから特許情報を取得中..."):
+        patent_info_list = get_full_patent_info_by_doc_numbers(doc_numbers_to_fetch)
+
+    # doc_numberをキーとした辞書に変換（高速検索のため）
+    patent_info_dict = {info['doc_number']: info for info in patent_info_list}
+
+    # retrieved_docsに特許情報を追加または更新
+    if "retrieved_docs" not in st.session_state:
+        st.session_state.retrieved_docs = []
+
+    for i, target_row in rejected_df.head(actual_limit).iterrows():
+        doc_number = target_row['doc_number']
+
+        # 対応するretrieved_docsを探す
+        doc_found = False
+        for doc in st.session_state.retrieved_docs:
+            if doc.get('doc_number') == doc_number:
+                # 既存のdocにBigQueryから取得した情報を追加
+                if doc_number in patent_info_dict:
+                    patent_info = patent_info_dict[doc_number]
+                    doc['title'] = patent_info['title']
+                    doc['abstract'] = patent_info['abstract']
+                    doc['claims'] = patent_info['claims']
+                    doc['description'] = patent_info['description']
+                doc_found = True
+                break
+
+        # 見つからなかった場合は、新規にdocを作成
+        if not doc_found and doc_number in patent_info_dict:
+            patent_info = patent_info_dict[doc_number]
+            new_doc = {
+                'doc_number': doc_number,
+                'title': patent_info['title'],
+                'abstract': patent_info['abstract'],
+                'claims': patent_info['claims'],
+                'description': patent_info['description']
+            }
+            st.session_state.retrieved_docs.append(new_doc)
+
+    st.success(f"✅ {len(patent_info_list)}件の特許情報を取得しました。")
+
+
+
+
     st.session_state.reasons = []
     status_text = st.empty()
     progress = st.progress(0)

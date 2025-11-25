@@ -147,4 +147,84 @@ def get_abstract_claims_by_query(top_k_df):
     return abstraccts_claims_list
 
 
+def get_full_patent_info_by_doc_numbers(doc_numbers_list):
+    """
+    doc_numberのリストから、title, abstract, claims, descriptionを取得する
+
+    Parameters:
+    -----------
+    doc_numbers_list : list
+        特許番号のリスト
+
+    Returns:
+    --------
+    list[dict]
+        特許情報の辞書のリスト。各辞書には以下のキーが含まれる:
+        - doc_number: 特許番号
+        - title: タイトル
+        - abstract: 要約
+        - claims: 請求項
+        - description: 説明
+    """
+    client = bigquery.Client(project=PROJECT_ID)
+
+    # doc_numbersからtable_nameとpathを取得
+    doc_infos = find_documents_batch(doc_numbers_list)
+
+    if not doc_infos:
+        return []
+
+    # table_nameごとにグループ化
+    name_table_dict = {}
+    for doc_info in doc_infos:
+        table_name = doc_info['result_table']
+        doc_number = doc_info['doc_number']
+        if table_name not in name_table_dict:
+            name_table_dict[table_name] = []
+        name_table_dict[table_name].append(doc_number)
+
+    patent_info_list = []
+
+    for table_name, doc_num_list in name_table_dict.items():
+        table_name = f"result_{table_name}"
+
+        query = f"""
+            SELECT
+                publication.doc_number,
+                invention_title,
+                abstract,
+                claims,
+                description
+            FROM `{PROJECT_ID}.{SOURCE_DATASET}.{table_name}`
+            WHERE publication.doc_number IN UNNEST(@doc_numbers_array)
+        """
+
+        job_config = bigquery.QueryJobConfig(
+            query_parameters=[
+                bigquery.ArrayQueryParameter("doc_numbers_array", "STRING", doc_num_list)
+            ]
+        )
+
+        try:
+            query_job = client.query(query, job_config=job_config)
+            results = list(query_job.result())
+
+            for row in results:
+                patent_info = {
+                    "doc_number": row["doc_number"],
+                    "title": row.get("invention_title", ""),
+                    "abstract": row.get("abstract", ""),
+                    "claims": row.get("claims", ""),
+                    "description": row.get("description", "")
+                }
+                patent_info_list.append(patent_info)
+        except Exception as e:
+            print(f"Error querying table {table_name}: {e}")
+            if DEBUG:
+                import traceback
+                traceback.print_exc()
+
+    return patent_info_list
+
+
 

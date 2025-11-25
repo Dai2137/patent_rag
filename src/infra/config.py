@@ -35,6 +35,7 @@ class DirNames(StrEnum):
     TOPK = "topk"
     ABSTRACT_CLAIMS = "abstract_claims"
     AI_JUDGE = "ai_judge"
+    AI_JUDGE_TABLE = "ai_judge_result_table"
     SEARCH = "search"
     LOGS = "logs"
     CACHE = "cache"

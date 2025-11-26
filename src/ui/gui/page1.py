@@ -329,40 +329,6 @@ def render_common_steps():
             else:
                 run_ai_judge()
 
-    # ai_judge_results = st.session_state.get("ai_judge_results")
-    # if ai_judge_results and type(ai_judge_results) is list :
-    #     st.session_state.rejected_df = None
-    #     claim_rejected_results = []
-        
-    #     for ai_result in ai_judge_results:
-    #         # doc_number = ai_result["doc_number"]  
-    #         # final_decision = ai_result["inventiveness"]
-
-    #         claim_rejected = False 
-    #         for claim in ai_result["inventiveness"]:
-    #             inventiveness = ai_result["inventiveness"][claim]
-    #             inventive_bool = inventiveness['inventive']
-    #             if inventive_bool:
-    #                 continue
-    #             claim_rejected = True
-    #         if claim_rejected:
-    #             claim_rejected_results.append(ai_result)
-    #     if claim_rejected_results:
-    #         st.warning(f"💡  参照文献の総数 (m) = {len(claim_rejected_results)}件 文献が紐づきの候補の件数。")
-
-    #         rejected_dict ={
-    #             'doc_number': [r['doc_number'] for r in claim_rejected_results],
-    #             'top_k': [r['top_k'] for r in claim_rejected_results],
-    #         }
-    #         rejected_df = pd.DataFrame(rejected_dict)
-
-    #         # セッションステートに保存
-    #         st.session_state.rejected_df = rejected_df
-
-    #         st.dataframe(rejected_df)
-    #     else:
-    #         st.success("✅ 全ての請求項で進歩性が認められました。")
-
     # --- Step 4: 判断根拠出力 ---
     st.header("4. 判断根拠出力")
 
@@ -370,17 +336,71 @@ def render_common_steps():
         st.write("⚠️ AI審査を実行すると表示されます。")
     else:
         ai_judge_results = st.session_state.ai_judge_results
+        if not ai_judge_results or all(r is None or (isinstance(r, dict) and 'error' in r) for r in ai_judge_results):
+            st.warning("⚠️ 有効なAI審査結果がありません。AI審査をやり直してください。")
+            return
+        
+        doc_numbers_to_fetch = generate_reasons(ai_judge_results)
+        if doc_numbers_to_fetch is None or len(doc_numbers_to_fetch) == 0:
+            return
+        current_doc_number = str(st.session_state.current_doc_number)
+        year_part = current_doc_number[:4]
+        doc_digit_part = current_doc_number[4:]
+        formatted_current_doc_number = f"{year_part}-{doc_digit_part}"
+
+        st.write(f"✅特願 {formatted_current_doc_number}に紐づく{len(doc_numbers_to_fetch)}件の文献があります。")
+
+        doc_number_output_number_dict = {}
+        for i, doc_num in enumerate(doc_numbers_to_fetch):
+            doc_num = str(doc_num)
+            year_part = doc_num[:4]
+            doc_digit_part = doc_num[4:]
+            formatted_doc_number = f"{year_part}-{doc_digit_part}"
+            output_doc_number = f"{i + 1} - 特開 {formatted_doc_number}号公報"
+            st.write(output_doc_number)
+            doc_number_output_number_dict[doc_num] = output_doc_number
+
+        # markdown形式で根拠表示 箇条書きで表示doc_numbers_to_fetchの下に根拠を表示する
+        # configでevidence_exstractionディレクトリを取得し、存在チェック
+        evidence_extraction_dir = PathManager.get_dir(
+            st.session_state.current_doc_number,
+            DirNames.EVIDENCE_EXTRACTION
+        )
+
+        # ディレクトリ内のファイル存在チェック
+        evidence_files = list(evidence_extraction_dir.glob("*.json"))
+        if evidence_files:
+            st.info(f"📂 参照箇所表示: {len(evidence_files)}件の参照文献が保存されています")
+
+            for doc_num in doc_number_output_number_dict.keys():
+                st.markdown(f"### 📑 {doc_number_output_number_dict[doc_num]} の判断根拠")
+                # listの要素の文字列にdoc_numが含まれるものを抽出
+                for evidence_file in evidence_files:
+                    if doc_num in evidence_file.name:
+                        with open(evidence_file, "r", encoding="utf-8") as f:
+                            evidence_data = json.load(f)
+                        for item in evidence_data:
+                            verified_evidence_list = item["verified_evidence"]
+                            for evidence_dict in verified_evidence_list:
+                                for evidence_key in evidence_dict:
+                                    evidence_content = evidence_dict[evidence_key]
+                                    st.markdown(f"-   {evidence_key}:{evidence_content}")
+                                st.divider()
+
 
         if st.button("根拠テキスト生成", type="primary"):
             # if "retrieved_docs" not in st.session_state or not st.session_state.retrieved_docs:
             #      st.error("文献データ(retrieved_docs)がメモリにありません。再検索が必要な可能性があります。")
             # else:
-            generate_reasons(ai_judge_results)
+                # BigQueryから一括で特許情報を取得
+            with st.spinner("BigQueryから特許情報を取得中..."):
+                get_full_patent_info_by_doc_numbers(doc_numbers_to_fetch, st.session_state.current_doc_number)
 
-        if "reasons" in st.session_state and st.session_state.reasons:
-            for i, reason in enumerate(st.session_state.reasons):
-                st.markdown(f"##### 判断根拠 {i + 1}")
-                st.code(reason, language="markdown")
+
+        # if "reasons" in st.session_state and st.session_state.reasons:
+        #     for i, reason in enumerate(st.session_state.reasons):
+        #         st.markdown(f"##### 判断根拠 {i + 1}")
+        #         st.code(reason, language="markdown")
 
 
 def run_ai_judge():
@@ -400,6 +420,7 @@ def generate_reasons(ai_judge_results):
     #９件に満たない場合は、top_kから不足している分を補完する
     competition_rule_max_m = 9
     print(competition_rule_max_m, ": mMaxの設定")
+
 
     # eval/{doc_number}/ai_judge_result_tableからcsvを読み込み
     doc_number = st.session_state.current_doc_number
@@ -430,80 +451,81 @@ def generate_reasons(ai_judge_results):
     reject_document_exists_list = rejected_df.head(actual_limit)['reject_document_exists'].tolist() 
     # reject_document_exists_listがTrueのものだけに絞る
     doc_numbers_to_fetch = [doc_num for doc_num, exists in zip(doc_numbers_to_fetch, reject_document_exists_list) if exists]    
+    return doc_numbers_to_fetch
 
-    # BigQueryから一括で特許情報を取得
-    with st.spinner("BigQueryから特許情報を取得中..."):
-        get_full_patent_info_by_doc_numbers(doc_numbers_to_fetch, doc_number)
-
-
-    # doc_numberをキーとした辞書に変換（高速検索のため）
-    patent_info_dict = {info['doc_number']: info for info in patent_info_list}
-
-    # retrieved_docsに特許情報を追加または更新
-    if "retrieved_docs" not in st.session_state:
-        st.session_state.retrieved_docs = []
-
-    for i, target_row in rejected_df.head(actual_limit).iterrows():
-        doc_number = target_row['doc_number']
-
-        # 対応するretrieved_docsを探す
-        doc_found = False
-        for doc in st.session_state.retrieved_docs:
-            if doc.get('doc_number') == doc_number:
-                # 既存のdocにBigQueryから取得した情報を追加
-                if doc_number in patent_info_dict:
-                    patent_info = patent_info_dict[doc_number]
-                    doc['title'] = patent_info['title']
-                    doc['abstract'] = patent_info['abstract']
-                    doc['claims'] = patent_info['claims']
-                    doc['description'] = patent_info['description']
-                doc_found = True
-                break
-
-        # 見つからなかった場合は、新規にdocを作成
-        if not doc_found and doc_number in patent_info_dict:
-            patent_info = patent_info_dict[doc_number]
-            new_doc = {
-                'doc_number': doc_number,
-                'title': patent_info['title'],
-                'abstract': patent_info['abstract'],
-                'claims': patent_info['claims'],
-                'description': patent_info['description']
-            }
-            st.session_state.retrieved_docs.append(new_doc)
-
-    st.success(f"✅ {len(patent_info_list)}件の特許情報を取得しました。")
+    # # BigQueryから一括で特許情報を取得
+    # with st.spinner("BigQueryから特許情報を取得中..."):
+    #     get_full_patent_info_by_doc_numbers(doc_numbers_to_fetch, doc_number)
 
 
+    # # doc_numberをキーとした辞書に変換（高速検索のため）
+    # patent_info_dict = {info['doc_number']: info for info in patent_info_list}
+
+    # # retrieved_docsに特許情報を追加または更新
+    # if "retrieved_docs" not in st.session_state:
+    #     st.session_state.retrieved_docs = []
+
+    # for i, target_row in rejected_df.head(actual_limit).iterrows():
+    #     doc_number = target_row['doc_number']
+
+    #     # 対応するretrieved_docsを探す
+    #     doc_found = False
+    #     for doc in st.session_state.retrieved_docs:
+    #         if doc.get('doc_number') == doc_number:
+    #             # 既存のdocにBigQueryから取得した情報を追加
+    #             if doc_number in patent_info_dict:
+    #                 patent_info = patent_info_dict[doc_number]
+    #                 doc['title'] = patent_info['title']
+    #                 doc['abstract'] = patent_info['abstract']
+    #                 doc['claims'] = patent_info['claims']
+    #                 doc['description'] = patent_info['description']
+    #             doc_found = True
+    #             break
+
+    #     # 見つからなかった場合は、新規にdocを作成
+    #     if not doc_found and doc_number in patent_info_dict:
+    #         patent_info = patent_info_dict[doc_number]
+    #         new_doc = {
+    #             'doc_number': doc_number,
+    #             'title': patent_info['title'],
+    #             'abstract': patent_info['abstract'],
+    #             'claims': patent_info['claims'],
+    #             'description': patent_info['description']
+    #         }
+    #         st.session_state.retrieved_docs.append(new_doc)
+
+    # st.success(f"✅ {len(patent_info_list)}件の特許情報を取得しました。")
 
 
-    st.session_state.reasons = []
-    status_text = st.empty()
-    progress = st.progress(0)
-    final_decision = ai_judge_results[0]["final_decision"] 
-    conversation_history = ai_judge_results[0]["conversation_history"] 
-    inventiveness_keys = dict(ai_judge_results[0]["inventiveness"]).keys()
-    for key in inventiveness_keys:
-        if key.startswith('claim'):
-            st.session_state.query.claims.append(key.upper())
 
-     # 動作確認用ダミーアクセス
-    (['doc_number', 'top_k', 'application_structure', 'prior_art_structure', 'applicant_arguments', 'examiner_review', 'final_decision', 'conversation_history', 'inventiveness', 'prior_art_doc_number'])
 
-    for i in range(actual_limit):
-        status_text.text(f"{i + 1} / {actual_limit} 件目を生成中です...")
-        if "generator" in st.session_state:
-            reason = st.session_state.generator.generate(
-                st.session_state.query,
-                st.session_state.retrieved_docs[i]
-            )
-            st.session_state.reasons.append(reason)
-        else:
-            st.error("Generatorが初期化されていません。")
-            break
-        progress.progress((i + 1) / actual_limit)
+    # st.session_state.reasons = []
+    # status_text = st.empty()
+    # progress = st.progress(0)
+    # final_decision = ai_judge_results[0]["final_decision"] 
+    # conversation_history = ai_judge_results[0]["conversation_history"] 
+    # inventiveness_keys = dict(ai_judge_results[0]["inventiveness"]).keys()
+    # for key in inventiveness_keys:
+    #     if key.startswith('claim'):
+    #         st.session_state.query.claims.append(key.upper())
 
-    status_text.text("生成が完了しました。")
+    #  # 動作確認用ダミーアクセス
+    # (['doc_number', 'top_k', 'application_structure', 'prior_art_structure', 'applicant_arguments', 'examiner_review', 'final_decision', 'conversation_history', 'inventiveness', 'prior_art_doc_number'])
+
+    # for i in range(actual_limit):
+    #     status_text.text(f"{i + 1} / {actual_limit} 件目を生成中です...")
+    #     if "generator" in st.session_state:
+    #         reason = st.session_state.generator.generate(
+    #             st.session_state.query,
+    #             st.session_state.retrieved_docs[i]
+    #         )
+    #         st.session_state.reasons.append(reason)
+    #     else:
+    #         st.error("Generatorが初期化されていません。")
+    #         break
+    #     progress.progress((i + 1) / actual_limit)
+
+    # status_text.text("生成が完了しました。")
 
 if __name__ == "__main__":
     page_1()

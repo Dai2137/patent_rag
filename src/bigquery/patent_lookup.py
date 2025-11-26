@@ -238,6 +238,10 @@ def get_full_patent_info_by_doc_numbers(doc_numbers_list, current_doc_number=Non
             print(f"クエリ結果を {output_file} に保存しました")
         except Exception as e:
             print(f"Error querying table {table_name}: {e}")
+    # 未テスト
+    # Lazy import to avoid circular dependency
+    from llm.llm_ground_loder import convert_fullcontent_bigquery_result_to_json
+    convert_fullcontent_bigquery_result_to_json(current_doc_number)
 
 def load_get_full_patent_info_by_doc_numbers(current_doc_number):
     """current_doc_numberに対応するquery_results_*.jsonをすべて読み込み、リストで返す"""

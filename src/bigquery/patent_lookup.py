@@ -1,7 +1,10 @@
 """BigQueryでpatent_lookupテーブルを作成"""
 
+from bigquery.search_path_from_file import get_associated_table_number
 from google.cloud import bigquery
 import copy
+import json
+from infra.config import PathManager, DirNames
 
 PROJECT_ID = "llmatch-471107"
 DATASET_ID = "dataset_lookup"
@@ -147,7 +150,7 @@ def get_abstract_claims_by_query(top_k_df):
     return abstraccts_claims_list
 
 
-def get_full_patent_info_by_doc_numbers(doc_numbers_list):
+def get_full_patent_info_by_doc_numbers(doc_numbers_list, current_doc_number=None):
     """
     doc_numberのリストから、title, abstract, claims, descriptionを取得する
 
@@ -155,6 +158,8 @@ def get_full_patent_info_by_doc_numbers(doc_numbers_list):
     -----------
     doc_numbers_list : list
         特許番号のリスト
+    current_doc_number : str, optional
+        現在審査中の申請特許の番号（保存先ディレクトリに使用）
 
     Returns:
     --------
@@ -166,17 +171,22 @@ def get_full_patent_info_by_doc_numbers(doc_numbers_list):
         - claims: 請求項
         - description: 説明
     """
+
+    # search_path_from_file.pyのfind_documents_batch関数を使用して、doc_numbersからtable_nameを取得
+
+
     client = bigquery.Client(project=PROJECT_ID)
 
-    # doc_numbersからtable_nameとpathを取得
-    doc_infos = find_documents_batch(doc_numbers_list)
 
-    if not doc_infos:
+    # doc_numbersからtable_nameとpathを取得
+    pub_num_table_df = get_associated_table_number(doc_numbers_list)
+
+    if pub_num_table_df.empty:
         return []
 
     # table_nameごとにグループ化
     name_table_dict = {}
-    for doc_info in doc_infos:
+    for _, doc_info in pub_num_table_df.iterrows():
         table_name = doc_info['result_table']
         doc_number = doc_info['doc_number']
         if table_name not in name_table_dict:
@@ -188,12 +198,15 @@ def get_full_patent_info_by_doc_numbers(doc_numbers_list):
     for table_name, doc_num_list in name_table_dict.items():
         table_name = f"result_{table_name}"
 
+        # SELECT abstract, claims, description, invention_title FROM `llmatch-471107.dataset03.result_10` LIMIT 1000
+
+
         query = f"""
             SELECT
                 publication.doc_number,
                 invention_title,
-                abstract,
-                claims,
+                abstract, 
+                claims, 
                 description
             FROM `{PROJECT_ID}.{SOURCE_DATASET}.{table_name}`
             WHERE publication.doc_number IN UNNEST(@doc_numbers_array)
@@ -209,22 +222,30 @@ def get_full_patent_info_by_doc_numbers(doc_numbers_list):
             query_job = client.query(query, job_config=job_config)
             results = list(query_job.result())
 
-            for row in results:
-                patent_info = {
-                    "doc_number": row["doc_number"],
-                    "title": row.get("invention_title", ""),
-                    "abstract": row.get("abstract", ""),
-                    "claims": row.get("claims", ""),
-                    "description": row.get("description", "")
-                }
-                patent_info_list.append(patent_info)
+            # クエリ結果をJSONファイルに保存
+            result_dicts = [dict(row) for row in results]
+
+            # current_doc_numberが指定されている場合は、eval/{current_doc_number}/himotuki_doc_contents/ に保存
+            if current_doc_number:
+                output_dir = PathManager.get_dir(current_doc_number, DirNames.HIMOTUKI_DOC_CONTENTS)
+                output_file = output_dir / f'query_results_{table_name}.json'
+            else:
+                # 後方互換性: current_doc_numberが指定されていない場合は従来の動作
+                output_file = f'query_results_{table_name}.json'
+
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(result_dicts, f, ensure_ascii=False, indent=2)
+            print(f"クエリ結果を {output_file} に保存しました")
         except Exception as e:
             print(f"Error querying table {table_name}: {e}")
-            if DEBUG:
-                import traceback
-                traceback.print_exc()
 
+def load_get_full_patent_info_by_doc_numbers(current_doc_number):
+    """current_doc_numberに対応するquery_results_*.jsonをすべて読み込み、リストで返す"""
+    output_dir = PathManager.get_dir(current_doc_number, DirNames.HIMOTUKI_DOC_CONTENTS)
+    patent_info_list = []
+    for json_file in output_dir.glob('query_results_*.json'):
+        with open(json_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            patent_info_list.extend(data)
     return patent_info_list
-
-
 

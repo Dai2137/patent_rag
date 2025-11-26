@@ -268,10 +268,8 @@ def render_common_steps():
                     df_to_save['紐付き候補の有無_bool'] = df_to_save['紐付き候補の有無'].map({'有': True, '無': False})
 
                     # DataFrameを保存
-                    from datetime import datetime
                     doc_number = st.session_state.current_doc_number
-                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                    save_path = PathManager.get_file(doc_number, DirNames.AI_JUDGE_TABLE, f"ai_judge_table_{timestamp}.csv")
+                    save_path = PathManager.get_file(doc_number, DirNames.AI_JUDGE_TABLE, "ai_judge_table.csv")
                     df_to_save.to_csv(save_path, index=False, encoding='utf-8-sig')
 
                     # CSVダウンロードボタン
@@ -331,39 +329,39 @@ def render_common_steps():
             else:
                 run_ai_judge()
 
-    ai_judge_results = st.session_state.get("ai_judge_results")
-    if ai_judge_results and type(ai_judge_results) is list :
-        st.session_state.rejected_df = None
-        claim_rejected_results = []
+    # ai_judge_results = st.session_state.get("ai_judge_results")
+    # if ai_judge_results and type(ai_judge_results) is list :
+    #     st.session_state.rejected_df = None
+    #     claim_rejected_results = []
         
-        for ai_result in ai_judge_results:
-            # doc_number = ai_result["doc_number"]  
-            # final_decision = ai_result["inventiveness"]
+    #     for ai_result in ai_judge_results:
+    #         # doc_number = ai_result["doc_number"]  
+    #         # final_decision = ai_result["inventiveness"]
 
-            claim_rejected = False 
-            for claim in ai_result["inventiveness"]:
-                inventiveness = ai_result["inventiveness"][claim]
-                inventive_bool = inventiveness['inventive']
-                if inventive_bool:
-                    continue
-                claim_rejected = True
-            if claim_rejected:
-                claim_rejected_results.append(ai_result)
-        if claim_rejected_results:
-            st.warning(f"💡  参照文献の総数 (m) = {len(claim_rejected_results)}件 文献が紐づきの候補の件数。")
+    #         claim_rejected = False 
+    #         for claim in ai_result["inventiveness"]:
+    #             inventiveness = ai_result["inventiveness"][claim]
+    #             inventive_bool = inventiveness['inventive']
+    #             if inventive_bool:
+    #                 continue
+    #             claim_rejected = True
+    #         if claim_rejected:
+    #             claim_rejected_results.append(ai_result)
+    #     if claim_rejected_results:
+    #         st.warning(f"💡  参照文献の総数 (m) = {len(claim_rejected_results)}件 文献が紐づきの候補の件数。")
 
-            rejected_dict ={
-                'doc_number': [r['doc_number'] for r in claim_rejected_results],
-                'top_k': [r['top_k'] for r in claim_rejected_results],
-            }
-            rejected_df = pd.DataFrame(rejected_dict)
+    #         rejected_dict ={
+    #             'doc_number': [r['doc_number'] for r in claim_rejected_results],
+    #             'top_k': [r['top_k'] for r in claim_rejected_results],
+    #         }
+    #         rejected_df = pd.DataFrame(rejected_dict)
 
-            # セッションステートに保存
-            st.session_state.rejected_df = rejected_df
+    #         # セッションステートに保存
+    #         st.session_state.rejected_df = rejected_df
 
-            st.dataframe(rejected_df)
-        else:
-            st.success("✅ 全ての請求項で進歩性が認められました。")
+    #         st.dataframe(rejected_df)
+    #     else:
+    #         st.success("✅ 全ての請求項で進歩性が認められました。")
 
     # --- Step 4: 判断根拠出力 ---
     st.header("4. 判断根拠出力")
@@ -397,31 +395,46 @@ def run_ai_judge():
 
 def generate_reasons(ai_judge_results):
     """根拠生成ロジック"""
-    query_object = st.session_state.query
-    rejected_df = st.session_state.get("rejected_df")
-    if not st.session_state.get("rejected_df"):
-        st.error("進歩性が否定された文献がありません。")
-        # 審査のための、top_kからA分類のドキュメントを９件表示する。
-        return
+    # query_object = st.session_state.query
     # rejected_dfを９件まで表示する
     #９件に満たない場合は、top_kから不足している分を補完する
-    # title, abstract, claims, descriptionをペアで取得する
-
-    query_title = query_object[0].title
-    query_abstract = query_object[0].abstract
-    query_claims = query_object[0].claims
-    query_description = query_object[0].description
-
     competition_rule_max_m = 9
     print(competition_rule_max_m, ": mMaxの設定")
+
+    # eval/{doc_number}/ai_judge_result_tableからcsvを読み込み
+    doc_number = st.session_state.current_doc_number
+    csv_path = PathManager.get_file(doc_number, DirNames.AI_JUDGE_TABLE, "ai_judge_table.csv")
+
+    if not csv_path.exists():
+        st.error(f"❌ AI審査結果テーブルが見つかりません: {csv_path}")
+        return
+
+    # CSVを読み込み
+    df_ai_judge = pd.read_csv(csv_path, encoding='utf-8-sig')
+
+    # 紐付き候補の有無_boolがTrueのものを抽出
+    rejected_df = df_ai_judge[df_ai_judge['紐付き候補の有無_bool'] == True].copy()
+
+    if len(rejected_df) == 0:
+        st.info("✅ 紐付き候補がある文献はありませんでした。")
+        return
+
+    # rejected_dfにdoc_number列とtop_k列を追加
+    rejected_df['doc_number'] = rejected_df['公報番号']
+    rejected_df['reject_document_exists'] = rejected_df['紐付き候補の有無_bool']
+
     actual_limit = min(competition_rule_max_m, len(rejected_df))
 
     # rejected_dfから全てのdoc_numberを取得
     doc_numbers_to_fetch = rejected_df.head(actual_limit)['doc_number'].tolist()
+    reject_document_exists_list = rejected_df.head(actual_limit)['reject_document_exists'].tolist() 
+    # reject_document_exists_listがTrueのものだけに絞る
+    doc_numbers_to_fetch = [doc_num for doc_num, exists in zip(doc_numbers_to_fetch, reject_document_exists_list) if exists]    
 
     # BigQueryから一括で特許情報を取得
     with st.spinner("BigQueryから特許情報を取得中..."):
-        patent_info_list = get_full_patent_info_by_doc_numbers(doc_numbers_to_fetch)
+        get_full_patent_info_by_doc_numbers(doc_numbers_to_fetch, doc_number)
+
 
     # doc_numberをキーとした辞書に変換（高速検索のため）
     patent_info_dict = {info['doc_number']: info for info in patent_info_list}

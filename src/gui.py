@@ -14,12 +14,10 @@ from app.generator import Generator
 from infra.config import cfg
 from infra.loader.common_loader import CommonLoader
 from ui.gui.page1 import page_1
-from ui.gui.page2 import page_2
 from ui.gui.query_detail import query_detail
 from ui.gui.ai_judge_detail import ai_judge_detail
 from ui.gui.prior_art_detail import prior_art_detail
 from ui.gui.search_results_list import search_results_list
-from ui.gui.page99 import page_99
 
 # 定数
 # TODO: GUI関連の定数の適切な定義場所を考える。移動する。

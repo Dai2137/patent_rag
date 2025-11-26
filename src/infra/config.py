@@ -39,6 +39,9 @@ class DirNames(StrEnum):
     SEARCH = "search"
     LOGS = "logs"
     CACHE = "cache"
+    HIMOTUKI_DOC_CONTENTS = "himotuki_doc_contents"
+    DOC_FULL_CONTENT = "doc_full_content"
+    EVIDENCE_EXTRACTION = "evidence_extraction"
 
 
 # ==============================================================================
@@ -249,6 +252,16 @@ class PathManager:
             eval/{doc_number}/ai_judge/
         """
         return cls.get_dir(doc_number, DirNames.AI_JUDGE)
+
+    @classmethod
+    def get_himotuki_doc_contents(cls, doc_number: str) -> Path:
+        """
+        AI審査結果ディレクトリのパスを取得
+
+        Returns:
+            eval/{doc_number}/ai_judge/
+        """
+        return cls.get_dir(doc_number, DirNames.HIMOTUKI_DOC_CONTENTS)
 
     # --------------------------------------------------------------------------
     # レガシー対応: インスタンスメソッド版（既存コードとの互換性）

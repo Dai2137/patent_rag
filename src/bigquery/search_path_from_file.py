@@ -20,6 +20,29 @@ TYPE_MAPPING = {'A': 0, '1': 1, 'B': 2, 'U': 3}
 # 整数からdocument_typeへの逆マッピング
 TYPE_REVERSE_MAPPING = {0: 'A', 1: '1', 2: 'B', 3: 'U'}
 
+
+def search_matched_rows(
+    num_path_array: np.ndarray,
+    int_publication_number: int,
+    document_type_int: int
+) -> np.ndarray:
+    """
+    NUM_PATH_ARRAYから文書番号とドキュメントタイプに一致する行を検索する
+
+    Args:
+        num_path_array: 検索対象の配列 [doc_number, table_name, type]
+        int_publication_number: 検索する文書番号
+        document_type_int: 検索するドキュメントタイプ（整数）
+
+    Returns:
+        一致した行の配列
+    """
+    # 配列の列構造: [doc_number (0), table_name (1), type (2)]
+    mask = (num_path_array[:, 0] == int_publication_number) & (num_path_array[:, 2] == document_type_int)
+    matched_rows = num_path_array[mask]
+    return matched_rows
+
+
 # # A_path_01 - 08
 # A_PATH_FILE = 'A_path_'
 # A_PATH_FILES = []
@@ -100,3 +123,36 @@ def search_path(top_k_df: pd.DataFrame, top_k=None) -> pd.DataFrame:
     top_k_df = top_k_df[top_k_df['table_name'].notna()].reset_index(drop=True)
 
     return top_k_df
+
+
+def get_associated_table_number(doc_number_list: list):
+    # top_k_dfにpathカラムを追加、NaNで初期化
+    teble_number_dict = {
+        'result_table': [],
+        'doc_number': [],
+    }
+    for idx, publication_number in enumerate(doc_number_list):
+        int_publication_number = int(publication_number)
+        # -1: typeなし、0:A、1:1、2:B、3:U
+        document_type_int = TYPE_MAPPING.get('A', -1)  # A タイプのみ
+
+        # NUM_PATH_ARRAYから検索
+        # 配列の列構造: [doc_number (0), table_name (1), type (2)]
+        mask = (NUM_PATH_ARRAY[:, 0] == int_publication_number) & (NUM_PATH_ARRAY[:, 2] == document_type_int)
+        matched_rows = NUM_PATH_ARRAY[mask]
+
+        # マッチする行が見つからなければスキップ
+        if len(matched_rows) == 0:
+            teble_number_dict['result_table'].append(None)
+            teble_number_dict['doc_number'].append(publication_number)
+            continue
+
+        # 辞書に見つかった情報を追加
+        teble_number_dict['result_table'].append(str(matched_rows[0, 1]))
+        teble_number_dict['doc_number'].append(publication_number)
+    # top_k_dfから、table_nameがNoneでない行だけを抽出して返す
+    df = pd.DataFrame(teble_number_dict)
+    return df
+if __name__ == "__main__":
+    # テストコード
+    print(get_associated_table_number(['2010018170', '2010151703', '2010026792']))

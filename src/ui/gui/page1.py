@@ -3,6 +3,10 @@ import json
 import pandas as pd
 import streamlit as st
 from streamlit.runtime.uploaded_file_manager import UploadedFile
+import os
+import google.generativeai as genai
+import re
+
 
 # --- 既存のインポート ---
 from infra.config import PROJECT_ROOT, PathManager, DirNames
@@ -120,6 +124,7 @@ def handle_new_upload(uploaded_file: UploadedFile):
         st.error("❌ ファイルのエンコーディングが正しくありません。UTF-8形式のファイルをアップロードしてください。")
     except Exception as e:
         st.error(f"❌ アップロード処理に失敗しました: {e}")
+
 
 def page_1():
     st.title("GENIAC-PRIZE prototype")
@@ -388,13 +393,53 @@ def render_common_steps():
                                 st.divider()
 
 
+
         if st.button("根拠テキスト生成", type="primary"):
-            # if "retrieved_docs" not in st.session_state or not st.session_state.retrieved_docs:
-            #      st.error("文献データ(retrieved_docs)がメモリにありません。再検索が必要な可能性があります。")
-            # else:
-                # BigQueryから一括で特許情報を取得
-            with st.spinner("BigQueryから特許情報を取得中..."):
-                get_full_patent_info_by_doc_numbers(doc_numbers_to_fetch, st.session_state.current_doc_number)
+            with st.spinner("LLM で根拠箇所を抽出中..."):
+                query_patent: Patent = st.session_state.query
+                ai_results = st.session_state.ai_judge_results
+                run_evidence_extraction_for_doc_numbers(
+                    query_patent=query_patent,
+                    doc_numbers_to_fetch=doc_numbers_to_fetch,
+                    ai_judge_results=ai_results,
+                )
+
+            st.success("✅ 根拠テキストを生成し、保存しました。ページ下部に表示されます。")
+            st.rerun()
+        
+        
+        evidence_files = list(evidence_extraction_dir.glob("*.json"))
+        if evidence_files:
+            st.info(f"📂 参照箇所表示: {len(evidence_files)}件の参照文献が保存されています")
+
+            for doc_num in doc_number_output_number_dict.keys():
+                st.markdown(f"### 📑 {doc_number_output_number_dict[doc_num]} の判断根拠")
+
+                for evidence_file in evidence_files:
+                    if doc_num in evidence_file.name:
+                        with open(evidence_file, "r", encoding="utf-8") as f:
+                            evidence_data = json.load(f)
+
+                        for item in evidence_data:
+                            verified_evidence_list = item["verified_evidence"]
+                            for evidence_dict in verified_evidence_list:
+                                claim_html = evidence_dict.get("claim_html")
+                                prior_html = evidence_dict.get("prior_art_html")
+                                reason = evidence_dict.get("reason")
+
+                                if claim_html:
+                                    st.markdown("**請求項（根拠箇所を黄色でハイライト）**")
+                                    st.markdown(claim_html, unsafe_allow_html=True)
+
+                                if prior_html:
+                                    st.markdown("**引用文献（根拠箇所を黄色でハイライト）**")
+                                    st.markdown(prior_html, unsafe_allow_html=True)
+
+                                if reason:
+                                    st.markdown("**AI審査の理由**")
+                                    st.write(reason)
+
+                                st.divider()
 
 
         # if "reasons" in st.session_state and st.session_state.reasons:
@@ -414,118 +459,233 @@ def run_ai_judge():
             st.rerun()
 
 def generate_reasons(ai_judge_results):
-    """根拠生成ロジック"""
-    # query_object = st.session_state.query
-    # rejected_dfを９件まで表示する
-    #９件に満たない場合は、top_kから不足している分を補完する
-    competition_rule_max_m = 9
-    print(competition_rule_max_m, ": mMaxの設定")
+    """根拠生成用に、AI審査結果から「紐付き候補あり」の doc_number を集めて返すだけにする。
 
+    - AI審査結果(ai_judge_results)から「少なくとも1つの請求項で inventive=False」になった
+      先行技術の doc_number を抽出する
+    - 類似文献検索結果(df_retrieved)には依存しない
+      （全文テキストは BigQuery の get_full_patent_info_by_doc_numbers から取得する）
+    """
 
-    # eval/{doc_number}/ai_judge_result_tableからcsvを読み込み
-    doc_number = st.session_state.current_doc_number
-    csv_path = PathManager.get_file(doc_number, DirNames.AI_JUDGE_TABLE, "ai_judge_table.csv")
+    rejected_doc_numbers: list[str] = []
 
-    if not csv_path.exists():
-        st.error(f"❌ AI審査結果テーブルが見つかりません: {csv_path}")
-        return
+    for res in ai_judge_results:
+        if not isinstance(res, dict):
+            continue
+        if res.get("error"):
+            continue
 
-    # CSVを読み込み
-    df_ai_judge = pd.read_csv(csv_path, encoding='utf-8-sig')
+        inventiveness = res.get("inventiveness")
+        if not isinstance(inventiveness, dict):
+            continue
 
-    # 紐付き候補の有無_boolがTrueのものを抽出
-    rejected_df = df_ai_judge[df_ai_judge['紐付き候補の有無_bool'] == True].copy()
+        # 少なくとも1つの請求項で「inventive=False」なら紐付き候補とみなす
+        claim_rejected = any(
+            isinstance(v, dict) and (v.get("inventive") is False)
+            for v in inventiveness.values()
+        )
+        if not claim_rejected:
+            continue
 
-    if len(rejected_df) == 0:
+        # 先行技術の番号を取得
+        doc_num = res.get("prior_art_doc_number") or res.get("doc_number")
+        if not doc_num:
+            continue
+
+        doc_num = str(doc_num)
+        rejected_doc_numbers.append(doc_num)
+
+    if not rejected_doc_numbers:
         st.info("✅ 紐付き候補がある文献はありませんでした。")
-        return
+        return []
 
-    # rejected_dfにdoc_number列とtop_k列を追加
-    rejected_df['doc_number'] = rejected_df['公報番号']
-    rejected_df['reject_document_exists'] = rejected_df['紐付き候補の有無_bool']
-
-    actual_limit = min(competition_rule_max_m, len(rejected_df))
-
-    # rejected_dfから全てのdoc_numberを取得
-    doc_numbers_to_fetch = rejected_df.head(actual_limit)['doc_number'].tolist()
-    reject_document_exists_list = rejected_df.head(actual_limit)['reject_document_exists'].tolist() 
-    # reject_document_exists_listがTrueのものだけに絞る
-    doc_numbers_to_fetch = [doc_num for doc_num, exists in zip(doc_numbers_to_fetch, reject_document_exists_list) if exists]    
-    return doc_numbers_to_fetch
-
-    # # BigQueryから一括で特許情報を取得
-    # with st.spinner("BigQueryから特許情報を取得中..."):
-    #     get_full_patent_info_by_doc_numbers(doc_numbers_to_fetch, doc_number)
+    # 重複削除しつつ順序維持
+    unique_doc_numbers = list(dict.fromkeys(rejected_doc_numbers))
+    return unique_doc_numbers
 
 
-    # # doc_numberをキーとした辞書に変換（高速検索のため）
-    # patent_info_dict = {info['doc_number']: info for info in patent_info_list}
+def _highlight_snippets(text: str, snippets: list[str]) -> str:
+    """snippets に含まれる部分文字列を <mark> で1回ずつハイライトする"""
+    if not text:
+        return ""
 
-    # # retrieved_docsに特許情報を追加または更新
-    # if "retrieved_docs" not in st.session_state:
-    #     st.session_state.retrieved_docs = []
-
-    # for i, target_row in rejected_df.head(actual_limit).iterrows():
-    #     doc_number = target_row['doc_number']
-
-    #     # 対応するretrieved_docsを探す
-    #     doc_found = False
-    #     for doc in st.session_state.retrieved_docs:
-    #         if doc.get('doc_number') == doc_number:
-    #             # 既存のdocにBigQueryから取得した情報を追加
-    #             if doc_number in patent_info_dict:
-    #                 patent_info = patent_info_dict[doc_number]
-    #                 doc['title'] = patent_info['title']
-    #                 doc['abstract'] = patent_info['abstract']
-    #                 doc['claims'] = patent_info['claims']
-    #                 doc['description'] = patent_info['description']
-    #             doc_found = True
-    #             break
-
-    #     # 見つからなかった場合は、新規にdocを作成
-    #     if not doc_found and doc_number in patent_info_dict:
-    #         patent_info = patent_info_dict[doc_number]
-    #         new_doc = {
-    #             'doc_number': doc_number,
-    #             'title': patent_info['title'],
-    #             'abstract': patent_info['abstract'],
-    #             'claims': patent_info['claims'],
-    #             'description': patent_info['description']
-    #         }
-    #         st.session_state.retrieved_docs.append(new_doc)
-
-    # st.success(f"✅ {len(patent_info_list)}件の特許情報を取得しました。")
+    highlighted = text
+    for s in snippets:
+        s = s.strip()
+        if not s:
+            continue
+        # 正規表現でエスケープして、最初の1回だけ置換
+        pattern = re.escape(s)
+        highlighted = re.sub(
+            pattern,
+            lambda m: f"<mark>{m.group(0)}</mark>",
+            highlighted,
+            count=1,
+        )
+    return highlighted
 
 
+def _extract_evidence_with_llm(
+    claim_text: str,
+    prior_art_text: str,
+    reason_text: str | None = None,
+) -> dict:
+    """
+    LLM に根拠ペアを作らせ、ハイライト済み HTML を返す
+
+    戻り値:
+        {
+            "claim_html": "<pre>...</pre>",
+            "prior_art_html": "<pre>...</pre>",
+            "reason": "・・・"
+        }
+    """
+    api_key = os.environ.get("GOOGLE_API_KEY")
+    if not api_key:
+        raise RuntimeError("環境変数 GOOGLE_API_KEY が設定されていません。")
+
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel(
+        model_name="gemini-2.0-flash",
+        generation_config={"response_mime_type": "application/json"},
+    )
+
+    base_reason = reason_text or ""
+    prompt = f"""
+あなたは日本の特許審査官です。
+以下の本願請求項テキストと先行技術テキスト、および AI 審査での「発明を否定する理由」に基づき、
+「発明を否定する根拠となる請求項の部分」と「対応する先行技術の部分」のペアを抽出してください。
+
+[本願請求項全文]
+{claim_text}
+
+[先行技術テキスト全文]
+{prior_art_text}
+
+[AI審査での発明否定の理由（参考）]
+{base_reason}
+
+出力は必ず JSON 形式のみとし、次の形式にしてください。
+
+{{
+  "evidence_pairs": [
+    {{
+      "claim_snippet": "本願請求項から抜き出した、根拠となる日本語の文またはフレーズ（原文をそのまま）",
+      "prior_art_snippet": "先行技術から抜き出した、対応する日本語の文またはフレーズ（原文をそのまま）",
+      "explanation": "なぜこのペアが発明を否定する根拠になるのかを簡潔に説明（日本語）"
+    }},
+    ...
+  ]
+}}
+
+重要:
+- snippet は必ず上記の [本願請求項全文] / [先行技術テキスト全文] からそのまま抜き出してください。
+- Markdown や HTML タグ (<mark> 等) は含めないでください。
+- 日本語で回答してください。
+"""
+
+    response = model.generate_content(prompt)
+    try:
+        data = json.loads(response.text)
+        pairs = data.get("evidence_pairs", [])
+    except Exception:
+        # LLM が壊れた JSON を返した場合、そもそも JSON としてパースできなかった場合のフォールバック
+        pairs = []
+
+    # 抜き出されたテキストを使ってハイライト
+    claim_snippets = [p.get("claim_snippet", "") for p in pairs]
+    prior_snippets = [p.get("prior_art_snippet", "") for p in pairs]
+
+    claim_html = "<pre>" + _highlight_snippets(claim_text, claim_snippets) + "</pre>"
+    prior_html = "<pre>" + _highlight_snippets(prior_art_text, prior_snippets) + "</pre>"
+
+    # 説明はひとまず全部つなげる
+    explanations = [p.get("explanation", "").strip() for p in pairs if p.get("explanation")]
+    explanation_joined = "\n\n".join(explanations)
+    reason_merged = (base_reason + "\n\n" + explanation_joined).strip() if explanation_joined else base_reason
+
+    return {
+        "claim_html": claim_html,
+        "prior_art_html": prior_html,
+        "reason": reason_merged,
+    }
 
 
-    # st.session_state.reasons = []
-    # status_text = st.empty()
-    # progress = st.progress(0)
-    # final_decision = ai_judge_results[0]["final_decision"] 
-    # conversation_history = ai_judge_results[0]["conversation_history"] 
-    # inventiveness_keys = dict(ai_judge_results[0]["inventiveness"]).keys()
-    # for key in inventiveness_keys:
-    #     if key.startswith('claim'):
-    #         st.session_state.query.claims.append(key.upper())
+def run_evidence_extraction_for_doc_numbers(
+    query_patent: Patent,
+    doc_numbers_to_fetch: list[str],
+    ai_judge_results: list[dict],
+):
+    """
+    - 否定された文献 doc_number ごとに
+      * 本願請求項テキスト
+      * prior_art テキスト
+      * AI審査の理由
+      をまとめて LLM に投げる
+    - 結果を DirNames.EVIDENCE_EXTRACTION 配下に JSON で保存
+    """
 
-    #  # 動作確認用ダミーアクセス
-    # (['doc_number', 'top_k', 'application_structure', 'prior_art_structure', 'applicant_arguments', 'examiner_review', 'final_decision', 'conversation_history', 'inventiveness', 'prior_art_doc_number'])
+    current_doc_number = str(query_patent.publication.doc_number)
+    evidence_extraction_dir = PathManager.get_dir(
+        current_doc_number,
+        DirNames.EVIDENCE_EXTRACTION,
+    )
+    evidence_extraction_dir.mkdir(parents=True, exist_ok=True)
 
-    # for i in range(actual_limit):
-    #     status_text.text(f"{i + 1} / {actual_limit} 件目を生成中です...")
-    #     if "generator" in st.session_state:
-    #         reason = st.session_state.generator.generate(
-    #             st.session_state.query,
-    #             st.session_state.retrieved_docs[i]
-    #         )
-    #         st.session_state.reasons.append(reason)
-    #     else:
-    #         st.error("Generatorが初期化されていません。")
-    #         break
-    #     progress.progress((i + 1) / actual_limit)
+    # prior_art テキストは generate_reasons() で作った retrieved_docs から取得
+    prior_art_text_by_doc: dict[str, str] = {}
+    if "retrieved_docs" in st.session_state:
+        for d in st.session_state.retrieved_docs:
+            prior_art_text_by_doc[str(d["doc_number"])] = d["text"]
 
-    # status_text.text("生成が完了しました。")
+    # AI審査結果から「その doc_number で否定された claim の理由」をまとめる
+    reason_by_doc: dict[str, str] = {}
+    for res in ai_judge_results:
+        if not isinstance(res, dict):
+            continue
+        doc_num = str(res.get("prior_art_doc_number", ""))
+        if not doc_num or doc_num not in doc_numbers_to_fetch:
+            continue
+        inv = res.get("inventiveness", {})
+        reasons = []
+        for claim_name, v in inv.items():
+            if not v.get("inventive", True) and v.get("reason"):
+                reasons.append(f"{claim_name}: {v['reason']}")
+        if reasons:
+            reason_by_doc[doc_num] = "\n\n".join(reasons)
+
+    claim_text = query_patent.claims or ""
+
+    # 各文献について LLM を回して JSON を保存
+    for doc_num in doc_numbers_to_fetch:
+        prior_text = prior_art_text_by_doc.get(str(doc_num), "")
+        reason_text = reason_by_doc.get(str(doc_num), "")
+
+        if not prior_text:
+            # prior_art テキストがない場合はスキップ
+            continue
+
+        evidence = _extract_evidence_with_llm(
+            claim_text=claim_text,
+            prior_art_text=prior_text,
+            reason_text=reason_text,
+        )
+
+        # page1 の既存表示ロジックに合わせて、「verified_evidence」のリストとして保存
+        output_obj = [
+            {
+                "doc_number": str(doc_num),
+                "verified_evidence": [
+                    evidence  # {"claim_html", "prior_art_html", "reason"}
+                ],
+            }
+        ]
+
+        out_path = evidence_extraction_dir / f"evidence_{doc_num}.json"
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(output_obj, f, ensure_ascii=False, indent=2)
+
+
 
 if __name__ == "__main__":
     page_1()

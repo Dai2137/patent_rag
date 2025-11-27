@@ -9,7 +9,6 @@ from infra.config import PROJECT_ROOT, PathManager, DirNames
 from model.patent import Patent
 from ui.gui import query_detail
 from ui.gui import ai_judge_detail
-from ui.gui.search_results_list import search_results_list
 from ui.gui.prior_art_detail import prior_art_detail
 from bigquery.patent_lookup import get_full_patent_info_by_doc_numbers
 
@@ -247,12 +246,12 @@ def render_common_steps():
                                 break
 
                     # 公報番号を取得
-                    doc_num = result.get('prior_art_doc_number', f"Doc #{display_idx}")
+                    reference_doc_num = result.get('prior_art_doc_number', f"Doc #{display_idx}")
 
                     # DataFrameの行データを追加
                     df_data.append({
                         '順位': display_idx,
-                        '公報番号': doc_num,
+                        '公報番号': reference_doc_num,
                         '紐付き候補の有無': '有' if claim_rejected else '無'
                     })
 
@@ -351,14 +350,14 @@ def render_common_steps():
         st.write(f"✅特願 {formatted_current_doc_number}に紐づく{len(doc_numbers_to_fetch)}件の文献があります。")
 
         doc_number_output_number_dict = {}
-        for i, doc_num in enumerate(doc_numbers_to_fetch):
-            doc_num = str(doc_num)
-            year_part = doc_num[:4]
-            doc_digit_part = doc_num[4:]
+        for i, reference_doc_num in enumerate(doc_numbers_to_fetch):
+            reference_doc_num = str(reference_doc_num)
+            year_part = reference_doc_num[:4]
+            doc_digit_part = reference_doc_num[4:]
             formatted_doc_number = f"{year_part}-{doc_digit_part}"
             output_doc_number = f"{i + 1} - 特開 {formatted_doc_number}号公報"
             st.write(output_doc_number)
-            doc_number_output_number_dict[doc_num] = output_doc_number
+            doc_number_output_number_dict[reference_doc_num] = output_doc_number
 
         # markdown形式で根拠表示 箇条書きで表示doc_numbers_to_fetchの下に根拠を表示する
         # configでevidence_exstractionディレクトリを取得し、存在チェック
@@ -370,38 +369,147 @@ def render_common_steps():
         # ディレクトリ内のファイル存在チェック
         evidence_files = list(evidence_extraction_dir.glob("*.json"))
         if evidence_files:
-            st.info(f"📂 参照箇所表示: {len(evidence_files)}件の参照文献が保存されています")
+            st.markdown("## 📂 出願文献の基本情報")
+            # stからpatentオブジェクトを取得
+            patent = st.session_state.query
+            # abstract, claimsを取得し、「概要」、「請求項１」などを結合して長い文字列を作成
+            abstract_text = patent.abstract if patent.abstract else "N/A"
+            claims_text = "\n".join([f"請求項 {i + 1}: {claim}" for i, claim in enumerate(patent.claims)]) if patent.claims else "N/A"
+            long_markdown_text = f"### 概要\n{abstract_text}\n\n### 請求項\n{claims_text}\n"
+            st.text_area(
+                label="出願の概要と請求項",
+                value=long_markdown_text,
+                height=300,
+                disabled=True # 編集不可（読み取り専用）にする
+            )
 
-            for doc_num in doc_number_output_number_dict.keys():
-                st.markdown(f"### 📑 {doc_number_output_number_dict[doc_num]} の判断根拠")
-                # listの要素の文字列にdoc_numが含まれるものを抽出
+            st.info(f"📂 参照箇所表示: {len(evidence_files)}件の参照文献が保存されています")
+            # doc_numberと表示用の番号の辞書
+            for reference_doc_num in doc_number_output_number_dict.keys():
+                st.markdown(f"### 📑 {doc_number_output_number_dict[reference_doc_num]} の判断根拠")
+
                 for evidence_file in evidence_files:
-                    if doc_num in evidence_file.name:
-                        with open(evidence_file, "r", encoding="utf-8") as f:
-                            evidence_data = json.load(f)
-                        for item in evidence_data:
-                            verified_evidence_list = item["verified_evidence"]
-                            for evidence_dict in verified_evidence_list:
-                                for evidence_key in evidence_dict:
-                                    evidence_content = evidence_dict[evidence_key]
-                                    st.markdown(f"-   {evidence_key}:{evidence_content}")
-                                st.divider()
+                    if reference_doc_num in evidence_file.name:
+                        break
+                else:
+                    st.warning(f"❌ 対応するevidence_extractionファイルが見つかりません: {reference_doc_num}")
+                    continue
+                displey_evidence_section(reference_doc_num, evidence_file)
 
 
         if st.button("根拠テキスト生成", type="primary"):
-            # if "retrieved_docs" not in st.session_state or not st.session_state.retrieved_docs:
-            #      st.error("文献データ(retrieved_docs)がメモリにありません。再検索が必要な可能性があります。")
-            # else:
-                # BigQueryから一括で特許情報を取得
             with st.spinner("BigQueryから特許情報を取得中..."):
                 get_full_patent_info_by_doc_numbers(doc_numbers_to_fetch, st.session_state.current_doc_number)
 
+def displey_evidence_section(reference_doc_num, evidence_file):
+    # eval/{doc_number}/doc_full_contentからreference_doc_numのファイル名のjsonを見つけて開く
+    # configの標準的な方法を採用する
+    paragraph_name_dict = {
+        "technical_field": "【技術分野】",
+        "background_art": "【背景技術】",
+        "disclosure": "【発明の概要】",
+        "best_mode": "【発明を実施するための形態】"
+    }
 
-        # if "reasons" in st.session_state and st.session_state.reasons:
-        #     for i, reason in enumerate(st.session_state.reasons):
-        #         st.markdown(f"##### 判断根拠 {i + 1}")
-        #         st.code(reason, language="markdown")
+    current_doc_number = st.session_state.current_doc_number
 
+    doc_full_content_dir = PathManager.get_dir(current_doc_number, DirNames.DOC_FULL_CONTENT)
+    doc_full_content_file = doc_full_content_dir / f"{reference_doc_num}.json"
+    if not doc_full_content_file.exists():
+        st.warning(f"❌ doc_full_contentファイルが見つかりません: {doc_full_content_file}")
+        return
+    with open(doc_full_content_file, "r", encoding="utf-8") as f:
+        doc_full_content = json.load(f)
+
+    # --- Step 1: 全証拠を収集してparagraph_nameでグループ化 ---
+    evidence_groups = {}  # {paragraph_name: [{"quote": ..., "explanation": ..., "paragraph_number": ...}, ...]}
+
+    with open(evidence_file, "r", encoding="utf-8") as f:
+        evidence_data = json.load(f)
+    for item in evidence_data:
+        verified_evidence_list = item["verified_evidence"]
+        for evidence_dict in verified_evidence_list:
+            quote = evidence_dict["quote"]
+            source_paragraph_id = evidence_dict["source_paragraph_id"]
+            explanation = evidence_dict["explanation"]
+
+            # best_mode_7 から paragraph_name と paragraph_number を取得
+            paragraph_name, paragraph_number = source_paragraph_id.rsplit("_", 1)
+            paragraph_name_japanese = paragraph_name_dict.get(paragraph_name, None)
+
+            if not paragraph_name_japanese:
+                st.markdown(f"- 箇所:{source_paragraph_id}")
+                continue
+
+            # グループ化
+            if paragraph_name not in evidence_groups:
+                evidence_groups[paragraph_name] = []
+
+            evidence_groups[paragraph_name].append({
+                "quote": quote,
+                "explanation": explanation,
+                "paragraph_number": int(paragraph_number),
+                "source_paragraph_id": source_paragraph_id
+            })
+
+    # --- Step 2: グループごとに表示 ---
+    for paragraph_name, evidence_list in evidence_groups.items():
+        paragraph_name_japanese = paragraph_name_dict[paragraph_name]
+        paragraph_list = doc_full_content["description"][paragraph_name]
+
+        # 各証拠の詳細を表示
+        for evidence in evidence_list:
+            st.markdown(f"- 一致箇所 : {evidence['quote']}")
+            st.markdown(f"- 一致と判断した理由 : {evidence['explanation']}")
+            st.markdown(f"- 箇所 : 明細書 {paragraph_name_japanese} 段落:{evidence['paragraph_number'] + 1}")
+            st.divider()
+
+        # --- Step 3: 全段落を一度に表示（複数のquoteをまとめてハイライト） ---
+        start_index = 0
+        end_index = len(paragraph_list)
+        display_text_list = []
+
+        # 各段落番号に対応するquoteをマッピング
+        paragraph_quotes = {}  # {paragraph_number: [quote1, quote2, ...]}
+        for evidence in evidence_list:
+            para_num = evidence["paragraph_number"]
+            if para_num not in paragraph_quotes:
+                paragraph_quotes[para_num] = []
+            paragraph_quotes[para_num].append(evidence["quote"])
+
+        # 範囲内の段落をループ処理してリストに追加
+        for i in range(start_index, end_index):
+            raw_paragraph = paragraph_list[i]
+
+            # 該当段落の場合：複数のquoteをハイライト処理 ＋ 太字ラベル
+            if i in paragraph_quotes:
+                clean_paragraph = raw_paragraph.replace("　", "").replace(" ", "")
+
+                # 複数のquoteをすべてハイライト
+                for quote in paragraph_quotes[i]:
+                    clean_quote = quote.replace("　", "").replace(" ", "")
+                    yellow_highlight = f"<mark>{clean_quote}</mark>"
+                    clean_paragraph = clean_paragraph.replace(clean_quote, yellow_highlight)
+
+                # リストに追加（強調表示）
+                display_text_list.append(f"<b>【段落{i+1}】</b> {clean_paragraph}")
+
+            # 前後の段落の場合：そのまま表示
+            else:
+                display_text_list.append(f"【段落{i+1}】 {raw_paragraph}")
+
+        # リストを結合（改行コードでつなぐ）
+        if display_text_list:
+            full_context_text = "<br><br>".join(display_text_list)
+        else:
+            full_context_text = "⚠️ 指定された範囲のデータが見つかりませんでした。"
+
+        # height=300 で高さを300pxに固定。
+        with st.container(height=300):
+            # 修正後の変数 full_context_text を表示
+            st.markdown(f"- 該当箇所の内容 : <br>明細書 : {paragraph_name_japanese} : <br>{full_context_text}", unsafe_allow_html=True)
+
+        st.divider()
 
 def run_ai_judge():
     """AI審査実行ラッパー"""

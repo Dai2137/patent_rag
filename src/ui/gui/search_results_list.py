@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
-from ui.gui import page1
 
 
 def search_results_list():
     """検索結果一覧ページ"""
+    from ui.gui import page1  # Lazy import to avoid circular dependency
 
     # session_stateから検索結果を取得
     if 'search_results_df' not in st.session_state or st.session_state.search_results_df is None:

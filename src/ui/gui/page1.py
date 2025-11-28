@@ -132,19 +132,16 @@ def page_1():
         uploaded_file = st.file_uploader("1. XML形式の出願をアップロードしてください", type=["xml", "txt"])
 
         if uploaded_file is not None:
-            # アップロードされたファイルの内容が、現在ロード中のものと違う場合のみ処理
-            # (Streamlitのリロード対策)
+            # アップロードされたファイルの内容を取得
+            uploaded_content = uploaded_file.getvalue().decode("utf-8")
             current_content = st.session_state.get("file_content")
 
-            # まだ読み込んでいない、あるいは内容が変わった場合に実行
-            # 注: uploaded_file.getvalue()などで比較する方法もあるが、
-            # ここでは簡易的に既存stateの有無で判定し、ボタンなしで即時ロードさせる挙動を維持
-            if not current_content:
-                 handle_new_upload(uploaded_file)
+            # ファイルの内容が変わった場合、または初回アップロードの場合に処理を実行
+            if current_content != uploaded_content:
+                handle_new_upload(uploaded_file)
             else:
-                 # すでにロード済みだが、ユーザーが別のファイルをドラッグした場合の検知は
-                 # file_uploaderのkeyを変えるか、ID比較が必要だが、今回は簡易実装とする
-                 st.info(f"ロード済み: {st.session_state.get('current_doc_number')}")
+                # 同じファイルが既にロード済み
+                st.info(f"ロード済み: {st.session_state.get('current_doc_number')}")
 
     else: # 既存文献の表示
         st.header("📂 既存プロジェクトの参照")

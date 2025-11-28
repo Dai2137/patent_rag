@@ -15,11 +15,12 @@ from model.patent import Patent
 from ui.gui.utils import format_patent_number_for_bigquery
 from ui.gui.utils import normalize_patent_id
 from bigquery.patent_lookup import find_documents_batch, get_abstract_claims_by_query
-from llm.llm_pipeline import llm_entry
+from llm.patent_evidence_miner_improved import llm_entry
 from infra.loader.common_loader import CommonLoader
 from bigquery.search_path_from_file import search_path
 from infra.config import PathManager, DirNames
 from llm.llm_ground_passage import evidence_extraction_entry
+from llm.patent_evidence_miner_improved import EnhancedPatentEvidenceMiner
 
 def entry(action=None):
     if action == "show_page":
@@ -103,6 +104,15 @@ def load_patent_b(doc_number: str):
     # 証拠抽出結果を格納するリスト
     extraction_results = []
 
+    # EnhancedPatentEvidenceMinerのインスタンスを作成
+    try:
+        miner = EnhancedPatentEvidenceMiner()
+        print("✅ EnhancedPatentEvidenceMiner初期化成功")
+    except ValueError as e:
+        print(f"❌ EnhancedPatentEvidenceMiner初期化エラー: {e}")
+        print("   従来のevidence_extraction_entryを使用します")
+        miner = None
+
     for json_file in json_files:
         # 対応するAI審査結果ファイルを取得
         evidence_file_name = json_file.stem
@@ -123,23 +133,38 @@ def load_patent_b(doc_number: str):
             if not reason_json or not json_contents:
                 continue
 
-            # 証拠抽出を実行
-            evidence_result = evidence_extraction_entry(reason_json, json_contents)
+            # 証拠抽出を実行（EnhancedPatentEvidenceMinerを使用）
+            if miner is not None:
+                # 新しいEnhancedPatentEvidenceMinerを使用
+                evidence_result_list = [] 
+                for reason_json_dict in reason_json:
+                    extraction_result_obj = miner.run(reason_json_dict, json_contents)
+                    # ExtractionResultオブジェクトを辞書形式に変換
+                    evidence_result = asdict(extraction_result_obj)
+                    evidence_result_list.append(evidence_result)
 
-            # 結果をリストに追加（エラーでない場合）
-            if evidence_result and "error" not in evidence_result:
-                extraction_results.append(evidence_result)
-            else:
-                print(f"⚠️ 証拠抽出エラー: {json_file.stem}")
-                if evidence_result:
-                    print(f"   エラー内容: {evidence_result.get('error', 'Unknown error')}")
+                    if evidence_result:
+                        # EnhancedPatentEvidenceMinerの結果の場合は'errors'フィールドをチェック
+                        if 'errors' in evidence_result:
+                            # エラーリストが空または存在しない場合は成功
+                            if not evidence_result.get('errors'):
+                                extraction_results.append(evidence_result)
+                            else:
+                                print(f"⚠️ 証拠抽出エラー: {json_file.stem}")
+                                print(f"   エラー内容: {evidence_result.get('errors')}")
+                        # 従来のevidence_extraction_entryの結果の場合は'error'フィールドをチェック
+                        elif 'error' not in evidence_result:
+                            extraction_results.append(evidence_result)
+                        else:
+                            print(f"⚠️ 証拠抽出エラー: {json_file.stem}")
+                            print(f"   エラー内容: {evidence_result.get('error', 'Unknown error')}")
 
-            # extraction_resultをeval/{doc_number}/evidence_extraction/に保存
-            evidence_extraction_dir = PathManager.get_dir(doc_number, DirNames.EVIDENCE_EXTRACTION)
-            evidence_json_file_full_name = f"{evidence_file_name}.json"
-            evidence_json_path = evidence_extraction_dir / evidence_json_file_full_name
-            with open(evidence_json_path, 'w', encoding='utf-8') as f:
-                json.dump(extraction_results, f, ensure_ascii=False, indent=4)  
+                        # extraction_resultをeval/{doc_number}/evidence_extraction/に保存
+                        evidence_extraction_dir = PathManager.get_dir(doc_number, DirNames.EVIDENCE_EXTRACTION)
+                        evidence_json_file_full_name = f"{evidence_file_name}.json"
+                        evidence_json_path = evidence_extraction_dir / evidence_json_file_full_name
+                        with open(evidence_json_path, 'w', encoding='utf-8') as f:
+                            json.dump(extraction_results, f, ensure_ascii=False, indent=4)  
 
         except Exception as e:
             print(f"❌ ファイル処理中にエラーが発生しました: {json_file.name}")

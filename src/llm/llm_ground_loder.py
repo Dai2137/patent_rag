@@ -4,17 +4,14 @@ LLM data loader module
 This module provides functions to prepare patent data for LLM processing.
 """
 
-import re
 import json
 import streamlit as st
 from dataclasses import asdict
 from pathlib import Path
 from typing import Dict, Any
-import pandas as pd
 from model.patent import Patent
 from ui.gui.utils import format_patent_number_for_bigquery
 from ui.gui.utils import normalize_patent_id
-from bigquery.patent_lookup import find_documents_batch, get_abstract_claims_by_query
 from llm.patent_evidence_miner_improved import llm_entry
 from infra.loader.common_loader import CommonLoader
 from bigquery.search_path_from_file import search_path
@@ -136,35 +133,32 @@ def load_patent_b(doc_number: str):
             # 証拠抽出を実行（EnhancedPatentEvidenceMinerを使用）
             if miner is not None:
                 # 新しいEnhancedPatentEvidenceMinerを使用
-                evidence_result_list = [] 
-                for reason_json_dict in reason_json:
-                    extraction_result_obj = miner.run(reason_json_dict, json_contents)
-                    # ExtractionResultオブジェクトを辞書形式に変換
-                    evidence_result = asdict(extraction_result_obj)
-                    evidence_result_list.append(evidence_result)
+                extraction_result_obj = miner.run(reason_json, json_contents)
+                # ExtractionResultオブジェクトを辞書形式に変換
+                evidence_result = asdict(extraction_result_obj)
 
-                    if evidence_result:
-                        # EnhancedPatentEvidenceMinerの結果の場合は'errors'フィールドをチェック
-                        if 'errors' in evidence_result:
-                            # エラーリストが空または存在しない場合は成功
-                            if not evidence_result.get('errors'):
-                                extraction_results.append(evidence_result)
-                            else:
-                                print(f"⚠️ 証拠抽出エラー: {json_file.stem}")
-                                print(f"   エラー内容: {evidence_result.get('errors')}")
-                        # 従来のevidence_extraction_entryの結果の場合は'error'フィールドをチェック
-                        elif 'error' not in evidence_result:
+                if evidence_result:
+                    # EnhancedPatentEvidenceMinerの結果の場合は'errors'フィールドをチェック
+                    if 'errors' in evidence_result:
+                        # エラーリストが空または存在しない場合は成功
+                        if not evidence_result.get('errors'):
                             extraction_results.append(evidence_result)
                         else:
                             print(f"⚠️ 証拠抽出エラー: {json_file.stem}")
-                            print(f"   エラー内容: {evidence_result.get('error', 'Unknown error')}")
+                            print(f"   エラー内容: {evidence_result.get('errors')}")
+                    # 従来のevidence_extraction_entryの結果の場合は'error'フィールドをチェック
+                    elif 'error' not in evidence_result:
+                        extraction_results.append(evidence_result)
+                    else:
+                        print(f"⚠️ 証拠抽出エラー: {json_file.stem}")
+                        print(f"   エラー内容: {evidence_result.get('error', 'Unknown error')}")
 
-                        # extraction_resultをeval/{doc_number}/evidence_extraction/に保存
-                        evidence_extraction_dir = PathManager.get_dir(doc_number, DirNames.EVIDENCE_EXTRACTION)
-                        evidence_json_file_full_name = f"{evidence_file_name}.json"
-                        evidence_json_path = evidence_extraction_dir / evidence_json_file_full_name
-                        with open(evidence_json_path, 'w', encoding='utf-8') as f:
-                            json.dump(extraction_results, f, ensure_ascii=False, indent=4)  
+                    # extraction_resultをeval/{doc_number}/evidence_extraction/に保存
+                    evidence_extraction_dir = PathManager.get_dir(doc_number, DirNames.EVIDENCE_EXTRACTION)
+                    evidence_json_file_full_name = f"{evidence_file_name}.json"
+                    evidence_json_path = evidence_extraction_dir / evidence_json_file_full_name
+                    with open(evidence_json_path, 'w', encoding='utf-8') as f:
+                        json.dump(extraction_results, f, ensure_ascii=False, indent=4)  
 
         except Exception as e:
             print(f"❌ ファイル処理中にエラーが発生しました: {json_file.name}")
@@ -294,92 +288,6 @@ def convert_fullcontent_bigquery_result_to_json(doc_number: str):
         raise
 
 
-def save_abstract_claims_as_json(abstract_claims_list_dict, query_doc_number: str):
-    """abstract_claims_list_dictをJSONファイルとして保存する"""
-    # PathManagerを使用してabstract_claimsディレクトリを取得
-    abstract_claims_dir = PathManager.get_dir(query_doc_number, DirNames.ABSTRACT_CLAIMS)
-
-    for top_k, abstract_claim_dict in enumerate(abstract_claims_list_dict):
-        doc_number = abstract_claim_dict[0][0]
-        abstract = abstract_claim_dict[0][1]
-        claims = abstract_claim_dict[0][2]
-        output_dict_json = {
-            "top_k": top_k + 1,
-            "doc_number": doc_number,
-            "abstract": abstract,
-            "claims": claims
-        }
-        json_file_name = f"{top_k + 1}_{doc_number}.json"
-        abs_path = abstract_claims_dir / json_file_name
-
-        with open(abs_path, 'w', encoding='utf-8') as f:
-            json.dump(output_dict_json, f, ensure_ascii=False, indent=4)
-        print(f"Saved abstract and claims to {abs_path}")
-
-
-def get_abstract_claims(found_lookup):
-    # doc_infoのresult_tableで同じresult_tableをまとめる
-    result_table_dict = {}  
-    for doc_info in found_lookup:
-        table_name = doc_info['result_table']
-        if table_name not in result_table_dict:
-            result_table_dict[table_name] = []
-        result_table_dict[table_name].append(doc_info)
-    
-    abstract_claim_list_dict = get_abstract_claims_by_query(result_table_dict)
-    return abstract_claim_list_dict
-
-def find_document(publication_numbers, year_parts):
-    target_lookup_entries = find_documents_batch(publication_numbers)
-    # target_lookup_entriesを辞書に変換し、dataframeにする
-    df_lookup_entries = pd.DataFrame(target_lookup_entries)
-    # 下のアルゴリズムをdataframeで実装する
-    # doc_number の列に publication_numbersが含まれるものを探す
-    # Noneを除外
-    publication_numbers = [num for num in publication_numbers if num is not None]
-
-    final_lookup_entrys = []
-    for pub_num, year in zip(publication_numbers, year_parts):
-        found_df = df_lookup_entries[df_lookup_entries['doc_number'].str.contains(pub_num, na=False)]
-        if len(found_df) == 0:
-            continue
-        if len(found_df) == 1:
-            final_lookup_entrys.append(found_df.iloc[0].to_dict())
-            continue
-        # 複数ヒットした場合、yearでフィルタリング
-        if year is not None:
-            print(found_df.head())
-            found_df_year = found_df[found_df['doc_number'].str.contains(year, na=False)]
-            if len(found_df_year) > 0:
-                final_lookup_entrys.append(found_df_year.iloc[0].to_dict())
-                continue
-            else:
-                # yearが和暦であれば西暦に変換して再度試す
-                imperial = re.match(r'^[HSR]\d{2}$', year)
-                if imperial:
-                    era = imperial.group()[0]
-                    year_num = int(imperial.group()[1:])
-                    if era == 'S': year = 1925 + year_num
-                    elif era == 'H': year = 1988 + year_num
-                    elif era == 'R': year = 2018 + year_num
-
-                # データフレームの doc_number から '年' (先頭4桁) を抽出して整数化
-                # エラー処理: 数字でないものが混ざっている場合に備えて coerce を使用
-                found_df['extracted_year'] = pd.to_numeric(found_df['doc_number'].str[:4], errors='coerce')
-                
-                # ターゲットの年 (int化)
-                target_year = int(year)
-                
-                # 「年号の差（絶対値）」を計算
-                found_df['year_diff'] = (found_df['extracted_year'] - target_year).abs()
-                
-                # 年の差が小さい順にソート
-                sorted_df = found_df.sort_values('year_diff')
-                
-                # 最も近い候補を取得
-                best_match = sorted_df.iloc[0]
-                final_lookup_entrys.append(best_match.to_dict())
-    return final_lookup_entrys
 
 
 if __name__ == "__main__":

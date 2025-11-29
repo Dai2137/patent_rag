@@ -12,12 +12,12 @@ from typing import Dict, Any
 from model.patent import Patent
 from ui.gui.utils import format_patent_number_for_bigquery
 from ui.gui.utils import normalize_patent_id
-from llm.patent_evidence_miner_improved import llm_entry
+from llm.llm_extract_evidence import llm_entry
 from infra.loader.common_loader import CommonLoader
 from bigquery.search_path_from_file import search_path
 from infra.config import PathManager, DirNames
 from llm.llm_ground_passage import evidence_extraction_entry
-from llm.patent_evidence_miner_improved import EnhancedPatentEvidenceMiner
+from llm.llm_extract_evidence import EnhancedPatentEvidenceMiner
 
 def entry(action=None):
     if action == "show_page":

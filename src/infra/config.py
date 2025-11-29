@@ -42,6 +42,8 @@ class DirNames(StrEnum):
     HIMOTUKI_DOC_CONTENTS = "himotuki_doc_contents"
     DOC_FULL_CONTENT = "doc_full_content"
     EVIDENCE_EXTRACTION = "evidence_extraction"
+    HIGHLIGHTED_EVIDENCE = "highlighted_evidence"
+    HIGHLIGHTED_JSON = "highlight_json"
 
 
 # ==============================================================================

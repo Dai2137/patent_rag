@@ -72,10 +72,10 @@ def llm_execution(abstraccts_claims_list, doc_number):
             continue
         
         # 結果をJSONファイルとして保存
-        json_file_name = f"{i + 1}_{row_dict['doc_number']}.json"
+        json_file_name = f"{row_dict['top_k']}_{row_dict['doc_number']}.json"
         abs_path = ai_judge_dir / json_file_name
         with open(abs_path, 'w', encoding='utf-8') as f:
-            json.dump(all_results, f, ensure_ascii=False, indent=4)
+            json.dump(result, f, ensure_ascii=False, indent=4)
 
     return all_results
 
@@ -246,6 +246,7 @@ def find_document(publication_numbers, year_parts):
 
 
 if __name__ == "__main__":
+    pass
     #entry()
-    # llm_execution(1)
-    load_patent_b('JP-2010000001-A')
+    # llm_execution(1)doc_number
+    # load_patent_b(Patent,'2023104947)

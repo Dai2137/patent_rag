@@ -142,10 +142,7 @@ def get_abstract_claims_by_query(top_k_df):
             row_dict = dict(row)
             row_dict["top_k"] = n_th_row_index + 1
             abstraccts_claims_list.append(copy.deepcopy(row_dict))
-
-        if DEBUG:# デバッグモード注意
-            print("DEBUG: get_abstract_claims_by_query ")
-            return abstraccts_claims_list
+            
     
     return abstraccts_claims_list
 

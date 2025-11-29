@@ -99,8 +99,8 @@ def format_patent_number_for_bigquery(patent: Patent) -> str:
         BigQuery用にフォーマットされた特許番号（例: JP-2012173419-A, JP-7550342-B2）
     """
     doc_number = patent.publication.doc_number
-    country = patent.publication.country or "JP"
-    kind = patent.publication.kind
+    # country = patent.publication.country or "JP"
+    # kind = patent.publication.kind
 
 
     # BigQueryクライアントの初期化

@@ -19,6 +19,7 @@ from dotenv import load_dotenv
 import time
 from google.api_core import exceptions as google_exceptions
 import re
+from infra.config import cfg
 
 
 # ==================== データクラス定義 ====================
@@ -46,6 +47,16 @@ class PatentDocument:
 
 class PromptTemplates:
     """プロンプトテンプレートを管理するクラス"""
+
+    # システム全体への指示（日本語出力を強制）
+    SYSTEM_INSTRUCTION = """
+あなたは日本の特許庁（JPO）の熟練した特許審査官アシスタントです。
+
+【重要不可侵ルール】
+1. **言語**: すべての思考プロセスと出力テキストは、**必ず「日本語」**で記述してください。JSONのキーのみ英語を使用します。
+2. **客観性**: 根拠のない主張や誇張は避け、技術的事実に基づいて判断してください。
+3. **専門性**: 特許法および審査基準に基づいた専門的な判断を行ってください。
+"""
 
     STEP_0_1_STRUCTURE_APPLICATION = """以下の「本願発明」のAbstractおよび全てのClaimを読み、特許判断に必要な要素を以下の形式で抽出・構造化してください。
 
@@ -252,24 +263,31 @@ JSON形式のみで回答してください。"""
 class PatentExaminationSystemIntegrated:
     """統合版特許審査システム"""
 
-    # def __init__(self, api_key: str, model_name: str = "gemini-2.0-flash-exp"):
-    def __init__(self, api_key: str, model_name: str = "gemini-2.0-flash"):
-    # def __init__(self, api_key: str, model_name: str = "gemini-2.5-flash"):
+    def __init__(self, api_key: str, model_name: Optional[str] = None):
         """
         Args:
             api_key: Google AI Studio APIキー
-            model_name: 使用するGeminiモデル
+            model_name: 使用するGeminiモデル（未指定時はcfg.gemini_llm_nameを使用）
         """
         if not api_key:
             raise ValueError("APIキーが設定されていません。.envファイルを確認してください。")
 
         genai.configure(api_key=api_key)
-        self.model_name = model_name
-        self.model = genai.GenerativeModel(model_name)
+        self.model_name = model_name or cfg.gemini_llm_name
 
-        # JSON出力用のモデル（構造化データ用）
+        # System Instructionを設定（日本語での出力を強制）
+        self.system_instruction = PromptTemplates.SYSTEM_INSTRUCTION
+
+        # 通常モデル（system_instruction付き）
+        self.model = genai.GenerativeModel(
+            model_name=self.model_name,
+            system_instruction=self.system_instruction
+        )
+
+        # JSON出力用のモデル（構造化データ用、system_instruction付き）
         self.json_model = genai.GenerativeModel(
-            model_name=model_name,
+            model_name=self.model_name,
+            system_instruction=self.system_instruction,
             generation_config={"response_mime_type": "application/json"}
         )
 
@@ -309,7 +327,7 @@ class PatentExaminationSystemIntegrated:
     def _generate_with_retry(self, use_json_model: bool, prompt: str,
                             max_retries: int = 5, initial_wait: int = 2) -> str:
         """
-        リトライロジック付きでコンテンツを生成
+        リトライロジック付きでコンテンツを生成（日本語出力を強制）
 
         Args:
             use_json_model: JSON出力モデルを使用するか
@@ -322,14 +340,17 @@ class PatentExaminationSystemIntegrated:
         """
         model = self.json_model if use_json_model else self.model
 
+        # 明示的に日本語出力を要求するテキストをプロンプト末尾に追加
+        final_prompt = prompt + "\n\n必ず日本語で出力してください (Output in Japanese)."
+
         for attempt in range(max_retries):
             try:
                 if self.chat and not use_json_model:
                     # チャットセッションを使用（文脈保持）
-                    response = self.chat.send_message(prompt)
+                    response = self.chat.send_message(final_prompt)
                 else:
                     # 単発のリクエスト（JSON構造化用）
-                    response = model.generate_content(prompt)
+                    response = model.generate_content(final_prompt)
                 return response.text
             except google_exceptions.ResourceExhausted as e:
                 if attempt < max_retries - 1:

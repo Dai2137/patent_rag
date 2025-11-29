@@ -74,6 +74,7 @@ def load_project_by_id(doc_number: str) -> bool:
 
         # --- C. AI審査結果（JSON）のロード (存在すれば) ---
         ai_judge_dir = PathManager.get_ai_judge_result_path(doc_number)
+        aj_judge_data_success = False
         if ai_judge_dir.exists():
             json_files = sorted(ai_judge_dir.glob("*.json"))
             if json_files:
@@ -81,6 +82,9 @@ def load_project_by_id(doc_number: str) -> bool:
                 with open(latest_json, 'r', encoding='utf-8') as f:
                     results = json.load(f)
                 st.session_state.ai_judge_results = results
+
+                if st.session_state.ai_judge_results:
+                    aj_judge_data_success = True
 
         return True
 
@@ -163,6 +167,8 @@ def page_1():
                         with st.spinner("ロード中..."):
                             if load_project_by_id(selected_doc):
                                 st.success(f"✅ {selected_doc} を読み込みました")
+                            # else:
+                            #     st.error(f"❌ {selected_doc} のロードに失敗しました")
 
     # --- 共通メインエリア描画 ---
     # データが正常にロードされている場合のみ表示
@@ -222,28 +228,43 @@ def render_common_steps():
                 df_data = []
                 valid_indices = []  # 有効な結果の元のインデックスを保存
 
+                # ai_judge_resultsの存在チェック
+                if 'ai_judge_results' not in st.session_state or not st.session_state.ai_judge_results:
+                    st.error("❌ AI審査結果が見つかりません。")
+                    return
+
                 display_idx = 1
                 for idx, result in enumerate(st.session_state.ai_judge_results):
                     # result が None の場合はスキップ
                     if result is None:
                         continue
 
+                    # result が辞書型でない場合はスキップ
+                    if not isinstance(result, dict):
+                        continue
+
                     # エラーの場合もスキップ
-                    if isinstance(result, dict) and 'error' in result:
+                    if 'error' in result:
                         continue
 
                     # 紐付き候補の有無を判定
                     claim_rejected = False
                     if 'inventiveness' in result:
-                        for claim in result["inventiveness"]:
-                            inventiveness = result["inventiveness"][claim]
-                            inventive_bool = inventiveness.get('inventive', True)
-                            if not inventive_bool:
-                                claim_rejected = True
-                                break
+                        try:
+                            for claim in result["inventiveness"]:
+                                inventiveness = result["inventiveness"][claim]
+                                inventive_bool = inventiveness.get('inventive', True)
+                                if not inventive_bool:
+                                    claim_rejected = True
+                                    break
+                        except Exception as e:
+                            continue
 
                     # 公報番号を取得
-                    reference_doc_num = result.get('prior_art_doc_number', f"Doc #{display_idx}")
+                    try:
+                        reference_doc_num = result.get('prior_art_doc_number', f"Doc #{display_idx}")
+                    except Exception as e:
+                        continue
 
                     # DataFrameの行データを追加
                     df_data.append({

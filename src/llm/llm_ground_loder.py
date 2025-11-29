@@ -69,7 +69,7 @@ def llm_execution(abstraccts_claims_list, doc_number):
             continue
         
         # 結果をJSONファイルとして保存
-        json_file_name = f"{i + 1}_{row_dict['doc_number']}.json"
+        json_file_name = f"{row_dict['top_k']}_{row_dict['doc_number']}.json"
         abs_path = ai_judge_dir / json_file_name
         with open(abs_path, 'w', encoding='utf-8') as f:
             json.dump(all_results, f, ensure_ascii=False, indent=4)
@@ -172,34 +172,6 @@ def load_patent_b(doc_number: str):
             continue
     
     return extraction_results
-
-    # # # 取得したパス名にpatent_number_aが含まれているものを見つける
-    # csv_file_path = None
-    # for csv_file in csv_files:
-    #     # pathlib name only stem
-    #     if patent_number_a == str(csv_file.stem):
-    #         csv_file_path = csv_file
-    #         break
-
-    # if not csv_file_path:
-    #     return None
-
-    # df = pd.read_csv(csv_file_path)
-    # top_k_df = search_path(df, top_k=TOP_K)
-
-    # abstraccts_claims_list =get_abstract_claims_by_query(top_k_df)
-
-    # json_file_name = f"top_k_{patent_number_a}.json"
-
-    # # PathManagerを使用してabstract_claimsディレクトリを取得
-    # abstract_claims_dir = PathManager.get_dir(doc_number, DirNames.ABSTRACT_CLAIMS)
-    # abs_path = abstract_claims_dir / json_file_name
-
-    # with open(abs_path, 'w', encoding='utf-8') as f:
-    #     json.dump(abstraccts_claims_list, f, ensure_ascii=False, indent=4)
-
-    # return abstraccts_claims_list
-
 
 
 def read_json(prefix, doc_number):
@@ -413,4 +385,4 @@ def find_document(publication_numbers, year_parts):
 if __name__ == "__main__":
     #entry()
     # llm_execution(1)
-    load_patent_b('2014007731')
+    load_patent_b('2023104947')

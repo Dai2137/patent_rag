@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="../../../../../XSL/JPInternationalPatentPublication.xsl"?> -->
+<jppat:InternationalPatentPublication xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                      xmlns:jppat="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPPatent"
+                                      xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent"
+                                      xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common"
+                                      xmlns:jpcom="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPCommon"
+                                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                      xsi:schemaLocation="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPPatent ../../../../../XSD/JPInternationalPatentPublication_V1_0.xsd"
+                                      com:languageCode="ja"
+                                      com:st96Version="V3_1"
+                                      com:ipoVersion="JP_V1_0">
+   <com:IPOfficeCode>JP</com:IPOfficeCode>
+   <jppat:InternationalPatentPublicationBibliographicData com:languageCode="ja">
+      <com:IPOfficeCode>JP</com:IPOfficeCode>
+      <jppat:PatentPublicationIdentification>
+         <com:IPOfficeCode>JP</com:IPOfficeCode>
+         <pat:PublicationNumber>2022533491</pat:PublicationNumber>
+         <com:PublicationDate>2022-07-25</com:PublicationDate>
+      </jppat:PatentPublicationIdentification>
+      <pat:PlainLanguageDesignationText>公表特許公報(A)</pat:PlainLanguageDesignationText>
+      <jppat:ApplicationIdentification>
+         <com:ApplicationNumber>
+            <com:ApplicationNumberText>2020564465</com:ApplicationNumberText>
+         </com:ApplicationNumber>
+         <pat:FilingDate>2019-07-12</pat:FilingDate>
+      </jppat:ApplicationIdentification>
+      <pat:InventionTitle>美容分野向けの適応型経皮イオン電気浸透導入システム</pat:InventionTitle>
+      <jppat:InternationalPatentPublicationPartyBag>
+         <jppat:ApplicantsRegisteredPractitionersBag>
+            <jppat:ApplicantRegisteredPractitionerBag com:sequenceNumber="1">
+               <jppat:Applicant com:sequenceNumber="1">
+                  <com:PartyIdentifier>520443907</com:PartyIdentifier>
+                  <jpcom:Contact>
+                     <com:Name>
+                        <com:EntityName>上海敬巽信息科技有限公司</com:EntityName>
+                     </com:Name>
+                     <com:PostalAddressBag>
+                        <com:PostalAddress>
+                           <com:PostalAddressText>中華人民共和国  ２０１２０６  上海市浦東新区金橋路１３８９号８０３室</com:PostalAddressText>
+                        </com:PostalAddress>
+                     </com:PostalAddressBag>
+                  </jpcom:Contact>
+               </jppat:Applicant>
+               <jppat:RegisteredPractitioner com:sequenceNumber="1">
+                  <jppat:AgentCategory>Representative</jppat:AgentCategory>
+                  <pat:RegisteredPractitionerRegistrationNumber>110002468</pat:RegisteredPractitionerRegistrationNumber>
+                  <jpcom:Contact>
+                     <com:Name>
+                        <com:EntityName>特許業務法人後藤特許事務所</com:EntityName>
+                     </com:Name>
+                  </jpcom:Contact>
+               </jppat:RegisteredPractitioner>
+            </jppat:ApplicantRegisteredPractitionerBag>
+         </jppat:ApplicantsRegisteredPractitionersBag>
+         <jppat:InventorBag>
+            <jppat:Inventor com:sequenceNumber="1">
+               <jpcom:Contact>
+                  <com:Name>
+                     <com:EntityName>邱  ▲カ▼軒</com:EntityName>
+                  </com:Name>
+                  <com:PostalAddressBag>
+                     <com:PostalAddress>
+                        <com:PostalAddressText>中華人民共和国  ２０１２０６  上海市浦東新区金橋路１３８９号８０３室</com:PostalAddressText>
+                     </com:PostalAddress>
+                  </com:PostalAddressBag>
+               </jpcom:Contact>
+            </jppat:Inventor>
+         </jppat:InventorBag>
+      </jppat:InternationalPatentPublicationPartyBag>
+      <jppat:IPCClassification>
+         <com:Edition/>
+         <pat:MainClassification>A61N   1/30        20060101AFI20220715BHJP        </pat:MainClassification>
+      </jppat:IPCClassification>
+      <jppat:NationalClassification>
+         <com:IPOfficeCode>JP</com:IPOfficeCode>
+         <jppat:MainNationalClassification>
+            <pat:PatentClassificationText>A61N1/30</pat:PatentClassificationText>
+         </jppat:MainNationalClassification>
+      </jppat:NationalClassification>
+      <pat:StateDesignation>
+         <pat:NationalDesignation>
+            <com:DesignatedCountryCode>AP</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SD</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ST</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>UG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ZM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ZW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TJ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EP</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ES</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>FI</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>FR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GB</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>HR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>HU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LV</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MC</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SI</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>OA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BF</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BJ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CF</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CI</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GQ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ML</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TD</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BB</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DJ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EC</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ES</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>FI</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GB</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GD</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>HN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>HR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>HU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ID</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>JO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>JP</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KP</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LC</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MD</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ME</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MX</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NI</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>OM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>QA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SC</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SD</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ST</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SV</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TJ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>UA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>UG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>US</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>UZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>VC</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>VN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ZA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ZM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ZW</com:DesignatedCountryCode>
+         </pat:NationalDesignation>
+      </pat:StateDesignation>
+      <jppat:InternationalFilingData>
+         <jppat:ApplicationIdentification>
+            <com:ApplicationNumber>
+               <com:ApplicationNumberText>CN2019095882</com:ApplicationNumberText>
+            </com:ApplicationNumber>
+            <pat:FilingDate>2019-07-12</pat:FilingDate>
+         </jppat:ApplicationIdentification>
+      </jppat:InternationalFilingData>
+      <jppat:InternationalPublishingData>
+         <jppat:PatentDocumentIdentification>
+            <jppat:PatentPublicationIdentification>
+               <pat:PublicationNumber>WO2019219097</pat:PublicationNumber>
+               <com:PublicationDate>2019-11-21</com:PublicationDate>
+            </jppat:PatentPublicationIdentification>
+         </jppat:PatentDocumentIdentification>
+      </jppat:InternationalPublishingData>
+      <jppat:RequestExaminationIndicator>false</jppat:RequestExaminationIndicator>
+      <jppat:RequestPreliminaryExaminationIndicator>false</jppat:RequestPreliminaryExaminationIndicator>
+      <pat:NationalStageFilingDate>2020-12-25</pat:NationalStageFilingDate>
+      <jppat:ThemeCodeInformationBag>
+         <jppat:ThemeCodeInformation>4C053</jppat:ThemeCodeInformation>
+      </jppat:ThemeCodeInformationBag>
+      <jppat:FtermInformationBag>
+         <jppat:FtermInformation>4C053HH01</jppat:FtermInformation>
+      </jppat:FtermInformationBag>
+   </jppat:InternationalPatentPublicationBibliographicData>
+   <jppat:ChosenDrawingImage>
+      <com:Image com:imageContentCategory="Drawing">
+         <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+         <com:FileName>2022533491000001.tif</com:FileName>
+         <com:HeightMeasure com:measureUnitCode="Mm">72</com:HeightMeasure>
+         <com:WidthMeasure com:measureUnitCode="Mm">101</com:WidthMeasure>
+      </com:Image>
+   </jppat:ChosenDrawingImage>
+   <jppat:Description>
+      <pat:TechnicalField>
+         <com:P com:pNumber="0001">
+  本発明は、美容分野に関し、具体的には、適応型経皮イオン電気浸透導入システムに関する。
+</com:P>
+      </pat:TechnicalField>
+      <pat:BackgroundArt>
+         <com:P com:pNumber="0002">
+  人々には美しさを愛する心がある。特に女性にとって、美しさは生涯にわたる追及である。経済水準が年々向上するに連れて、ますます多くの女性が彼らの外見にもっと注意を払うようになっている。その中で、美しさを愛する重要な部分としてのスキンケアは、女性の美容消費の半分以上を占める。スキンケアは、現代の一つの学問になっている。<com:Br/>
+  人々が健康への追及の高まりと皮膚医学の急速な発展に伴い、より高い安全性と有効性を持つ医学スキンケア製品は、止められないブームになっている。美容分野に経皮イオン電気浸透薬物送達技術を適用することも必然的なトレンドである。
+</com:P>
+         <com:P com:pNumber="0003">
+  従来の経皮イオン電気浸透薬物送達技術の主な目的は、皮膚を通じて血液に薬物を送達することである。従って、従来の経皮薬物送達適用モードでは、皮膚は通過しなければならない障壁に過ぎない。この理解を考慮して、従来の経皮薬物送達技術の制御メカニズムは、主に、皮膚障壁を通過して薬物分子を安全に押し出すことができる所定の強度（臨床試験によって決定される）に薬物送達電流を固定することに焦点を集めている。その制御システムに含まれるフィードバックシステムも、一定の薬物送達電流強度を達成及び維持するように設計されている。
+</com:P>
+         <com:P com:pNumber="0004">
+  現在、最初に経皮薬物送達技術を導入したすべての皮膚美容システムは、従来の適用思考モードを依然に維持している。美容分野では、皮膚はもはや単なる障壁ではなく、それは障壁でもあり、一部の薬物または美容分子を送達する最終目的地（真皮層）でもある。薬物や美容分子の侵入により皮膚の状況が改善されて、経皮薬物送達の制御システムにおける被制御体（皮膚）も変化する。従って、一定の薬物送達電流強度は、美容効果を最大化することができない。
+</com:P>
+         <com:P com:pNumber="0005">
+  要約すると、この分野では、ユーザーの実際の皮膚状況に応じて、経皮薬物送達計画をカスタマイズし、リアルタイムで経皮薬物送達の投与量、深さ、及び速度を最適化し、製品の使用効果及び安全性を最大化することができる適応型経皮イオン電気浸透導入システムを早急に開発する必要がある。
+</com:P>
+      </pat:BackgroundArt>
+      <pat:InventionSummary>
+         <pat:TechnicalProblem>
+            <com:P com:pNumber="0006">
+  本発明の目的は、ユーザーの実際の皮膚状況に応じて、経皮薬物送達計画をカスタマイズし、リアルタイムで経皮薬物送達の投与量、深さ、及び速度を最適化し、製品の使用効果及び安全性を最大化することができる適応型経皮イオン電気浸透導入システムを開発することである。
+</com:P>
+         </pat:TechnicalProblem>
+         <pat:TechnicalSolution>
+            <com:P com:pNumber="0007">
+  本発明は、美容分野向けの適応型経皮イオン電気浸透導入システムを提供し、前記システムは、<com:Br/>
+  皮膚に接触され、電極駆動システムによって出力される電流または電圧の作用を通じて、活性剤を皮膚層に反発し、それによって、皮膚への経皮イオン電気浸透導入の目的を達成する電気浸透イオン導入システムと、及び<com:Br/>
+  制御駆動電子システムとを含み、<com:Br/>
+  前記制御駆動電子システムは、<com:Br/>
+  電源、および／または電源スイッチ、および／またはモード選択ボタンを有するオペレーティングシステムと、<com:Br/>
+  少なくとも一つの基本パラメータ及び少なくとも一つの前記センシングシステムのフィードバック信号及び選択可能な補助データに基づいて、出力電極駆動波形を動的に計算及び調整し、前記電極駆動システムに提供する中央処理システムと、<com:Br/>
+  前記中央処理システムの出力値に応じて、駆動電流または駆動電圧を生成する電極駆動システムと、及び<com:Br/>
+  接触された皮膚の状況を感知し、前記中央処理システムにフィードバックすることができるセンシングシステムとを含む。
+</com:P>
+            <com:P com:pNumber="0008">
+  別の好ましい例において、前記制御駆動電子システムは、前記基本パラメータと補助データとを受信し、オペレーティングを制御し、システムを更新し、使用状況データをアップロードする機能を有するデータ通信システムをさらに含む。
+</com:P>
+            <com:P com:pNumber="0009">
+  別の好ましい例において、前記出力電極駆動波形を動的に計算及び調整する調整範囲は、その基本パラメータ値の０％～５００％である。
+</com:P>
+            <com:P com:pNumber="0010">
+  別の好ましい例において、前記電極駆動波形を動的に計算及び調整可能な調整範囲は、その基本パラメータ値の５０％～２００％である。
+</com:P>
+            <com:P com:pNumber="0011">
+  別の好ましい例において、前記中央処理システムの計算となる基本パラメータ及び調整可能な電極駆動波形は、<com:Br/>
+  （ｉ）経皮送達期間、<com:Br/>
+  （ｉｉ）出力電流または出力電圧の最大値、<com:Br/>
+  （ｉｉｉ）出力電流または出力電圧の最小値、<com:Br/>
+  （ｉｖ）サイクル、及び<com:Br/>
+  （ｖ）デューティレシオから選択される一つまたは複数の特徴を含むことができる。<com:Br/>
+  別の好ましい例において、前記補助データは、<com:Br/>
+  （ｉ）美容成分、<com:Br/>
+  （ｉｉ）用量、及び<com:Br/>
+  （ｉｉｉ）ユーザーの皮膚の状況から選択される一つまたは複数の特徴を含む。
+</com:P>
+            <com:P com:pNumber="0012">
+  別の好ましい例において、前記ユーザーの皮膚の状況は、前記中央処理システムの計算のためのフィードフォワードデータを提供する使用前の皮膚状況である。
+</com:P>
+            <com:P com:pNumber="0013">
+  別の好ましい例において、前記ユーザーの皮膚の状況は、額領域、鼻領域、左頬領域、右頬領域、顎領域、またはそれらの組み合わせを含む顔の皮膚状況である。
+</com:P>
+            <com:P com:pNumber="0014">
+  別の好ましい例において、前記中央処理システムは、出力される総電荷量を記録するためのメモリ装置またはインテグレーターをさらに含む。
+</com:P>
+            <com:P com:pNumber="0015">
+  別の好ましい例において、前記電極駆動波形は、交流電流であり、前記メモリ装置またはインテグレーターは、システムが電流強度を動的に調整する場合でも、出力される電荷バランスを維持できることを保証する。
+</com:P>
+            <com:P com:pNumber="0016">
+  別の好ましい例において、前記電極駆動波形は、直流電流である。
+</com:P>
+            <com:P com:pNumber="0017">
+  別の好ましい例において、前記電極駆動システムは、電流駆動システムである。
+</com:P>
+            <com:P com:pNumber="0018">
+  別の好ましい例において、前記電流駆動システムは、前記経皮送達時間中の皮膚抵抗が変化する時に、中央処理器によって設定された強度に出力電流を維持する電流フィードバック回路をさらに含む。
+</com:P>
+            <com:P com:pNumber="0019">
+  別の好ましい例において、前記電極駆動システムは、一つまたは複数の電流駆動コンポーネントを含む。
+</com:P>
+            <com:P com:pNumber="0020">
+  別の好ましい例において、前記電気浸透イオン導入システムは、一つまたは複数の対の電極コンポーネントを含む。
+</com:P>
+            <com:P com:pNumber="0021">
+  別の好ましい例において、前記電極コンポーネントのそれぞれは、対応する皮膚接触層を含み、前記接触層は、前記活性剤の介質を貯蔵し、電極と流体連通する。
+</com:P>
+            <com:P com:pNumber="0022">
+  別の好ましい例において、前記活性剤は、ヒアルロン酸、トラネキサミン酸、アミノ酸、ペプチド、コラーゲン、ビタミンＣ、ビタミンＢ、成長因子（ＥＧＦ）の群から選択される一つまたは複数の成分である。
+</com:P>
+            <com:P com:pNumber="0023">
+  別の好ましい例において、前記電気浸透イオン導入システムと前記制御駆動電子システムとは、二つの単独のモジュールである。
+</com:P>
+            <com:P com:pNumber="0024">
+  別の好ましい例において、前記電気浸透イオン導入システムは、使い捨て用の電子マスクである。
+</com:P>
+            <com:P com:pNumber="0025">
+  別の好ましい例において、前記電子マスクは、顔の外面に適合する。
+</com:P>
+            <com:P com:pNumber="0026">
+  別の好ましい例において、前記電気浸透イオン導入システムは、前記センシングシステムのセンサーの一部または全部をさらに含む。
+</com:P>
+            <com:P com:pNumber="0027">
+  別の好ましい例において、前記センシングシステムは、皮膚センサー、および／または信号調整回路、および／またはアナログ－デジタルコンバーターを含む。
+</com:P>
+            <com:P com:pNumber="0028">
+  別の好ましい例において、前記皮膚センサーは、皮膚水分試験センサー、ｐＨセンサー、皮脂測定センサー、温度センサー及び生物学的抵抗分析センサーから選択される少なくとも一つのセンサーを含む。
+</com:P>
+            <com:P com:pNumber="0029">
+  別の好ましい例において、前記データ通信システムは、近距離通信、無線周波数通信、Ｗｉ－Ｆｉ、プル―トゥース、Ｚｉｇｂｅｅ（登録商標）、ＧＳＭ、ＣＤＭＡ、ＬＴＥ、ＵＳＢ及びＲＳ２３２から選択される少なくとも一つのインターフェースを含む。
+</com:P>
+            <com:P com:pNumber="0030">
+  別の好ましい例において、前記データ通信システムは、主に携帯電話ＡＰＰと通信する。
+</com:P>
+            <com:P com:pNumber="0031">
+  別の好ましい例において、前記データ通信システムの入力は、<com:Br/>
+  （ｉ）経皮送達期間、<com:Br/>
+  （ｉｉ）出力電流または出力電圧の最大値、<com:Br/>
+  （ｉｉｉ）出力電流または出力電圧の最小値、<com:Br/>
+  （ｉｖ）サイクル、<com:Br/>
+  （ｖ）デューティレシオ、<com:Br/>
+  （ｖｉ）美容成分、<com:Br/>
+  （ｖｉｉ）用量、及び<com:Br/>
+  （ｖｉｉｉ）ユーザーデータの中の一つまたは複数のパラメータまたはデータを含む。<com:Br/>
+  別の好ましい例において、前記データ通信システムの入力は、起動コマンドをさらに含む。
+</com:P>
+            <com:P com:pNumber="0032">
+  別の好ましい例において、前記データ通信によって出力される使用状況データは、<com:Br/>
+  （ｉ）実際の経皮送達期間、<com:Br/>
+  （ｉｉ）前記電極駆動システムの実際の出力電流または出力電圧の波形またはその特徴、<com:Br/>
+  （ｉｉｉ）前記電極駆動システムの実際の出力電荷量、<com:Br/>
+  （ｉｖ）前記センシングシステムに基づく使用前のユーザーの皮膚分析、及び<com:Br/>
+  （ｖ）前記センシングシステムに基づく使用後のユーザーの皮膚分析の中の一つまたは複数のパラメータまたはデータを含む。
+</com:P>
+            <com:P com:pNumber="0033">
+  別の好ましい例において、前記モード選択ボタンは、高強度モードボタン、中強度モードボタン及び低強度モードボタンを含む。
+</com:P>
+            <com:P com:pNumber="0034">
+  別の好ましい例において、前記電源は、携帯型移動可能な電源である。
+</com:P>
+         </pat:TechnicalSolution>
+         <pat:AdvantageousEffects>
+            <com:P com:pNumber="0035">
+  本発明の有益な効果は、前記適応型経皮イオン電気浸透導入システムが、ユーザーの皮膚状況に応じて、経皮薬物送達計画をカスタマイズし、薬物送達駆動波形とそのパラメータを動的に調整して、美容効果及び安全性を最大化に向上することを達成することができる。
+</com:P>
+            <com:P com:pNumber="0036">
+  本発明の範囲内で、本発明の上記の各技術的特徴及び以下に（例えば、実施例）具体的に説明する各技術的特徴を高いに組み合わせて、新規または好ましい技術的解決策を形成できることを理解されたい。スペースの制限のため、ここでは繰り返さない。
+</com:P>
+         </pat:AdvantageousEffects>
+      </pat:InventionSummary>
+      <pat:DrawingDescription>
+         <com:P com:pNumber="0037">
+            <com:FigureReference com:referencedFigureNumber="1">本発明の適応型経皮イオン電気浸透導入システムの模式図を示している。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="2A">従来の経皮薬物送達システムの交流電流の電極駆動波形を示している。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="2B">本発明の適応型経皮イオン電気浸透導入システムが、ユーザーの実際の皮膚状況に応じてカスタマイズし、経皮薬物送達駆動電流を動的に調整する例を示している。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="2C">本発明の適応型経皮イオン電気浸透導入システムが、ユーザーの実際の皮膚状況に応じてカスタマイズし、経皮薬物送達駆動電流を動的に調整する例を示している。</com:FigureReference>
+         </com:P>
+      </pat:DrawingDescription>
+      <pat:EmbodimentDescription>
+         <com:P com:pNumber="0038">
+  広範囲にわたる詳細な研究を通じて、本発明者は、美容分野向けの適応型経皮イオン電気浸透導入システムを初めて開発した。このシステムは、ユーザーの実際の皮膚状況に応じて、経皮薬物送達計画をカスタマイズし、リアルタイムで経皮薬物送達の投与量、深さ、及び速度を最適化することができる。本発明は、これに基づいて完成された。
+</com:P>
+         <com:P com:pNumber="0039">
+  美容分野向けの適応型経皮イオン電気浸透導入システム<com:Br/>
+  美容分野向けの適応型経皮イオン電気浸透導入システムは、電気浸透イオン導入システムと制御駆動電子システムとを含む。
+</com:P>
+         <com:P com:pNumber="0040">
+  ここで、前記電気浸透イオン導入システムのイオン導入システムは、皮膚に接触され、電極駆動システムによって出力される電流または電圧の作用を通じて、活性剤を皮膚層に反発し、それによって皮膚への経皮イオン電気浸透導入の目的を達成する。前記制御駆動電子システムは、オペレーティングシステム、中央処理システム、電極駆動システム及びセンシングシステムを含む。典型的に、前記制御駆動電子システムは、データ通信システムをさらに含むことができる。
+</com:P>
+         <com:P com:pNumber="0041">
+  前記オペレーティングシステムは、電源、および／または電源スイッチ、および／またはモード選択ボタンを含む。ユーザーは、電源スイッチとモード選択ボタンとを通じて、設定された基本パラメータ及び他の補助データが設定された薬物送達プログラムを選択的に実行することができる。
+</com:P>
+         <com:P com:pNumber="0042">
+  中央処理システム<com:Br/>
+  薬物送達プログラムの実行期間中、前記中央処理システムは、センシングシステムのフィードバック信号と選択可能な補助データとに従って、少なくとも一つの基本パラメータに基づいて形成された出力電極駆動波形を動的に調整及び最適化して、製品の美容効果を最大化する。ここで、前記補助データの主な目的は、前記ユーザーの経皮薬物送達に適した電極駆動波形の事前最適化及び生成のために、フィードフォワードデータを中央処理器に提供することである。従来の経皮薬物送達技術は、ここまでである。しかし、本発明の適応型システムは、薬物送達期間中で、フィードバック信号に基づいて、ユーザーの経皮薬物送達の電極駆動波形を動的に調整及び最適化し続けることである。
+</com:P>
+         <com:P com:pNumber="0043">
+  前記補助データは、美容成分、用量及びユーザーデータなどを含むことができる。ここで、ユーザーデータは、ユーザーの皮膚の状況（例えば、如体の抵抗）、年齢、性別等を含むことができる。ユーザーの皮膚の状況は、導入システムを使用する前の皮膚の状況であり、前記中央処理システムの計算のためにフィードフォワードデータを提供する。顔の美容応用において、前記ユーザーの皮膚の状況は、額領域、鼻領域、左頬領域、右頬領域、顎領域、またはそれらの組み合わせから選択される顔の皮膚の状況である。
+</com:P>
+         <com:P com:pNumber="0044">
+  電極駆動波形の基本パラメータは、経皮送達期間、出力電流または出力電圧の最大値を含むことができ、一つまたは複数の好ましい例においで、前記電極駆動波形は、交流電流であり、その基本パラメータは、出力電流または出力電圧の最小値（負の値であることができ）、サイクル及びデューティレシオなどのパラメータをさらに含むことができる。出力電極駆動波形の調整範囲は、様々なユーザーの皮膚の状況を柔軟に適応しながら、高いレベルの安全基準を維持できるように、その基本パラメータの値の０％～５００％、好ましくは、５０％～２００％に制限する。
+</com:P>
+         <com:P com:pNumber="0045">
+  以下に、図２Ａと、図２Ｂと図２Ｃとを併せて説明する。説明と図面とは、本発明の原理を例示するだけであることに留意されたい。従って、当業者は、本発明の原理を具体化し、その精神及び範囲に含まれる様々な配置を考えることができ、これらの配置が本明細書に明確に説明または示されてなくても理解することができる。以下の説明は、電極駆動波形の例として交流電流使用し、当業者にとって、同じ例が直流電流にも適用する（その薬物送達波形が、交流電流波形の正の半のサイクルであると仮定すればよい）。図２Ａは、従来の経皮薬物送達システムの交流電流の電極駆動波形を示している。ここで、パラメータＩ<com:Sub>1</com:Sub>、Ｉ<com:Sub>2</com:Sub>、ｔ<com:Sub>1</com:Sub>、及びｔ<com:Sub>2</com:Sub>は、バ物および／またはユーザー信息等のようなフィードフォワードデータに基づいて生成され、薬物送達プログラムが開始されると、薬物送達の駆動波形とそのパラメータとは、薬物送達期間全体には変わらない。
+</com:P>
+         <com:P com:pNumber="0046">
+  本発明の適応型イオン電気浸透法導入システムにおいて、図２Ｂに示したように、すべてのパラメータは、薬物送達期間中のユーザーの実際の状況に応じて、動的に調整されることができる。ここで、α・、β・は、調整比率であり、範囲は０％～５００％（好まし<com:Br/>
+くは、５０％～２００％）である。・α<com:Sub>i</com:Sub>＜１と・β<com:Sub>i</com:Sub>＞１と仮定すると、図２Ｂは、ユ<com:Br/>
+ーザーの皮膚が乾燥しすぎる実施例を示している。薬物送達プログラムが開始する時に、中央処理システムは、センシングシステムを通じて、ユーザーの皮膚が乾燥しすぎ、乾燥な皮膚は、電気的火傷を受けやすいことに気づく。従って、中央処理システムは、期間φφ<com:Sub>1</com:Sub>中の薬物送達の駆動電流を制限する。期間φ<com:Sub>2</com:Sub>中では、期間φ<com:Sub>1</com:Sub>中の美容成分の保湿によって、前記ユーザーの皮膚が徐々に改善され、電流に対する耐性も対応的に向上したため、中央処理システムは、薬物送達の電流強度を徐々に増加する。期間φ<com:Sub>3</com:Sub>中では、中央処理システムは、既に薬物送達の電流を前記ユーザーの最高の適用強度に増加し、ユーザー体験を最適化し且つ使用時間を短縮するために、残りの薬物送達期間では、薬物送達電流は、この適用可能な最大強度に維持される。
+</com:P>
+         <com:P com:pNumber="0047">
+  図２Ｃにおいて、α・、β・は、同じく、０％～５００％（好ましくは、５０％～２０<com:Br/>
+０％）の範囲の調整比率である。・α<com:Sub>i</com:Sub>＞１と・β<com:Sub>i</com:Sub>＜１と仮定すると、図２Ｃは、ユー<com:Br/>
+ザーの皮膚の状況が良好な実施例を示している。薬物送達プログラムが開始する時に、中央処理システムは、センシングシステムを通じて、ユーザーの皮膚の状況が非常に良好であり、薬物送達の駆動電流に対する耐性も非常に高いことに気づく。従って、期間φでは、基本パラメータを超える薬物送達の電流が使用される。期間φ２では、中央処理システムは、センシングシステムを通じて、皮膚中の薬物および／または美容成分の濃度が既に飽和し、効果的な美容効果を生み出すことができる最大値に達したことを感知する。従って、中央処理システムは、薬物送達の電流強度を徐々に低下させ、治療の過程を早期に終了する。最後に、上記図２Ｂと２Ｃとに基づく二つの例は、必ずしも二人の異なるユーザーまたは二つの異なる治療コースを対象としているわけではなく、同じユーザーが一つの治療コースで同時に皮膚の異なる領域で異なる薬物送達の駆動電流を受けることもできることに注意すべきである。
+</com:P>
+         <com:P com:pNumber="0048">
+  交流電流波形を使用する主な利点は、皮膚の火傷を防ぐために、薬物送達の出力電流の電荷バランスを維持できることである。出力される総電荷量は、出力される電流を積分することで計算できる。図２Ａ、図２Ｂ、及び図２Ｃにおいて、正及び負の方向に出力される電荷量は、それぞれ「曲線面積１」と「曲線面積２」とマークされる。前記交流電流の薬物送達の電流波形の電荷バランスを確保するために、上記各図の「曲線面積１」と「曲線面積２」はほぼ等しなければならない。従来の経皮薬物送達システムでは、図２Ａに示したように、薬物送達プログラムを実行する前に、薬物送達の駆動波形を生成する時に、（Ｉ<com:Sub>1</com:Sub>とｔ<com:Sub>1</com:Sub>）及び（Ｉ<com:Sub>2</com:Sub>とｔ<com:Sub>2</com:Sub>）の積がほぼ等しいことを確保すれば、電荷バランスを保証することができる。本発明の適応型イオン電気浸透法導入システムにおいて、薬物送達の駆動波形とそのパラメータとは、オペレーティング中に調整することができ、従って、一つまたは複数の好ましい例において、前記中央処理システムは、出力される総電荷量を記録するためのメモリ装置またはインテグレーターをさらに含む。図２Ｂに示したように、正の方向の電流と負の方向の電流とは、異なる任意の波形である可能性があるため、「曲線面積１」と「曲線面積２」とがほぼ等しくなるように必ずインテグレーターを使用する必要がある。図２Ｃの実施例において、正の半のサイクルの電流波形は、メモリ装置によって記録され、負の半のサイクルでは、反対方向にコピー及び出力されえる。
+</com:P>
+         <com:P com:pNumber="0049">
+  電極駆動システム<com:Br/>
+  前記電極駆動システムは、前記中央処理システムの出力値に応じて、駆動電流または駆動電圧を生成する。
+</com:P>
+         <com:P com:pNumber="0050">
+  本発明において、電極駆動波形は、交流電流であり、典型的に、前記電極駆動システムは、電流駆動システムである。
+</com:P>
+         <com:P com:pNumber="0051">
+  前記電流駆動システムは、前記経皮送達時間中に皮膚抵抗が変化したときに中央処理器によって設定された強度で出力電流を維持するための電流フィードバック回路をさらに含む。
+</com:P>
+         <com:P com:pNumber="0052">
+  前記電極駆動システムは、一つまたは複数の電流駆動コンポーネントを含む。顔の美容を例として、顔の様々な部位にある電極の複数のペアと一致する電流駆動コンポーネントの複数のペアは、様々な領域の様々な皮膚タイプに様々な薬物送達計画を与えることができる。
+</com:P>
+         <com:P com:pNumber="0053">
+  センシングシステム<com:Br/>
+  前記センシングシステムは、接触された皮膚の状況を感知し、前記中央処理システムにフィードバックすることができる。前記センシングシステムは、皮膚センサー、および／または信号調整回路、および／またはアナログ－デジタルコンバーターを含むことができる。ここで、前記皮膚センサーは、皮膚水分試験センサー、ｐＨセンサー、皮脂測定センサー、温度センサー及び生物学的抵抗分析センサーなどから選択される少なくとも一つのセンサーを含む。
+</com:P>
+         <com:P com:pNumber="0054">
+  電気浸透イオン導入システム<com:Br/>
+  前記イオン導入システムは、皮膚に接触され、電極駆動システムによって出力される電流または電圧の作用を通じて、活性剤を皮膚層に反発し、それによって、皮膚への経皮イオン電気浸透導入の目的を達成する。
+</com:P>
+         <com:P com:pNumber="0055">
+  前記電気浸透イオン導入システムは、一つまたは複数の対の電極コンポーネントを含み、各電極コンポーネントは、対応する皮膚接触層を含む。前記接触層は、前記活性剤を含む媒体を貯蔵するために使用され、電極に流体連通する。ここで、前記活性剤は、ヒアルロン酸、トラネキサミン酸、アミノ酸、ペプチド、コラーゲン、ビタミンＣ、ビタミンＢ、成長因子（ＥＧＦ）またはそれらの組み合わせから選択される一つまたは複数の成分を含む。
+</com:P>
+         <com:P com:pNumber="0056">
+  データ通信システム<com:Br/>
+  前記制御駆動電子システムは、データ通信システムをさらに含むことができ、前記データ通信システムは、前記基本パラメータと補助データとを受信し、オペレーティングを制御し、システムを更新し、使用状況データをアップロードする機能を有する。前記データ通信システムは、近距離通信、無線周波数通信、Ｗｉ－Ｆｉ、プル―トゥース、Ｚｉｇｂｅｅ、ＧＳＭ、ＣＤＭＡ、ＬＴＥ、ＵＳＢ及びＲＳ２３２から選択される少なくとも一つのインターフェースを含む。好ましい例において、図１に示したように、前記制御駆動電子システムは、前記データ通信システムを介して、通信接続またはクラウド環境を経由して、一つまたは複数の通信デバイスに接続され且つデータを交換することができる。ここで、通信デバイスの例は、携帯電話、タブレット、及びコンピュータ等のモバイルコンピューティングデバイスを含む。別の好ましい例において、前記制御駆動電子システムは、前記データ通信システムを介して、インターネットまたはクラウド環境に基づく他の通信デバイスを経由して、接続され且つデータを交換することができる。
+</com:P>
+         <com:P com:pNumber="0057">
+  本発明において、データ通信システムは、主に携帯電話ＡＰＰと通信する。データ通信システムの入力は、経皮送達期間、出力電流または出力電圧の最大値、出力電流または出力電圧の最小値、サイクル、デューティレシオ、美容成分、用量、ユーザーの皮膚の状況等のうちの一つまたは複数のパラメータまたはデータを含む。ここで、前記データ通信の入力は、ユーザーが製品を使いすぎたり誤用したりするのを防ぐ起動コマンドをさらに含むことができる。
+</com:P>
+         <com:P com:pNumber="0058">
+  前記データ通信システムによって出力される使用状況データは、実際の経皮送達期間、前記電極駆動システムの実際の出力電流または出力電圧の波形またはその特徴、前記電極駆動システムの実際の出力電荷量、使用前の前記センシングシステムに基づくユーザー皮膚分析、使用後の前記センシングシステムに基づくユーザー皮膚分析等のうちの一つまたは複数のパラメータまたはデータを含む。データ通信システムを通じて、通信デバイスに接続し、ユーザー皮膚の状況をクラウドにアップロードし、そのデータを使用して、次の製品を使用する時間を計算して推奨する。製品を頻繁に使用することは無駄であり且つより良い美容効果を生み出さないが、製品の使用が少なすぎると望ましい美容効果が得られない。
+</com:P>
+         <com:P com:pNumber="0059">
+  マスク<com:Br/>
+  一つまたは複数の実施例において、本発明の前記電気浸透イオン導入システムと前記制御駆動電子システムとは、二つの別個のモジュールである。ここで、前記電気浸透イオン導入システムは、使い捨て用の電子マスクであり、前記電子マスクは、顔の外面に適合し、前記制御駆動電子システムは、再利用可能な美容インテリジェントハードウェアである。
+</com:P>
+         <com:P com:pNumber="0060">
+  本発明の前記電子マスクは、前記センシングシステムの一部または全部のセンサー、特に、皮膚と直接接触する必要があるセンサーをさらに含む。
+</com:P>
+         <com:P com:pNumber="0061">
+  本発明で言及されるすべての文書は、あたかも各文書が個別に参照として引用されたかのように、本出願における参照として引用される。  さらに、本発明の上記の教示内容を読んだ後、当業者は、本発明に様々な変更または修正を加えることができ、これらの同等の形態もまた、本出願の添付の特許請求の範囲によって定義される範囲内にあることを理解されたい。
+</com:P>
+      </pat:EmbodimentDescription>
+   </jppat:Description>
+   <pat:Claims>
+      <pat:Claim>
+         <pat:ClaimNumber>1</pat:ClaimNumber>
+         <pat:ClaimText>
+  美容分野向けの適応型経皮イオン電気浸透導入システムであって、<com:Br/>
+  皮膚に接触し、皮膚への経皮イオン電気浸透導入の目的が達成されるように電極駆動システムから出力される電流または電圧によって、活性剤を皮膚層に押し付ける電気浸透イオン導入システムと、<com:Br/>
+  制御駆動電子システムとを含み、<com:Br/>
+  前記制御駆動電子システムは、<com:Br/>
+  電源、および／または電源スイッチ、および／またはモード選択ボタンを有するオペレーティングシステムと、<com:Br/>
+  少なくとも一つの基本パラメータ及び少なくとも一つのセンシングシステムのフィードバック信号及び選択可能な補助データに基づいて、出力電極駆動波形を動的に計算及び調整し、前記電極駆動システムに提供する中央処理システムと、<com:Br/>
+  前記中央処理システムの出力値に応じて、駆動電流または駆動電圧を生成する電極駆動システムと、及び<com:Br/>
+  接触された皮膚の状況を感知し、前記中央処理システムにフィードバックすることが可能なセンシングシステムとを含むことを特徴とする<com:Br/>
+美容分野向けの適応型経皮イオン電気浸透導入システム。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>2</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記制御駆動電子システムは、前記基本パラメータと補助データとを受信し、オペレーティングを制御し、システムを更新し、使用状況データをアップロードする機能を有するデータ通信システムをさらに含むことを特徴とする<com:Br/>
+請求項１に記載のシステム。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>3</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記出力電極駆動波形を動的に計算及び調整する調整範囲は、基本パラメータの０％～５００％であることを特徴とする<com:Br/>
+請求項１に記載のシステム。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>4</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記中央処理システムの計算に基づく基本パラメータ及び前記中央処理システムが調整可能な電極駆動波形は、<com:Br/>
+  （ｉ）経皮送達期間、<com:Br/>
+  （ｉｉ）出力電流または出力電圧の最大値、<com:Br/>
+  （ｉｉｉ）出力電流または出力電圧の最小値、<com:Br/>
+  （ｉｖ）周期、及び<com:Br/>
+  （ｖ）デューティレシオから選択される一つまたは複数の特徴を含むことを特徴とする<com:Br/>
+請求項１に記載のシステム。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>5</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記補助データは、<com:Br/>
+  （ｉ）美容成分、<com:Br/>
+  （ｉｉ）用量、及び<com:Br/>
+  （ｉｉｉ）ユーザーの皮膚の状況から選択される一つまたは複数の特徴を含むことを特徴とする<com:Br/>
+請求項１に記載のシステム。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>6</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記中央処理システムは、出力される総電荷量を記録するためのメモリ装置またはインテグレーターをさらに含むことを特徴とする<com:Br/>
+請求項１に記載のシステム。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>7</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記電極駆動システムは、一つまたは複数の電流駆動コンポーネントを含むことを特徴とする<com:Br/>
+請求項１に記載のシステム。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>8</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記活性剤は、ヒアルロン酸、トラネキサミン酸、アミノ酸、ペプチド、コラーゲン、ビタミンＣ、ビタミンＢ及び成長因子から選択される一つまたは複数の成分であることを特徴とする<com:Br/>
+請求項１に記載のシステム。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>9</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記センシングシステムは、皮膚センサー、および／または信号調整回路、および／またはアナログ－デジタルコンバーターを含むことを特徴とする<com:Br/>
+  請求項１に記載のシステム。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>10</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記皮膚センサーは、皮膚水分試験センサー、ｐＨセンサー、皮脂測定センサー、温度センサー及び生物学的抵抗分析センサーから選択される少なくとも一つのセンサーを含むことを特徴とする<com:Br/>
+  請求項９に記載のシステム。
+</pat:ClaimText>
+      </pat:Claim>
+   </pat:Claims>
+   <pat:Abstract>
+      <com:P com:pNumber="">
+  本発明は、美容分野向けの適応型経皮イオン電気浸透導入システムであり、具体的には、前記システムは、電気浸透イオン導入システム及び制御駆動電子システムを含み、前記制御駆動電子システムは、オペレーティングシステム、中央処理システム、電極駆動システム、センシングシステム及びデータ通信システムを含む。本発明の適応型経皮イオン電気浸透導入システムは、ユーザーの実際の皮膚状況に応じて、経皮薬物送達計画をカスタマイズし、リアルタイムで経皮薬物送達の投与量、深さ、及び速度を最適化し、製品の使用効果及び安全性を最大化することができる。<com:Br/>
+【選択図】図１
+</com:P>
+   </pat:Abstract>
+   <pat:Drawings>
+      <pat:Figure>
+         <pat:FigureNumber>1</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2022533491000002.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">99</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>2A</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2022533491000003.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">71</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">169</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>2B</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2022533491000004.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">59</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>2C</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2022533491000005.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">86</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+   </pat:Drawings>
+   <jppat:SearchReportBag>
+      <jppat:SearchReport>
+         <jppat:PageImage>
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2022533491000006.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">241</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </jppat:PageImage>
+      </jppat:SearchReport>
+      <jppat:SearchReport>
+         <jppat:PageImage>
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2022533491000007.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">241</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </jppat:PageImage>
+      </jppat:SearchReport>
+      <jppat:SearchReport>
+         <jppat:PageImage>
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2022533491000008.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">241</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </jppat:PageImage>
+      </jppat:SearchReport>
+      <jppat:SearchReport>
+         <jppat:PageImage>
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2022533491000009.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">241</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </jppat:PageImage>
+      </jppat:SearchReport>
+   </jppat:SearchReportBag>
+</jppat:InternationalPatentPublication>

@@ -1,0 +1,2041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="../../../../../XSL/JPInternationalPatentPublication.xsl"?> -->
+<jppat:InternationalPatentPublication xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                      xmlns:jppat="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPPatent"
+                                      xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent"
+                                      xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common"
+                                      xmlns:jpcom="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPCommon"
+                                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                      xsi:schemaLocation="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPPatent ../../../../../XSD/JPInternationalPatentPublication_V1_0.xsd"
+                                      com:languageCode="ja"
+                                      com:st96Version="V3_1"
+                                      com:ipoVersion="JP_V1_0">
+   <com:IPOfficeCode>JP</com:IPOfficeCode>
+   <jppat:InternationalPatentPublicationBibliographicData com:languageCode="ja">
+      <com:IPOfficeCode>JP</com:IPOfficeCode>
+      <jppat:PatentPublicationIdentification>
+         <com:IPOfficeCode>JP</com:IPOfficeCode>
+         <pat:PublicationNumber>2023534250</pat:PublicationNumber>
+         <com:PublicationDate>2023-08-08</com:PublicationDate>
+      </jppat:PatentPublicationIdentification>
+      <pat:PlainLanguageDesignationText>公表特許公報(A)</pat:PlainLanguageDesignationText>
+      <jppat:ApplicationIdentification>
+         <com:ApplicationNumber>
+            <com:ApplicationNumberText>2023502688</com:ApplicationNumberText>
+         </com:ApplicationNumber>
+         <pat:FilingDate>2021-06-16</pat:FilingDate>
+      </jppat:ApplicationIdentification>
+      <pat:InventionTitle>非ニコチンプレベイパー製剤のレベル検出機能および自動シャットダウン機能を備える非ニコチン電子ベイピング装置</pat:InventionTitle>
+      <jppat:InternationalPatentPublicationPartyBag>
+         <jppat:ApplicantsRegisteredPractitionersBag>
+            <jppat:ApplicantRegisteredPractitionerBag com:sequenceNumber="1">
+               <jppat:Applicant com:sequenceNumber="1">
+                  <com:PartyIdentifier>517453405</com:PartyIdentifier>
+                  <jpcom:Contact>
+                     <com:Name>
+                        <com:EntityName>アルトリア  クライアント  サーヴィシーズ  リミテッド  ライアビリティ  カンパニー</com:EntityName>
+                     </com:Name>
+                     <com:PostalAddressBag>
+                        <com:PostalAddress>
+                           <com:PostalAddressText>アメリカ合衆国  バージニア州  ２３２３０  リッチモンド  ウェスト  ブロード  ストリート  ６６０１</com:PostalAddressText>
+                        </com:PostalAddress>
+                     </com:PostalAddressBag>
+                  </jpcom:Contact>
+               </jppat:Applicant>
+               <jppat:RegisteredPractitioner com:sequenceNumber="1">
+                  <jppat:AgentCategory>Representative</jppat:AgentCategory>
+                  <pat:RegisteredPractitionerRegistrationNumber>110002789</pat:RegisteredPractitionerRegistrationNumber>
+                  <jpcom:Contact>
+                     <com:Name>
+                        <com:EntityName>弁理士法人ＩＰＸ</com:EntityName>
+                     </com:Name>
+                  </jpcom:Contact>
+               </jppat:RegisteredPractitioner>
+            </jppat:ApplicantRegisteredPractitionerBag>
+         </jppat:ApplicantsRegisteredPractitionersBag>
+         <jppat:InventorBag>
+            <jppat:Inventor com:sequenceNumber="1">
+               <jpcom:Contact>
+                  <com:Name>
+                     <com:EntityName>ギャラガー・ニール</com:EntityName>
+                  </com:Name>
+                  <com:PostalAddressBag>
+                     <com:PostalAddress>
+                        <com:PostalAddressText>アメリカ合衆国  ２３２１９  ヴァージニア  リッチモンド  イースト  ジャクソン  ストリート  ６０１  ケア  オヴ  アルトリア  クライアント  サーヴィシーズ  リミテッド  ライアビリティ  カンパニー</com:PostalAddressText>
+                     </com:PostalAddress>
+                  </com:PostalAddressBag>
+               </jpcom:Contact>
+            </jppat:Inventor>
+            <jppat:Inventor com:sequenceNumber="2">
+               <jpcom:Contact>
+                  <com:Name>
+                     <com:EntityName>ベイチ・テランス・セオドア</com:EntityName>
+                  </com:Name>
+                  <com:PostalAddressBag>
+                     <com:PostalAddress>
+                        <com:PostalAddressText>アメリカ合衆国  ２３２１９  ヴァージニア  リッチモンド  イースト  ジャクソン  ストリート  ６０１  ケア  オヴ  アルトリア  クライアント  サーヴィシーズ  リミテッド  ライアビリティ  カンパニー</com:PostalAddressText>
+                     </com:PostalAddress>
+                  </com:PostalAddressBag>
+               </jpcom:Contact>
+            </jppat:Inventor>
+            <jppat:Inventor com:sequenceNumber="3">
+               <jpcom:Contact>
+                  <com:Name>
+                     <com:EntityName>サンダー・ランガラージ・エス</com:EntityName>
+                  </com:Name>
+                  <com:PostalAddressBag>
+                     <com:PostalAddress>
+                        <com:PostalAddressText>アメリカ合衆国  ２３２１９  ヴァージニア  リッチモンド  イースト  ジャクソン  ストリート  ６０１  ケア  オヴ  アルトリア  クライアント  サーヴィシーズ  リミテッド  ライアビリティ  カンパニー</com:PostalAddressText>
+                     </com:PostalAddress>
+                  </com:PostalAddressBag>
+               </jpcom:Contact>
+            </jppat:Inventor>
+            <jppat:Inventor com:sequenceNumber="4">
+               <jpcom:Contact>
+                  <com:Name>
+                     <com:EntityName>キーン・ジャレット</com:EntityName>
+                  </com:Name>
+                  <com:PostalAddressBag>
+                     <com:PostalAddress>
+                        <com:PostalAddressText>アメリカ合衆国  ２３２１９  ヴァージニア  リッチモンド  イースト  ジャクソン  ストリート  ６０１  ケア  オヴ  アルトリア  クライアント  サーヴィシーズ  リミテッド  ライアビリティ  カンパニー</com:PostalAddressText>
+                     </com:PostalAddress>
+                  </com:PostalAddressBag>
+               </jpcom:Contact>
+            </jppat:Inventor>
+            <jppat:Inventor com:sequenceNumber="5">
+               <jpcom:Contact>
+                  <com:Name>
+                     <com:EntityName>ラウ・レイモンド・ダブリュー．</com:EntityName>
+                  </com:Name>
+                  <com:PostalAddressBag>
+                     <com:PostalAddress>
+                        <com:PostalAddressText>アメリカ合衆国  ２３２１９  ヴァージニア  リッチモンド  イースト  ジャクソン  ストリート  ６０１  ケア  オヴ  アルトリア  クライアント  サーヴィシーズ  リミテッド  ライアビリティ  カンパニー</com:PostalAddressText>
+                     </com:PostalAddress>
+                  </com:PostalAddressBag>
+               </jpcom:Contact>
+            </jppat:Inventor>
+            <jppat:Inventor com:sequenceNumber="6">
+               <jpcom:Contact>
+                  <com:Name>
+                     <com:EntityName>ホーズ・エリック</com:EntityName>
+                  </com:Name>
+                  <com:PostalAddressBag>
+                     <com:PostalAddress>
+                        <com:PostalAddressText>アメリカ合衆国  ２３２１９  ヴァージニア  リッチモンド  イースト  ジャクソン  ストリート  ６０１  ケア  オヴ  アルトリア  クライアント  サーヴィシーズ  リミテッド  ライアビリティ  カンパニー</com:PostalAddressText>
+                     </com:PostalAddress>
+                  </com:PostalAddressBag>
+               </jpcom:Contact>
+            </jppat:Inventor>
+         </jppat:InventorBag>
+      </jppat:InternationalPatentPublicationPartyBag>
+      <jppat:PriorityClaimBag>
+         <jppat:PriorityClaim com:sequenceNumber="1">
+            <com:IPOfficeCode>US</com:IPOfficeCode>
+            <com:ApplicationNumber>
+               <com:ApplicationNumberText>16/929,348</com:ApplicationNumberText>
+            </com:ApplicationNumber>
+            <pat:FilingDate>2020-07-15</pat:FilingDate>
+            <jppat:ApplicationFilingCategory>International</jppat:ApplicationFilingCategory>
+         </jppat:PriorityClaim>
+      </jppat:PriorityClaimBag>
+      <jppat:IPCClassification>
+         <com:Edition/>
+         <pat:MainClassification>A24F  40/50        20200101AFI20230801BHJP        </pat:MainClassification>
+         <pat:FurtherClassification>A24F  40/60        20200101ALI20230801BHJP        </pat:FurtherClassification>
+         <pat:FurtherClassification>A24F  40/42        20200101ALI20230801BHJP        </pat:FurtherClassification>
+      </jppat:IPCClassification>
+      <jppat:NationalClassification>
+         <com:IPOfficeCode>JP</com:IPOfficeCode>
+         <jppat:MainNationalClassification>
+            <pat:PatentClassificationText>A24F40/50</pat:PatentClassificationText>
+         </jppat:MainNationalClassification>
+         <jppat:FurtherNationalClassification>
+            <pat:PatentClassificationText>A24F40/60</pat:PatentClassificationText>
+         </jppat:FurtherNationalClassification>
+         <jppat:FurtherNationalClassification>
+            <pat:PatentClassificationText>A24F40/42</pat:PatentClassificationText>
+         </jppat:FurtherNationalClassification>
+      </jppat:NationalClassification>
+      <pat:StateDesignation>
+         <pat:NationalDesignation>
+            <com:DesignatedCountryCode>AP</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SD</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ST</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>UG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ZM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ZW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TJ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EP</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ES</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>FI</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>FR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GB</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>HR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>HU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LV</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MC</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SI</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>OA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BF</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BJ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CF</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CI</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GQ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ML</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TD</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>AZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BB</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>BZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>CZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DJ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>DZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EC</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>EG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ES</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>FI</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GB</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GD</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>GT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>HN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>HR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>HU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ID</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>IT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>JO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>JP</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KP</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>KZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LC</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>LY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MD</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ME</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MX</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>MZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NI</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>NZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>OM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>PT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>QA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RO</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RU</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>RW</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SC</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SD</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SE</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SK</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SL</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ST</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SV</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>SY</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TH</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TJ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TR</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TT</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>TZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>UA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>UG</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>US</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>UZ</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>VC</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>VN</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>WS</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ZA</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ZM</com:DesignatedCountryCode>
+            <com:DesignatedCountryCode>ZW</com:DesignatedCountryCode>
+         </pat:NationalDesignation>
+      </pat:StateDesignation>
+      <jppat:InternationalFilingData>
+         <jppat:ApplicationIdentification>
+            <com:ApplicationNumber>
+               <com:ApplicationNumberText>US2021037597</com:ApplicationNumberText>
+            </com:ApplicationNumber>
+            <pat:FilingDate>2021-06-16</pat:FilingDate>
+         </jppat:ApplicationIdentification>
+      </jppat:InternationalFilingData>
+      <jppat:InternationalPublishingData>
+         <jppat:PatentDocumentIdentification>
+            <jppat:PatentPublicationIdentification>
+               <pat:PublicationNumber>WO2022015456</pat:PublicationNumber>
+               <com:PublicationDate>2022-01-20</com:PublicationDate>
+            </jppat:PatentPublicationIdentification>
+         </jppat:PatentDocumentIdentification>
+      </jppat:InternationalPublishingData>
+      <jppat:RequestExaminationIndicator>false</jppat:RequestExaminationIndicator>
+      <jppat:RequestPreliminaryExaminationIndicator>false</jppat:RequestPreliminaryExaminationIndicator>
+      <pat:NationalStageFilingDate>2023-03-06</pat:NationalStageFilingDate>
+      <jppat:PublicOrderMoralityBag>
+         <jppat:UnapprovedUseTrademarkBag>
+            <jppat:UnapprovedUseTrademark>１．ＢＬＵＥＴＯＯＴＨ                                          </jppat:UnapprovedUseTrademark>
+         </jppat:UnapprovedUseTrademarkBag>
+      </jppat:PublicOrderMoralityBag>
+      <jppat:ThemeCodeInformationBag>
+         <jppat:ThemeCodeInformation>4B162</jppat:ThemeCodeInformation>
+      </jppat:ThemeCodeInformationBag>
+      <jppat:FtermInformationBag>
+         <jppat:FtermInformation>4B162AA05</jppat:FtermInformation>
+         <jppat:FtermInformation>4B162AA22</jppat:FtermInformation>
+         <jppat:FtermInformation>4B162AB14</jppat:FtermInformation>
+         <jppat:FtermInformation>4B162AB23</jppat:FtermInformation>
+         <jppat:FtermInformation>4B162AC34</jppat:FtermInformation>
+         <jppat:FtermInformation>4B162AC37</jppat:FtermInformation>
+         <jppat:FtermInformation>4B162AD08</jppat:FtermInformation>
+         <jppat:FtermInformation>4B162AD23</jppat:FtermInformation>
+      </jppat:FtermInformationBag>
+   </jppat:InternationalPatentPublicationBibliographicData>
+   <jppat:Description>
+      <pat:TechnicalField>
+         <com:P com:pNumber="0001">
+  １つ以上の例示的な実施形態は、非ニコチン電子ベイピング（ｎｏｎ－ｎｉｃｏｔｉｎｅ  ｅ－ｖａｐｉｎｇ）装置に関する。
+</com:P>
+      </pat:TechnicalField>
+      <pat:BackgroundArt>
+         <com:P com:pNumber="0002">
+  非ニコチン電子ベイピング装置（または非ニコチンｅ－ｖａｐｉｎｇデバイス）は、非ニコチンプレベイパー製剤材料を気化して非ニコチン蒸気を生成するヒータを含む。非ニコチン電子ベイピング装置は、電源、ヒータを含む非ニコチンカートリッジまたは非ニコチン電子ベイピングタンク、および非ニコチンプレベイパー製剤材料を保持することができる非ニコチンリザーバを含むいくつかの非ニコチン電子ベイピング要素を含んでもよい。
+</com:P>
+         <com:P com:pNumber="0003">
+［サマリー］<com:Br/>
+  少なくとも１つの例示的な実施形態では、非ニコチンポッドアセンブリと、前記非ニコチンポッドアセンブリと係合するように構成されるデバイスアセンブリと、を有する非ニコチン電子ベイピング装置が提供される。<com:Br/>
+  前記非ニコチンポッドアセンブリは、メモリ、非ニコチンリザーバ、及びヒータを備える。<com:Br/>
+  前記メモリは、非ニコチンプレベイパー製剤気化パラメータと、気化した非ニコチンプレベイパー製剤の総量と、を記憶する。<com:Br/>
+  前記非ニコチンリザーバは、非ニコチンプレベイパー製剤を保持する。<com:Br/>
+  前記ヒータは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を気化する。<com:Br/>
+  前記デバイスアセンブリは、コントローラを備える。<com:Br/>
+  前記コントローラは、<com:Br/>
+  前記メモリから取得した非ニコチンプレベイパー製剤気化パラメータと、パフイベントの間に前記ヒータに与えられた電力の総量と、に基づいて、前記パフイベントの間に気化した非ニコチンプレベイパー製剤の量を推定し、<com:Br/>
+  前記メモリに記憶された、前記気化した非ニコチンプレベイパー製剤の総量と、前記パフイベントの間に気化した非ニコチンプレベイパー製剤の量と、に基づいて、気化した非ニコチンプレベイパー製剤の更新された総量を決定し、<com:Br/>
+  前記気化した非ニコチンプレベイパー製剤の更新された総量が少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定し、<com:Br/>
+  前記気化した非ニコチンプレベイパー製剤の更新された総量が、前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤の現在のレベルの表示を出力するように、前記非ニコチン電子ベイピング装置を制御する、
+</com:P>
+         <com:P com:pNumber="0004">
+  少なくとも１つの他の例示的な実施形態では、非ニコチンポッドアセンブリと、前記非ニコチンポッドアセンブリと係合するように構成されるデバイスアセンブリと、を有する非ニコチン電子ベイピング装置が提供される。<com:Br/>
+  前記非ニコチンポッドアセンブリは、非ニコチンリザーバ、ヒータ、及びメモリを備える。<com:Br/>
+  前記非ニコチンリザーバは、非ニコチンプレベイパー製剤を保持する。<com:Br/>
+  前記ヒータは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を気化する。<com:Br/>
+  前記メモリは、非ニコチンプレベイパー製剤気化パラメータと、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の総量と、を記憶する。<com:Br/>
+  前記デバイスアセンブリは、コントローラを備える。<com:Br/>
+  前記コントローラは、<com:Br/>
+  前記非ニコチンプレベイパー製剤気化パラメータと、パフイベントの間に前記ヒータに与えられた電力の総量と、に基づいて、前記パフイベントの間に前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の量を推定し、<com:Br/>
+  前記メモリに記憶された、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の総量と、前記パフイベントの間に前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の量と、に基づいて、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量を決定し、<com:Br/>
+  前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定し、<com:Br/>
+  前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が、前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤の現在のレベルの表示を出力するように、前記非ニコチン電子ベイピング装置を制御する、<com:Br/>
+  ように構成される。
+</com:P>
+         <com:P com:pNumber="0005">
+  少なくとも１つの他の例示的な実施形態では、コントローラを有する非ニコチン電子ベイピング装置が提供される。<com:Br/>
+  前記コントローラは、メモリからエンプティフラグを取得し、<com:Br/>
+  前記メモリは、前記非ニコチン電子ベイピング装置に挿入された非ニコチンポッドアセンブリに含まれ、<com:Br/>
+  前記エンプティフラグは、前記非ニコチンポッドアセンブリ内の非ニコチンプレベイパー製剤が枯渇していることを示すフラグであり、<com:Br/>
+  前記メモリから取得された前記エンプティフラグに基づいて、前記非ニコチン電子ベイピング装置でのベイピングを無効化する、<com:Br/>
+  ように構成される。
+</com:P>
+         <com:P com:pNumber="0006">
+  少なくとも１つの他の例示的な実施形態では、非ニコチン電子ベイピング装置を制御する方法であって、前記非ニコチン電子ベイピング装置は、非ニコチンリザーバと、ヒータと、を有し、<com:Br/>
+  前記非ニコチンリザーバは、非ニコチンプレベイパー製剤を保持し、<com:Br/>
+  前記ヒータは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を気化し、<com:Br/>
+  非ニコチンプレベイパー製剤気化パラメータと、パフイベントの間に前記ヒータに与えられた電力の総量と、に基づいて、前記パフイベントの間に前記ヒータにより気化した非ニコチンプレベイパー製剤の量を推定し、<com:Br/>
+  メモリに記憶された、気化した非ニコチンプレベイパー製剤の総量と、前記パフイベントの間に気化した非ニコチンプレベイパー製剤の量と、に基づいて、気化した非ニコチンプレベイパー製剤の更新された総量を決定し、<com:Br/>
+  前記気化した非ニコチンプレベイパー製剤の更新された総量が少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定し、<com:Br/>
+  前記気化した非ニコチンプレベイパー製剤の更新された総量が、前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤の現在のレベルの表示を出力する、<com:Br/>
+  方法が提供される。
+</com:P>
+         <com:P com:pNumber="0007">
+  少なくとも１つの他の例示的な実施形態では、非ニコチン電子ベイピング装置を制御する方法であって、<com:Br/>
+  前記非ニコチン電子ベイピング装置は、非ニコチンリザーバと、ヒータと、を有し、<com:Br/>
+  前記非ニコチンリザーバは、非ニコチンプレベイパー製剤を保持し、<com:Br/>
+  前記ヒータは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を気化し、<com:Br/>
+  非ニコチンプレベイパー製剤気化パラメータと、パフイベントの間に前記ヒータに与えられた電力の総量と、に基づいて、前記パフイベントの間に前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の量を推定し、<com:Br/>
+  メモリに記憶された、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の総量と、前記パフイベントの間に前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の量と、に基づいて、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量を決定し、<com:Br/>
+  前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定し、<com:Br/>
+  前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が、前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤の現在のレベルの表示を出力する、<com:Br/>
+  方法が提供される。
+</com:P>
+         <com:P com:pNumber="0008">
+  少なくとも１つの他の例示的な実施形態では、非ニコチン電子ベイピング装置を制御する方法であって、<com:Br/>
+  前記非ニコチン電子ベイピング装置は非ニコチンポッドアセンブリと、デバイスアセンブリと、を有し、<com:Br/>
+  メモリからエンプティフラグを取得し、<com:Br/>
+  前記メモリは、前記デバイスアセンブリに挿入された前記非ニコチンポッドアセンブリに含まれ、<com:Br/>
+  前記エンプティフラグは、前記非ニコチンポッドアセンブリ内の非ニコチンプレベイパー製剤が枯渇していることを示すフラグであり、<com:Br/>
+  前記メモリから取得された前記エンプティフラグに基づいて、前記非ニコチン電子ベイピング装置でのベイピングを無効化する、<com:Br/>
+  方法が提供される。
+</com:P>
+      </pat:BackgroundArt>
+      <pat:DrawingDescription>
+         <com:P com:pNumber="0009">
+  本明細書の非限定的な実施形態の様々な特徴及び利点は、添付の図面と併せて詳細な説明を検討することにより、より明らかになるであろう。添付の図面は、単に例示のために提供されており、特許請求の範囲を限定するように解釈されるべきではない。添付の図面は、明示的に注記しない限り、縮尺通りに描かれているとみなされるべきではない。分かりやすくするために、図面の様々な寸法は誇張されている場合がある。
+</com:P>
+         <com:P com:pNumber="0010">
+            <com:FigureReference com:referencedFigureNumber="1">図１は、例示的な実施形態による非ニコチン電子ベイピング装置の正面図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0011">
+            <com:FigureReference com:referencedFigureNumber="2">図２は、図１の非ニコチン電子ベイピング装置の側面図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0012">
+            <com:FigureReference com:referencedFigureNumber="3">図３は、図１の非ニコチン電子ベイピング装置の背面図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0013">
+            <com:FigureReference com:referencedFigureNumber="4">図４は、図１の非ニコチン電子ベイピング装置の近位端図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0014">
+            <com:FigureReference com:referencedFigureNumber="5">図５は、図１の非ニコチン電子ベイピング装置の遠位端図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0015">
+            <com:FigureReference com:referencedFigureNumber="6">図６は、図１の非ニコチン電子ベイピング装置の透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0016">
+            <com:FigureReference com:referencedFigureNumber="7">図７は、図６におけるポッド入口の拡大図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0017">
+            <com:FigureReference com:referencedFigureNumber="8">図８は、図６の非ニコチン電子ベイピング装置の断面図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0018">
+            <com:FigureReference com:referencedFigureNumber="9">図９は、図６の非ニコチン電子ベイピング装置の装置本体の透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0019">
+            <com:FigureReference com:referencedFigureNumber="10">図１０は、図９の装置本体を示す正面図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0020">
+            <com:FigureReference com:referencedFigureNumber="11">図１１は、図１０における貫通孔の拡大透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0021">
+            <com:FigureReference com:referencedFigureNumber="12">図１２は、図１０における装置電気コンタクトの拡大透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0022">
+            <com:FigureReference com:referencedFigureNumber="13">図１３は、図１２におけるマウスピースを含む部分分解図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0023">
+            <com:FigureReference com:referencedFigureNumber="14">図１４は、図９のベゼル構造を含む部分分解図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0024">
+            <com:FigureReference com:referencedFigureNumber="15">図１５は、図１４におけるマウスピース、ばね、保持構造、およびベゼル構造の拡大透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0025">
+            <com:FigureReference com:referencedFigureNumber="16">図１６は、図１４におけるフロントカバー、フレーム、及びリアカバーを含む部分分解斜視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0026">
+            <com:FigureReference com:referencedFigureNumber="17">図１７は、図６の非ニコチン電子ベイピング装置の非ニコチンポッドアセンブリの透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0027">
+            <com:FigureReference com:referencedFigureNumber="18">図１８は、図１７の非ニコチンポッドアセンブリの別の透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0028">
+            <com:FigureReference com:referencedFigureNumber="19">図１９は、図１８の非ニコチンポッドアセンブリの別の透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0029">
+            <com:FigureReference com:referencedFigureNumber="20">図２０は、コネクタモジュールを有しない図１９の非ニコチンポッドアセンブリの透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0030">
+            <com:FigureReference com:referencedFigureNumber="21">図２１は、図１９のコネクタモジュールの透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0031">
+            <com:FigureReference com:referencedFigureNumber="22">図２２は、図２１のコネクタモジュールの他の透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0032">
+            <com:FigureReference com:referencedFigureNumber="23">図２３は、図２２のウィック、ヒータ、電気リード線、およびコンタクトコアを含む分解斜視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0033">
+            <com:FigureReference com:referencedFigureNumber="24">図２４は、図１７の非ニコチンポッドアセンブリの第１の筐体部を含む分解斜視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0034">
+            <com:FigureReference com:referencedFigureNumber="25">図２５は、図１７の非ニコチンポッドアセンブリの第２の筐体部を含む部分分解斜視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0035">
+            <com:FigureReference com:referencedFigureNumber="26">図２６は、図２５のアクティベーションピンの分解斜視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0036">
+            <com:FigureReference com:referencedFigureNumber="27">図２７は、図２２のコネクタモジュールのウィック、ヒータ、電気リード線、及びコンタクトコアを除いた透視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0037">
+            <com:FigureReference com:referencedFigureNumber="28">図２８は、図２７のコネクタモジュールの分解斜視図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0038">
+            <com:FigureReference com:referencedFigureNumber="29">図２９は、１つ以上の例示的な実施形態による非ニコチン電子ベイピング装置の装置本体および非ニコチンポッドアセンブリの電気系統を示す図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0039">
+            <com:FigureReference com:referencedFigureNumber="30">図３０は、例示的な実施形態による非ニコチンプレベイパー製剤枯渇及び自動シャットダウン制御システムを示す単純なブロック図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0040">
+            <com:FigureReference com:referencedFigureNumber="31">図３１は、例示的な実施形態による非ニコチンプレベイパー製剤レベル検出方法を示すフローチャートである。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0041">
+            <com:FigureReference com:referencedFigureNumber="32">図３２は、例示的な実施形態による、ハードポッド障害事象の検出に応答してベイプ機能のシャットダウン後の非ニコチン電子ベイピング装置の動作方法の一例を示すフローチャートである。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0042">
+            <com:FigureReference com:referencedFigureNumber="33">図３３は、例示的な実施形態によるヒータ電圧測定回路を示す図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0043">
+            <com:FigureReference com:referencedFigureNumber="34">図３４は、例示的な実施形態によるヒータ電流測定回路を示す図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0044">
+            <com:FigureReference com:referencedFigureNumber="35">図３５は、いくつかの例示的な実施形態による加熱エンジン停止回路を示す回路図である。</com:FigureReference>
+         </com:P>
+         <com:P com:pNumber="0045">
+            <com:FigureReference com:referencedFigureNumber="36">図３６は、いくつかの他の例示的な実施形態による加熱エンジン停止回路を示す回路図である。</com:FigureReference>
+         </com:P>
+      </pat:DrawingDescription>
+      <pat:EmbodimentDescription>
+         <com:P com:pNumber="0046">
+  いくつかの詳細な例示的実施形態が本明細書に開示されている。しかしながら、本明細書に開示された特定の構造的及び機能的な詳細は、例示的な実施形態を説明する目的のために単に代表的なものである。しかしながら、例示的な実施形態は、多くの代替形態で具現化されてもよく、本明細書に記載された例示的な実施形態のみに限定されると解釈されるべきではない。
+</com:P>
+         <com:P com:pNumber="0047">
+  したがって、例示的な実施形態は、様々な変更および代替形態が可能であるが、その例示的な実施形態は、図面に例示的に示され、ここでは詳細に説明されることになる。しかしながら、例示的な実施形態を開示された特定の形態に限定する意図はなく、逆に、例示的な実施形態は、そのすべての変更、等価物、および代替物を網羅するものであることを理解されたい。図の説明を通じて、同様の番号は、同様の要素を指す。
+</com:P>
+         <com:P com:pNumber="0048">
+  ある要素または層が、他の要素または層の「上に（ｏｎ）ある」、「接続されている（ｃｏｎｎｅｃｔｅｄ  ｔｏ）」、「結合されている（ｃｏｕｐｌｅｄ  ｔｏ）」、「取り付けられている（ａｔｔａｃｈｅｄ  ｔｏ）」、「隣接している（ａｄｊａｃｅｎｔ  ｔｏ）」、または「覆っている（ｃｏｖｅｒｉｎｇ）」と呼ばれる場合、それは他の要素または層の上に直接、接続されている、結合されている、取り付けられている、隣接している、または覆っていてもよいし、介在する要素または層が存在していてもよいことを理解すべきである。一方、ある要素が他の要素や層に「直接載っている（ｄｉｒｅｃｔｌｙ  ｏｎ）」、「直接つながっている（ｄｉｒｅｃｔｌｙ  ｃｏｎｎｅｃｔｅｄ  ｔｏ）」、「直接結合している（ｄｉｒｅｃｔｌｙ  ｃｏｕｐｌｅｄ  ｔｏ）」と言われる場合は、介在する要素や層が存在しないこととなる。本明細書では、同一番号は同一要素を意味する。本明細書では、「および／または（ａｎｄ／ｏｒ）」という用語は、関連する記載項目の１つまたは複数の任意のおよびすべての組み合わせまたはサブコンビネーションを含む。
+</com:P>
+         <com:P com:pNumber="0049">
+  本明細書では、様々な要素、領域、層、および／またはセクションを説明するために、第１、第２、第３などの用語が使用されることがあるが、これらの要素、領域、層、および／またはセクションは、これらの用語によって限定されるべきではないことを理解する必要がある。これらの用語は、１つの要素、領域、層、またはセクションを別の領域、層、またはセクションと区別するためにのみ使用される。したがって、以下で説明する第１の要素、領域、層、またはセクションは、例示的な実施形態の教示から逸脱することなく、第２の要素、領域、層、またはセクションと呼ぶことができる。
+</com:P>
+         <com:P com:pNumber="0050">
+  本明細書では、説明を容易にするために、空間的に相対的な用語（例えば、「下方に（ｂｅｎｅａｔｈ）」、「下方に（ｂｅｌｏｗ）」、「下方に（ｌｏｗｅｒ）」、「上方に（ａｂｏｖｅ）」、「上方に（ｕｐｐｅｒ）」など）を使用して、図に示されているように、ある要素または機能と他の要素または機能との関係を説明することができる。空間的に相対的な用語は、図に描かれている向きに加えて、使用時や操作時におけるデバイスの異なる向きを包含することを意図していることを理解すべきである。例えば、図中のデバイスを裏返した場合、他の要素や特徴の「下方（ｂｅｌｏｗ）」や「下方（ｂｅｎｅａｔｈ）」と記載された要素は、他の要素や特徴の「上方（ａｂｏｖｅ）」に向けられることになる。したがって、「下方（ｂｅｌｏｗ）」という用語は、上と下の両方の向きを包含する可能性がある。また、デバイスは他の方向に向けてもよく（９０度回転させてもよいし、他の方向に向けてもよい）、本明細書で使用される空間的に相対的な記述子はそれに応じて解釈される。
+</com:P>
+         <com:P com:pNumber="0051">
+  本明細書で使用されている用語は、様々な例示的な実施形態を説明するためだけのものであり、例示的な実施形態を限定することを意図したものではない。本明細書で使用される単数形「ａ」、「ａｎ」、および「ｔｈｅ」は、文脈が明確に示す場合を除き、複数形も含むことが意図される。本明細書で使用される用語「含む（ｉｎｃｌｕｄｅｓ）」、「含む（ｉｎｃｌｕｄｉｎｇ）」、「備える（ｃｏｍｐｒｉｓｅｓ）」および／または「備える（ｃｏｍｐｒｉｓｉｎｇ）」は、記載された特徴、整数、ステップ、操作および／または要素の存在を特定するが、１つまたは複数の他の特徴、整数、ステップ、操作、要および／またはそれらのグループの存在または追加を排除するものではないことがさらに理解されるであろう。
+</com:P>
+         <com:P com:pNumber="0052">
+  本明細書中で、「約（ａｂｏｕｔ）」および「実質的に（ｓｕｂｓｔａｎｔｉａｌｌｙ）」という言葉が数値と関連して使用されている場合、他に明示的に定義されていない限り、関連する数値には、記載された数値の周囲に±１０％の公差が含まれることが意図される。
+</com:P>
+         <com:P com:pNumber="0053">
+  特に定義されない限り、本明細書で使用される全ての用語（技術用語及び科学用語を含む）は、例示的な実施形態が属する技術分野における通常の当業者によって一般的に理解されるのと同じ意味を有する。一般的に使用される辞書で定義されるものを含む用語は、関連する技術の文脈における意味と一致する意味を有するものとして解釈されるべきであり、本明細書で明示的にそのように定義されない限り、理想化されたまたは過度に形式的な意味で解釈されないことがさらに理解されよう。
+</com:P>
+         <com:P com:pNumber="0054">
+  ハードウェアは、１つ以上のプロセッサ、１つ以上の中央処理装置（ＣＰＵ）、１つ以上のマイクロコントローラ、１つ以上の算術論理装置（ＡＬＵ）、１つ以上のデジタル信号プロセッサ（ＤＳＰ）、１つ以上のマイクロコンピュータ、１つ以上のフィールドプログラマブルゲートアレイ（ＦＰＧＡ）、１つ以上のシステムオンチップ（ＳｏＣ）、１つ以上のプログラム可能論理装置（ＰＬＵ）、１つ以上のマイクロプロセッサ、１つ以上のアプリケーション特定集積回路（ＡＳＩＣｓ）、または、定義された方法で命令に応答し、実行することができるその他の１又は複数の装置のような処理回路または制御回路を用いて実装されてもよいが、これらに限定されない。
+</com:P>
+         <com:P com:pNumber="0055">
+  本明細書で使用する「非ニコチン電子ベイピング装置」または「非ニコチンｅ－ｖａｐｉｎｇデバイス」は、「非ニコチン電子ベイプ装置」および／または「非ニコチンｅ－ｖａｐｉｎｇ装置」を用いて時々言及され、これらの用語と同義と見なされることがある。
+</com:P>
+         <com:P com:pNumber="0056">
+  図１は、例示的な実施形態による非ニコチン電子ベイピング装置の正面図である。図２は、図１の非ニコチン電子ベイピング装置の側面図である。図３は、図１の非ニコチン電子ベイピング装置の背面図である。図１～３を参照すると、非ニコチン電子ベイピング装置５００は、非ニコチンポッドアセンブリ３００を受け入れるように構成された装置本体１００を含む。非ニコチンポッドアセンブリ３００は、非ニコチンプレベイパー製剤を保持するように構成されたモジュール物品である。「非ニコチンプレベイパー製剤」は、蒸気に変換され得る材料または材料の組み合わせである。例えば、非ニコチンプレベイパー製剤は、水、ビーズ、溶媒、活性成分、エタノール、植物抽出物、天然又は人工フレーバー、及び／又はグリセリン及びプロピレングリコールなどの蒸気形成剤を含む液体、固体、及び／又はゲル製剤であってもよく、また、これらに限定されるものではない。
+</com:P>
+         <com:P com:pNumber="0057">
+  例示的な実施形態では、非ニコチンプレベイパー製剤は、タバコを含まず、またタバコに由来するものでもない。非ニコチンプレベイパー製剤の非ニコチン化合物は、抽出物、油、アルコール、チンキ、懸濁液、分散液、コロイド、一般的な非中性（弱酸性又は弱塩基性）溶液、又はそれらの組み合わせを含む液体又は部分液体の一部であってもよいし、それらに含まれていてもよい。非ニコチンプレベイパー製剤の調製中、非ニコチン化合物は、非ニコチンプレベイパー製剤の他の成分に注入、混入、または他の方法で組み合わされてもよい。
+</com:P>
+         <com:P com:pNumber="0058">
+  例示的な実施形態では、非ニコチン化合物は、室温（例えば、７２°Ｆ）以下を含む比較的低い温度で、長期間にわたってゆっくりとした自然な脱炭酸プロセスを受ける。さらに、非ニコチン化合物は、１気圧などの比較的低い圧力で一定期間（数分または数時間）、特に約１７５°Ｆ以上の範囲の高温にさらされた場合、著しく上昇した脱炭酸プロセス（例えば、５０％脱炭酸以上）を受ける可能性がある。約２４０°Ｆ以上の高温は、比較的高い脱炭酸率で急速または瞬間的な脱炭酸を引き起こすことができるが、さらに高温にすると、非ニコチン化合物（複数可）の化学特性の一部または全部の劣化を引き起こすことがある。
+</com:P>
+         <com:P com:pNumber="0059">
+  例示的な実施形態では、非ニコチン化合物は、薬用植物（例えば、医学的に認められた治療効果を提供する植物の天然に存在する成分）由来であってもよい。薬用植物は、大麻植物であってもよく、成分は、少なくとも１つの大麻由来の成分であってもよい。カンナビノイド（例えば、フィトカンナビノイド）及びテルペン類は、大麻由来の成分の一例である。カンナビノイドは、体内の受容体と相互作用し、様々な作用をもたらす。そのため、カンナビノイドは、様々な薬効目的で使用されている。カンナビス由来材料は、１種以上のカンナビス植物からの葉および／または花材、または１種以上のカンナビス植物からの抽出物を含んでもよい。例えば、大麻植物の１つ以上の種は、カンナビス・サティバ、カンナビス・インディカ、及びカンナビス・ルデラリスを含んでもよい。いくつかの例示的な実施形態では、非ニコチンプレベイパー製剤は、６０～８０％（例えば、７０％）のカンナビス・サティバ及び２０～４０％（例えば、３０％）のカンナビス・インディカである、又はカンナビス及び／又はカンナビス由来の構成要素の混合物を含んでいる。
+</com:P>
+         <com:P com:pNumber="0060">
+  大麻由来のカンナビノイドの非限定的な例としては、テトラヒドロカンナビノール酸（ＴＨＣＡ）、テトラヒドロカンナビノール（ＴＨＣ）、カンナビジオール酸（ＣＢＤＡ）、カンナビジオール（ＣＢＤ）、カンナビノール（ＣＢＮ）、カンナビシクロール（ＣＢＬ）、カンナビクロメン（ＣＢＣ）及びカンナビゲロール（ＣＢＧ）等が挙げられる。テトラヒドロカンナビノール酸（ＴＨＣＡ）はテトラヒドロカンナビノール（ＴＨＣ）の前駆体であり、カンナビジオール酸（ＣＢＤＡ）はカンナビジロール（ＣＢＤ）の前駆体である。テトラヒドロカンナビノール酸（ＴＨＣＡ）及びカンナビジオール酸（ＣＢＤＡ）は、加熱を介して、それぞれテトラヒドロカンナビノール（ＴＨＣ）及びカンナビジオール（ＣＢＤ）に変換され得る。例示的な実施形態では、ヒータからの熱は、非ニコチンプレベイパー製剤中のテトラヒドロカンナビノール酸（ＴＨＣＡ）をテトラヒドロカンナビノール（ＴＨＣ）に変換するための脱炭酸、及び／又は非ニコチンプレベイパー製剤中のカンナビジオール酸（ＣＢＤＡ）をカンナビジオール（ＣＢＤ）に変換するための脱炭酸を引き起こしてもよい。
+</com:P>
+         <com:P com:pNumber="0061">
+  テトラヒドロカンナビノール酸（ＴＨＣＡ）およびテトラヒドロカンナビノール（ＴＨＣ）の両方が非ニコチンプレベイパー製剤中に存在する例では、脱炭酸およびその結果生じる変換により、テトラヒドロカンナビノール酸（ＴＨＣＡ）の減少およびテトラヒドロカンナビノール（ＴＨＣ）の増加が引き起こされるであろう。テトラヒドロカンナビノール酸（ＴＨＣＡ）の少なくとも５０％（例えば、少なくとも８７％）は、気化を目的とする非ニコチンプレベイパー製剤の加熱中に、脱炭酸プロセスを介して、テトラヒドロカンナビノール（ＴＨＣ）に変換されてもよい。同様に、カンナビジオール酸（ＣＢＤＡ）及びカンナビジオール（ＣＢＤ）の両方が非ニコチンプレベイパー製剤中に存在する実施例では、脱炭酸及びその結果の変換は、カンナビジオール酸（ＣＢＤＡ）の減少及びカンナビジオール（ＣＢＤ）の増加を引き起こすであろう。カンナビジオール酸（ＣＢＤＡ）の少なくとも５０％（例えば、少なくとも８７％）は、気化を目的とする非ニコチンプレベイパー製剤の加熱中に、脱炭酸プロセスを介して、カンナビジオール（ＣＢＤ）に変換されてもよい。
+</com:P>
+         <com:P com:pNumber="0062">
+  非ニコチンプレベイパー製剤は、医学的に認められた治療効果（例えば、痛み、吐き気、てんかん、精神疾患の治療）を提供する非ニコチン化合物を含んでもよい。治療方法の詳細は、２０１７年１２月１８日に出願された、「ＶＡＰＯＲＩＺＩＮＧ  ＤＥＶＩＣＥＳ  ＡＮＤ  ＭＥＴＨＯＤＳ  ＦＯＲ  ＤＥＬＩＶＥＲＩＮＧ  Ａ  ＣＯＭＰＯＵＮＤ  ＵＳＩＮＧ  ＴＨＥ  ＳＡＭＥ」と題された米国出願第１５／８４５，５０１号に記載されており、その開示は参照によりその全体が本明細書に組み込まれるものとする。
+</com:P>
+         <com:P com:pNumber="0063">
+  例示的な実施形態では、少なくとも１つのフレバラントは、非ニコチンプレベイパー製剤の総重量を基準にして、約０．２％～約１５％（例えば、約１％～１２％、約２％～１０％、または約５％～８％）の範囲の量で存在する。少なくとも１つのフレバラントは、天然フレバラント、人工フレバラント、または天然フレバラントと人工フレバラントの組み合わせのうちの少なくとも１つであってよい。少なくとも１つのフレバラントは、大麻風味化合物の代わりに、又は大麻風味化合物に加えて、揮発性大麻風味化合物（フラボノイド）又は他の風味化合物を含んでもよい。例えば、少なくとも１つのフレバラントは、メントール、ウィンターグリーン、ペパーミント、シナモン、クローブ、それらの組み合わせ、及び／又はそれらの抽出物を含んでもよい。さらに、他のハーブフレーバー、フルーツフレーバー、ナッツフレーバー、酒フレーバー、ローストフレーバー、ミントフレーバー、香ばしいフレーバー、それらの組み合わせ、及び他の任意の所望のフレーバーを提供するために、フレバラントが含まれてもよい。
+</com:P>
+         <com:P com:pNumber="0064">
+  ベイプ中、非ニコチン電子ベイピング装置５００は、非ニコチンプレベイパー製剤を加熱して蒸気を発生させるように構成される。本明細書で言及されるように、「非ニコチン蒸気」は、本明細書に開示される例示的な実施形態のいずれかによる任意の非ニコチン電子ベイピング装置から生成又は出力される任意の物質である。
+</com:P>
+         <com:P com:pNumber="0065">
+  図１及び図３に示すように、非ニコチン電子ベイピング装置５００は、長手方向に延び、その幅よりも大きい長さを有している。さらに、図２に示すように、非ニコチン電子ベイピング装置５００の長さは、その厚さよりも大きいことも特徴である。さらに、非ニコチン電子ベイピング装置５００の幅は、その厚みよりも大きくてもよい。ｘ－ｙ－ｚ直交座標系を仮定すると、非ニコチン電子ベイピング装置５００の長さはｙ方向で測定されてもよく、幅はｘ方向で測定されてもよく、厚さはｚ方向で測定されてもよい。非ニコチン電子ベイピング装置５００は、例示的な実施形態はこれに限定されないが、その正面図、側面図、及び背面図に基づいてテーパ状の端部を有する実質的に直線状の形態を有していてもよい。
+</com:P>
+         <com:P com:pNumber="0066">
+  装置本体１００は、フロントカバー１０４、フレーム１０６、及びリアカバー１０８を含む。フロントカバー１０４、フレーム１０６、及びリアカバー１０８は、非ニコチン電子ベイピング装置５００の動作に関連する機械的要素、電子的要素、及び／又は回路を囲む装置筐体を形成している。例えば、装置本体１００の装置筐体は、非ニコチン電子ベイピング装置５００に電力を供給するように構成された電源を囲むことができ、これは、非ニコチンポッドアセンブリ３００に電流を供給することを含むことができる。装置本体１００の装置筐体は、非ニコチン電子ベイピング装置５００を制御するための１つ以上の電気システムも含んでもよい。例示的な実施形態による電気システムについては、後でより詳細に説明する。さらに、組み立てられたとき、フロントカバー１０４、フレーム１０６、及びリアカバー１０８は、装置本体１００の可視部分の大部分を構成してもよい。
+</com:P>
+         <com:P com:pNumber="0067">
+  フロントカバー１０４（例えば、第１のカバー）は、ベゼル構造１１２を収容するように構成された一次開口部を規定する。一次開口部は、ベゼル構造１１２の形状に応じて他の形状が可能であるが、丸みを帯びた長方形の形状を有していてもよい。ベゼル構造１１２は、非ニコチンポッドアセンブリ３００を受容するように構成された貫通孔１５０を規定する。貫通孔１５０は、例えば図９に関連して本明細書でより詳細に論じられる。
+</com:P>
+         <com:P com:pNumber="0068">
+  フロントカバー１０４はまた、ライトガイド配置を収容するように構成された二次開口部を規定する。二次開口部は、スロット（例えば、丸みを帯びたエッジを有する細長い長方形）に類似していてもよいが、ライトガイド配置の形状に応じて他の形状も可能である。例示的な実施形態では、ライトガイド配置は、ライトガイド筐体１１４及びボタン筐体１２２を含む。ライトガイド筐体１１４は、ライトガイドレンズ１１６を露出するように構成され、ボタン筐体１２２は、第１のボタンレンズ１２４及び第２のボタンレンズ１２６（例えば、図１６）を露出するように構成される。第１のボタンレンズ１２４とボタン筐体１２２の上流部分とは、第１のボタン１１８を形成してもよい。同様に、第２のボタンレンズ１２６及びボタン筐体１２２の下流部分は、第２のボタン１２０を形成してもよい。ボタン筐体１２２は、単一の構造の形態であってもよいし、２つの別々の構造の形態であってもよい。後者の形態であれば、第１のボタン１１８と第２のボタン１２０は、押されたときに、より独立した感触で動くことができる。
+</com:P>
+         <com:P com:pNumber="0069">
+  非ニコチン電子ベイピング装置５００の動作は、第１のボタン１１８及び第２のボタン１２０によって制御されてもよい。例えば、第１のボタン１１８は電源ボタンであってもよく、第２のボタン１２０は強度ボタンであってもよい。ライトガイド配置に関連して２つのボタンが図面に示されているが、利用可能な機能及び所望のユーザインタフェースに応じて、より多くの（又はより少ない）ボタンが提供されてもよいことが理解されるべきである。
+</com:P>
+         <com:P com:pNumber="0070">
+  フレーム１０６（例えば、ベースフレーム）は、装置本体１００（及び全体としての非ニコチン電子ベイピング装置５００）の中心的な支持構造である。フレーム１０６は、シャーシと呼ばれることもある。フレーム１０６は、近位端と、遠位端と、近位端と遠位端の間の一対の側部とを含む。近位端及び遠位端は、それぞれ、下流端及び上流端と呼ばれることもある。本明細書において、「近位」（及び逆に「遠位」）は、ベイプ中の成人ベイパーとの関係においてであり、「下流」（及び逆に「上流」）は、蒸気の流れとの関係においてである。さらなる強度および安定性のために、サイドセクションの対向する内面間（例えば、フレーム１０６の長さの約中間）に橋渡し部が設けられてもよい。フレーム１０６は、モノリシック構造となるように一体的に形成されていてもよい。
+</com:P>
+         <com:P com:pNumber="0071">
+  構造の材料に関して、フレーム１０６は、合金またはプラスチックで形成されてもよい。合金（例えば、ダイキャストグレード、マシナブルグレード）は、アルミニウム（Ａｌ）合金または亜鉛（Ｚｎ）合金であってもよい。プラスチックは、ポリカーボネート（ＰＣ）、アクリロニトリル・ブタジエン・スチレン（ＡＢＳ）、またはそれらの組み合わせ（ＰＣ／ＡＢＳ）であってもよい。例えば、ポリカーボネートは、ＬＵＰＯＹ  ＳＣ１００４Ａであってもよい。さらに、フレーム１０６は、機能的及び／又は美的理由のために（例えば、高級な外観を提供するために）表面仕上げを提供されてもよい。例示的な実施形態において、フレーム１０６（例えば、アルミニウム合金で形成される場合）は、陽極酸化されてもよい。別の実施形態では、フレーム１０６（例えば、亜鉛合金で形成された場合）は、硬質エナメルでコーティングされてもよいし、塗装されてもよい。別の実施形態において、フレーム１０６（例えば、ポリカーボネートで形成される場合）は、メタライズされてもよい。さらに別の実施形態では、フレーム１０６（例えば、アクリロニトリル・ブタジエン・スチレンで形成される場合）は電気メッキされてもよい。フレーム１０６に関する構造の材料は、フロントカバー１０４、リアカバー１０８、及び／又は非ニコチン電子ベイピング装置５００の他の適切な部品にも適用できることを理解されたい。
+</com:P>
+         <com:P com:pNumber="0072">
+  リアカバー１０８（例えば、第２のカバー）はまた、ベゼル構造１１２を収容するように構成された開口部を規定する。開口部は、ベゼル構造１１２の形状に応じて他の形状も可能であるが、丸みを帯びた長方形の形状を有していてもよい。例示的な実施形態では、リアカバー１０８の開口部は、フロントカバー１０４の一次開口部よりも小さい。加えて、図示しないが、非ニコチン電子ベイピング装置５００の前面の導光体配置に加えて（又はその代わりに）、非ニコチン電子ベイピング装置５００の背面に導光体配置（例えば、ボタンを含む）を設けてもよいことが理解されるべきである。
+</com:P>
+         <com:P com:pNumber="0073">
+  フロントカバー１０４及びリアカバー１０８は、スナップフィット配置を介してフレーム１０６と係合するように構成されてもよい。例えば、フロントカバー１０４及び／又はリアカバー１０８は、フレーム１０６の対応する嵌合部材と連動するように構成されたクリップを含んでもよい。非限定的な実施形態では、クリップは、フレーム１０６の対応する嵌合部材（例えば、ベベルエッジを有する突起）を受け入れるように構成されたオリフィスを有するタブの形態であってよい。あるいは、フロントカバー１０４及び／又はリアカバー１０８は、干渉嵌め（プレスフィット又は摩擦嵌めと呼ばれることもある）を介してフレーム１０６と係合するように構成されてもよい。しかしながら、フロントカバー１０４、フレーム１０６、及びリアカバー１０８は、他の適切な配置及び技術を用いて結合されてもよいことが理解されるべきである。
+</com:P>
+         <com:P com:pNumber="0074">
+  装置本体１００はまた、マウスピース１０２を含む。マウスピース１０２は、フレーム１０６の近位端に固定されてもよい。さらに、図２に示すように、フレーム１０６がフロントカバー１０４とリアカバー１０８との間に挟まれる例示的な実施形態では、マウスピース１０２は、フロントカバー１０４、フレーム１０６、及びリアカバー１０８に隣接していてもよい。さらに、非限定的な実施形態では、マウスピース１０２は、バヨネット接続を介して装置筐体と接合されてもよい。
+</com:P>
+         <com:P com:pNumber="0075">
+  図４は、図１の非ニコチン電子ベイピング装置の近位端図である。図４を参照すると、マウスピース１０２の出口面は、複数の蒸気出口を規定している。非限定的な実施形態では、マウスピース１０２の出口面は楕円形であってよい。さらに、マウスピース１０２の出口面は、楕円形状の出口面の長軸に対応する第１のクロスバーと、楕円形状の出口面の短軸に対応する第２のクロスバーとを含んでもよい。さらに、第１のクロスバー及び第２のクロスバーは、垂直に交差し、マウスピース１０２の一体的に形成された部分であってもよい。出口面は、４つの蒸気出口を規定するように示されているが、例示的な実施形態はそれに限定されないことを理解されたい。例えば、出口面は、４つ未満の（例えば、１つ、２つ）蒸気出口、又は４つ以上の（例えば、６つ、８つ）蒸気出口を規定してもよい。
+</com:P>
+         <com:P com:pNumber="0076">
+  図５は、図１の非ニコチン電子ベイピング装置の遠位端図である。図５を参照すると、非ニコチン電子ベイピング装置５００の遠位端は、ポート１１０を含む。ポート１１０は、非ニコチン電子ベイピング装置５００内の内部電源を充電するように、外部電源から（例えば、ＵＳＢケーブルを介して）電流を受けるように構成される。さらに、ポート１１０は、別の非ニコチン電子ベイピング装置又は他の電子デバイス（例えば、電話、タブレット、コンピュータ）にデータを送信し、及び／又はそこから（例えば、ＵＳＢケーブルを介して）データを受信するようにも構成され得る。さらに、非ニコチン電子ベイピング装置５００は、電話などの別の電子デバイスと、その電子デバイスにインストールされたアプリケーションソフトウェア（アプリ）を介して無線通信するように構成されてもよい。そのような例では、成人ベイパーは、アプリを介して非ニコチン電子ベイピング装置５００を制御するか、そうでなければインターフェース（例えば、非ニコチン電子ベイピング装置の位置を特定する、使用情報を確認する、動作パラメータを変更する）してよい。
+</com:P>
+         <com:P com:pNumber="0077">
+  図６は、図１の非ニコチン電子ベイピング装置の透視図である。図７は、図６におけるポッド入口の拡大図である。図６～７を参照すると、そして簡単に上述したように、非ニコチン電子ベイピング装置５００は、非ニコチンのプレベイパー製剤を保持するように構成された非ニコチンポッドアセンブリ３００を含む。非ニコチンポッドアセンブリ３００は、上流端（これはライトガイド配置に面する）及び下流端（これはマウスピース１０２に面する）を有する。非限定的な実施形態では、上流端は、下流端から非ニコチンポッドアセンブリ３００の対向面である。非ニコチンポッドアセンブリ３００の上流端は、ポッド入口３２２を規定する。装置本体１００は、非ニコチンポッドアセンブリ３００を受け入れるように構成された貫通孔（例えば、図９の貫通孔１５０）を規定している。例示的な実施形態では、装置本体１００のベゼル構造１１２は、貫通孔を規定し、上流リムを含む。特に図７に示すように、ベゼル構造１１２の上流リムは、非ニコチンポッドアセンブリ３００が装置本体１００の貫通孔内に着座したときにポッド入口３２２を露出するように角度を付けられている（例えば、内側にくぼんでいる）。
+</com:P>
+         <com:P com:pNumber="0078">
+  例えば、フロントカバー１０４の輪郭に沿うのではなく（非ニコチンポッドアセンブリ３００の前面と比較的面一になるように、したがって、ポッド入口３２２を見えなくするように）、ベゼル構造１１２の上流リムは、ポッド入口３２２に周囲空気を導くように構成されたスクープの形態である。この角度付き／スクープ構成は、非ニコチン電子ベイピング装置５００の空気入口（例えば、ポッド入口３２２）の閉塞を低減又は防止するのに役立ち得る。スクープの深さは、非ニコチンポッドアセンブリ３００の上流端面の半分未満（例えば、４分の１未満）が露出するようなものであってもよい。さらに、非限定的な実施形態において、ポッド入口３２２は、スロットの形態である。さらに、装置本体１００が第１の方向に延在するとみなされる場合、スロットは第２の方向に延在するとみなされてもよく、第２の方向は第１の方向に対して横方向である。
+</com:P>
+         <com:P com:pNumber="0079">
+  図８は、図６の非ニコチン電子ベイピング装置の断面図である。図８では、断面は、非ニコチン電子ベイピング装置５００の長手方向軸に沿って撮影されている。示されるように、装置本体１００及び非ニコチンポッドアセンブリ３００は、非ニコチン電子ベイピング装置５００の動作に関連する機械要素、電子要素、及び／又は回路を含み、これらは、本明細書においてより詳細に議論され、及び／又は参照により本明細書に組み入れられる。例えば、非ニコチンポッドアセンブリ３００は、内部の密封された非ニコチンリザーバから非ニコチンプレベイパー製剤を放出するように作動するように構成された機械的要素を含んでもよい。非ニコチンポッドアセンブリ３００はまた、非ニコチンポッドアセンブリ３００の挿入及び着座を容易にするために装置本体１００と係合するように構成された機械的側面を有してもよい。
+</com:P>
+         <com:P com:pNumber="0080">
+  さらに、非ニコチンポッドアセンブリ３００は、装置本体１００との間で情報を記憶、受信、および／または送信するように構成された電子要素および／または回路を含む「スマートポッド」であってよい。このような情報は、装置本体１００と共に使用するために非ニコチンポッドアセンブリ３００を認証するために使用されてもよい（例えば、未承認／偽造の非ニコチン用ポッドアセンブリの使用を防止するために）。さらに、情報は、非ニコチンポッドアセンブリ３００のタイプを識別するために使用されてもよく、次いで、識別されたタイプに基づくベイププロファイルと相関される。ベイププロファイルは、非ニコチンプレベイパー製剤の加熱のための一般的なパラメータを定めるように設計されてもよく、ベイプ前及び／又はベイプ中に成人ベイパーによって調整、改質、又は他の調整を受けることができる。
+</com:P>
+         <com:P com:pNumber="0081">
+  非ニコチンポッドアセンブリ３００はまた、非ニコチン電子ベイピング装置５００の動作に関連し得る他の情報を装置本体１００と通信することができる。関連する情報の例は、非ニコチンポッドアセンブリ３００内の非ニコチンプレベイパー製剤のレベル及び／又は非ニコチンポッドアセンブリ３００が装置本体１００に挿入されてアクティベートされてから経過した時間の長さを含んでもよい。例えば、非ニコチンポッドアセンブリ３００が、ある期間以上前（例えば、６ヶ月以上前）に装置本体１００に挿入されてアクティベートされた場合、非ニコチン電子ベイピング装置５００はベイプを許可せず、非ニコチンポッドアセンブリ３００がまだ十分なレベルの非ニコチンプレベイパー製剤を含んでいても、成人ベイパーは、新しい非ニコチンポッドアセンブリに変更するように促されることがある。
+</com:P>
+         <com:P com:pNumber="0082">
+  装置本体１００は、非ニコチンポッドアセンブリ３００を係合、保持、および／または作動させるように構成された機械的要素（例えば、相補構造）を含んでもよい。さらに、装置本体１００は、ベイプ中に非ニコチンポッドアセンブリ３００に電力を供給するように構成された内部電源（例えば、バッテリー）を充電するための電流を受け取るように構成された電子要素及び／又は回路を含んでもよい。さらに、装置本体１００は、非ニコチンポッドアセンブリ３００、異なる非ニコチン電子ベイピング装置、他の電子装置（例えば、電話、タブレット、コンピュータ）、及び／又は成人ベイパーと通信するように構成された電子要素及び／又は回路を含んでもよい。通信される情報は、ポッド固有のデータ、現在のベイピングの詳細、および／または過去のベイピングのパターン／履歴を含んでもよい。成人ベイパーは、触覚（例えば、振動）、聴覚（例えば、ビープ音）、及び／又は視覚（例えば、色付き／点滅するライト）であるフィードバックでそのような通信を通知されてもよい。充電及び／又は情報の通信は、ポート１１０を使用して（例えば、ＵＳＢケーブルを介して）行われてもよい。
+</com:P>
+         <com:P com:pNumber="0083">
+  図９は、図６の非ニコチン電子ベイピング装置の装置本体の透視図である。図９を参照すると、装置本体１００のベゼル構造１１２は、貫通孔１５０を規定している。貫通孔１５０は、非ニコチンポッドアセンブリ３００を受け入れるように構成される。非ニコチンポッドアセンブリ３００の貫通孔１５０内への挿入及び着座を容易にするために、ベゼル構造１１２の上流リムは、第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂを含む。貫通孔１５０は、角が丸くなった長方形の形状を有していてもよい。例示的な実施形態では、第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂは、ベゼル構造１１２と一体的に形成され、上流リムの２つの丸みを帯びた角部に位置する。
+</com:P>
+         <com:P com:pNumber="0084">
+  ベゼル構造１１２の下流側壁は、第１の下流開口部、第２の下流開口部、及び第３の下流開口部を規定してよい。第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂを含む保持構造は、第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂがそれぞれベゼル構造１１２の第１の下流開口部及び第２の下流開口部を通って貫通孔１５０の中に突き出るようにベゼル構造１１２に係合される。さらに、マウスピース１０２の遠位端は、第１の下流突出部１３０ａと第２の下流突出部１３０ｂとの間にあるように、ベゼル構造１１２の第３の下流開口部を通り、貫通孔１５０の中に延在する。
+</com:P>
+         <com:P com:pNumber="0085">
+  図１０は、図９の装置本体を示す正面図である。図１０を参照すると、装置本体１００は、貫通孔１５０の上流側に配置された装置電気コネクタ１３２を含む。装置本体１００の装置電気コネクタ１３２は、貫通孔１５０内に着座する非ニコチンポッドアセンブリ３００と電気的に係合するように構成される。その結果、ベイプ中に装置本体１００から装置電気コネクタ１３２を介して非ニコチンポッドアセンブリ３００に電力を供給することができる。さらに、装置電気コネクタ１３２を介して、装置本体１００及び非ニコチンポッドアセンブリ３００にデータを送信及び／又は非ニコチンポッドアセンブリ３００からデータを受信することができる。
+</com:P>
+         <com:P com:pNumber="0086">
+  図１１は、図１０における貫通孔の拡大透視図である。図１１を参照すると、第１の上流突出部１２８ａ、第２の上流突出部１２８ｂ、第１の下流突出部１３０ａ、第２の下流突出部１３０ｂ、及びマウスピース１０２の遠位端は、貫通孔１５０内に突出している。例示的な実施形態において、第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂは静止構造（例えば、静止ピボット）であり、第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂは牽引可能構造（例えば、格納可能な部材）である。例えば、第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂは、非ニコチンポッドアセンブリ３００の挿入を容易にするために、引き込み状態に一時的に移行する（及び引き込み状態に可逆的に戻る）ように構成されつつ、引き込み状態にデフォルトするように構成（例えば、ばね仕掛け）されていてもよい。
+</com:P>
+         <com:P com:pNumber="0087">
+  特に、装置本体１００の貫通孔１５０に非ニコチンポッドアセンブリ３００を挿入する場合、非ニコチンポッドアセンブリ３００の上流端面の凹部が、最初に第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂと係合し、その後、非ニコチンポッドアセンブリ３００の下流端面の凹部が第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂと係合するまでの、（第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂの周りの）非ニコチンポッドアセンブリの首振り動作が行われてもよい。このような例では、非ニコチンポッドアセンブリ３００の（枢動中の）回転軸は、装置本体１００の長手方向軸に対して直交していてもよい。さらに、扱いやすいように偏っていてもよい第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂは、非ニコチンポッドアセンブリ３００が貫通孔１５０に枢動しているときに引っ込み、弾力的に伸びて非ニコチンポッドアセンブリ３００の下流端面における凹部と係合することができる。さらに、第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂと非ニコチンポッドアセンブリ３００の下流端面における凹部との係合は、非ニコチンポッドアセンブリ３００が装置本体１００の貫通孔１５０に適切に装着されることを成人ベイパーに通知するために触覚及び／又は聴覚フィードバック（例えば、可聴クリック）を生成し得る。
+</com:P>
+         <com:P com:pNumber="0088">
+  図１２は、図１０における装置電気コンタクトの拡大透視図である。装置本体１００の装置電気コンタクトは、非ニコチンポッドアセンブリ３００が装置本体１００の貫通孔１５０内に着座したときに、非ニコチンポッドアセンブリ３００のポッド電気コンタクトと係合するように構成される。図１２を参照すると、装置本体１００の装置電気コンタクトは、装置電気コネクタ１３２を含む。装置電気コネクタ１３２は、電力コンタクトとデータコンタクトとを含む。装置電気コネクタ１３２の電力コンタクトは、装置本体１００から非ニコチンポッドアセンブリ３００に電力を供給するように構成される。図示されているように、装置電気コネクタ１３２の電力コンタクトは、第１の対の電力コンタクトと第２の対の電力コンタクト（これらは、リアカバー１０８よりもフロントカバー１０４に近くなるように配置される）とを含む。電力コンタクトの第１の対（例えば、第１の上流突出部１２８ａに隣接するペア）は、電力コンタクトの第２の対とは異なる単一の一体構造であってよく、組み立てられたときに、貫通孔１５０内に延びる２つの突出部を含むものである。同様に、第２の対の電力コンタクト（例えば、第２の上流突出部１２８ｂに隣接する対）は、第１の対の電力コンタクトとは異なる単一の一体構造であってよく、組み立てられたときに、貫通孔１５０の中に延在する２つの突起を含むものである。装置電気コネクタ１３２の第１の対の電力コンタクト及び第２の対の電力コンタクトは、既定として貫通孔１５０内に突出し、バイアスに打ち勝つ力を受けると貫通孔１５０から（例えば、独立して）引っ込むように、扱いやすく取り付けられ、バイアスをかけられてもよい。
+</com:P>
+         <com:P com:pNumber="0089">
+  装置電気コネクタ１３２のデータコンタクトは、非ニコチンポッドアセンブリ３００と装置本体１００との間でデータを伝送するように構成されている。図示されているように、装置電気コネクタ１３２のデータコンタクトは、５つの突起の列（これらは、フロントカバー１０４よりもリアカバー１０８に近くなるように配置される）を含む。装置電気コネクタ１３２のデータコンタクトは、組み立てられると貫通孔１５０の中に延びる別個の構造であってもよい。装置電気コネクタ１３２のデータコンタクトはまた、デフォルトとして貫通孔１５０内に伸長し、バイアスに打ち勝つ力を受けると貫通孔１５０から（例えば、独立して）引っ込むように、扱いやすくマウントされバイアスがかけられていてもよい。例えば、非ニコチンポッドアセンブリ３００が装置本体１００の貫通孔１５０に挿入されると、非ニコチンポッドアセンブリ３００のポッド電気コンタクトが装置本体１００の対応する装置電気コンタクトに押し当てられることになる。その結果、装置電気コネクタ１３２の電力コンタクトおよびデータコンタクトは、装置本体１００の中に引っ込む（例えば、少なくとも部分的に引っ込む）が、その弾力的配置により対応するポッド電気コンタクトに対して押し続け、それによって、装置本体１００と非ニコチンポッドアセンブリ３００の間の適切な電気接続を確保するのを助ける。さらに、そのような接続は、装置本体１００と非ニコチンポッドアセンブリ３００との間の電力および／または信号を確実かつ正確に転送および／または通信できるように、機械的に安全であり、最小限の接触抵抗を有することもできる。装置本体１００の装置電気接点に関連して様々な態様を論じてきたが、例示的な実施形態はそれに限定されず、他の構成が利用されてもよいことが理解されるべきである。
+</com:P>
+         <com:P com:pNumber="0090">
+  図１３は、図１２におけるマウスピースを含む部分分解図である。図１３を参照すると、マウスピース１０２は、保持構造１４０を介して装置筐体と係合するように構成される。例示的な実施形態では、保持構造１４０は、主にフレーム１０６とベゼル構造１１２の間にあるように位置している。示されるように、保持構造１４０は、保持構造１４０の近位端がフレーム１０６の近位端を通って延びるように、装置筐体内に配置される。保持構造１４０は、フレーム１０６の近位端をわずかに超えて延びていてもよいし、実質的にそれと均等であってもよい。保持構造１４０の近位端は、マウスピース１０２の遠位端を受け入れるように構成される。保持構造１４０の近位端は雌端であってもよく、一方、マウスピースの遠位端は雄端であってもよい。
+</com:P>
+         <com:P com:pNumber="0091">
+  例えば、マウスピース１０２は、バヨネット接続で保持構造１４０に結合されてもよい（例えば、可逆的に結合されてもよい）。そのような例では、保持構造１４０の雌端は、一対の対向するＬ字型スロットを規定してもよく、一方、マウスピース１０２の雄端は、保持構造１４０のＬ字型スロットと係合するように構成された対向する半径方向部材１３４（例えば、半径ピン）を有してもよい。保持構造１４０のＬ字型スロットの各々は、長手方向部分と円周方向部分とを有する。任意選択で、周方向部分の末端は、マウスピース１０２の半径方向部材１３４が不注意に係合解除される可能性を低減又は防止するのに役立つセリフ部分を有していてもよい。非限定的な実施形態では、Ｌ字型スロットの長手方向部分は、装置本体１００の長手方向軸に沿って平行に延び、Ｌ字型スロットの周方向部分は、装置本体１００の長手方向軸（例えば、中心軸）の周りに延びている。その結果、マウスピース１０２を装置筐体に結合するために、図１３に示すマウスピース１０２は、最初に９０度回転して、半径方向部材１３４を保持構造１４０のＬ字型スロットの長手方向部分の入口に整合させる。次いで、半径方向部材１３４が、周方向部分のそれぞれとの接合部に達するまでＬ字型スロットの長手方向部分に沿ってスライドするように、マウスピース１０２が保持構造１４０の中に押し込まれる。この時点で、マウスピース１０２は、次に、半径方向部材１３４が、それぞれの終端部に達するまで円周方向部分を横切って移動するように回転される。各終端部にセリフ部分が存在する場合、マウスピース１０２が装置筐体に適切に結合されたことを成人ベイパーに通知するために、触覚及び／又は聴覚フィードバック（例えば、可聴クリック）が生成され得る。
+</com:P>
+         <com:P com:pNumber="0092">
+  マウスピース１０２は、ベイプ中に非ニコチンベイパーが流れる蒸気通路１３６を規定している。蒸気通路１３６は、貫通孔１５０（これは、非ニコチンポッドアセンブリ３００が装置本体１００内に着座する場所である）と流体連通している。蒸気通路１３６の近位端は、フレア状部分を含んでもよい。さらに、マウスピース１０２は、エンドカバー１３８を含んでもよい。エンドカバー１３８は、その遠位端から近位端に向かって先細りになっていてもよい。エンドカバー１３８の出口面は、複数の蒸気出口を規定する。エンドカバー１３８に４つの蒸気出口が示されているが、例示的な実施形態はこれに限定されないことを理解されたい。
+</com:P>
+         <com:P com:pNumber="0093">
+  図１４は、図９のベゼル構造を含む部分分解斜視図である。図１５は、図１４のマウスピース、ばね、保持構造、及びベゼル構造の拡大透視図である。図１４～１５を参照すると、ベゼル構造１１２は、上流側壁及び下流側壁を含む。ベゼル構造１１２の上流側壁は、コネクタ開口部１４６を規定する。コネクタ開口部１４６は、装置本体１００の装置電気コネクタ１３２を露出させるか、または受け入れるように構成される。ベゼル構造１１２の下流側壁は、第１の下流開口部１４８ａ、第２の下流開口部１４８ｂ、及び第３の下流開口部１４８ｃを規定している。ベゼル構造１１２の第１の下流開口部１４８ａ及び第２の下流開口部１４８ｂは、保持構造１４０の第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂをそれぞれ受け入れるように構成される。ベゼル構造１１２の第３の下流開口部１４８ｃは、マウスピース１０２の遠位端部を受け入れるように構成されている。
+</com:P>
+         <com:P com:pNumber="0094">
+  図１４に示すように、第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂは、保持構造１４０の凹面側にある。図１５に示すように、第１のポスト１４２ａ及び第２のポスト１４２ｂは、保持構造１４０の対向する凸面側にある。第１のポスト１４２ａ及び第２のポスト１４２ｂには、それぞれ第１のばね１４４ａ及び第２のばね１４４ｂが配置される。第１のばね１４４ａ及び第２のばね１４４ｂは、保持構造１４０をベゼル構造１１２に対して偏らせるように構成される。
+</com:P>
+         <com:P com:pNumber="0095">
+  組み立てられると、ベゼル構造１１２は、コネクタ開口部１４６に隣接する一対のタブを介してフレーム１０６に固定されてもよい。さらに、保持構造１４０は、第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂがそれぞれ第１の下流開口部１４８ａ及び第２の下流開口部１４８ｂを通って延びるように、ベゼル構造１１２に付勢することになる。マウスピース１０２は、マウスピース１０２の遠位端が保持構造１４０を通って延びるとともに、ベゼル構造１１２の第３の下流開口部１４８ｃを通って延びるように、保持構造１４０に結合されることになる。第１のばね１４４ａ及び第２のばね１４４ｂは、フレーム１０６と保持構造１４０との間にあることになる。
+</com:P>
+         <com:P com:pNumber="0096">
+  非ニコチンポッドアセンブリ３００が装置本体１００の貫通孔１５０に挿入されているとき、非ニコチンポッドアセンブリ３００の下流端は、保持構造１４０の第１の下流突出部１３０ａおよび第２の下流突出部１３０ｂに押し付けられる。その結果、保持構造１４０の第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂは、（第１のばね１４４ａ及び第２のばね１４４ｂの圧縮によって）装置本体１００の貫通孔１５０から弾力的に降伏及び後退し、それによって、非ニコチンポッドアセンブリ３００の挿入が進行することができる。例示的な実施形態では、第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂが装置本体１００の貫通孔１５０から完全に引き込まれると、保持構造１４０の変位によって、第１のポスト１４２ａ及び第２のポスト１４２ｂの端部がフレーム１０６の内側端面に当接し得る。さらに、マウスピース１０２は保持構造１４０に結合されているので、マウスピース１０２の遠位端は貫通孔１５０から引っ込むことになり、したがって、マウスピース１０２の近位端（例えば、エンドカバー１３８を含む可視部分）も装置筐体から離れる対応距離だけ移動することになる。
+</com:P>
+         <com:P com:pNumber="0097">
+  非ニコチンポッドアセンブリ３００の第１の下流凹部及び第２の下流凹部がそれぞれ第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂと係合可能な位置に達するように非ニコチンポッドアセンブリ３００が十分に挿入されるとは、第１のばね１４４ａ及び第２のばね１４４ｂの圧縮による蓄積エネルギーによって、第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂが弾力的に伸長し、非ニコチンポッドアセンブリ３００の第１の下流凹部及び第２の下流凹部にそれぞれ係合するようになるであろう。さらに、係合は、非ニコチンポッドアセンブリ３００が装置本体１００の貫通孔１５０内に適切に装着されていることを成人ベイパーに通知するために、触覚及び／又は聴覚フィードバック（例えば、可聴クリック）を生成することができる。
+</com:P>
+         <com:P com:pNumber="0098">
+  図１６は、図１４のフロントカバー、フレーム、及びリアカバーを含む部分分解斜視図である。図１６を参照すると、非ニコチン電子ベイピング装置５００の動作に関連する様々な機械的要素、電子的要素、及び／又は回路がフレーム１０６に固定されてもよい。フロントカバー１０４及びリアカバー１０８は、スナップフィット配置を介してフレーム１０６と係合するように構成されてもよい。例示的な実施形態では、フロントカバー１０４及びリアカバー１０８は、フレーム１０６の対応する嵌合部材と連動するように構成されたクリップを含む。クリップは、フレーム１０６の対応する嵌合部材（例えば、面取りされたエッジを有する突起）を受け入れるように構成されたオリフィスを有するタブの形態であってよい。図１６において、フロントカバー１０４は、それぞれ４つのクリップを有する２つの列を有する（フロントカバー１０４について合計８つのクリップを有する）。同様に、リアカバー１０８は、それぞれ４つのクリップを有する２つの列を有する（リアカバー１０８のために合計８つのクリップ）。フレーム１０６の対応する嵌合部材は、フレーム１０６の内側側壁上にあってもよい。その結果、フロントカバー１０４とリアカバー１０８が一緒にスナップされるとき、係合したクリップと嵌合部材は見えないようにすることができる。あるいは、フロントカバー１０４及び／又はリアカバー１０８は、干渉嵌合を介してフレーム１０６と係合するように構成されてもよい。しかしながら、フロントカバー１０４、フレーム１０６、及びリアカバー１０８は、他の適切な配置及び技術を用いて結合されてもよいことが理解されるべきである。
+</com:P>
+         <com:P com:pNumber="0099">
+  図１７は、図６の非ニコチン電子ベイピング装置の非ニコチンポッドアセンブリの透視図である。図１８は、図１７の非ニコチンポッドアセンブリの別の透視図である。図１９は、図１８の非ニコチンポッドアセンブリの別の透視図である。図１７～１９を参照すると、非ニコチン電子ベイピング装置５００のための非ニコチンポッドアセンブリ３００は、非ニコチンプレベイパー製剤を保持するように構成されたポッド本体を含んでいる。ポッド本体は、上流端と下流端とを有する。ポッド本体の上流端は、キャビティ３１０（図２０）を規定する。ポッド本体の下流端は、上流端のキャビティ３１０と流体連通しているポッド出口３０４を規定する。コネクタモジュール３２０は、ポッド本体のキャビティ３１０内に着座するように構成される。コネクタモジュール３２０は、外面及び側面の面を含む。コネクタモジュール３２０の外部面は、ポッド本体の外部を形成する。
+</com:P>
+         <com:P com:pNumber="0100">
+  コネクタモジュール３２０の外部面は、ポッド入口３２２を規定する。ポッド入口３２２（ベイプ中に空気が入る）は、ポッド出口３０４（ベイプ中に非ニコチン蒸気が出る）と流体的に連通している。ポッド入口３２２は、図１９において、スロットの形態であるとして示されている。しかしながら、例示的な実施形態はそれに限定されず、他の形態も可能であることを理解されたい。コネクタモジュール３２０がポッド本体のキャビティ３１０内に着座すると、コネクタモジュール３２０の外部面は見えるままであるが、コネクタモジュール３２０の側面は、所定の角度に基づいてポッド入口３２２を通して部分的にしか見えないようにほとんど隠された状態となる。
+</com:P>
+         <com:P com:pNumber="0101">
+  コネクタモジュール３２０の外面は、少なくとも１つの電気コンタクトを含む。少なくとも１つの電気コンタクトは、複数の電力コンタクトを含んでもよい。例えば、複数の電力コンタクトは、第１の電力コンタクト３２４ａ及び第２の電力コンタクト３２４ｂを含んでもよい。非ニコチンポッドアセンブリ３００の第１の電力コンタクト３２４ａは、装置本体１００の装置電気コネクタ１３２の第１の電力コンタクトの対（例えば、図１２における第１の上流突出部１２８ａに隣接する対）と電気的に接続するように構成される。同様に、非ニコチンポッドアセンブリ３００の第２の電力コンタクト３２４ｂは、装置本体１００の装置電気コネクタ１３２の第２の電力コンタクトの対（例えば、図１２の第２の上流突出部１２８ｂに隣接する対）と電気的に接続するよう構成される。さらに、非ニコチンポッドアセンブリ３００の少なくとも１つの電気コンタクトは、複数のデータコンタクト３２６を含む。非ニコチンポッドアセンブリ３００の複数のデータコンタクト３２６は、装置電気コネクタ１３２のデータコンタクト（例えば、図１２における５つの突起の列）と電気的に接続するように構成される。非ニコチンポッドアセンブリ３００に関連して２つの電力コンタクト及び５つのデータコンタクトが示されているが、装置本体１００の設計に応じて他の変形が可能であることを理解されたい。
+</com:P>
+         <com:P com:pNumber="0102">
+  例示的な実施形態では、非ニコチンポッドアセンブリ３００は、前面、前面の反対側の後面、前面と後面との間の第１の側面、第１の側面の反対側の第２の側面、上流端面、及び上流端面の反対側の下流端面を含む。側面および端面の角（例えば、第１側面面と上流端面との角、上流端面と第２側面面との角、第２側面面と下流端面との角、下流端面と第１側面面との角）は、丸みを帯びていてもよい。しかし、場合によっては、角部が角ばっていてもよい。さらに、前面の周縁は、レッジの形態であってもよい。コネクタモジュール３２０の外面は、非ニコチンポッドアセンブリ３００の上流側端面の一部であるとみなすことができる。非ニコチンポッドアセンブリ３００の前面は、後面より広く、長くてもよい。そのような例では、第１の側面の面および第２の側面の面は、互いに対して内側に角度がつけられていてもよい。上流端面及び下流端面も、互いに対して内側に角度を付けられてもよい。角度のついた面を有するため、非ニコチンポッドアセンブリ３００の挿入は、一方向（例えば、装置本体１００の前面側（フロントカバー１０４に関連する側）から）に行われるようになる。その結果、非ニコチンポッドアセンブリ３００が装置本体１００に不適切に挿入される可能性を低減又は防止することができる。
+</com:P>
+         <com:P com:pNumber="0103">
+  図示されているように、非ニコチンポッドアセンブリ３００のポッド本体は、第１の筐体部３０２と第２の筐体部３０８とを含む。第１の筐体部３０２は、ポッド出口３０４を規定する下流端部を有する。ポッド出口３０４の縁は、任意に、陥没した領域またはくぼんだ領域であってよい。そのような例では、この領域は入り江に似ていてもよく、非ニコチンポッドアセンブリ３００の後面に隣接するリムの側面は開いていてもよく、前面に隣接するリムの側面は、第１の筐体部３０２の下流端の隆起した部分によって囲まれていてもよい。隆起した部分は、マウスピース１０２の遠位端のためのストッパとして機能してもよい。その結果、ポッド出口３０４のためのこの構成は、リムの開放側を介してマウスピース１０２（例えば、図１１）の遠位端の受け入れ及び位置合わせを容易にし、その後に第１の筐体部３０２の下流端の隆起部分に対して着座させることができる。非限定的な実施形態では、マウスピース１０２の遠位端は、非ニコチンポッドアセンブリ３００が装置本体１００の貫通孔１５０内に適切に挿入されたときにポッド出口３０４の周りにシールを作るのを助けるために弾力性材料を含む（またはそれから形成される）こともできる。
+</com:P>
+         <com:P com:pNumber="0104">
+  第１の筐体部３０２の下流端は、さらに、少なくとも１つの下流凹部を規定する。例示的な実施形態では、少なくとも１つの下流凹部は、第１の下流凹部３０６ａ及び第２の下流凹部３０６ｂの形態である。ポッド出口３０４は、第１の下流凹部３０６ａと第２の下流凹部３０６ｂとの間にあってもよい。第１の下流凹部３０６ａ及び第２の下流凹部３０６ｂは、装置本体１００の第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂにそれぞれ係合するように構成される。図１１に示すように、装置本体１００の第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂは、貫通孔１５０の下流側壁の隣接する角部に配置されてもよい。また、第１の下流凹部３０６ａおよび第２の下流凹部３０６ｂのそれぞれは、Ｖ字型の切り欠きの形態であってもよい。このような例では、装置本体１００の第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂの各々は、第１の下流凹部３０６ａ及び第２の下流凹部３０６ｂの対応するＶ字状切欠と係合するように構成された楔状構造の形態であってもよい。第１の下流凹部３０６ａは、下流端面及び第１の側面の角部に接していてもよく、第２の下流凹部３０６ｂは、下流端面及び第２の側面の角部に接していてもよい。その結果、第１の下流凹部３０６ａ及び第２の下流凹部３０６ｂのうち、第１の側面及び第２の側面に隣接する端部はそれぞれ開放されていてもよい。このような例では、図１８に示すように、第１の下流凹部３０６ａ及び第２の下流凹部３０６ｂの各々は、３面凹部であってもよい。
+</com:P>
+         <com:P com:pNumber="0105">
+  第２の筐体部３０８は、キャビティ３１０（図２０）を規定する上流端部を有する。キャビティ３１０は、コネクタモジュール３２０（図２１）を受け入れるように構成される。さらに、第２の筐体部３０８の上流端は、少なくとも１つの上流凹部を規定する。例示的な実施形態では、少なくとも１つの上流凹部は、第１の上流凹部３１２ａ及び第２の上流凹部３１２ｂの形態である。ポッド入口３２２は、第１の上流凹部３１２ａと第２の上流凹部３１２ｂとの間であってもよい。第１の上流凹部３１２ａ及び第２の上流凹部３１２ｂは、装置本体１００の第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂにそれぞれ係合するように構成される。図１２に示すように、装置本体１００の第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂは、貫通孔１５０の上流側壁の隣接する角部に配置されてもよい。第１の上流凹部３１２ａ及び第２の上流凹部３１２ｂの各々の深さは、第１の下流凹部３０６ａ及び第２の下流凹部３０６ｂの各々の深さよりも大きくてもよい。また、第１の上流凹部３１２ａ及び第２の上流凹部３１２ｂの各々の末端は、第１の下流凹部３０６ａ及び第２の下流凹部３０６ｂの各々の末端よりも丸みを帯びていても良い。例えば、第１の上流凹部３１２ａ及び第２の上流凹部３１２ｂのそれぞれは、Ｕ字型の窪みの形態であってもよい。このような例では、装置本体１００の第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂの各々は、第１の上流凹部３１２ａ及び第２の上流凹部３１２ｂの対応するＵ字形のくぼみに係合するように構成された丸いノブの形態であってよい。第１の上流凹部３１２ａは、上流側端面及び第１の側面の角と略一致してもよく、第２の上流凹部３１２ｂは、上流側端面及び第２の側面の角と略一致してもよい。その結果、第１の上流凹部３１２ａ及び第２の上流凹部３１２ｂのうち、第１の側面及び第２の側面に隣接する端部は、それぞれ開放されていてもよい。
+</com:P>
+         <com:P com:pNumber="0106">
+  第１の筐体部３０２は、非ニコチンプレベイパー製剤を保持するように構成された非ニコチンリザーバを内部に規定してもよい。非ニコチンリザーバは、非ニコチンポッドアセンブリ３００が作動して非ニコチンリザーバから非ニコチンプレベイパー製剤を放出するまで、非ニコチンプレベイパー製剤を密封するように構成され得る。密閉の結果、非ニコチンプレベイパー製剤は、環境だけでなく、非ニコチンプレベイパー製剤と潜在的に反応し得る非ニコチンポッドアセンブリ３００の内部要素からも隔離され得るので、非ニコチンプレベイパー製剤の貯蔵寿命及び／又は感覚特性（例えば風味）に対する悪影響の可能性を低減又は防止することができる。第２の筐体部３０８は、非ニコチンポッドアセンブリ３００をアクティベートし、アクティベート後に非ニコチンリザーバから放出される非ニコチンプレベイパー製剤を受け取り加熱するように構成された構造を含んでもよい。
+</com:P>
+         <com:P com:pNumber="0107">
+  非ニコチンポッドアセンブリ３００は、非ニコチンポッドアセンブリ３００の装置本体１００への挿入の前に、成人ベイパーによって手動で作動させられてもよい。あるいは、非ニコチンポッドアセンブリ３００は、非ニコチンポッドアセンブリ３００の装置本体１００への挿入の一部としてアクティベートされてもよい。例示的な実施形態では、ポッド本体の第２の筐体部３０８は、非ニコチンポッドアセンブリ３００のアクティベートの間に非ニコチンリザーバから非ニコチンプレベイパー製剤を放出するように構成された穿孔器を含む。穿孔器は、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂの形態であってよく、本明細書においてより詳細に議論されるであろう。
+</com:P>
+         <com:P com:pNumber="0108">
+  非ニコチンポッドアセンブリ３００を手動で起動するために、成人ベイパーは、非ニコチンポッドアセンブリ３００を装置本体１００の貫通孔１５０に挿入する前に、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂを内側に（例えば、同時に又は順次）押圧してもよい。例えば、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂは、その端部が非ニコチンポッドアセンブリ３００の上流端面と実質的に面一になるまで手動で押圧されてもよい。例示的な実施形態では、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂの内方への動きは、非ニコチンリザーバのシールを穿孔させるか又は他の方法で侵入させて、そこから非ニコチンプレベイパー製剤を放出させるようにする。
+</com:P>
+         <com:P com:pNumber="0109">
+  あるいは、非ニコチンポッドアセンブリ３００の装置本体１００への挿入の一部として非ニコチンポッドアセンブリ３００を起動するために、非ニコチンポッドアセンブリ３００は、第１の上流凹部３１２ａ及び第２の上流凹部３１２ｂがそれぞれ第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂに噛み合うように（例えば、上流係合）初期位置決めがされる。装置本体１００の第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂの各々は、第１の上流凹部３１２ａ及び第２の上流凹部３１２ｂの対応するＵ字形のくぼみと係合するように構成された丸いノブの形態であってもいいので、非ニコチンポッドアセンブリ３００は、続いて第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂについて比較的容易に回動して装置本体１００の貫通孔１５０に入れることができる。
+</com:P>
+         <com:P com:pNumber="0110">
+  非ニコチンポッドアセンブリ３００の枢動に関して、回転軸は、第１の上流突出部１２８ａ及び第２の上流突出部１２８ｂを通って延び、装置本体１００の長手方向軸に対して直交するように方向付けられると見なすことができる。非ニコチンポッドアセンブリ３００の最初の位置決め及びその後の枢動の間、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂは貫通孔１５０の上流側壁に接触し、非ニコチンポッドアセンブリ３００が貫通孔１５０内に進行すると第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂが第２の筐体部３０８内に（例えば、同時に）押し込まれて、伸展状態から後退状態に移行することになる。非ニコチンポッドアセンブリ３００の下流端が貫通孔１５０の下流側壁付近に到達して第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂに接触すると、第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂが後退して弾力的に伸長（例えば、スプリングバック）すると、非ニコチンポッドアセンブリ３００の位置決めにより、装置本体１００の第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂが、非ニコチンポッドアセンブリ３００の第１の下流凹部３０６ａ及び第２の下流凹部３０６ｂにそれぞれ係合する（例えば、下流側の係合）。
+</com:P>
+         <com:P com:pNumber="0111">
+  上述したように、例示的な実施形態によれば、マウスピース１０２は、保持構造１４０（第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂはその一部である）に固定される。このような例では、貫通孔１５０からの第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂの後退は、同じ方向（例えば、下流方向）に対応する距離だけマウスピース１０２の同時移動を引き起こすことになる。逆に、非ニコチンポッドアセンブリ３００が十分に挿入されて下流方向の係合が容易になると、マウスピース１０２は、第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂと同時にスプリングバックする。第１の下流突出部１３０ａ及び第２の下流突出部１３０ｂによる弾力的な係合に加えて、マウスピース１０２の遠位端は、非ニコチンポッドアセンブリ３００が装置本体１００の貫通孔１５０内に適切に装着されると、非ニコチンポッドアセンブリ３００に対して偏る（そして、比較的蒸気密なシールを形成するようにポッド出口３０４と整列する）ようにも構成される。
+</com:P>
+         <com:P com:pNumber="0112">
+  さらに、下流係合は、非ニコチンポッドアセンブリ３００が装置本体１００の貫通孔１５０内に適切に装着されたことを示すために、可聴クリック及び／又は触覚フィードバックを生成してもよい。適切に着座すると、非ニコチンポッドアセンブリ３００は、装置本体１００に機械的、電気的、及び流体的に接続されることになる。本明細書の非限定的な実施形態では、非ニコチンポッドアセンブリ３００の上流係合が下流係合の前に起こるように説明されているが、下流係合が上流係合の前に起こるように、適切な嵌合、起動、及び／又は電気的配置が逆になってもよいことが理解されるべきである。
+</com:P>
+         <com:P com:pNumber="0113">
+  図２０は、コネクタモジュールがない図１９の非ニコチンポッドアセンブリの透視図である。図２０を参照すると、第２の筐体部３０８の上流端は、キャビティ３１０を規定している。上述したように、キャビティ３１０は、コネクタモジュール３２０を（例えば、干渉嵌合を介して）受容するように構成される。例示的な実施形態では、キャビティ３１０は、第１の上流凹部３１２ａと第２の上流凹部３１２ｂとの間に位置し、また、第１のアクティベーションピン３１４ａと第２のアクティベーションピン３１４ｂとの間に位置する。コネクタモジュール３２０がない場合、インサート３４２（図２４）及び吸収性材料３４６（図２５）は、キャビティ３１０の凹部開口部を通して見える。インサート３４２は、吸収性材料３４６を保持するように構成される。吸収性材料３４６は、非ニコチンポッドアセンブリ３００が作動したときに非ニコチンリザーバから放出される非ニコチンプレベイパー製剤の量を吸収し保持するように構成されている。インサート３４２及び吸収性材料３４６は、本明細書においてより詳細に議論される。
+</com:P>
+         <com:P com:pNumber="0114">
+  図２１は、図１９のコネクタモジュールの透視図である。図２２は、図２１のコネクタモジュールの別の透視図である。図２１～図２２を参照すると、コネクタモジュール３２０の一般的な枠組みは、モジュール筐体３５４及びフェースプレート３６６を含む。さらに、コネクタモジュール３２０は、外面及び側面を含む複数の面を有し、外面は側面に隣接している。例示的な実施形態において、コネクタモジュール３２０の外面は、フェースプレート３６６、第１の電力コンタクト３２４ａ、第２の電力コンタクト３２４ｂ、及びデータコンタクト３２６の上流面により構成されている。コネクタモジュール３２０の側面は、モジュール筐体３５４の一部である。コネクタモジュール３２０の側面は、第１のモジュール入口３３０及び第２のモジュール入口３３２を規定する。さらに、側面に隣接する２つの側方面（これもモジュール筐体３５４の一部である）は、コネクタモジュール３２０がポッド本体のキャビティ３１０内に着座したときに干渉嵌めを容易にするように構成されたリブ構造（例えば、クラッシュリブ）を含んでもよい。例えば、２つの側面の各々は、フェースプレート３６６から離れる方向に先細りになる一対のリブ構造を含んでもよい。その結果、モジュール筐体３５４は、コネクタモジュール３２０がポッド本体のキャビティ３１０内に押し込まれると、キャビティ３１０の側壁に対するリブ構造の摩擦を介して増大する抵抗に遭遇することになる。コネクタモジュール３２０がキャビティ３１０内に着座すると、フェースプレート３６６は、第２の筐体部３０８の上流端と実質的に同一平面になることがある。また、コネクタモジュール３２０の側面（第１のモジュール入口３３０及び第２のモジュール入口３３２を規定する）は、キャビティ３１０の側壁に面することになる。
+</com:P>
+         <com:P com:pNumber="0115">
+  コネクタモジュール３２０のフェースプレート３６６は、キャビティ３１０の対応する側面と組み合わせて、ポッド入口３２２を規定する溝付きエッジ３２８を有してもよい。しかしながら、例示的な実施形態はそれに限定されないことを理解されたい。例えば、コネクタモジュール３２０のフェースプレート３６６は、ポッド入口３２２を完全に規定するように代替的に構成されてもよい。コネクタモジュール３２０の側面（第１のモジュール入口３３０及び第２のモジュール入口３３２を規定する）とキャビティ３１０の側面（側面に面する）とは、その間に中間空間を規定している。中間空間は、ポッド入口３２２から下流にあり、第１のモジュール入口３３０及び第２のモジュール入口３３２から上流にある。したがって、例示的な実施形態では、ポッド入口３２２は、中間空間を経由して第１のモジュール入口３３０及び第２のモジュール入口３３２の両方と流体連通している。第１のモジュール入口３３０は、第２のモジュール入口３３２より大きくてもよい。そのような例では、ベイプ中にポッド入口３２２によって流入する空気が受け取られるとき、第１のモジュール入口３３０は流入する空気の一次流れ（例えば、より大きな流れ）を受け取ってよく、一方、第２のモジュール入口３３２は流入する空気の二次流れ（例えば、より小さな流れ）を受け取ってよい。
+</com:P>
+         <com:P com:pNumber="0116">
+  図２２に示すように、コネクタモジュール３２０は、非ニコチンプレベイパー製剤をヒータ３３６に移送するように構成されたウィック３３８を含む。ヒータ３３６は、ベイプ中に非ニコチンプレベイパー製剤を加熱して蒸気を発生させるように構成されている。ヒータ３３６は、コンタクトコア３３４を介してコネクタモジュール３２０に搭載されてもよい。ヒータ３３６は、コネクタモジュール３２０の少なくとも１つの電気コンタクトに電気的に接続されている。例えば、ヒータ３３６の一端（例えば、第１端）は、第１の電力コンタクト３２４ａに接続されてもよく、ヒータ３３６の他端（例えば、第２端）は、第２の電力コンタクト３２４ｂに接続されてもよい。例示的な実施形態において、ヒータ３３６は、折り畳まれた加熱要素を含む。そのような例では、ウィック３３８は、折り畳まれた加熱要素によって保持されるように構成された平面的な形態を有してよい。コネクタモジュール３２０がポッド本体のキャビティ３１０内に着座すると、ウィック３３８は、（非ニコチンポッドアセンブリ３００が作動したときに）吸収性材料３４６内にあるであろう非ニコチンプレベイパー製剤が毛細管現象を介してウィック３３８に移行するように吸収性材料３４６と流動的に連絡するよう構成される。
+</com:P>
+         <com:P com:pNumber="0117">
+  図２３は、図２２のウィック、ヒータ、電気リード、およびコンタクトコアを含む分解斜視図である。図２３を参照すると、ウィック３３８は、毛細管現象のために設計された孔／間隙を有する繊維質のパッド又は他の構造体であってもよい。さらに、ウィック３３８は、例示的な実施形態はこれに限定されないが、不規則な六角形の形状を有していてもよい。ウィック３３８は、六角形の形状に製造されてもよいし、より大きなシート状の材料からこの形状に切断されてもよい。ウィック３３８の下部は、ヒータ３３６の巻線部に向かって先細りになっているので、非ニコチンプレベイパー製剤がウィック３３８の（ヒータ３３６からの距離による）気化を継続的に回避する部分にある可能性を低減又は回避することができる。
+</com:P>
+         <com:P com:pNumber="0118">
+  例示的な実施形態において、ヒータ３３６は、そこに電流が印加されるとジュール加熱（これは、オーミック／抵抗加熱としても知られている）を受けるように構成される。より詳細に述べると、ヒータ３３６は、１つ以上の導体で形成されてもよく、電流がそこを通過するときに熱を生成するように構成される。電流は、装置本体１００内の電源（例えば、バッテリー）から供給され、第１の電力コンタクト３２４ａ及び第１の電気リード３４０ａを介して（又は第２の電力コンタクト３２４ｂ及び第２の電気リード３４０ｂを介して）ヒータ３３６に伝達されてもよい。
+</com:P>
+         <com:P com:pNumber="0119">
+  ヒータ３３６に適した導体としては、鉄系合金（例えば、ステンレス鋼）および／またはニッケル系合金（例えば、ニクロム）が挙げられる。ヒータ３３６は、そこから巻線パターンを切断するために型押しされる導電性シート（例えば、金属、合金）から製造されてもよい。巻線パターンは、水平セグメントが平行に延びながら前後にジグザグに動くように、水平セグメントと交互に配置された曲線セグメントを有していてもよい。さらに、巻線パターンの水平セグメントの各々の幅は、巻線パターンの隣接する水平セグメント間の間隔と実質的に等しくてもよいが、例示的な実施形態はこれに限定されない。図面に示されたヒータ３３６の形態を得るために、巻線パターンは、ウィック３３８を把持するように折り畳まれてもよい。
+</com:P>
+         <com:P com:pNumber="0120">
+  ヒータ３３６は、第１の電気リード３４０ａ及び第２の電気リード３４０ｂでコンタクトコア３３４に固定されてもよい。コンタクトコア３３４は、絶縁材料で形成され、第１の電気リード３４０ａを第２の電気リード３４０ｂから電気的に分離するように構成される。例示的な実施形態では、第１の電気リード３４０ａ及び第２の電気リード３４０ｂはそれぞれ、コンタクトコア３３４の対応する雄部材と係合するように構成された雌開口部を規定している。一旦係合すると、ヒータ３３６の第１の端部及び第２の端部は、それぞれ第１の電気リード３４０ａ及び第２の電気リード３４０ｂに固定されてもよい（例えば、溶接、はんだ付け、ろう付け）。その後、コンタクトコア３３４は、モジュール筐体３５４の対応するソケット内に（例えば、干渉嵌合を介して）装着されてもよい。コネクタモジュール３２０の組み立てが完了すると、第１の電気リード３４０ａは、ヒータ３３６の第１の端部を第１の電力コンタクト３２４ａと電気的に接続し、一方、第２の電気リード３４０ｂは、ヒータ３３６の第２の端部を第２の電力コンタクト３２４ｂと電気的に接続することになる。ヒータおよび関連構造は、２０１７年１０月１１日に出願された「Ｆｏｌｄｅｄ  Ｈｅａｔｅｒ  Ｆｏｒ  Ｅｌｅｃｔｒｏｎｉｃ  Ｖａｐｉｎｇ  Ｄｅｖｉｃｅ」と題する米国出願第１５／７２９，９０９号（Ａｔｔｙ．  Ｄｋｔ．    Ｎｏ．  ２４０００－０００３７１－ＵＳ）でより詳細に説明されており、その内容全体は参照により本書に組み込まれるものとする。
+</com:P>
+         <com:P com:pNumber="0121">
+  図２４は、図１７の非ニコチンポッドアセンブリの第１の筐体部を含む分解斜視図である。図２４を参照すると、第１の筐体部３０２は、蒸気チャネル３１６を含む。蒸気チャネル３１６は、ヒータ３３６によって生成された非ニコチン蒸気を受け取るように構成され、ポッド出口３０４と流体連通している。例示的な実施形態では、蒸気チャネル３１６は、ポッド出口３０４に向かって延びるにつれてサイズ（例えば、直径）が徐々に大きくなってもよい。さらに、蒸気チャネル３１６は、第１の筐体部３０２と一体的に形成されてもよい。ラップ３１８、インサート３４２、およびシール３４４が、第１の筐体部３０２の上流端に配置され、非ニコチンポッドアセンブリ３００の非ニコチンリザーバを規定する。例えば、ラップ３１８は、第１の筐体部３０２のリム上に配置されてもよい。インサート３４２は、インサート３４２の周面と第１の筐体部３０２の内面との界面が液密（例えば、液密及び／又は気密）であるように、リムに沿って（例えば、干渉嵌合を介して）第１の筐体部３０２の内面と係合するように第１の筐体部３０２内に着座していてもよい。さらに、シール３４４は、非ニコチンリザーバ内の非ニコチンプレベイパー製剤の流体密（例えば、液密及び／又は気密）封じ込めを行うように、インサート３４２の上流側に取り付けられて、インサート３４２内の非ニコチンリザーバの流出口を閉鎖している。
+</com:P>
+         <com:P com:pNumber="0122">
+  例示的な実施形態では、インサート３４２は、（図２４に示すように）上流側から突出するホルダ部分と、（図２４では見えないように）下流側から突出するコネクタ部分とを含んでいる。インサート３４２のホルダ部分は、吸収性材料３４６を保持するように構成され、インサート３４２のコネクタ部分は、第１の筐体部３０２の蒸気チャネル３１６と係合するように構成される。インサート３４２のコネクタ部分は、蒸気チャネル３１６内に着座するように構成されてもよく、したがって、蒸気チャネル３１６の内部と係合するように構成されてもよい。あるいは、インサート３４２のコネクタ部分は、蒸気チャネル３１６を受け、したがって、蒸気チャネル３１６の外部と係合するように構成されてもよい。インサート３４２はまた、非ニコチンポッドアセンブリ３００の作動中にシール３４４が（図２４に示すように）穿刺されると、非ニコチンのプレベイパー製剤が流れる非ニコチンリザーバ出口を規定する。インサート３４２のホルダ部分及びコネクタ部分は、例示的な実施形態はこれに限定されないが、非ニコチンリザーバ出口（例えば、第１及び第２の非ニコチンリザーバ出口）の間であってもよい。さらに、インサート３４２は、ホルダ部分及びコネクタ部分を通って延びる蒸気導管を規定する。その結果、インサート３４２が第１の筐体部３０２内に着座すると、インサート３４２の蒸気導管は、ベイプ中にヒータ３３６によって生成された非ニコチン蒸気のために非ニコチンリザーバを通ってポッド出口３０４に至る連続経路を形成するように蒸気チャネル３１６と整合し、これと流体的に連通することになる。
+</com:P>
+         <com:P com:pNumber="0123">
+  シール３４４は、インサート３４２内の非ニコチンリザーバ出口を覆うように、インサート３４２の上流側に取り付けられる。例示的な実施形態では、シール３４４は、シール３４４がインサート３４２に取り付けられたときに、（インサート３４２の上流側から突出する）ホルダ部分を収容するための適切なクリアランスを提供するように構成された開口（例えば、中央開口）を規定する。図２４において、シール３４４は、穿刺された状態で示されていることを理解されたい。特に、非ニコチンポッドアセンブリ３００の第１のアクティベーションピン３１４ａおよび第２のアクティベーションピン３１４ｂによって穿刺されると、シール３４４の２つの穿刺部分がフラップとして（図２４に示すように）非ニコチンリザーバに押し込まれ、したがって、シール３４４に２つの穿刺開口（例えば、中央開口の各側に１つ）を形成することになる。シール３４４における穿孔された開口部のサイズ及び形状は、インサート３４２における非ニコチンリザーバの出口のサイズ及び形状に対応し得る。これに対して、穿刺されていない状態のとき、シール３４４は、平面的な形態を有し、１つの開口部（例えば、中央開口部）だけを有することになる。シール３４４は、早期に／不用意に破られることを避けるように、非ニコチンポッドアセンブリ３００の通常の動き及び／又は取り扱いの間、そのままの状態を維持するのに十分に強いように設計されている。例えば、シール３４４は、コーティングされた箔（例えば、アルミニウムで裏打ちされたトリタン）であってもよい。
+</com:P>
+         <com:P com:pNumber="0124">
+  図２５は、図１７の非ニコチンポッドアセンブリの第２の筐体部を含む部分分解斜視図である。図２５を参照すると、第２の筐体部３０８は、非ニコチンプレベイパー製剤を放出し、受け取り、加熱するように構成された様々な要素を含むように構造化されている。例えば、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂは、第１の筐体部３０２内の非ニコチンリザーバを穿刺して非ニコチンプレベイパー製剤を放出するように構成されている。第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂの各々は、第２の筐体部３０８の対応する開口部を通って延びる遠位端部を有する。例示的な実施形態では、第１のアクティベーションピン３１４ａおよび第２のアクティベーションピン３１４ｂの遠位端は組み立て後に見えるが（例えば、図１７）、第１のアクティベーションピン３１４ａおよび第２のアクティベーションピン３１４ｂの残りの部分は非ニコチンポッドアセンブリ３００内で視界から隠されている。さらに、第１のアクティベーションピン３１４ａおよび第２のアクティベーションピン３１４ｂの各々は、非ニコチンポッドアセンブリ３００のアクティベートの前にシール３４４に隣接し、かつその上流にあるように配置された近位端部を有する。第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂが第２の筐体部３０８に押し込まれて非ニコチンポッドアセンブリ３００をアクティベートすると、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂの各々の近位端は、インサート３４２を通って進み、その結果、シール３４４に穴を開け、非ニコチンプレベイパー製剤を非ニコチンリザーバから放出させるであろう。第１のアクティベーションピン３１４ａの動きは、第２のアクティベーションピン３１４ｂの動きと独立していてもよい（逆もまた然りである）。第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂは、本明細書でより詳細に説明される。
+</com:P>
+         <com:P com:pNumber="0125">
+  吸収性材料３４６は、インサート３４２のホルダ部分（図２４に示すように、インサート３４２の上流側から突出している）と係合するように構成されている。吸収性材料３４６は、例示的な実施形態はこれに限定されないが、環状の形態を有していてもよい。図２５に描かれるように、吸収性材料３４６は、中空の円筒に類似していてもよい。そのような例では、吸収性材料３４６の外径は、ウィック３３８の長さに実質的に等しく（又はわずかに大きく）なってもよい。吸収性材料３４６の内径は、干渉嵌合をもたらすように、インサート３４２のホルダ部分の平均外径より小さくてもよい。吸収性材料３４６との係合を容易にするために、インサート３４２のホルダ部分の先端は、テーパ状であってもよい。さらに、図２５では見えないが、第２の筐体部３０８の下流側は、吸収性材料３４６を受け取り、支持するように構成された凹部を規定してもよい。そのような凹みの例は、キャビティ３１０と流体連通し、かつキャビティ３１０の下流側にある円形チャンバであってもよい。吸収性材料３４６は、非ニコチンポッドアセンブリ３００が起動されたときに非ニコチンリザーバから放出される非ニコチンプレベイパー製剤の量を受け取り、保持するように構成される。
+</com:P>
+         <com:P com:pNumber="0126">
+  ウィック３３８は、非ニコチンプレベイパー製剤が毛細管現象によって吸収性材料３４６からヒータ３３６に引き込まれ得るように、吸収性材料３４６と流体連通しているように非ニコチンポッドアセンブリ３００内に配置される。ウィック３３８は、吸収性材料３４６の上流側（例えば、図２５に示す図に基づく吸収性材料３４６の底部）に物理的に接触してもよい。さらに、ウィック３３８は、例示的な実施形態はこれに限定されないが、吸収性材料３４６の直径と整列していてもよい。
+</com:P>
+         <com:P com:pNumber="0127">
+  図２５に示されるように（以前の図２３と同様に）、ヒータ３３６は、ウィック３３８の対向する表面を掴んで熱接触を確立するように、折り畳まれた構成を有していてもよい。ヒータ３３６は、ベイプ中にウィック３３８を加熱して蒸気を発生させるように構成される。このような加熱を促進するために、ヒータ３３６の第１の端部は、第１の電気リード３４０ａを介して第１の電力コンタクト３２４ａに電気的に接続されてもよく、一方、ヒータ３３６の第２の端部は、第２の電気リード３４０ｂを介して第２の電力コンタクト３２４ｂに電気的に接続されてもよい。その結果、装置本体１００内の電源（例えば、電池）から電流が供給され、第１の電力コンタクト３２４ａおよび第１の電気リード３４０ａを介して（または第２の電力コンタクト３２４ｂおよび第２の電気リード３４０ｂを介して）ヒータ３３６に伝達されてもよい。なお、第１の電気リード３４０ａおよび第２の電気リード３４０ｂ（図２３では別々に示されている）は、（図２５に示すように）コンタクトコア３３４に係合されてもよい。第２の筐体部３０８のキャビティ３１０内に着座するように構成されたコネクタモジュール３２０の他の態様の関連する詳細については、上述（例えば、図２１～２２に関連して）しており、簡潔さの観点から、このセクションでは繰り返さないことにする。ベイプ中、ヒータ３３６によって生成された非ニコチン蒸気は、インサート３４２の蒸気導管を通って、第１の筐体部３０２の蒸気チャネル３１６を通り、非ニコチンポッドアセンブリ３００のポッド出口３０４から出て、マウスピース１０２の蒸気通路１３６を通って蒸気出口（複数）に引き出される。
+</com:P>
+         <com:P com:pNumber="0128">
+  図２６は、図２５のアクティベーションピンの分解斜視図である。図２６を参照すると、アクティベーションピンは、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂの形態であってよい。２つのアクティベーションピンが本明細書の非限定的な実施形態に関連して示され議論されているが、代替的に、非ニコチンポッドアセンブリ３００は１つのアクティベーションピンのみを含んでもよいことが理解されるべきである。図２６において、第１のアクティベーションピン３１４ａは、第１のブレード３４８ａ、第１のアクチュエータ３５０ａ、及び第１のＯリング３５２ａを含んでもよい。同様に、第２のアクティベーションピン３１４ｂは、第２のブレード３４８ｂ、第２のアクチュエータ３５０ｂ、及び第２のＯリング３５２ｂを含んでもよい。
+</com:P>
+         <com:P com:pNumber="0129">
+  例示的な実施形態において、第１のブレード３４８ａ及び第２のブレード３４８ｂは、それぞれ、第１のアクチュエータ３５０ａ及び第２のアクチュエータ３５０ｂの上部部分（例えば、近位部分）に取り付け又は取り付けられるように構成される。取り付け又は取付けは、スナップフィット接続、干渉フィット（例えば、摩擦フィット）接続、接着剤、又は他の適切な結合技術を介して達成されてもよい。第１のブレード３４８ａ及び第２のブレード３４８ｂの各々の上部は、尖った先端に向かって上方にテーパする１つ又は複数の曲線状又は凹状のエッジを有していてもよい。例えば、第１のブレード３４８ａ及び第２のブレード３４８ｂの各々は、その間に凹状のエッジを有する２つの尖った先端と、各尖った先端に隣接する湾曲したエッジを有していてもよい。凹状のエッジと湾曲したエッジの曲率半径は同じであってもよいが、それらの円弧の長さは異なっていてもよい。第１のブレード３４８ａ及び第２のブレード３４８ｂは、所望のプロファイルを有するように切断されるか又は他の方法で成形され、その最終形態に曲げられるシートメタル（例えば、ステンレス鋼）で形成されてもよい。別の実施例では、第１のブレード３４８ａ及び第２のブレード３４８ｂは、プラスチックで形成されてもよい。
+</com:P>
+         <com:P com:pNumber="0130">
+  平面図に基づいて、第１のブレード３４８ａ、第２のブレード３４８ｂ、並びにそれらが取り付けられる第１のアクチュエータ３５０ａ及び第２のアクチュエータ３５０ｂの部分のサイズ及び形状は、インサート３４２内の非ニコチンリザーバアウトレットのサイズ及び形状に対応してもよい。さらに、図２６に示すように、第１のアクチュエータ３５０ａ及び第２のアクチュエータ３５０ｂは、第１のブレード３４８ａ及び第２のブレード３４８ｂが非ニコチンリザーバの中に進むと、シール３４４の２つの穿刺部分を非ニコチンリザーバの中に押すように構成された突起縁（例えば、互いに向き合う曲がった内側唇）を含んでもよい。非限定的な実施形態において、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂが非ニコチンポッドアセンブリ３００に完全に挿入されるとき、（図２４に示されるように、シール３４４の２つの穿刺部分からの）２つのフラップは、インサート３４２の非ニコチンリザーバの出口の湾曲した側壁と、第１のアクチュエータ３５０ａ及び第２のアクチュエータ３５０ｂの突起縁の対応する湾曲との間に存在しうる。その結果、シール３４４の２つの穿刺された開口部が（２つの穿刺された部分からの２つのフラップによって）閉塞される可能性が低減または防止され得る。さらに、第１のアクチュエータ３５０ａ及び第２のアクチュエータ３５０ｂは、非ニコチンリザーバから吸収性材料３４６に向かって非ニコチンプレベイパー製剤を案内するように構成されてもよい。
+</com:P>
+         <com:P com:pNumber="0131">
+  第１のアクチュエータ３５０ａ及び第２のアクチュエータ３５０ｂの各々の下部（例えば、遠位部分）は、第２の筐体部３０８の底部（例えば、上流端）を通って延びるように構成される。この第１のアクチュエータ３５０ａ及び第２のアクチュエータ３５０ｂの各々の棒状部分は、シャフトと呼ばれることもある。第１のＯリング３５２ａ及び第２のＯリング３５２ｂは、第１のアクチュエータ３５０ａ及び第２のアクチュエータ３５０ｂのそれぞれのシャフトに設けられた環状の溝に着座していてもよい。第１のＯリング３５２ａ及び第２のＯリング３５２ｂは、流体密シールを提供するために、第１のアクチュエータ３５０ａ及び第２のアクチュエータ３５０ｂのシャフト、並びに第２の筐体部３０８の対応する開口部の内面に係合するように構成される。その結果、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂが内側に押されて非ニコチンポッドアセンブリ３００をアクティベートするとき、第１のＯリング３５２ａ及び第２のＯリング３５２ｂは、それぞれのシールを維持しながら第２の筐体部３０８の対応する開口部内で第１のアクチュエータ３５０ａ及び第２のアクチュエータ３５０ｂのそれぞれのシャフトと共に移動しうる。それによって、第１のアクティベーションピン３１４ａ及び第２のアクティベーションピン３１４ｂによる第２の筐体部３０８内の開口部を通る非ニコチンプレベイパー製剤の漏れを低減又は防止するのを助ける。第１のＯリング３５２ａ及び第２のＯリング３５２ｂは、シリコーンで形成されてもよい。
+</com:P>
+         <com:P com:pNumber="0132">
+  図２７は、ウィック、ヒータ、電気リード、およびコンタクトコアを除いた図２２のコネクタモジュールの透視図である。図２８は、図２７のコネクタモジュールの分解斜視図である。図２７～２８を参照すると、モジュール筐体３５４及びフェースプレート３６６は、概して、コネクタモジュール３２０の外部骨組みを形成している。モジュール筐体３５４は、第１のモジュール入口３３０と、溝付きエッジ３５６とを規定する。モジュール筐体３５４の溝付きエッジ３５６は、第２のモジュール入口３３２（これは、バイパス構造３５８によって規定される）を露出させる。しかしながら、溝付きエッジ３５６はまた、（例えば、フェースプレート３６６と組み合わせて）モジュール入口を規定しているとみなすことができることを理解されたい。フェースプレート３６６は、第２の筐体部３０８のキャビティ３１０の対応する側面と共に、ポッド入口３２２を規定する溝付きエッジ３２８を有する。さらに、フェースプレート３６６は、第１のコンタクト開口部、第２のコンタクト開口部、および第３のコンタクト開口部を規定する。第１のコンタクト開口部及び第２のコンタクト開口部は、正方形状であって、それぞれ第１の電力コンタクト３２４ａ及び第２の電力コンタクト３２４ｂを露出するように構成されてもよく、第３のコンタクト開口部は、長方形状であって、複数のデータコンタクト３２６を露出するように構成されるが、例示的実施形態はこれらに限定されるものではない。
+</com:P>
+         <com:P com:pNumber="0133">
+  第１の電力コンタクト３２４ａ、第２の電力コンタクト３２４ｂ、プリント回路基板（ＰＣＢ）３６２、及びバイパス構造３５８は、モジュール筐体３５４及びフェースプレート３６６によって形成される外枠内に配置される。プリント回路基板（ＰＣＢ）３６２は、その上流側（図２８では隠れている）に複数のデータコンタクト３２６を含み、その下流側にセンサ３６４を含む。バイパス構造３５８は、第２のモジュール入口３３２及びバイパス出口３６０を規定する。
+</com:P>
+         <com:P com:pNumber="0134">
+  組立中、第１の電力コンタクト３２４ａ及び第２の電力コンタクト３２４ｂは、フェースプレート３６６の第１のコンタクト開口部及び第２のコンタクト開口部を通してそれぞれ見えるように位置決めされる。さらに、プリント回路基板（ＰＣＢ）３６２は、その上流側の複数のデータコンタクト３２６がフェースプレート３６６の第３のコンタクト開口部を通して見えるように位置決めされる。プリント回路基板（ＰＣＢ）３６２は、第１の電力コンタクト３２４ａ及び第２の電力コンタクト３２４ｂの後面に重なってもよい。バイパス構造３５８は、センサ３６４が第２のモジュール入口３３２及びバイパス出口３６０によって規定される空気流路内にあるように、プリント回路基板（ＰＣＢ）３６２上に配置される。組み立てられたとき、バイパス構造３５８及びプリント回路基板（ＰＣＢ）３６２は、第１の電力コンタクト３２４ａ及び第２の電力コンタクト３２４ｂの蛇行構造によって少なくとも４つの側面で囲まれていると見なすことができる。例示的な実施形態において、第１の電力コンタクト３２４ａ及び第２の電力コンタクト３２４ｂの分岐した端部は、第１の電気リード３４０ａ及び第２の電気リード３４０ｂに電気的に接続するように構成される。
+</com:P>
+         <com:P com:pNumber="0135">
+  ベイプ中に流入空気がポッド入口３２２によって受け取られるとき、第１のモジュール入口３３０は流入空気の一次流れ（例えば、より大きな流れ）を受け取ってよく、一方、第２のモジュール入口３３２は流入空気の二次流れ（例えば、より小さな流れ）を受け取ってよい。入ってくる空気の二次的な流れは、センサ３６４の感度を向上させることができる。バイパス出口３６０を通ってバイパス構造３５８を出た後、二次流れは一次流れと再結合して、ヒータ３３６及びウィック３３８に遭遇するようにコンタクトコア３３４に引き込まれ、それを通る結合された流れを形成する。非限定的な実施形態において、一次流れは、流入する空気の６０～９５％（例えば、８０～９０％）であってもよく、一方、二次流れは、流入する空気の５～４０％（例えば、１０～２０％）であってもよい。
+</com:P>
+         <com:P com:pNumber="0136">
+  第１のモジュール入口３３０は、ドロー抵抗（ＲＴＤ；ｒｅｓｉｓｔａｎｃｅ－ｔｏ－ｄｒａｗ）ポートであってもよく、第２のモジュール入口３３２は、バイパスポートであってもよい。このような構成では、非ニコチン電子ベイピング装置５００のドロー抵抗は、（ポッド入口３２２のサイズを変更するのではなく）第１のモジュール入口３３０のサイズを変更することによって調整されてもよい。例示的な実施形態では、第１のモジュール入口３３０のサイズは、ドロー抵抗が２５～１００ｍｍＨ<com:Sub>２</com:Sub>Ｏの間（例えば、３０～５０ｍｍＨ<com:Sub>２</com:Sub>Ｏの間）にあるように選択されてもよい。例えば、第１のモジュール入口３３０の直径が１．０ｍｍであれば、８８．３ｍｍＨ<com:Sub>２</com:Sub>Ｏのドロー抵抗をもたらすことができる。別の例では、第１のモジュール入口３３０について１．１ｍｍの直径は、７３．６ｍｍＨ<com:Sub>２</com:Sub>Ｏのドロー抵抗をもたらす可能性がある。別の例では、第１のモジュール入口３３０に対する１．２ｍｍの直径は、５８．７ｍｍＨ<com:Sub>２</com:Sub>Ｏのドロー抵抗をもたらす可能性がある。さらに別の例では、第１のモジュール入口３３０について１．３ｍｍの直径は、４３．８ｍｍＨ<com:Sub>２</com:Sub>Ｏのドロー抵抗をもたらす可能性がある。注目すべきは、第１のモジュール入口３３０のサイズは、その内部配置のために、非ニコチンポッドアセンブリ３００の外部美観に影響を与えることなく調整され得、それによって、様々なＲＴＤ（ｒｅｓｉｓｔａｎｃｅ－ｔｏ－ｄｒａｗ）を有するポッドアセンブリに対してより標準的な製品設計が可能になると同時に、流入空気の不注意による遮断の可能性を低減することである。
+</com:P>
+         <com:P com:pNumber="0137">
+  図２９は、例示的な実施形態による非ニコチン電子ベイピング装置の装置本体および非ニコチンポッドアセンブリの電気システムを示す図である。
+</com:P>
+         <com:P com:pNumber="0138">
+  図２９を参照すると、電気システムは、装置本体電気システム２１００及び非ニコチンポッドアセンブリ電気システム２２００を含む。装置本体電気システム２１００は、装置本体１００に含まれてもよく、非ニコチンポッドアセンブリ電気システム２２００は、図１～２８に関して上述した非ニコチン電子ベイピング装置５００の非ニコチンポッドアセンブリ３００に含まれてもよい。
+</com:P>
+         <com:P com:pNumber="0139">
+  図２９に示す例示的な実施形態では、非ニコチンポッドアセンブリ電気システム２２００は、ヒータ３３６、および不揮発性メモリ（ＮＶＭ）２２０５を含む。ＮＶＭ２２０５は、電気的に消去可能なプログラマブルリードオンリーメモリ（ＥＥＰＲＯＭ）集積回路（ＩＣ）であってもよい。
+</com:P>
+         <com:P com:pNumber="0140">
+  非ニコチンポッドアセンブリ電気システム２２００は、装置本体１００と非ニコチンポッドアセンブリ３００との間で電力及び／又はデータを転送するための本体電気／データインターフェース（図示せず）をさらに含んでもよい。少なくとも１つの例示的な実施形態によれば、例えば図１７に示される電力コンタクト３２４ａ、３２４ｂ及び３２６は、本体電気／データインターフェースとして機能してもよい。
+</com:P>
+         <com:P com:pNumber="0141">
+  装置本体電気システム２１００は、コントローラ２１０５、電源２１１０、装置センサ２１２５、加熱エンジン制御回路（加熱エンジン停止回路とも呼ばれる）２１２７、ベイパーインジケータ２１３５、オンプロダクトコントロール２１５０（例えば、図１に示すボタン１１８及び１２０）、メモリ２１３０、及びクロック回路２１２８を含んでいる。装置本体電気システム２１００は、装置本体１００と非ニコチンポッドアセンブリ３００との間で電力及び／又はデータを転送するためのポッド電気／データインターフェース（図示せず）をさらに含んでもよい。少なくとも１つの例示的な実施形態によれば、例えば図１２に示される装置電気コネクタ１３２は、ポッド電気／データインターフェースとして機能してもよい。
+</com:P>
+         <com:P com:pNumber="0142">
+  電源２１１０は、非ニコチン電子ベイピング装置５００の装置本体１００及び非ニコチンポッドアセンブリ３００に電力を供給するための内部電源であってよい。電源２１１０からの電力の供給は、電力制御回路（図示せず）を介してコントローラ２１０５によって制御されてもよい。電力制御回路は、電源２１１０からの電力出力を調整するための１つ又は複数のスイッチ又はトランジスタを含んでもよい。電源２１１０は、リチウムイオン電池又はその変種（例えば、リチウムイオンポリマー電池）であってもよい。
+</com:P>
+         <com:P com:pNumber="0143">
+  コントローラ２１０５は、非ニコチン電子ベイピング装置５００の全体的な動作を制御するように構成されてもよい。少なくともいくつかの例示的な実施形態によれば、コントローラ２１０５は、ハードウェア、ハードウェアとソフトウェアの組み合わせ、またはソフトウェアを格納する記憶媒体を使用して実装されてもよい。上述したように、ハードウェアは、１つ以上のプロセッサ、１つ以上の中央処理装置（ＣＰＵ）、１つ以上のマイクロコントローラ、１つ以上の算術論理装置（ＡＬＵ）、１つ以上のデジタル信号プロセッサ（ＤＳＰ）、１つ以上のマイクロコンピュータ、１つ以上のフィールドプログラマブルゲートアレイ（ＦＰＧＡ）、１つ以上のシステムオンチップ（ＳｏＣ）、１つ以上のプログラム可能論理装置（ＰＬＵ）、１つ以上のマイクロプロセッサ、１つ以上のアプリケーション特定集積回路（ＡＳＩＣｓ）、または、定義された方法で命令に応答し、実行することができるその他の１又は複数の装置のような処理回路または制御回路を用いて実装されてもよいが、これらに限定されない。
+</com:P>
+         <com:P com:pNumber="0144">
+  図２９に示す例示的な実施形態では、コントローラ２１０５は、汎用入力／出力（ＧＰＩＯ）、集積回路（Ｉ２Ｃ）インターフェース、シリアル周辺インターフェースバス（ＳＰＩ）インターフェースなどの入力／出力（Ｉ／Ｏ）インターフェース、マルチチャンネル・アナログ／デジタル変換器（ＡＤＣ）、およびクロック入力端子を含むマイクロコントローラとして図示される。しかし、例示的な実施形態は、この例に限定されるべきではない。少なくとも１つの例示的な実施形態において、コントローラ２１０５は、マイクロプロセッサであってもよい。
+</com:P>
+         <com:P com:pNumber="0145">
+  コントローラ２１０５は、装置センサ２１２５、加熱エンジン制御回路２１２７、ベイパーインジケータ２１３５、メモリ２１３０、オンプロダクトコントロール２１５０、クロック回路２１２８および電源２１１０に通信可能に結合される。
+</com:P>
+         <com:P com:pNumber="0146">
+  加熱エンジン制御回路２１２７は、ＧＰＩＯピンを介してコントローラ２１０５に接続されている。メモリ２１３０は、ＳＰＩピンを介してコントローラ２１０５に接続されている。クロック回路２１２８は、コントローラ２１０５のクロック入力端子に接続されている。ベイパーインジケータ２１３５は、Ｉ<com:Sup>２</com:Sup>ＣインターフェースピンおよびＧＰＩＯピンを介してコントローラ２１０５に接続されている。装置センサ２１２５は、マルチチャネルＡＤＣのそれぞれのピンを介してコントローラ２１０５に接続される。
+</com:P>
+         <com:P com:pNumber="0147">
+  クロック回路２１２８は、コントローラ２１０５が非ニコチン電子ベイピング装置５００のアイドル時間、ベイプ長、アイドル時間とベイプ長の組み合わせなどを追跡できるようにするための、発振回路などのタイミング機構であってよい。クロック回路２１２８はまた、非ニコチン電子ベイピング装置５００のシステムクロックを生成するように構成された専用のクロッククリスタルを含んでもよい。
+</com:P>
+         <com:P com:pNumber="0148">
+  メモリ２１３０は、１つ以上のシャットダウンログを格納するように構成された不揮発性メモリであってよい。一例では、メモリ２１３０は、１つ以上のシャットダウンログを１つ以上のテーブルに格納してもよい。メモリ２１３０及びそこに記憶される１つ又は複数のシャットダウンログについては、後でより詳細に説明する。一例では、メモリ２１３０は、フラッシュメモリなどのＥＥＰＲＯＭであってもよい。
+</com:P>
+         <com:P com:pNumber="0149">
+  依然として図２９を参照すると、装置センサ２１２５は、センサまたは測定情報を示す信号をコントローラ２１０５に提供するように構成された複数のセンサまたは測定回路を含んでもよい。図２９に示される例では、装置センサ２１２５は、ヒータ電流測定回路２１２５８、及びヒータ電圧測定回路２１２５２を含む。
+</com:P>
+         <com:P com:pNumber="0150">
+  ヒータ電流測定回路２１２５８は、ヒータ３３６を通る電流を示す（例えば、電圧）信号を出力するように構成されてもよい。ヒータ電流測定回路２１２５８の例示的な実施形態は、図３４に関してより詳細に後述される。
+</com:P>
+         <com:P com:pNumber="0151">
+  ヒータ電圧測定回路２１２５２は、ヒータ３３６を横切る電圧を示す（例えば、電圧）信号を出力するように構成されてもよい。ヒータ電圧測定回路２１２５２の例示的な実施形態は、図３３に関してより詳細に後述される。
+</com:P>
+         <com:P com:pNumber="0152">
+  ヒータ電流測定回路２１２５８及びヒータ電圧測定回路２１２５２は、マルチチャネルＡＤＣのピンを介してコントローラ２１０５に接続される。非ニコチン電子ベイピング装置５００の特性及び／又はパラメータ（例えば、ヒータ３３６の電圧、電流、抵抗、温度等）を測定するために、コントローラ２１０５のマルチチャネルＡＤＣは、それぞれの装置センサによって測定される所定の特性及び／又はパラメータに適したサンプリングレートで装置センサ２１２５からの出力信号をサンプリングしてもよい。
+</com:P>
+         <com:P com:pNumber="0153">
+  図２９には示されていないが、装置センサ２１２５は、図２８に示されたセンサ３６４を含んでもよい。少なくとも１つの例示的な実施形態では、センサ３６４は、マイクロエレクトロメカニカルシステム（ＭＥＭＳ）流量または圧力センサ、または空気の流れを測定するように構成された別のタイプのセンサ（例：熱線風速計）であってもよい。
+</com:P>
+         <com:P com:pNumber="0154">
+  上述したように、加熱エンジン制御回路２１２７は、ＧＰＩＯピンを介してコントローラ２１０５に接続されている。加熱エンジン制御回路２１２７は、ヒータ３３６への電力を制御することによって、非ニコチン電子ベイピング装置５００の加熱エンジンを制御（有効化及び／又は無効化）するように構成される。より詳細に後述するように、加熱エンジン制御回路２１２７は、コントローラ２１０５からの制御信号（本明細書ではデバイスパワー状態信号と呼ばれることもある）に基づいて加熱エンジンを無効化することができる。
+</com:P>
+         <com:P com:pNumber="0155">
+  非ニコチンポッドアセンブリ３００が装置本体１００に挿入されると、コントローラ２１０５はまた、Ｉ<com:Sup>２</com:Sup>Ｃインターフェースを介して少なくともＮＶＭ２２０５に通信可能に結合される。ＮＶＭ２２０５は、非ニコチンポッドアセンブリ３００のための非ニコチンプレベイパー製剤パラメータおよび変数値を格納してもよい。
+</com:P>
+         <com:P com:pNumber="0156">
+  少なくとも１つの例示的な実施形態によれば、非ニコチンプレベイパー製剤パラメータは、非ニコチンプレベイパー製剤空閾値パラメータ（例：マイクロリットル（μＬ）単位）、非ニコチンプレベイパー製剤開始レベル（例：μＬ単位）、非ニコチンプレベイパー製剤低閾値パラメータ（例：μＬ単位）、非ニコチンプレベイパー製剤気化パラメータ（例：気化率）、それらのサブコンビネーション、それらの組み合わせ、などである。非ニコチンプレベイパー製剤変数は、気化した非ニコチンプレベイパー製剤の総量（例：μＬ単位）及び／又は非ニコチンプレベイパー製剤エンプティフラグを含んでもよい。
+</com:P>
+         <com:P com:pNumber="0157">
+  少なくともいくつかの例示的な実施形態によれば、非ニコチンプレベイパー製剤空閾値パラメータは、成人ベイパーによって修正されないような、読み取り専用値であってもよい。一方、非ニコチンプレベイパー製剤変数は、読み取り／書き込み値であり、動作中に非ニコチン電子ベイピング装置５００によって更新される。
+</com:P>
+         <com:P com:pNumber="0158">
+  非ニコチンプレベイパー製剤開始レベルは、非ニコチンポッドアセンブリ３００が装置本体１００に挿入されたときの、非ニコチンポッドアセンブリ３００に含まれる非ニコチンリザーバ内の非ニコチンプレベイパー製剤の初期レベルを示す。非ニコチンリザーバ内の非ニコチンプレベイパー製剤の初期レベルは、装置本体１００に挿入される前の、非ニコチンリザーバ及び／又は非ニコチンポッドアセンブリ３００の充填時又は製造時に決定されてもよい。
+</com:P>
+         <com:P com:pNumber="0159">
+  非ニコチンプレベイパー製剤気化パラメータは、例えば、非ニコチンプレベイパー製剤の気化率を示す。ここで、気化率は、例えば、気化率変換係数である。気化率変換係数は、非ニコチンポッドアセンブリ３００内の非ニコチンプレベイパー製剤のミリジュール（ｍＪ）当たりのピコリットル（ｐＬ）などである。
+</com:P>
+         <com:P com:pNumber="0160">
+  非ニコチンプレベイパー製剤空閾値パラメータおよび非ニコチンプレベイパー製剤低閾値パラメータは、経験則に基づいて設定し得る閾値である。<com:Br/>
+  ここで、本実施形態では、非ニコチンプレベイパー製剤空閾値パラメータは、非ニコチンプレベイパー製剤空閾値または空閾値ともいわれる。<com:Br/>
+  同様に、本実施形態では、非ニコチンプレベイパー製剤低閾値パラメータは、非ニコチンプレベイパー製剤低閾値または低閾値ともいわれる。
+</com:P>
+         <com:P com:pNumber="0161">
+  少なくともいくつかの例示的な実施形態によれば、非ニコチンプレベイパー製剤開始レベルは約３５００μＬであってもよく、非ニコチンプレベイパー製剤低閾値パラメータは約３０００μＬであってもよく、非ニコチンプレベイパー製剤空閾値パラメータは約３４００μＬであってもよい。使用するエネルギーの測定誤差を許容するマージンを提供するために、非ニコチンプレベイパー製剤空閾値パラメータは、非ニコチンプレベイパー製剤開始レベルより小さくてもよい。
+</com:P>
+         <com:P com:pNumber="0162">
+  非ニコチンプレベイパー製剤の例示的な気化速度は約２８０ｐＬ／ｍＪであってよいが、気化速度は製剤に依存することがある。
+</com:P>
+         <com:P com:pNumber="0163">
+  これらの閾値パラメータについては、後で詳しく説明する。
+</com:P>
+         <com:P com:pNumber="0164">
+  気化した非ニコチンプレベイパー製剤の総量は、非ニコチンリザーバから引き出された、及び／又は、ベイプ中若しくは１つ以上のパフイベント中に気化した非ニコチンプレベイパー製剤の総（集計）量を示す。
+</com:P>
+         <com:P com:pNumber="0165">
+  非ニコチンプレベイパー製剤エンプティフラグは、気化した非ニコチンプレベイパー製剤の総量が、非ニコチンプレベイパー製剤空閾値パラメータに達する場合、または超える（以上である）場合に設定されるフラグビットであってもよい。
+</com:P>
+         <com:P com:pNumber="0166">
+  依然として図２９を参照すると、コントローラ２１０５は、ベイパーインジケータ２１３５を制御して、成人ベイパーに非ニコチン電子ベイピング装置５００のステータス及び／又は動作を示してもよい。ベイパーインジケータ２１３５は、ライトガイド（例えば、図１に示すライトガイド配置）を介して少なくとも部分的に実装されてもよく、コントローラ２１０５が成人ベイパーによって押されたボタンを感知したときに作動してもよいパワーインジケータ（例えば、ＬＥＤ）を含んでもよい。ベイパーインジケータ２１３５はまた、振動機構、スピーカー、または他のフィードバック機構を含んでもよく、成人ベイパーが制御するベイピングパラメータの現在の状態（例えば、非ニコチン蒸気量）を示してもよい。
+</com:P>
+         <com:P com:pNumber="0167">
+  依然として図２９を参照すると、コントローラ２１０５は、加熱プロファイル（例：体積、温度、風味）に従って、非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を加熱するためにヒータ３３６への電力を制御してもよい。加熱プロファイルは、経験的データに基づいて決定されてもよく、非ニコチンポッドアセンブリ３００のＮＶＭ２２０５に格納されてもよい。
+</com:P>
+         <com:P com:pNumber="0168">
+  図３０は、例示的な実施形態による非ニコチンプレベイパー製剤レベル検出及び自動シャットダウン制御システム２３００を示す単純なブロック図である。簡潔さのために、非ニコチンプレベイパー製剤レベル検出及び自動シャットダウン制御システム２３００は、本明細書において、自動シャットダウン制御システム２３００と呼ばれることがある。
+</com:P>
+         <com:P com:pNumber="0169">
+  図３０に示される自動シャットダウン制御システム２３００は、コントローラ２１０５で実装されてもよい。一例では、自動シャットダウン制御システム２３００は、コントローラ２１０５で実行されるデバイスマネージャ有限状態マシン（ＦＳＭ）ソフトウェア実装の一部として実装されてもよい。図３０に示す例では、自動シャットダウン制御システム２３００は、非ニコチンプレベイパー製剤レベル検出サブシステム２６２０を含む。しかしながら、自動シャットダウン制御システム２３００は、他の様々なサブシステムモジュールを含んでもよいことが理解されるべきである。
+</com:P>
+         <com:P com:pNumber="0170">
+  図３０を参照すると、自動シャットダウン制御システム２３００、より一般的にはコントローラ２１０５は、気化した非ニコチンプレベイパー製剤の総量を決定してもよい。また、コントローラ２１０５は、決定した、気化した非ニコチンプレベイパー製剤の総量に基づいて、非ニコチンポッドアセンブリ３００に含まれる非ニコチンリザーバに残る非ニコチンプレベイパー製剤のレベル（例：低い、空、枯渇）を表示させてもよい。
+</com:P>
+         <com:P com:pNumber="0171">
+  例えば、自動シャットダウン制御システム２３００は、気化した非ニコチンプレベイパー製剤の総量が、非ニコチンプレベイパー製剤低閾値に達するかそれを超える（つまり、非ニコチンプレベイパー製剤低閾値以上となる）、非ニコチンプレベイパー製剤空閾値未満である場合、非ニコチンリザーバ内の非ニコチンプレベイパー製剤量が比較的少ない（例：枯渇しつつある）ことを示す表示を出力しても良い。自動シャットダウン制御システム２３００は、気化した非ニコチンプレベイパー製剤の総量が非ニコチンプレベイパー製剤空閾値に達する（または以上となる）と、非ニコチンリザーバ内の非ニコチンプレベイパー製剤が枯渇していることを示す表示（例：空）を出力してもよい。非ニコチンプレベイパー製剤空閾値は、非ニコチンプレベイパー製剤低閾値より大きくてもよい。自動シャットダウン制御システム２３００は、１つ以上のベイパーインジケータ２１３５を介して非ニコチンプレベイパー製剤のレベル（例：低い、又は枯渇している）を示してもよい。
+</com:P>
+         <com:P com:pNumber="0172">
+  気化した非ニコチンプレベイパー製剤の総量が非ニコチンプレベイパー製剤空閾値に達することに応答して、自動シャットダウン制御システム２３００は、コントローラ２１０５に、非ニコチン電子ベイピング装置５００の一つ以上のサブシステムを制御し、一つ以上の結果的な動作を実行させることもできる。１又は複数の例示的な実施形態によれば、気化した非ニコチンプレベイパー製剤の総量が非ニコチンプレベイパー製剤空閾値に到達することに応答して、複数の結果的な動作が連続的に実行され得る。一例では、結果的な動作は、以下を含むことができる。<com:Br/>
+（ｉ）非ニコチン電子ベイピング装置５００が低電力状態に切り替わるオートオフ動作（例：電源ボタンを使用して非ニコチン電子ベイピング装置５００をオフにすることと同等である）、または<com:Br/>
+（ｉｉ）ベイプサブシステムを（例えば、ヒータ３３６への全ての電力を無効にすることによって）無効とし、それによって、是正措置（例えば、非ニコチンポッドアセンブリを交換する）が取られるまでベイプを防止する、ベイプオフ動作。
+</com:P>
+         <com:P com:pNumber="0173">
+  非ニコチンリザーバ内の非ニコチンプレベイパー製剤の枯渇は、非ニコチン電子ベイピング装置５００における障害事象（例えば、ハードポッド障害事象）の一例であり、非ニコチン電子ベイピング装置５００において無効化された機能（例：ベイプ機能）を再び有効にするための是正措置（例：非ニコチンポッドアセンブリの交換）を必要とする場合がある。
+</com:P>
+         <com:P com:pNumber="0174">
+  コントローラ２１０５は、後でより詳細に説明するように、１つ以上の制御信号を出力する（又はそれぞれの信号をアサート若しくはデアサートする）ことにより、非ニコチン電子ベイピング装置５００のサブシステムを制御することができる。場合によっては、コントローラ２１０５から出力される制御信号は、デバイスパワー状態信号、デバイスパワー状態命令、またはデバイスパワー制御信号と呼ばれることがある。少なくとも１つの例示的な実施形態では、コントローラ２１０５は、非ニコチン電子ベイピング装置５００における非ニコチンリザーバ内の非ニコチンプレベイパー製剤の枯渇を検出することに応答して、非ニコチン電子ベイピング装置５００におけるベイプ機能をシャットダウンするために、加熱エンジン制御回路２１２７に１以上の制御信号を出力することができる。
+</com:P>
+         <com:P com:pNumber="0175">
+  図３０に示す例では、自動シャットダウン制御システム２３００、より一般的にはコントローラ２１０５は、各パフイベント中に気化した非ニコチンプレベイパー製剤の量を推定し、推定した量を集計することにより、気化した非ニコチンプレベイパー製剤の総量を決定する。自動シャットダウン制御システム２３００は、パフイベント中にヒータ３３６に印加される電力の量（例：集計量）と、ＮＶＭ２２０５から得られる非ニコチンポッドアセンブリ３００の非ニコチンプレベイパー製剤気化パラメータと、に基づいて、パフイベント中に気化した非ニコチンプレベイパー製剤の量を推定してもよい。
+</com:P>
+         <com:P com:pNumber="0176">
+  図３１は、例示的な実施形態による非ニコチンプレベイパー製剤レベル検出方法を示すフローチャートである。
+</com:P>
+         <com:P com:pNumber="0177">
+  例示の目的のために、図３１に示される実施形態は、図２９に示される電気システムに関して説明される。しかしながら、例示的な実施形態は、この例に限定されるべきではないことが理解されるべきである。むしろ、例示的な実施形態は、他の非ニコチン電子ベイピング装置及びその電気システムに適用可能である。さらに、図３２に示される例示的な実施形態は、コントローラ２１０５によって実行される動作に関して説明される。しかしながら、例示的な実施形態は、自動シャットダウン制御システム２３００及び／又は非ニコチンプレベイパー製剤レベル検出サブシステム２６２０が図３１に示す機能／動作の１つ以上を実行することに関して同様に説明され得ることを理解されたい。
+</com:P>
+         <com:P com:pNumber="0178">
+  図３１を参照すると、非ニコチンポッドアセンブリ３００が装置本体１００に挿入または係合されると、コントローラ２１０５は、ステップＳ２８０２において、ＮＶＭ２２０５から非ニコチンプレベイパー製剤パラメータおよび変数を取得する。
+</com:P>
+         <com:P com:pNumber="0179">
+  上述したように、非ニコチンプレベイパー製剤パラメータは、非ニコチンプレベイパー製剤空閾値パラメータ、非ニコチンプレベイパー製剤開始レベル、非ニコチンプレベイパー製剤低閾値パラメータ、非ニコチンプレベイパー製剤気化パラメータ、それらのサブコンビネーション、それらのコンビネーション、又は同様のものを含むことができる。また、上述したように、非ニコチンプレベイパー製剤変数は、気化した非ニコチンプレベイパー製剤の総量及び／又は非ニコチンプレベイパー製剤エンプティフラグを含んでもよい。
+</com:P>
+         <com:P com:pNumber="0180">
+  ステップＳ２８０４において、コントローラ２１０５は、非ニコチンプレベイパー製剤エンプティフラグが設定されているか否かを判断する。非ニコチンプレベイパー製剤エンプティフラグは、気化した非ニコチンプレベイパー製剤の総量が、ＮＶＭ２２０５から取得した非ニコチンプレベイパー製剤空閾値パラメータ以上か否かに従って設定又はリセットされてもよい。設定された非ニコチンプレベイパー製剤エンプティフラグは、第１のビット値（例：１又は０）を有してもよい。一方、リセットされた非ニコチンプレベイパー製剤エンプティフラグは、第２のビット値（例：１又は０のうち、第１のビット値と異なる方）を有してもよい。
+</com:P>
+         <com:P com:pNumber="0181">
+  この例では、設定された非ニコチンプレベイパー製剤エンプティフラグは、非ニコチンポッドアセンブリ３００内の非ニコチンプレベイパー製剤が枯渇している（つまり、非ニコチンポッドアセンブリ内の非ニコチンリザーバが空である）ことを示す。一方、リセットされた非ニコチンプレベイパー製剤エンプティフラグは、非ニコチンポッドアセンブリ３００内の非ニコチンプレベイパー製剤が枯渇していないことを示す。
+</com:P>
+         <com:P com:pNumber="0182">
+  非ニコチンプレベイパー製剤エンプティフラグが設定されている場合、ステップＳ２８２６において、コントローラ２１０５は、ベイパーインジケータ２１３５を制御し、非ニコチンポッドアセンブリ３００内の非ニコチンプレベイパー製剤が枯渇しているという指示を出力する。より詳細には、例えば、コントローラ２１０５は、ベイパーインジケータ２１３５を制御し、非ニコチンプレベイパー製剤が枯渇しているという表示を、音、視覚表示及び／又は触覚フィードバックの態様で出力してもよい。１又は複数の例示的な実施形態によれば、かかる表示は、点滅する赤色ＬＥＤであってもよく、ソフトウェアメッセージであって、リモート電子デバイス上の接続された「Ａｐｐ（アプリ）」に（例えば、Ｂｌｕｅｔｏｏｔｈを介して）送信される、エラーコードを含み、このアプリの通知がトリガーとなり得るソフトウェアメッセージであってもよく、それらの組み合わせ、又は同様のものであってもよい。
+</com:P>
+         <com:P com:pNumber="0183">
+  また、ステップＳ２８２６において、コントローラ２１０５は、加熱エンジン制御回路２１２７を制御して、ベイプオフ動作を実行する。上述したように、ベイプオフ動作は、ヒータ３３６への全てのエネルギーを無効にすることによってベイプ機能を停止させ、それによって、（例えば、成人ベイパーにより）是正措置が取られるまでベイプを防止するものである。より詳細に後述するように、コントローラ２１０５は、論理高レベルを有するベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮを出力することによって（図３５）、またはベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭをデアサートする（または出力を停止する）（図３６）ことにより、ヒータ３３６へのすべてのエネルギーを無効にするように、加熱エンジン制御回路２１２７を制御してもよい。少なくとも１つの実施形態では、ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭは、パルス幅変調（ＰＷＭ）信号であってよい。例示的な是正措置も、後でより詳細に説明される。
+</com:P>
+         <com:P com:pNumber="0184">
+  ステップＳ２８０４に戻り、非ニコチンプレベイパー製剤エンプティフラグがリセットされている（設定されていない）場合、ステップＳ２８０６において、コントローラ２１０５は、非ニコチン電子ベイピング装置５００にベイプ条件が存在するかどうかを判断する。コントローラ２１０５は、センサ３６４からの出力に基づいて、非ニコチン電子ベイピング装置５００にベイプ条件が存在するか否かを決定してもよい。一例では、センサ３６４からの出力が、非ニコチン電子ベイピング装置５００のマウスピース１０２における閾値を超える負圧の印加を示す場合、コントローラ２１０５は、非ニコチン電子ベイピング装置５００にベイプ条件が存在すると決定してもよい。
+</com:P>
+         <com:P com:pNumber="0185">
+  コントローラ２１０５がベイプ条件を検出した場合、ステップＳ２８０８において、コントローラ２１０５は、非ニコチンポッドアセンブリ３００の非ニコチンリザーバから取り出した非ニコチンプレベイパー製剤を気化するために、ヒータ３３６に電力を印加するよう加熱エンジン制御回路２１２７を制御する。ヒータ３３６に電力を印加するための加熱エンジン制御回路２１２７の制御例については、図３５および図３６を用いて後でより詳細に説明する。
+</com:P>
+         <com:P com:pNumber="0186">
+  また、ステップＳ２８０８において、コントローラ２１０５は、パフイベント中（ベイプ条件が存在する間）にヒータ３３６に加えられた総エネルギーを計算するために、ヒータ３３６に加えられた電力の積分を開始する。
+</com:P>
+         <com:P com:pNumber="0187">
+  少なくとも１つの例示的な実施形態によれば、ヒータ３３６に加えられる電力は、パフイベント中（イントラ－パフ）に動的に調整され得る。したがって、コントローラ２１０５は、パフイベント中にヒータ３３６に加えられた総エネルギーを計算するために、パフイベント中にヒータ３３６に供給される電力を積分または合算する。
+</com:P>
+         <com:P com:pNumber="0188">
+  より詳細に後述するように、１つ以上の例示的な実施形態によれば、コントローラ２１０５は、測定ノイズを減衰させるために、３タップ移動平均フィルタを用いて、ヒータ電圧測定回路２１２５２およびヒータ電流測定回路２１２５８からに由来する、変換されたヒータ電圧および電流測定値をそれぞれ、フィルタリングしてもよい。次に、コントローラ２１０５は、フィルタリングされた測定値を使用して、例えば、ヒータ３３６に印加される電力Ｐ<com:Sub>ＨＥＡＴＥＲ</com:Sub>を計算してもよい。ここで、「Ｐ<com:Sub>ＨＥＡＴＥＲ</com:Sub>＝Ｖ<com:Sub>ＨＥＡＴＥＲ</com:Sub>＊  Ｉ<com:Sub>ＨＥＡＴＥＲ</com:Sub>」である。次に、コントローラ２１０５は、以下に示す式（１）に従って、パフイベント間にヒータ３３６に加えられたエネルギー<com:Sub>ＥＡｐｐｌｉｅｄ</com:Sub>を計算してもよい。ここで、「Ｔ＝ＰｕｆｆＬｅｎｇｔｈ」は、パフイベントの長さである。<com:Br/>
+  <com:Br/>
+            <com:Image com:imageContentCategory="Drawing">
+               <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+               <com:FileName>2023534250000001.jpg</com:FileName>
+               <com:HeightMeasure com:measureUnitCode="Mm">8</com:HeightMeasure>
+               <com:WidthMeasure com:measureUnitCode="Mm">95</com:WidthMeasure>
+            </com:Image>
+  
+</com:P>
+         <com:P com:pNumber="0189">
+  少なくとも１つの例示的な実施形態において、Ｔ＝０からＴ＝ＰｕｆｆＬｅｎｇｔｈまでの式（１）の積分は、１ミリ秒のステップであってよい。しかし、このステップサイズは、実装によって変化してもよい。
+</com:P>
+         <com:P com:pNumber="0190">
+  電力Ｐ<com:Sub>ＨＥＡＴＥＲ</com:Sub>一定であれば、一次方程式を用いてエネルギーＥ<com:Sub>ＡＰＰＬＩＥＤ</com:Sub>を計算することができる。
+</com:P>
+         <com:P com:pNumber="0191">
+  ステップＳ２８１０では、コントローラ２１０５は、非ニコチン電子ベイピング装置５００においてベイプ条件が停止したか否かを判断する。ここで、ベイプ条件が停止したとは、ベイプ条件が検出されなくなり、パフイベントが終了したことであってもよい。
+</com:P>
+         <com:P com:pNumber="0192">
+  コントローラ２１０５が、ベイプ条件が停止した（つまり、パフイベントが終了した）と判断した場合、ステップＳ２８１２において、コントローラ２１０５は、パフイベント中にヒータ３３６に加えられたエネルギーに基づき、パフイベント中に気化した非ニコチンプレベイパー製剤の量を推定する。ここで、本実施形態では、パフイベントは、ベイプ期間又はベイプ間隔とも呼ばれる。一例では、ステップＳ２８０２においてＮＶＭ２２０５から得られた気化率変換係数を適用することにより、パフイベント中にヒータ３３６に加えられたエネルギーは、気化した非ニコチン事前蒸気製剤の量に線形的に近似されてもよい。この場合、気化した非ニコチンプレベイパー製剤の推定量ＥＳＴ＿ＡＭＴ＿ＶＡＰは、以下の式（２）に示すように、気化率変換係数ＶＡＰ＿ＣＯＮＶ＿ＦＡＣＴＯＲ（ミリジュール当たりピコリットル）と、パフイベント中にヒータ３３６に加えられたエネルギーと、の積として計算してもよい。<com:Br/>
+  <com:Br/>
+            <com:Image com:imageContentCategory="Drawing">
+               <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+               <com:FileName>2023534250000002.jpg</com:FileName>
+               <com:HeightMeasure com:measureUnitCode="Mm">6</com:HeightMeasure>
+               <com:WidthMeasure com:measureUnitCode="Mm">107</com:WidthMeasure>
+            </com:Image>
+  
+</com:P>
+         <com:P com:pNumber="0193">
+  次に、ステップＳ２８１４において、コントローラ２１０５は、ステップＳ２８１２で推定された気化した非ニコチンプレベイパー製剤の量を、ＮＶＭ２２０５に記憶された気化した非ニコチンプレベイパー製剤の総量に加えることによって、非ニコチンポッドアセンブリ３００の気化した非ニコチンプレベイパー製剤の総量の更新された推定値を計算する。ここで、本実施形態では、気化した非ニコチンプレベイパー製剤の総量を、気化した非ニコチンプレベイパー製剤値とも称する。
+</com:P>
+         <com:P com:pNumber="0194">
+  ステップＳ２８１６において、コントローラ２１０５は、気化した非ニコチンプレベイパー製剤の更新された総量と、ステップＳ２８０２においてＮＶＭ２２０５から取得した非ニコチンプレベイパー製剤空閾値パラメータと、を比較する。
+</com:P>
+         <com:P com:pNumber="0195">
+  気化した非ニコチンプレベイパー製剤の更新された総量が、非ニコチンプレベイパー製剤空閾値パラメータ以上である場合、ステップＳ２８１８において、コントローラ２１０５は、非ニコチンポッドアセンブリ３００内の非ニコチンプレベイパー製剤が枯渇していることを示す表示（例：非ニコチンポッドアセンブリ３００内の非ニコチンリザーバが空です）を出力するように、（（１又は複数の）制御信号を介して）ベイパーインジケータ２１３５を制御する。
+</com:P>
+         <com:P com:pNumber="0196">
+  ステップＳ２８２０で、コントローラ２１０５は、気化した非ニコチンプレベイパー製剤の更新された総量をＮＶＭ２２０５に格納する。そして、コントローラ２１０５は、非ニコチンポッドアセンブリ３００内の非ニコチンプレベイパー製剤が枯渇したことを示すために、ＮＶＭ２２０５にエンプティフラグを設定する。
+</com:P>
+         <com:P com:pNumber="0197">
+  ＮＶＭ２２０５にエンプティフラグを設定することは、製剤総量をさらに更新することを防ぐ書込ロックとして機能する。また、書込ロックは、エンプティフラグのクリアを防止する。
+</com:P>
+         <com:P com:pNumber="0198">
+  その後、ステップＳ２８０４に戻り、上述の処理が継続される。
+</com:P>
+         <com:P com:pNumber="0199">
+  ステップＳ２８１６に戻り、気化した非ニコチンプレベイパー製剤の更新された総量が非ニコチンプレベイパー製剤空閾値パラメータより小さい場合、ステップＳ２８２２において、コントローラ２１０５は、気化した非ニコチンプレベイパー製剤の更新された総量と、非ニコチンプレベイパー製剤低閾値パラメータと、を比較する。
+</com:P>
+         <com:P com:pNumber="0200">
+  気化した非ニコチンプレベイパー製剤の更新された総量が、非ニコチンプレベイパー製剤低閾値パラメータ以上である場合、ステップＳ２８２４において、コントローラ２１０５は、低非ニコチンプレベイパー製剤が少ないことを示す表示を出力するように、（（１又は複数の）制御信号を介して）ベイパーインジケータ２１３５を制御する。一例では、低非ニコチンプレベイパー製剤が少ないことを示す表示は、成人ベイパーに対する音、視覚表示及び／又は触覚フィードバックの態様であってもよい。例えば、かかる表示は、点滅する黄色ＬＥＤであってもよく、ソフトウェアメッセージであって、リモート電子デバイス上の接続された「Ａｐｐ（アプリ）」に（例えば、Ｂｌｕｅｔｏｏｔｈを介して）送信される、コードを含み、このアプリの通知がトリガーとなり得るソフトウェアメッセージであってもよく、それらの組み合わせ、又は同様のものであってもよい。
+</com:P>
+         <com:P com:pNumber="0201">
+  次に、ステップＳ２８２８において、コントローラ２１０５は、ＮＶＭ２２０５に記憶される気化した非ニコチンプレベイパー製剤の総量を更新する。その後、ステップＳ２８０４に戻り、上述の処理が継続される。
+</com:P>
+         <com:P com:pNumber="0202">
+  ステップＳ２８２２に戻り、気化した非ニコチンプレベイパー製剤の更新された総量が、非ニコチンプレベイパー製剤低閾値パラメータより小さい場合、ステップＳ２８２８に進み、本実施形態に示される態様で処理が継続される。
+</com:P>
+         <com:P com:pNumber="0203">
+  ここで、ステップＳ２８１０に戻ると、コントローラ２１０５は、ベイプ条件が検出された後、ベイプ条件がまだ停止していない（パフイベントが終了していない）と判断した場合、コントローラ２１０５は、電力制御回路を制御してヒータ３３６に電力を供給し、供給した電力を積分することを継続する。コントローラ２１０５が、ベイプ条件が停止したと判断すると、上述の処理が継続される。
+</com:P>
+         <com:P com:pNumber="0204">
+  ステップＳ２８０６に戻り、コントローラ２１０５が、非ニコチンプレベイパー製剤エンプティフラグが設定されていないと判断した後に、ベイプ条件がまだ存在しないと判断した場合、コントローラ２１０５は、ベイプ条件の存在についてセンサ３６４の出力の監視を継続する。そして、コントローラ２１０５がベイプ条件を検出すると、Ｓ２８０８に進み、上述の処理が継続される。
+</com:P>
+         <com:P com:pNumber="0205">
+  図３１に示す例示的な実施形態では、気化した非ニコチンプレベイパー製剤の合計がそれぞれの閾値パラメータを超えたときに、非ニコチンリザーバ内の非ニコチンプレベイパー製剤が少なくなった又は空になったと判断することに関して開示されるが、例示的な実施形態はこの例に限定されるべきでは無い。代替案として、非ニコチンリザーバ内の（空の）非ニコチンプレベイパー製剤の枯渇は、それぞれの最小非ニコチンプレベイパー製剤閾値パラメータとの比較によって決定されてもよい。例えば、コントローラ２１０５は、非ニコチンリザーバ内の非ニコチンプレベイパー製剤開始レベルと、ステップＳ２８１４で計算された気化した非ニコチンプレベイパー製剤の総量と、の差分を計算し、ステップＳ２８１６において、計算された差分と、最小非ニコチンプレベイパー製剤空閾値パラメータと、を比較することにより、非ニコチンリザーバ内の非ニコチンプレベイパー製剤が枯渇（空）したかどうかを判断してもよい。この例では、計算された差分が最小非ニコチンプレベイパー製剤空閾値パラメータより小さい場合、コントローラ２１０５は、非ニコチンリザーバ内の非ニコチンプレベイパー製剤が枯渇していると判断する。
+</com:P>
+         <com:P com:pNumber="0206">
+  他の例では、コントローラ２１０５は、非ニコチンリザーバ内の非ニコチンプレベイパー製剤開始レベルと、ステップＳ２８１４で計算された気化した非ニコチンプレベイパー製剤の総量と、の差分を計算し、ステップＳ２８２２において、計算された差分と、最小非ニコチンプレベイパー製剤低閾値パラメータと、を比較することにより、非ニコチンリザーバ内の非ニコチンプレベイパー製剤が少なくなっているかどうかを判断してもよい。この例では、計算された差分が、非ニコチンプレベイパー製剤低閾値パラメータより小さく、非ニコチンプレベイパー製剤空閾値パラメータより大きい場合、コントローラ２１０５は、非ニコチンリザーバ内の非ニコチンプレベイパー製剤が少なくなっていると判断する。
+</com:P>
+         <com:P com:pNumber="0207">
+  この代替例では、非ニコチンプレベイパー製剤開始レベルは約３５００μＬであってもよく、非ニコチンプレベイパー製剤低閾値パラメータは約５００μＬであってもよく、非ニコチンプレベイパー製剤空閾値パラメータは約１００μＬであってもよい。使用するエネルギーの測定誤差を許容するマージンを提供するために、非ニコチンプレベイパー製剤空閾値パラメータは、ゼロより大きくてもよい。
+</com:P>
+         <com:P com:pNumber="0208">
+  上述のように、非ニコチンプレベイパー製剤の枯渇は、非ニコチン電子ベイピング装置５００における障害事象の一例である。また、上述のように、障害事象は、非ニコチン電子ベイピング装置５００における１つ以上の結果的な動作（例：ベイプオフ動作及び／又は自動オフ動作）をもたらす事象である。
+</com:P>
+         <com:P com:pNumber="0209">
+  図３２は、例示的な実施形態による、非ニコチンプレベイパー製剤の枯渇などの障害事象を検出することに応答してベイプオフ動作を実行した後の、非ニコチン電子ベイピング装置の動作方法の一例を示すフローチャートである。例示的な目的のために、図３２に示される例示的な実施形態は、非ニコチンプレベイパー製剤の枯渇に関して説明される。しかしながら、例示的な実施形態は、この例に限定されるべきではない。
+</com:P>
+         <com:P com:pNumber="0210">
+  また、例示の目的で、図３２に示すフローチャートは、図２９に示す電気システムに関して説明される。しかしながら、例示的な実施形態はこの例に限定されるべきではないことを理解されたい。むしろ、例示的な実施形態は、他の非ニコチン電子ベイピング装置及びその電気システムに適用可能である。さらに、図３２に示される例示的な実施形態は、コントローラ２１０５によって実行される動作に関して説明される。しかしながら、例示的な実施形態は、自動シャットダウン制御システム２３００及び／又は非ニコチンプレベイパー製剤レベル検出サブシステム２６２０が図３２に示される機能／動作の１つ以上を実行することに関して同様に説明され得ることを理解されたい。
+</com:P>
+         <com:P com:pNumber="0211">
+  図３２を参照すると、ステップＳ３８０４で、コントローラ２１０５は、障害事象（非ニコチンリザーバの枯渇）の発生をメモリ２１３０にログ記録する。一例では、コントローラ２１０５は、障害事象（非ニコチンリザーバの枯渇）の識別子を、結果的な動作（例：ベイプオフ動作）と、障害事象及び結果的な動作が発生した時刻と関連付けて記憶してもよい。
+</com:P>
+         <com:P com:pNumber="0212">
+ステップＳ３８０８において、コントローラ２１０５は、成人ベイパーに非ニコチンプレベイパー製剤が枯渇していることを示した後（例えば、それに応答して）、非ニコチンポッドアセンブリ３００が除去閾値時間間隔内に（満了前に）装置本体１００から除去されたかどうか（是正措置）を判断する。少なくとも１つの例示的な実施形態では、コントローラ２１０５は、非ニコチンポッドアセンブリの５つのデータコンタクト３２６のセットが取り外されたことを確認することによって、非ニコチンポッドアセンブリ３００が装置本体１００からデジタル的に取り外されたことを決定してもよい。別の例では、コントローラ２１０５は、非ニコチンポッドアセンブリ３００の電力コンタクト３２４ａ、３２４ｂ及び／又は３２６が装置本体１００の装置電気コネクタ１３２から取り外されたことを感知することによって、非ニコチンポッドアセンブリが装置本体１００から取り外されたと決定してもよい。
+</com:P>
+         <com:P com:pNumber="0213">
+  コントローラ２１０５が、成人ベイパーに非ニコチンプレベイパー製剤が枯渇していることを示した後（例えば、それに応答して）、非ニコチンポッドアセンブリ３００が取り外し閾値時間間隔内に装置本体１００から取り外されたと判断した場合、ステップＳ３８１０でコントローラ２１０５は、通常動作（非障害状態）に戻るように非ニコチン電子ベイピング装置５００を制御する。この場合、非ニコチンポッドアセンブリ３００が取り外されたので、ヒータ３３６へのエネルギーは依然として無効であるが、非ニコチン電子ベイピング装置５００は、新しい非ニコチンポッドアセンブリが挿入されると、成人ベイパーによる負圧の適用に応じてベイプする他の準備が整っている。
+</com:P>
+         <com:P com:pNumber="0214">
+  ステップＳ３８１２で、コントローラ２１０５は、ステップＳ３８１４で、非ニコチンポッドアセンブリ３００を取り外し、非ニコチン電子ベイピング装置５００を通常動作に戻した後、挿入閾値時間間隔内に（満了前に）新しい非ニコチンポッドアセンブリが装置本体１００に挿入されたかどうかを決定する。
+</com:P>
+         <com:P com:pNumber="0215">
+  少なくとも１つの例では、除去閾値時間間隔及び／又は挿入閾値時間間隔は、約５分と約１２０分との間の長さを有してよい。除去閾値時間間隔及び／又は挿入閾値時間間隔は、成人ベイパーによってこの範囲内の長さに設定されてもよい。少なくとも１つの例示的な実施形態では、コントローラ２１０５は、非ニコチンポッドアセンブリ３００の電力コンタクト３２４ａ及び３２４ｂと装置本体１００の装置電気コネクタ１３２との間のヒータ３３６の抵抗を感知することによって新しい非ニコチンポッドアセンブリが装置本体１００に挿入されたと判断してもよい。さらなる例示的な実施形態では、コントローラ２１０５は、非ニコチンポッドアセンブリ３００のデータコンタクト３２６と装置本体１００の装置電気コネクタ１３２との間の非ニコチンポッドアセンブリ３００に含まれるプルアップ抵抗の存在を感知することによって、新しい非ニコチンポッドアセンブリが装置本体１００に挿入されたと判断してもよい。
+</com:P>
+         <com:P com:pNumber="0216">
+  コントローラ２１０５が、新しい非ニコチンポッドアセンブリが挿入閾値時間間隔内に装置本体１００に挿入されたと判断した場合、ステップＳ３８１４で、コントローラ２１０５は、加熱エンジン制御回路２１２７を制御して、ベイプモジュールを再有効化する（例えば、ヒータ３３６への電力印加を可能にする）。より詳細に後述するように、コントローラ２１０５は、論理ローレベルを有するベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮを出力すること（図３４）またはベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭ（図３６）をアサートすることによって、ベイプモジュールを再びイネーブルするよう加熱エンジン制御回路２１２７を制御してもよい。
+</com:P>
+         <com:P com:pNumber="0217">
+  ステップＳ３８１２に戻り、コントローラ２１０５が、新しい非ニコチンポッドアセンブリが挿入閾値時間間隔内に装置本体１００に挿入されていないと判断した場合、ステップＳ３８１６で、コントローラ２１０５は、非ニコチン電子ベイピング装置５００が電源オフになるか低電力モードになるオートオフ動作を実行するために別の１以上の制御シグナルを出力する。少なくともいくつかの例示的な実施形態によれば、通常のソフトウェア自動オフの文脈で、コントローラ２１０５は、非ニコチン電子ベイピング装置５００のすべてのまたは実質的にすべての周辺機器をオフにし、コントローラ２１０５がスリープ状態に入るように、多数または複数のＧＰＩＯ制御線（信号）を出力してよい。
+</com:P>
+         <com:P com:pNumber="0218">
+  ここでステップＳ３８０８に戻ると、非ニコチンポッドアセンブリ３００が除去閾値時間間隔内に除去されない場合、プロセスはステップＳ３８１６に進み、上述したように継続される。
+</com:P>
+         <com:P com:pNumber="0219">
+  図３３は、ヒータ電圧測定回路２１２５２の実施形態例を示す図である。
+</com:P>
+         <com:P com:pNumber="0220">
+  図３３を参照すると、ヒータ電圧測定回路２１２５２は、入力電圧信号ＣＯＩＬ＿ＯＵＴを受け取るように構成された端子と接地との間に分圧構成で接続された抵抗３７０２および抵抗３７０４を含む。入力電圧信号ＣＯＩＬ＿ＯＵＴは、ヒータ３３６に入力される電圧（の入力端子の電圧）である。抵抗３７０２と抵抗３７０４との間のノードＮ３７１６は、オペアンプ（Ｏｐ－Ａｍｐ）３７０８の正入力に結合される。コンデンサ３７０６は、ノードＮ３７１６とグラウンドとの間に接続され、オペアンプ３７０８の正入力への入力電圧を安定化させるためのローパスフィルタ回路（Ｒ／Ｃフィルタ）を形成している。このフィルタ回路は、ヒータ３３６への通電に用いられるＰＷＭ信号によって誘発されるスイッチングノイズによる不正確さを低減し、電流と電圧の両方に対して同じ位相応答／群遅延を有することもできる。
+</com:P>
+         <com:P com:pNumber="0221">
+  ヒータ電圧測定回路２１２５２は、抵抗３７１０、３７１２及びコンデンサ３７１４をさらに含む。抵抗３７１２は、ノードＮ３７１８と、出力電圧信号ＣＯＩＬ＿ＲＴＮを受信するように構成された端子との間に接続される。出力電圧信号ＣＯＩＬ＿ＲＴＮは、ヒータ３３６から出力される電圧（の出力端子の電圧）である。
+</com:P>
+         <com:P com:pNumber="0222">
+  抵抗３７１０とコンデンサ３７１４は、ノードＮ３７１８とオペアンプ３７０８の出力の間に並列に接続されている。また、ノードＮ３７１８には、オペアンプ３７０８の負入力が接続されている。抵抗３７１０、３７１２とコンデンサ３７１４は、ローパスフィルタ回路構成で接続されている。
+</com:P>
+         <com:P com:pNumber="0223">
+  ヒータ電圧測定回路２１２５２は、オペアンプ３７０８を利用して、入力電圧信号ＣＯＩＬ＿ＯＵＴと出力電圧信号ＣＯＩＬ＿ＲＴＮとの間の電圧差を測定し、ヒータ３３６にかかる電圧を表す、スケーリングされたヒータ電圧測定信号ＣＯＩＬ＿ＶＯＬを出力する。ヒータ電圧測定回路２１２５２は、コントローラ２１０５によるデジタルサンプリングおよび測定のために、スケーリングされたヒータ電圧測定信号ＣＯＩＬ＿ＶＯＬをコントローラ２１０５のＡＤＣピンに出力する。
+</com:P>
+         <com:P com:pNumber="0224">
+  オペアンプ３７０８のゲインは、電圧測定のダイナミックレンジを改善するために、周囲の受動電気素子（例えば、抵抗およびコンデンサ）に基づいて設定されてもよい。一例では、オペアンプ３７０８のダイナミックレンジは、最大電圧出力がＡＤＣの最大入力範囲（例えば、約１．８Ｖ）に一致するように、電圧をスケーリングすることによって達成されてもよい。少なくとも１つの例示的な実施形態では、スケーリングは、１Ｖあたり約２６７ｍＶであってよく、したがって、ヒータ電圧測定回路２１２５２は、約１．８Ｖ／０．２６７Ｖ＝６．７４Ｖまで測定してもよい。
+</com:P>
+         <com:P com:pNumber="0225">
+  図３４は、図２９に示したヒータ電流測定回路２１２５８の実施形態例を示す図である。
+</com:P>
+         <com:P com:pNumber="0226">
+  図３４を参照すると、出力電圧信号ＣＯＩＬ＿ＲＴＮは、グラウンドに接続された４端子（４Ｔ）測定抵抗３８０２に入力される。４端子測定抵抗３８０２にわたる差動電圧は、オペアンプ３８０６によってスケーリングされ、ヒータ３３６を通る電流を示すヒータ電流測定信号ＣＯＩＬ＿ＣＵＲを出力する。ヒータ電流測定信号ＣＯＩＬ＿ＣＵＲは、コントローラ２１０５でヒータ３３６を通る電流のデジタルサンプリングおよび測定のために、コントローラ２１０５のＡＤＣピンに出力される。
+</com:P>
+         <com:P com:pNumber="0227">
+  図３４に示す例示的な実施形態では、４端子測定抵抗３８０２は、「ケルビン電流測定」技術を使用して電流測定における誤差を低減するために使用されてもよい。この例では、電流測定経路を電圧測定経路から分離することで、電圧測定経路のノイズを低減することができる。
+</com:P>
+         <com:P com:pNumber="0228">
+  オペアンプ３８０６のゲインは、測定のダイナミックレンジを向上させるように設定されてもよい。この例では、オペアンプ３８０６のスケーリングは、約０．５７７Ｖ／Ａであってよく、したがって、ヒータ電流測定回路２１２５８は、最大でほぼ次の通り測定することができる。<com:Br/>
+  <com:Br/>
+            <com:Image com:imageContentCategory="Drawing">
+               <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+               <com:FileName>2023534250000003.jpg</com:FileName>
+               <com:HeightMeasure com:measureUnitCode="Mm">10</com:HeightMeasure>
+               <com:WidthMeasure com:measureUnitCode="Mm">33</com:WidthMeasure>
+            </com:Image>
+  
+</com:P>
+         <com:P com:pNumber="0229">
+  より詳細に図３４を参照すると、４端子測定抵抗３８０２の第１の端子は、出力電圧信号ＣＯＩＬ＿ＲＴＮを受信するために、ヒータ３３６の端子に接続される。４端子測定抵抗３８０２の第２の端子は、グラウンドに接続されている。４端子測定抵抗３８０２の第３の端子は、抵抗３８０４、コンデンサ３８０８及び抵抗３８１０を含むローパスフィルタ回路（Ｒ／Ｃフィルタ）に接続されている。ローパスフィルタ回路の出力は、オペアンプ３８０６の正入力に接続される。ローパスフィルタ回路は、ヒータ３３６に通電するために印加されるＰＷＭ信号によって誘発されるスイッチングノイズによる不正確さを低減し、また、電流および電圧の両方に対して同じ位相応答／群遅延を有することができる。
+</com:P>
+         <com:P com:pNumber="0230">
+  ヒータ電流測定回路２１２５８は、さらに、抵抗３８１２および３８１４と、コンデンサ３８１６とを含む。抵抗３８１２、３８１４とコンデンサ３８１６は、４端子測定抵抗３８０２の第４の端子、オペアンプ３８０６のマイナス入力、オペアンプ３８０６の出力にローパスフィルタ回路構成で接続されており、オペアンプ３８０６のマイナス入力にローパスフィルタ回路の出力が接続されている。
+</com:P>
+         <com:P com:pNumber="0231">
+  オペアンプ３８０６は、ヒータ電流測定信号ＣＯＩＬ＿ＣＵＲとして差動電圧をコントローラ２１０５のＡＤＣピンに出力し、コントローラ２１０５によるヒータ３３６を流れる電流のサンプリングと測定に使用される。
+</com:P>
+         <com:P com:pNumber="0232">
+  少なくともこの例示的な実施形態によれば、抵抗３８０４および３８１０ならびにコンデンサ３８０８を含むローパスフィルタ回路が４端子測定抵抗３８０２の端子に接続され、抵抗３８１２および３８１４ならびにコンデンサ３８１６を含むローパスフィルタ回路が４端子測定抵抗３８０２の他の端子に接続されていることを除いて、ヒータ電流測定回路２１２５８の構成はヒータ電圧測定回路２１２５２の構成と同様である。
+</com:P>
+         <com:P com:pNumber="0233">
+  コントローラ２１０５は、非ニコチン電子ベイピング装置５００で使用される「ティック」時間に対応する時間窓（例えば、約１ｍｓ）上の複数のサンプル（例えば、電圧の）を平均し、平均をスケーリング値の適用を通じてヒータ３３６にわたる電圧及び電流の数学表現に転換してもよい。スケーリング値は、それぞれのオペアンプで実装される利得設定に基づいて決定されてもよく、これは、非ニコチン電子ベイピング装置５００のハードウェアに固有のものであってもよい。
+</com:P>
+         <com:P com:pNumber="0234">
+  コントローラ２１０５は、測定ノイズを減衰させるために、例えば、３タップ移動平均フィルタを用いて変換された電圧および電流の測定値をフィルタリングしてもよい。コントローラ２１０５は、次に、フィルタリングされた測定値を使用して、例えば、以下を計算してもよい。<com:Br/>
+  <com:Br/>
+・ヒータ３３６の抵抗Ｒ<com:Sub>ＨＥＡＴＥＲ</com:Sub>
+            <com:Br/>
+            <com:Image com:imageContentCategory="Drawing">
+               <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+               <com:FileName>2023534250000004.jpg</com:FileName>
+               <com:HeightMeasure com:measureUnitCode="Mm">10</com:HeightMeasure>
+               <com:WidthMeasure com:measureUnitCode="Mm">34</com:WidthMeasure>
+            </com:Image>
+  <com:Br/>
+・ヒータ３３６に印加される電力Ｐ<com:Sub>ＨＥＡＴＥＲ</com:Sub>
+            <com:Br/>
+            <com:Image com:imageContentCategory="Drawing">
+               <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+               <com:FileName>2023534250000005.jpg</com:FileName>
+               <com:HeightMeasure com:measureUnitCode="Mm">8</com:HeightMeasure>
+               <com:WidthMeasure com:measureUnitCode="Mm">48</com:WidthMeasure>
+            </com:Image>
+  <com:Br/>
+・電源電流<com:Br/>
+            <com:Image com:imageContentCategory="Drawing">
+               <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+               <com:FileName>2023534250000006.jpg</com:FileName>
+               <com:HeightMeasure com:measureUnitCode="Mm">10</com:HeightMeasure>
+               <com:WidthMeasure com:measureUnitCode="Mm">26</com:WidthMeasure>
+            </com:Image>
+  <com:Br/>
+ここで<com:Br/>
+            <com:Image com:imageContentCategory="Drawing">
+               <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+               <com:FileName>2023534250000007.jpg</com:FileName>
+               <com:HeightMeasure com:measureUnitCode="Mm">16</com:HeightMeasure>
+               <com:WidthMeasure com:measureUnitCode="Mm">48</com:WidthMeasure>
+            </com:Image>
+である。<com:Br/>
+  Ｅｆｆｉｃｉｅｎｃｙは、すべての動作条件にわたってヒータ３３６に供給される電力Ｐ<com:Sub>ｉｎ</com:Sub>  の比率である。一例では、Ｅｆｆｉｃｉｅｎｃｙは少なくとも８５％であってよい。
+</com:P>
+         <com:P com:pNumber="0235">
+  １つ以上の例示的な実施形態によれば、図３３及び／又は３５に示される回路の受動素子の利得設定は、出力信号範囲をコントローラ２１０５の入力範囲に一致させるように調整されてもよい。
+</com:P>
+         <com:P com:pNumber="0236">
+  図３５は、いくつかの例示的な実施形態による加熱エンジン制御回路を示す回路図である。図３５に示される加熱エンジン制御回路は、図２９に示される加熱エンジン制御回路２１２７の一例である。
+</com:P>
+         <com:P com:pNumber="0237">
+  図３５を参照すると、加熱エンジン制御回路２１２７Ａは、非ニコチンポッドアセンブリ３００内のヒータ３３６に通電するパワーＦＥＴ（加熱エンジン駆動回路または回路とも呼ばれる、図３５には示されていないヒータパワー制御回路）を制御するために、パワーレール（例えば、約７Ｖパワーレール（７Ｖ＿ＣＰ））を１つまたは複数のゲートドライバ集積回路（ＩＣ）へ供給するよう構成されたＣＭＯＳチャージポンプＵ２を含む。
+</com:P>
+         <com:P com:pNumber="0238">
+  動作例では、チャージポンプＵ２は、コントローラ２１０５からのベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮ（デバイスパワー状態信号；ベイプイネーブル信号とも呼ばれる）に基づいて制御（選択的に作動または非作動に）される。図３５に示す例では、チャージポンプＵ２は、ベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮが論理ローレベルを有する出力に応答して活性化され、コイルシャットダウン信号ＣＯＩＬ－ＳＨＤＮが論理ハイレベルを有する出力に応答して非活性化される。チャージポンプＵ２の活性化後にパワーレール７Ｖ＿ＣＰが安定化すると（例えば、セトリング時間間隔が経過した後）、コントローラ２１０５は、ヒータ活性化信号ＧＡＴＥ＿ＯＮを有効にしてヒータ電力制御回路及びヒータ３３６に電力を供給してもよい。
+</com:P>
+         <com:P com:pNumber="0239">
+  少なくとも１つの例示的な実施形態によれば、コントローラ２１０５は、コントローラ２１０５によってベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮが無効にされる（論理低レベルに遷移する）まで、ヒータ３３６へのすべての電力を無効にするために論理高レベルを有するベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮを出力（有効）にしてベイプオフ動作を実行してもよい。
+</com:P>
+         <com:P com:pNumber="0240">
+  コントローラ２１０５は、非ニコチン電子ベイピング装置５００におけるベイピング条件の存在を検出することに応答して、論理高レベルを有するヒータ活性化信号ＧＡＴＥ＿ＯＮ（別のデバイス電力状態信号）を出力してもよい。この例示的な実施形態では、トランジスタ（例えば、電界効果トランジスタ（ＦＥＴ）である）Ｑ５及びＱ７Ａ'は、コントローラ２１０５がヒータ活性化信号ＧＡＴＥ＿ＯＮを論理高レベルにイネーブルしたときに活性化される。コントローラ２１０５は、論理ローレベルを有するヒータ活性化信号ＧＡＴＥ＿ＯＮを出力して、ヒータ３３６への電力を無効化し、それによってヒータオフ動作を実行することができる。
+</com:P>
+         <com:P com:pNumber="0241">
+  トランジスタＱ５及びＱ７Ａ'がヒータ活性化信号ＧＡＴＥ＿ＯＮに応答しないパワーステージの障害が発生した場合、コントローラ２１０５は、論理ハイレベルを有するベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮを出力してゲートドライバへの電力を遮断し、これによってヒータ３３６への電力も遮断することによってベイプ遮断動作を実行してもよい。
+</com:P>
+         <com:P com:pNumber="0242">
+  別の例では、コントローラ２１０５が適切にブートできず、ベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮが不確定な状態を有する結果となった場合、加熱エンジン制御回路２１２７Ａは、ベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮを論理ハイレベルに自動的に引き込み、ヒータ３３６への電力を自動的に切断する。
+</com:P>
+         <com:P com:pNumber="0243">
+  図３５に関してより詳細に説明すると、コンデンサＣ９、チャージポンプＵ２及びコンデンサＣ１０は、正電圧ダブラー構成で接続されている。コンデンサＣ９は、チャージポンプＵ２のピンＣ―とＣ＋の間に接続され、チャージポンプＵ２の非ニコチンのリザーバとして機能する。チャージポンプＵ２の入力電圧端子ＶＩＮは、ノードＮ３８０１で電圧源ＢＡＴＴに接続され、コンデンサＣ１０は、ノードＮ３８０２でグラウンドとチャージポンプＵ２の出力電圧端子ＶＯＵＴの間に接続されている。コンデンサＣ１０は、チャージポンプＵ２からの出力に対してフィルタと非ニコチンリザーバを提供し、これにより、チャージポンプＵ２からの電圧出力をより安定させることができる。
+</com:P>
+         <com:P com:pNumber="0244">
+  コンデンサＣ１１は、ノードＮ３８０１とグラウンドとの間に接続され、チャージポンプＵ２への入力電圧のフィルタおよび非ニコチンリザーバとなる。
+</com:P>
+         <com:P com:pNumber="0245">
+  抵抗Ｒ１０は正電圧源とシャットダウン端子ＳＨＤＮとの間に接続されている。抵抗Ｒ１０は、ベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮが不確定状態である場合に、シャットダウン端子ＳＨＤＮへの入力を確実にハイにし、それによってチャージポンプＵ２の出力（ＶＯＵＴ）を無効にしてヒータ３３６への電力を遮断するプルアップ抵抗として機能する。
+</com:P>
+         <com:P com:pNumber="0246">
+  抵抗Ｒ４３は、ノードＮ３８０４において、グラウンドとトランジスタＱ７Ａ'のゲートとの間に接続される。抵抗Ｒ４３は、ヒータ活性化信号ＧＡＴＥ＿ＯＮが不確定状態である場合、トランジスタＱ７Ａ'が高インピーダンス（ＯＦＦ）状態であることを保証し、それによってパワーレール７Ｖ＿ＣＰを無効にしてヒータ３３６への電力を遮断するプルダウン抵抗として機能する。
+</com:P>
+         <com:P com:pNumber="0247">
+  抵抗Ｒ４１は、トランジスタＱ５のゲートとトランジスタＱ７Ａ'のドレインとの間のノードＮ３８０２とノードＮ３８０３との間に接続されている。抵抗Ｒ４１は，トランジスタＱ５がより確実にスイッチオフするためのプルダウン抵抗として機能する。
+</com:P>
+         <com:P com:pNumber="0248">
+  トランジスタＱ５は、パワーレール７Ｖ＿ＣＰをチャージポンプＵ２のＶＯＵＴ端子から選択的に分離するように構成される。トランジスタＱ５のゲートはノードＮ３８０３に接続され、トランジスタＱ５のドレインはノードＮ３８０２でチャージポンプＵ２の出力電圧端子ＶＯＵＴに接続され、トランジスタＱ５のソースはパワーレール７Ｖ＿ＣＰの出力端子として機能する。この構成により、コンデンサＣ１０は負荷を分離することでより早く動作電圧に到達し、ベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮとヒータ起動信号ＧＡＴＥ＿ＯＮが共に正しい状態でなければヒータ３３６に電力を供給できないというフェールセーフを実現することができる。
+</com:P>
+         <com:P com:pNumber="0249">
+  トランジスタＱ７Ａは、ヒータ活性化信号ＧＡＴＥ＿ＯＮに基づいてトランジスタＱ５の動作を制御するように構成されている。例えば、ヒータ活性化信号ＧＡＴＥ＿ＯＮが論理ハイレベル（例えば、～２Ｖ以上）であるとき、トランジスタＱ７Ａはその低インピーダンス（ＯＮ）状態にあり、これによりトランジスタＱ５のゲートが接地され、それによってトランジスタＱ５が低インピーダンス（ＯＮ）状態に遷移することになる。この場合、加熱エンジン制御回路２１２７Ａは、パワーレール７Ｖ＿ＣＰを加熱エンジン駆動回路（図示せず）に出力し、それによってヒータ３３６への電力供給が可能となる。
+</com:P>
+         <com:P com:pNumber="0250">
+  ヒータ活性化信号ＧＡＴＥ＿ＯＮが論理低レベルであれば、トランジスタＱ７Ａは高インピーダンス（ＯＦＦ）状態に遷移し、その結果、抵抗Ｒ４１を介してトランジスタＱ５のゲートが放電し、それによってトランジスタＱ５が高インピーダンス（ＯＦＦ）状態に遷移する。この場合、パワーレール７Ｖ＿ＣＰは出力されず、加熱エンジン駆動回路（およびヒータ３３６）への電力は遮断される。
+</com:P>
+         <com:P com:pNumber="0251">
+  図３５に示す例では、トランジスタＱ５がハイインピーダンス（ＯＦＦ）状態になるためには、ソース電圧と同程度のゲート電圧（～７Ｖ）を必要とするため、コントローラ２１０５はトランジスタＱ５を直接制御しない。トランジスタＱ７Ａは、コントローラ２１０５からの低い電圧に基づいてトランジスタＱ５を制御する機構を提供する。
+</com:P>
+         <com:P com:pNumber="0252">
+  図３６は、例示的な実施形態による他の加熱エンジン制御回路を示す回路図である。図３６に示す加熱エンジン制御回路は、図２９に示す加熱エンジン制御回路２１２７の別の実施例である。
+</com:P>
+         <com:P com:pNumber="0253">
+  図３６を参照して、加熱エンジン制御回路２１２７Ｂは、レールコンバータ回路３９０２０（昇圧コンバータ回路ともいう）およびゲートドライバ回路３９０４０を含む。レールコンバータ回路３９０２０は、ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭ（ベイプシャットダウン信号ともいう）に基づいて、ゲートドライバ回路３９０４０に電力供給するための電圧信号９Ｖ＿ＧＡＴＥ（電力信号または入力電圧信号ともいう）を出力するよう構成される。レールコンバータ回路３９０２０は、９Ｖ＿ＧＡＴＥ出力を調整するためにベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭを使用し、ソフトウェアで定義されてもよい。
+</com:P>
+         <com:P com:pNumber="0254">
+  ゲートドライバ回路３９０４０は、レールコンバータ回路３９０２０からの入力電圧信号９Ｖ＿ＧＡＴＥを利用して、加熱エンジン駆動回路３９０６を駆動する。
+</com:P>
+         <com:P com:pNumber="0255">
+  図３６に示す例示的な実施形態では、レールコンバータ回路３９０２０は、ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭがアサートされている（ｐｒｅｓｅｎｔ）場合にのみ入力電圧信号９Ｖ＿ＧＡＴＥを発生させる。コントローラ２１０５は、ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭをデアサート（停止又は終了）することによって、９Ｖレールを無効にしてゲートドライバ回路３９０４０への電力を遮断してもよい。図３５に示す例示的な実施形態におけるベイプシャットダウン信号ＣＯＩＬ＿ＳＨＤＮと同様に、ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭは、非ニコチン電子ベイピング装置５００においてベイプオフ操作を行うための装置状態電力信号として機能してもよい。この例では、コントローラ２１０５は、ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭをデアサートすることによってベイプオフ動作を実行し、それによってゲートドライバ回路３９０４０、加熱エンジン駆動回路３９０６及びヒータ３３６への全ての電力を無効化してもよい。その後、コントローラ２１０５は、レールコンバータ回路３９０２０にベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭを再びアサートすることによって、非ニコチン電子ベイピング装置５００でのベイプを有効としてもよい。
+</com:P>
+         <com:P com:pNumber="0256">
+  図３５のヒータ活性化信号ＧＡＴＥ＿ＯＮと同様に、コントローラ２１０５は、非ニコチン電子ベイピング装置５００におけるベイピング条件を検出することに応答して、加熱エンジン駆動回路３９０６及びヒータ３３６への電力を有効にするために論理高レベルを有する第１のヒータイネーブル信号ＧＡＴＥ＿ＥＮＢを出力してもよい。コントローラ２１０５は、加熱エンジン駆動回路３９０６及びヒータ３３６への電力を無効にするために、論理ローレベルを有する第１のヒータイネーブル信号ＧＡＴＥ＿ＥＮＢを出力し、それによってヒータオフ動作を実行することができる。
+</com:P>
+         <com:P com:pNumber="0257">
+  図３６のレールコンバータ回路３９０２０をより詳細に参照すると、電圧源ＢＡＴＴとグラウンドとの間にコンデンサＣ３６が接続されている。コンデンサＣ３６は、レールコンバータ回路３９０２０の非ニコチンリザーバとして機能する。
+</com:P>
+         <com:P com:pNumber="0258">
+  インダクタＬ１００６の第１の端子は、電圧源ＢＡＴＴとコンデンサＣ３６との間のノードＮｏｄｅ１に接続される。インダクタＬ１００６は、レールコンバータ回路３９０２０の主蓄電素子として機能する。
+</com:P>
+         <com:P com:pNumber="0259">
+  インダクタＬ１００６の第２の端子、トランジスタ（例えば、エンハンスメントモードＭＯＳＦＥＴ）Ｑ１００９のドレイン、及びコンデンサＣ１０５６の第１の端子は、ノードＮｏｄｅ２において接続される。トランジスタＱ１００９のソースは、グラウンドに接続され、トランジスタＱ１００９のゲートは、コントローラ２１０５からベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭを受信するように構成される。
+</com:P>
+         <com:P com:pNumber="0260">
+  図３６に示す例では、トランジスタＱ１００９がレールコンバータ回路３９０２０の主スイッチング素子として機能する。
+</com:P>
+         <com:P com:pNumber="0261">
+  トランジスタＱ１００９のゲートとグラウンドとの間に抵抗Ｒ２９が接続されてプルダウン抵抗として働き、ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭが不確定状態のときに、トランジスタＱ１００９がより確実にスイッチオフしてヒータ３３６の動作が防止されるようにする。
+</com:P>
+         <com:P com:pNumber="0262">
+  コンデンサＣ１０５６の第２の端子は、ノードＮｏｄｅ３において、ツェナーダイオードＤ１０１２のカソードとツェナーダイオードＤ１０１３のアノードとに接続されている。ツェナーダイオードＤ１０１２のアノードは、グラウンドに接続されている。
+</com:P>
+         <com:P com:pNumber="0263">
+  ツェナーダイオードＤ１０１３のカソードは、コンデンサＣ３５の端子と、ノードＮｏｄｅ４において抵抗Ｒ１０８７及びＲ１０８８を含む分圧回路の入力とに接続されている。コンデンサＣ３５の他方の端子は、グラウンドに接続されている。また、ノードＮｏｄｅ４の電圧は、レールコンバータ回路３９０２０から出力される出力電圧９Ｖ＿ＧＡＴＥである。
+</com:P>
+         <com:P com:pNumber="0264">
+  ノードＮｏｄｅ５の分圧回路の出力には，抵抗Ｒ１０８９が接続されている。
+</com:P>
+         <com:P com:pNumber="0265">
+  例示的な動作では、ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭがアサートされ論理ハイレベルになると、トランジスタＱ１００９は低インピーダンス状態（ＯＮ）に切り替わり、それによって電圧源ＢＡＴＴおよびコンデンサＣ３６からインダクタＬ１００６およびトランジスタＱ１００９を介してグラウンドへ電流が流れるようにする。これにより、インダクタＬ１００６にエネルギーが蓄積され、電流は時間と共に直線的に増加する。
+</com:P>
+         <com:P com:pNumber="0266">
+  ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭがロジックローレベルの場合、トランジスタＱ１００９はハイインピーダンス状態（ＯＦＦ）に切り替わる。このとき、インダクタＬ１００６は電流の流れを維持し（線形に減衰）、ノードＮｏｄｅ２の電圧は上昇する。
+</com:P>
+         <com:P com:pNumber="0267">
+  ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭのデューティサイクルは、所定の負荷に対する電圧上昇量を決定する。従って、ベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭは、ノードＮｏｄｅ５の分圧回路が出力するフィードバック信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＦＢをフィードバックとして用いてコントローラ２１０５により閉ループで制御される。上述したスイッチングは、比較的高いレート（例えば、約２ＭＨｚ、しかし、要求されるパラメータ及び素子値に応じて異なる周波数が使用されてもよい）で発生する。
+</com:P>
+         <com:P com:pNumber="0268">
+  依然として図３６のレールコンバータ回路３９０２０を参照すると、コンデンサＣ１０５６は、ＤＣレベルを除去するためのＤＣブロックを提供するＡＣカップリングコンデンサである。コンデンサＣ１０５６は、電池寿命を節約するためにベイプイネーブル信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＰＷＭが低いとき（例えば、非ニコチン電子ベイピング装置５００がスタンバイモードのとき）、電圧源ＢＡＴＴからインダクタＬ１００６及びダイオードＤ１０１３を介してゲートドライバ回路３９０４０に流れる電流をブロックする。コンデンサＣ１０５６の静電容量は、スイッチング周波数で比較的低インピーダンス経路を提供するように選択されてもよい。
+</com:P>
+         <com:P com:pNumber="0269">
+  ツェナーダイオードＤ１０１２は、スイッチング信号のグラウンドレベルを確立する。コンデンサＣ１０５６がＤＣレベルを除去するので、ノードＮｏｄｅ３における電圧は通常バイポーラであってもよい。一例として、ツェナーダイオードＤ１０１２は、信号の負の半サイクルをグランドより約０．３Ｖ低い電圧にクランプすることができる。
+</com:P>
+         <com:P com:pNumber="0270">
+  コンデンサＣ３５は、レールコンバータ回路３９０２０の出力非ニコチンリザーバとして機能する。ツェナーダイオードＤ１０１３は、トランジスタＱ１００９がＯＮのとき、コンデンサＣ３５からの電流がコンデンサＣ１０５６およびトランジスタＱ１００９を流れるのを阻止する。
+</com:P>
+         <com:P com:pNumber="0271">
+  インダクタＬ１００６からの減衰電流がツェナーダイオードＤ１０１３とコンデンサＣ３５の間のノードＮｏｄｅ４に電圧上昇を生じさせると、電流はコンデンサＣ３５に流れ込む。コンデンサＣ３５は、インダクタＬ１００６にエネルギーを蓄積している間、９Ｖ＿ＧＡＴＥ電圧を維持する。
+</com:P>
+         <com:P com:pNumber="0272">
+  抵抗Ｒ１０８７とＲ１０８８を含む分圧回路は、コントローラ２１０５のＡＤＣで測定するための許容レベルまで電圧を低下させる。この低減された電圧信号は、フィードバック信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＦＢとして出力される。
+</com:P>
+         <com:P com:pNumber="0273">
+  図３６に示す回路では、フィードバック信号ＣＯＩＬ＿ＶＧＡＴＥ＿ＦＢ電圧は約０．２５倍でスケーリングされ、したがって９Ｖ出力電圧はコントローラ２１０５でＡＤＣに入力するために約２．２５Ｖに減少する。
+</com:P>
+         <com:P com:pNumber="0274">
+  抵抗Ｒ１０８９は、レールコンバータ回路３９０２０の出力（例えば、ノードＮｏｄｅ４）において過電圧障害に対する電流制限を行い、コントローラ２１０５におけるＡＤＣを保護する。
+</com:P>
+         <com:P com:pNumber="0275">
+  レールコンバータ回路３９０２０からゲートドライバ回路３９０４０に９Ｖ出力電圧信号９Ｖ＿ＧＡＴＥが出力され、ゲートドライバ回路３９０４０に電力が供給される。
+</com:P>
+         <com:P com:pNumber="0276">
+  ここでゲートドライバ回路３９０４０をより詳細に参照すると、ゲートドライバ回路３９０４０は、とりわけ、コントローラ２１０５からの低電流信号（複数可）を、加熱エンジン駆動回路３９０６のトランジスタ（例えば、ＭＯＳＦＥＴ）のスイッチングを制御するための高電流信号へ変換するよう構成された集積ゲートドライバＵ２００３を含む集積ゲートドライバＵ２００３はまた、コントローラ２１０５からの電圧レベルを、加熱エンジン駆動回路３９０６のトランジスタが必要とする電圧レベルに変換するように構成される。図３６に示す例示的な実施形態では、集積ゲートドライバＵ２００３は、ハーフブリッジドライバである。しかしながら、例示的な実施形態は、この例に限定されるべきではない。
+</com:P>
+         <com:P com:pNumber="0277">
+  より詳細には、レールコンバータ回路３９０２０からの９Ｖ出力電圧は、抵抗Ｒ２０１２及びコンデンサＣ２００９を含むフィルタ回路を介して、ゲートドライバ回路３９０４０に入力される。抵抗Ｒ２０１２とコンデンサＣ２００９を含むフィルタ回路は、ノードＮｏｄｅ６において、集積ゲートドライバＵ２００３のＶＣＣ端子（４番ピン）とツェナーダイオードＳ２００２のアノードに接続されている。コンデンサＣ２００９の第２の端子は、グラウンドに接続されている。ツェナーダイオードＤ２００２のアノードは、ノードＮｏｄｅ７において、コンデンサＣ２００７の第１の端子と、集積ゲートドライバＵ２００３の昇圧端子ＢＳＴ（１番ピン）とに接続される。コンデンサＣ２００７の第２の端子は、ノードＮｏｄｅ８において、集積ゲートドライバＵ２００３のスイッチングノード端子ＳＷＮ（端子７）および加熱エンジン駆動回路３９０６（例えば、２つのＭＯＳＦＥＴの間）に接続される。図３６に示す例示的な実施形態では、ツェナーダイオードＤ２００２とコンデンサＣ２００７は、入力電圧端子ＶＣＣと集積ゲートドライバＵ２００３の昇圧端子ＢＳＴとの間に接続されたブートストラップチャージポンプ回路の一部を形成している。コンデンサＣ２００７は、レールコンバータ回路３９０２０からの９Ｖ入力電圧信号９Ｖ＿ＧＡＴＥに接続されているため、ダイオードＤ２００２を介して電圧信号９Ｖ＿ＧＡＴＥとほぼ等しい電圧まで充電される。
+</com:P>
+         <com:P com:pNumber="0278">
+  なお、図３６を参照して、集積ゲートドライバＵ２００３のハイサイドゲートドライバ端子ＤＲＶＨ（８番ピン）、ローサイドゲートドライバ端子ＤＲＶＬ（５番ピン）およびＥＰ端子（９番ピン）も加熱エンジン駆動回路３９０６に接続されている。
+</com:P>
+         <com:P com:pNumber="0279">
+  抵抗Ｒ２０１３とコンデンサＣ２０１０は、集積ゲートドライバＵ２００３の入力端子ＩＮ（２番ピン）に接続されたフィルタ回路を形成している。フィルタ回路は、入力端子に入力される第２のヒータイネーブル信号ＣＯＩＬ＿Ｚから高周波ノイズを除去するように構成される。なお、第２のヒータイネーブル信号ＣＯＩＬ＿Ｚは、コントローラ２１０５からのＰＷＭ信号であってもよい。
+</com:P>
+         <com:P com:pNumber="0280">
+  抵抗Ｒ２０１４は、フィルタ回路とノードＮｏｄｅ９の入力端子ＩＮとに接続されている。抵抗Ｒ２０１４はプルダウン抵抗として使用され、第２のヒータイネーブル信号ＣＯＩＬ＿Ｚがフローティング（または不定）であれば、集積ゲートドライバＵ２００３の入力端子ＩＮを論理ローレベルに保持して加熱エンジン駆動回路３９０６およびヒータ３３６の作動を防止するような抵抗である。
+</com:P>
+         <com:P com:pNumber="0281">
+  コントローラ２１０５からの第１のヒータイネーブル信号ＧＡＴＥ＿ＥＮＢは、集積ゲートドライバＵ２００３のＯＤ端子（３番ピン）に入力される。集積ゲートドライバＵ２００３のＯＤ端子には、抵抗Ｒ２０１６がプルダウン抵抗として接続されており、コントローラ２１０５からの第１のヒータイネーブル信号ＧＡＴＥ＿ＥＮＢがフローティング（または不定）であれば、集積ゲートドライバＵ２００３のＯＤ端子を論理ローレベルに保持して加熱エンジン駆動回路３９０６及びヒータ３３６の起動を防止するように構成されている。
+</com:P>
+         <com:P com:pNumber="0282">
+  図３６に示す例示的な実施形態では、加熱エンジン駆動回路３９０６は、電圧源ＢＡＴＴとグラウンドとの間に直列に接続されたトランジスタ（例えば、ＭＯＳＦＥＴ）３９０６２および３９０６４を含むトランジスタ（例えば、ＭＯＳＦＥＴ）回路を含んでいる。トランジスタ３９０６４のゲートは、集積ゲートドライバＵ２００３のローサイドゲートドライバ端子ＤＲＶＬ（５番ピン）に接続され、トランジスタ３９０６４のドレインは、ノードＮｏｄｅ８で集積ゲートドライバＵ２００３のスイッチングノード端子ＳＷＮ（７番ピン）に接続され、トランジスタ３９０６４のソースはグラウンドＧＮＤに接続されている。
+</com:P>
+         <com:P com:pNumber="0283">
+  ローサイドゲートドライバ端子ＤＲＶＬから出力されるローサイドゲート駆動信号がハイのとき、トランジスタ３９０６４はローインピーダンス状態（ＯＮ）となり、これによりノードＮｏｄｅ８はグラウンドに接続される。
+</com:P>
+         <com:P com:pNumber="0284">
+  上述したように、コンデンサＣ２００７は、レールコンバータ回路３９０２０からの９Ｖ入力電圧信号９Ｖ＿ＧＡＴＥに接続されているため、ダイオードＤ２００２を介して９Ｖ入力電圧信号９Ｖ＿ＧＡＴＥと同等または実質的に同等の電圧に充電される。
+</com:P>
+         <com:P com:pNumber="0285">
+  ローサイドゲートドライバ端子ＤＲＶＬから出力されるローサイドゲート駆動信号がローであるとき、トランジスタ３９０６４はハイインピーダンス状態（ＯＦＦ）に切り替わり、ハイサイドゲートドライバ端子ＤＲＶＨ（８番ピン）は集積ゲートドライバＵ２００３内の昇圧端子ＢＳＴに内部接続されている。その結果、トランジスタ３９０６２はローインピーダンス状態（ＯＮ）となり、これにより、スイッチングノードＳＷＮを電圧源ＢＡＴＴに接続して、スイッチングノードＳＷＮ（Ｎｏｄｅ８）を電圧源ＢＡＴＴの電圧に引き込むことができる。
+</com:P>
+         <com:P com:pNumber="0286">
+  この場合、ノードＮｏｄｅ７は、昇圧電圧Ｖ（ＢＳＴ）≒Ｖ（９Ｖ＿ＧＡＴＥ）＋Ｖ（ＢＡＴＴ）に引き上げられ、これにより、トランジスタ３９０６２のゲート－ソース間電圧は、電圧源ＢＡＴＴからの電圧にかかわらず（または独立して）９Ｖ入力電圧信号９Ｖ＿ＧＡＴＥの電圧（例えば、Ｖ（９Ｖ＿ＧＡＴＥ））と同一または実質的に同一にされることができる。その結果、スイッチングノードＳＷＮ（ノード８）は、バッテリ電圧源ＢＡＴＴからの電圧出力とは実質的に独立しているヒータ３３６への電圧出力を生成するために使用され得る高電流スイッチング信号を提供する。
+</com:P>
+         <com:P com:pNumber="0287">
+  例示的な実施形態が本明細書に開示されているが、他の変形が可能であることが理解されるべきである。そのような変形は、本開示の精神及び範囲から逸脱するものとみなされるべきではなく、当業者にとって明白であるような全てのそのような修正は、以下の請求項の範囲内に含まれることを意図している。
+</com:P>
+      </pat:EmbodimentDescription>
+   </jppat:Description>
+   <pat:Claims>
+      <pat:Claim>
+         <pat:ClaimNumber>1</pat:ClaimNumber>
+         <pat:ClaimText>
+  非ニコチン電子ベイピング装置であって、<com:Br/>
+  非ニコチンポッドアセンブリ及びデバイスアセンブリを有し、<com:Br/>
+  前記非ニコチンポッドアセンブリは、メモリ、非ニコチンリザーバ、及びヒータを備え、<com:Br/>
+  前記メモリは、非ニコチンプレベイパー製剤気化パラメータと、気化した非ニコチンプレベイパー製剤の総量と、を記憶し、<com:Br/>
+  前記非ニコチンリザーバは、非ニコチンプレベイパー製剤を保持し、<com:Br/>
+  前記ヒータは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を気化し、<com:Br/>
+  前記デバイスアセンブリは、前記非ニコチンポッドアセンブリと係合するように構成され、かつ、コントローラを備え、<com:Br/>
+  前記コントローラは、<com:Br/>
+  前記メモリから取得した非ニコチンプレベイパー製剤気化パラメータと、パフイベントの間に前記ヒータに与えられた電力の総量と、に基づいて、前記パフイベントの間に気化した非ニコチンプレベイパー製剤の量を推定し、<com:Br/>
+  前記メモリに記憶された、前記気化した非ニコチンプレベイパー製剤の総量と、前記パフイベントの間に気化した非ニコチンプレベイパー製剤の量と、に基づいて、気化した非ニコチンプレベイパー製剤の更新された総量を決定し、<com:Br/>
+  前記気化した非ニコチンプレベイパー製剤の更新された総量が少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定し、<com:Br/>
+  前記気化した非ニコチンプレベイパー製剤の更新された総量が、前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤の現在のレベルの表示を出力するように、前記非ニコチン電子ベイピング装置を制御する、<com:Br/>
+  ように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>2</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値は、非ニコチンプレベイパー製剤空閾値を含み、<com:Br/>
+  前記コントローラは、前記気化した非ニコチンプレベイパー製剤の更新された総量が、前記非ニコチンプレベイパー製剤空閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の非ニコチンプレベイパー製剤が枯渇していることを示す表示を出力するように、前記非ニコチン電子ベイピング装置を制御するように構成される、<com:Br/>
+非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>3</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項２に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記コントローラは、前記気化した非ニコチンプレベイパー製剤の更新された総量が、前記非ニコチンプレベイパー製剤空閾値以上であると決定されたことに応答して、前記メモリ内にエンプティフラグを設定するように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>4</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項３に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記エンプティフラグを設定することにより、気化した非ニコチンプレベイパー製剤の前記更新された総量のさらなる更新を防止する、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>5</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項２に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記コントローラは、前記気化した非ニコチンプレベイパー製剤の更新された総量が、前記非ニコチンプレベイパー製剤空閾値以上であると決定されたことに応答して、前記非ニコチン電子ベイピング装置でのベイピングを無効化するように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>6</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記メモリは、前記非ニコチンリザーバが枯渇しているか否かを示すエンプティフラグを記憶し、<com:Br/>
+  前記コントローラは、<com:Br/>
+  前記メモリから前記エンプティフラグを取得し、<com:Br/>
+  前記エンプティフラグの値に基づいて、前記非ニコチンリザーバが枯渇していると決定し、<com:Br/>
+  前記非ニコチンリザーバが枯渇していると決定されたことに応答して、前記非ニコチン電子ベイピング装置でのベイピングを無効化するように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>7</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値は、非ニコチンプレベイパー製剤低閾値を含み、<com:Br/>
+  前記コントローラは、前記気化した非ニコチンプレベイパー製剤の更新された総量が、前記非ニコチンプレベイパー製剤低閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤が少なくなっていることを示す表示を出力するように、前記非ニコチン電子ベイピング装置を制御するように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>8</pat:ClaimNumber>
+         <pat:ClaimText>
+  非ニコチン電子ベイピング装置であって、<com:Br/>
+  非ニコチンポッドアセンブリ及びデバイスアセンブリを有し、<com:Br/>
+  前記非ニコチンポッドアセンブリは、非ニコチンリザーバ、ヒータ、及びメモリを備え、<com:Br/>
+  前記非ニコチンリザーバは、非ニコチンプレベイパー製剤を保持し、<com:Br/>
+  前記ヒータは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を気化し、<com:Br/>
+  前記メモリは、非ニコチンプレベイパー製剤気化パラメータと、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の総量と、を記憶し、<com:Br/>
+  前記デバイスアセンブリは、前記非ニコチンポッドアセンブリと係合するように構成され、かつ、コントローラを備え、<com:Br/>
+  前記コントローラは、<com:Br/>
+  前記非ニコチンプレベイパー製剤気化パラメータと、パフイベントの間に前記ヒータに与えられた電力の総量と、に基づいて、前記パフイベントの間に前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の量を推定し、<com:Br/>
+  前記メモリに記憶された、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の総量と、前記パフイベントの間に前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の量と、に基づいて、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量を決定し、<com:Br/>
+  前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定し、<com:Br/>
+  前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が、前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤の現在のレベルの表示を出力するように、前記非ニコチン電子ベイピング装置を制御する、<com:Br/>
+  ように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>9</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項８に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値は、非ニコチンプレベイパー製剤空閾値を含み、<com:Br/>
+  前記コントローラは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が、前記非ニコチンプレベイパー製剤空閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の非ニコチンプレベイパー製剤がしていることを示す表示を出力するように、前記非ニコチン電子ベイピング装置を制御するように構成される、<com:Br/>
+非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>10</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項９に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記コントローラは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が、前記非ニコチンプレベイパー製剤空閾値以上であると決定されたことに応答して、前記メモリ内にエンプティフラグを設定するように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>11</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１０に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記エンプティフラグを設定することにより、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の前記更新された総量のさらなる更新を防止する、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>12</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項９に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記コントローラは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が、前記非ニコチンプレベイパー製剤空閾値以上であると決定されたことに応答して、前記非ニコチン電子ベイピング装置でのベイピングを無効化するように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>13</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項８に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記メモリは、前記非ニコチンリザーバが枯渇しているか否かを示すエンプティフラグを記憶し、<com:Br/>
+  前記コントローラは、<com:Br/>
+  前記メモリから前記エンプティフラグを取得し、<com:Br/>
+  前記エンプティフラグの値に基づいて、前記非ニコチンリザーバが枯渇していると決定し、<com:Br/>
+  前記非ニコチンリザーバが枯渇していると決定されたことに応答して、前記非ニコチン電子ベイピング装置でのベイピングを無効化するように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>14</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項８に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値は、非ニコチンプレベイパー製剤低閾値を含み、<com:Br/>
+  前記コントローラは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が、前記非ニコチンプレベイパー製剤低閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤が少なくなっていることを示す表示を出力するように、前記非ニコチン電子ベイピング装置を制御するように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>15</pat:ClaimNumber>
+         <pat:ClaimText>
+  非ニコチン電子ベイピング装置であって、<com:Br/>
+  コントローラを有し、<com:Br/>
+  前記コントローラは、メモリからエンプティフラグを取得し、<com:Br/>
+  前記メモリは、前記非ニコチン電子ベイピング装置に挿入された非ニコチンポッドアセンブリに含まれ、<com:Br/>
+  前記エンプティフラグは、前記非ニコチンポッドアセンブリ内の非ニコチンプレベイパー製剤が枯渇していることを示すフラグであり、<com:Br/>
+  前記メモリから取得された前記エンプティフラグに基づいて、前記非ニコチン電子ベイピング装置でのベイピングを無効化する、<com:Br/>
+  ように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>16</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１５に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記コントローラは、前記ベイピングを無効化した後、取り外し閾値時間間隔内に、非ニコチン電子ベイピング装置から非ニコチンポッドアセンブリが取り外されたことを検出したことに応答して、前記非ニコチン電子ベイピング装置でのベイピングを有効化する、<com:Br/>
+  ように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>17</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１６に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記コントローラは、<com:Br/>
+  前記非ニコチンポッドアセンブリが取り外された後、挿入閾値時間間隔の満了前に、新しい非ニコチンポッドアセンブリが非ニコチン電子ベイピング装置に挿入されていないことを特定し、<com:Br/>
+  前記挿入閾値時間間隔の満了前に、記新しい非ニコチンポッドアセンブリが非ニコチン電子ベイピング装置に挿入されていないと特定されたことに応答して、非ニコチン電子ベイピング装置の電源をシャットダウンする、<com:Br/>
+  ように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>18</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１５に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記コントローラは、<com:Br/>
+  取り外し閾値時間間隔の満了前に、前記非ニコチンポッドアセンブリが非ニコチン電子ベイピング装置から取り外されていないことを特定し、<com:Br/>
+  取り外し閾値時間間隔の満了前に、前記非ニコチンポッドアセンブリが非ニコチン電子ベイピング装置から取り外されていないと特定されたことに応答して、非ニコチン電子ベイピング装置の電源をシャットダウンする、<com:Br/>
+  ように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>19</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１５に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  非ニコチンポッドアセンブリ及びデバイスアセンブリを有し、<com:Br/>
+  前記非ニコチンポッドアセンブリは、非ニコチンリザーバ、ヒータ、及びメモリを備え、<com:Br/>
+  前記非ニコチンリザーバは、前記非ニコチンポッドアセンブリ内の前記非ニコチンプレベイパー製剤を保持し、<com:Br/>
+  前記ヒータは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を気化し、<com:Br/>
+  前記メモリは、非ニコチンプレベイパー製剤気化パラメータと、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の総量と、を記憶し、<com:Br/>
+  前記デバイスアセンブリは、前記非ニコチンポッドアセンブリと係合するように構成され、かつ、コントローラを備え、<com:Br/>
+  前記コントローラは、<com:Br/>
+  前記非ニコチンプレベイパー製剤気化パラメータと、パフイベントの間に前記ヒータに与えられた電力の総量と、に基づいて、前記パフイベントの間に前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の量を推定し、<com:Br/>
+  前記メモリに記憶された、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の総量と、前記パフイベントの間に前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の量と、に基づいて、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量を決定し、<com:Br/>
+  前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が非ニコチンプレベイパー製剤空閾値以上であると決定し、<com:Br/>
+  前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が、前記非ニコチンプレベイパー製剤空閾値以上であると決定されたことに応答して、前記メモリ内にエンプティフラグを設定する、<com:Br/>
+  ように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>20</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１９に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記コントローラは、前記エンプティフラグに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤が枯渇していることを示す表示を出力するように、前記非ニコチン電子ベイピング装置を制御するように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>21</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１５に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  非ニコチンポッドアセンブリ及びデバイスアセンブリを有し、<com:Br/>
+  前記非ニコチンポッドアセンブリは、非ニコチンリザーバ、ヒータ、及びメモリを備え、<com:Br/>
+  前記非ニコチンリザーバは、前記非ニコチンポッドアセンブリ内の前記非ニコチンプレベイパー製剤を保持し、<com:Br/>
+  前記ヒータは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を気化し、<com:Br/>
+  前記メモリは、非ニコチンプレベイパー製剤気化パラメータと、気化した非ニコチンプレベイパー製剤の総量と、を記憶し、<com:Br/>
+  前記デバイスアセンブリは、前記非ニコチンポッドアセンブリと係合するように構成され、かつ、コントローラを備え、<com:Br/>
+  前記コントローラは、<com:Br/>
+  前記メモリから取得した前記非ニコチンプレベイパー製剤気化パラメータと、パフイベントの間に前記ヒータに与えられた電力の総量と、に基づいて、前記パフイベントの間に気化した非ニコチンプレベイパー製剤の量を推定し、<com:Br/>
+  前記メモリに記憶された、気化した非ニコチンプレベイパー製剤の総量と、前記パフイベントの間に気化した非ニコチンプレベイパー製剤の量と、に基づいて、気化した非ニコチンプレベイパー製剤の更新された総量を決定し、<com:Br/>
+  気化した非ニコチンプレベイパー製剤の更新された総量が少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定し、<com:Br/>
+  気化した非ニコチンプレベイパー製剤の更新された総量が、前記非ニコチンプレベイパー製剤レベル閾値以上であると決定されたことに応答して、前記メモリ内にエンプティフラグを設定する、<com:Br/>
+  ように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>22</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項２１に記載の非ニコチン電子ベイピング装置において、<com:Br/>
+  前記コントローラは、前記エンプティフラグに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤が枯渇していることを示す表示を出力するように、前記非ニコチン電子ベイピング装置を制御するように構成される、<com:Br/>
+  非ニコチン電子ベイピング装置。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>23</pat:ClaimNumber>
+         <pat:ClaimText>
+  非ニコチン電子ベイピング装置を制御する方法であって、<com:Br/>
+  前記非ニコチン電子ベイピング装置は、非ニコチンリザーバと、ヒータと、を有し、<com:Br/>
+  前記非ニコチンリザーバは、非ニコチンプレベイパー製剤を保持し、<com:Br/>
+  前記ヒータは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を気化し、<com:Br/>
+  非ニコチンプレベイパー製剤気化パラメータと、パフイベントの間に前記ヒータに与えられた電力の総量と、に基づいて、前記パフイベントの間に前記ヒータにより気化した非ニコチンプレベイパー製剤の量を推定し、<com:Br/>
+  メモリに記憶された、気化した非ニコチンプレベイパー製剤の総量と、前記パフイベントの間に気化した非ニコチンプレベイパー製剤の量と、に基づいて、気化した非ニコチンプレベイパー製剤の更新された総量を決定し、<com:Br/>
+  前記気化した非ニコチンプレベイパー製剤の更新された総量が少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定し、<com:Br/>
+  前記気化した非ニコチンプレベイパー製剤の更新された総量が、前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤の現在のレベルの表示を出力する、<com:Br/>
+  方法。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>24</pat:ClaimNumber>
+         <pat:ClaimText>
+  非ニコチン電子ベイピング装置を制御する方法であって、<com:Br/>
+  前記非ニコチン電子ベイピング装置は、非ニコチンリザーバと、ヒータと、を有し、<com:Br/>
+  前記非ニコチンリザーバは、非ニコチンプレベイパー製剤を保持し、<com:Br/>
+  前記ヒータは、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤を気化し、<com:Br/>
+  非ニコチンプレベイパー製剤気化パラメータと、パフイベントの間に前記ヒータに与えられた電力の総量と、に基づいて、前記パフイベントの間に前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の量を推定し、<com:Br/>
+  メモリに記憶された、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の総量と、前記パフイベントの間に前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の量と、に基づいて、前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量を決定し、<com:Br/>
+  前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定し、<com:Br/>
+  前記非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の更新された総量が、前記少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定されたことに応答して、前記非ニコチンリザーバ内の前記非ニコチンプレベイパー製剤の現在のレベルの表示を出力する、<com:Br/>
+  方法。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>25</pat:ClaimNumber>
+         <pat:ClaimText>
+  非ニコチン電子ベイピング装置を制御する方法であって、<com:Br/>
+  前記非ニコチン電子ベイピング装置は非ニコチンポッドアセンブリと、デバイスアセンブリと、を有し、<com:Br/>
+  メモリからエンプティフラグを取得し、<com:Br/>
+  前記メモリは、前記デバイスアセンブリに挿入された前記非ニコチンポッドアセンブリに含まれ、<com:Br/>
+  前記エンプティフラグは、前記非ニコチンポッドアセンブリ内の非ニコチンプレベイパー製剤が枯渇していることを示すフラグであり、<com:Br/>
+  前記メモリから取得された前記エンプティフラグに基づいて、前記非ニコチン電子ベイピング装置でのベイピングを無効化する、<com:Br/>
+  方法。
+</pat:ClaimText>
+      </pat:Claim>
+   </pat:Claims>
+   <pat:Abstract>
+      <com:P com:pNumber="">
+デバイスアセンブリは、コントローラを備える。コントローラは、非ニコチンリザーバから取り出された非ニコチンプレベイパー製剤の総量、または、気化した非ニコチンプレベイパー製剤の更新された総量が、少なくとも１つの非ニコチンプレベイパー製剤レベル閾値以上であると決定されたことに応答して、非ニコチンポッドアセンブリに含まれる非ニコチンリザーバ内の非ニコチンプレベイパー製剤の現在のレベルの表示を出力するように、非ニコチン電子ベイピング装置を制御する、ように構成される。
+</com:P>
+   </pat:Abstract>
+   <pat:Drawings>
+      <pat:Figure>
+         <pat:FigureNumber>1</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000008.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">230</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">89</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>2</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000009.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">231</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">72</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>3</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000010.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">231</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">93</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>4</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000011.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">50</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">69</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>5</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000012.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">58</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">70</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>6</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000013.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">177</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">134</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>7</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000014.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">161</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">148</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>8</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000015.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">201</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">150</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>9</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000016.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">183</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">135</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>10</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000017.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">232</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">95</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>11</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000018.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">187</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">125</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>12</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000019.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">148</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">138</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>13</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000020.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">207</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">156</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>14</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000021.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">211</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">162</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>15</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000022.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">209</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">161</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>16</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000023.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">228</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">139</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>17</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000024.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">146</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">144</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>18</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000025.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">157</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">135</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>19</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000026.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">155</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">121</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>20</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000027.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">154</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">130</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>21</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000028.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">137</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">114</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>22</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000029.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">164</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">124</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>23</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000030.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">218</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">114</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>24</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000031.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">171</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">156</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>25</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000032.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">230</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">121</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>26</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000033.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">202</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">118</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>27</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000034.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">182</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">145</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>28</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000035.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">225</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">162</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>29</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000036.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">182</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">158</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>30</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000037.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">195</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">86</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>31</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000038.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">223</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">162</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>32</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000039.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">227</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">158</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>33</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000040.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">185</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">75</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>34</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000041.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">188</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">61</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>35</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000042.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">230</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">102</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>36</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023534250000043.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">214</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">162</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+   </pat:Drawings>
+   <jppat:SearchReportBag>
+      <jppat:SearchReport>
+         <jppat:PageImage>
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2023534250000044.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">241</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </jppat:PageImage>
+      </jppat:SearchReport>
+      <jppat:SearchReport>
+         <jppat:PageImage>
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2023534250000045.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">241</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </jppat:PageImage>
+      </jppat:SearchReport>
+      <jppat:SearchReport>
+         <jppat:PageImage>
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2023534250000046.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">241</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </jppat:PageImage>
+      </jppat:SearchReport>
+      <jppat:SearchReport>
+         <jppat:PageImage>
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2023534250000047.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">241</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">170</com:WidthMeasure>
+         </jppat:PageImage>
+      </jppat:SearchReport>
+   </jppat:SearchReportBag>
+</jppat:InternationalPatentPublication>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="../../../../../XSL/JPUnexaminedPatentPublication.xsl"?> -->
+<jppat:UnexaminedPatentPublication xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                   xmlns:jppat="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPPatent"
+                                   xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent"
+                                   xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common"
+                                   xmlns:jpcom="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPCommon"
+                                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                   xsi:schemaLocation="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPPatent ../../../../../XSD/JPUnexaminedPatentPublication_V1_0.xsd"
+                                   com:languageCode="ja"
+                                   com:st96Version="V3_1"
+                                   com:ipoVersion="JP_V1_0">
+   <com:IPOfficeCode>JP</com:IPOfficeCode>
+   <jppat:UnexaminedPatentPublicationBibliographicData com:languageCode="ja">
+      <com:IPOfficeCode>JP</com:IPOfficeCode>
+      <jppat:PatentPublicationIdentification>
+         <com:IPOfficeCode>JP</com:IPOfficeCode>
+         <pat:PublicationNumber>2022008727</pat:PublicationNumber>
+         <com:PublicationDate>2022-01-14</com:PublicationDate>
+      </jppat:PatentPublicationIdentification>
+      <pat:PlainLanguageDesignationText>公開特許公報(A)</pat:PlainLanguageDesignationText>
+      <jppat:ApplicationIdentification>
+         <com:ApplicationNumber>
+            <com:ApplicationNumberText>2018132753</com:ApplicationNumberText>
+         </com:ApplicationNumber>
+         <pat:FilingDate>2018-07-12</pat:FilingDate>
+      </jppat:ApplicationIdentification>
+      <pat:InventionTitle>ジュエリー加工設備</pat:InventionTitle>
+      <jppat:UnexaminedPatentPublicationPartyBag>
+         <jppat:ApplicantsRegisteredPractitionersBag>
+            <jppat:ApplicantRegisteredPractitionerBag com:sequenceNumber="1">
+               <jppat:Applicant com:sequenceNumber="1">
+                  <com:PartyIdentifier>518092883</com:PartyIdentifier>
+                  <jpcom:Contact>
+                     <com:Name>
+                        <com:EntityName>王磊</com:EntityName>
+                     </com:Name>
+                     <com:PostalAddressBag>
+                        <com:PostalAddress>
+                           <com:PostalAddressText>中華人民共和国浙江省慈渓市観海衛鎮双湖村進士弄５１号</com:PostalAddressText>
+                        </com:PostalAddress>
+                     </com:PostalAddressBag>
+                  </jpcom:Contact>
+               </jppat:Applicant>
+               <jppat:RegisteredPractitioner com:sequenceNumber="1">
+                  <jppat:AgentCategory>Representative</jppat:AgentCategory>
+                  <pat:RegisteredPractitionerRegistrationNumber>718003500</pat:RegisteredPractitionerRegistrationNumber>
+                  <jpcom:Contact>
+                     <com:Name>
+                        <com:EntityName>鄒  静文</com:EntityName>
+                     </com:Name>
+                  </jpcom:Contact>
+               </jppat:RegisteredPractitioner>
+            </jppat:ApplicantRegisteredPractitionerBag>
+         </jppat:ApplicantsRegisteredPractitionersBag>
+         <jppat:InventorBag>
+            <jppat:Inventor com:sequenceNumber="1">
+               <jpcom:Contact>
+                  <com:Name>
+                     <com:EntityName>楊営傑</com:EntityName>
+                  </com:Name>
+                  <com:PostalAddressBag>
+                     <com:PostalAddress>
+                        <com:PostalAddressText>中華人民共和国浙江省▲ちゅう▼▲じい▼市応店街鎭応店街村集鎭興路８号</com:PostalAddressText>
+                     </com:PostalAddress>
+                  </com:PostalAddressBag>
+               </jpcom:Contact>
+            </jppat:Inventor>
+         </jppat:InventorBag>
+      </jppat:UnexaminedPatentPublicationPartyBag>
+      <jppat:PriorityClaimBag>
+         <jppat:PriorityClaim com:sequenceNumber="1">
+            <com:IPOfficeCode>CN</com:IPOfficeCode>
+            <com:ApplicationNumber>
+               <com:ApplicationNumberText>201810344466.1</com:ApplicationNumberText>
+            </com:ApplicationNumber>
+            <pat:FilingDate>2018-04-17</pat:FilingDate>
+            <jppat:ApplicationFilingCategory>International</jppat:ApplicationFilingCategory>
+         </jppat:PriorityClaim>
+      </jppat:PriorityClaimBag>
+      <jppat:IPCClassification>
+         <com:Edition/>
+         <pat:MainClassification>B24B  29/04        20060101AFI20220106BHJP        </pat:MainClassification>
+         <pat:FurtherClassification>B24B   9/16        20060101ALI20220106BHJP        </pat:FurtherClassification>
+      </jppat:IPCClassification>
+      <jppat:NationalClassification>
+         <com:IPOfficeCode>JP</com:IPOfficeCode>
+         <jppat:MainNationalClassification>
+            <pat:PatentClassificationText>B24B29/04</pat:PatentClassificationText>
+         </jppat:MainNationalClassification>
+         <jppat:FurtherNationalClassification>
+            <pat:PatentClassificationText>B24B9/16</pat:PatentClassificationText>
+         </jppat:FurtherNationalClassification>
+      </jppat:NationalClassification>
+      <jppat:ClaimTotalQuantitySet>
+         <pat:ClaimTotalQuantity>1</pat:ClaimTotalQuantity>
+         <jppat:AdoptedLawCategory>Claim</jppat:AdoptedLawCategory>
+      </jppat:ClaimTotalQuantitySet>
+      <jppat:PublishFigure>
+         <pat:FigureNumber>1</pat:FigureNumber>
+      </jppat:PublishFigure>
+      <jppat:RequestExaminationIndicator>true</jppat:RequestExaminationIndicator>
+      <jppat:FilingForm>ＯＬ</jppat:FilingForm>
+      <jppat:ThemeCodeInformationBag>
+         <jppat:ThemeCodeInformation>3C049</jppat:ThemeCodeInformation>
+         <jppat:ThemeCodeInformation>3C158</jppat:ThemeCodeInformation>
+      </jppat:ThemeCodeInformationBag>
+      <jppat:FtermInformationBag>
+         <jppat:FtermInformation>3C049AA06</jppat:FtermInformation>
+         <jppat:FtermInformation>3C049AA12</jppat:FtermInformation>
+         <jppat:FtermInformation>3C049AA16</jppat:FtermInformation>
+         <jppat:FtermInformation>3C049AB04</jppat:FtermInformation>
+         <jppat:FtermInformation>3C049AB06</jppat:FtermInformation>
+         <jppat:FtermInformation>3C049AC01</jppat:FtermInformation>
+         <jppat:FtermInformation>3C049CA01</jppat:FtermInformation>
+         <jppat:FtermInformation>3C049CB01</jppat:FtermInformation>
+         <jppat:FtermInformation>3C158AA06</jppat:FtermInformation>
+         <jppat:FtermInformation>3C158AA12</jppat:FtermInformation>
+         <jppat:FtermInformation>3C158AA13</jppat:FtermInformation>
+         <jppat:FtermInformation>3C158AA16</jppat:FtermInformation>
+         <jppat:FtermInformation>3C158AB04</jppat:FtermInformation>
+         <jppat:FtermInformation>3C158AB06</jppat:FtermInformation>
+         <jppat:FtermInformation>3C158AC01</jppat:FtermInformation>
+         <jppat:FtermInformation>3C158CA01</jppat:FtermInformation>
+         <jppat:FtermInformation>3C158CB01</jppat:FtermInformation>
+      </jppat:FtermInformationBag>
+   </jppat:UnexaminedPatentPublicationBibliographicData>
+   <jppat:ChosenDrawingImage>
+      <com:Image com:imageContentCategory="Drawing">
+         <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+         <com:FileName>2022008727000001.tif</com:FileName>
+         <com:HeightMeasure com:measureUnitCode="Mm">92</com:HeightMeasure>
+         <com:WidthMeasure com:measureUnitCode="Mm">124</com:WidthMeasure>
+      </com:Image>
+   </jppat:ChosenDrawingImage>
+   <jppat:AbstractCorrectionIndicator>true</jppat:AbstractCorrectionIndicator>
+   <jppat:Description>
+      <pat:TechnicalField>
+         <com:P com:pNumber="0001">
+  本発明は加工分野に関し、具体的には、ビッグデータに基づいたジュエリー加工設備に関する。
+</com:P>
+      </pat:TechnicalField>
+      <pat:BackgroundArt>
+         <com:P com:pNumber="0002">
+科学技術の発展と社会の進歩につれて、国がハイテク技術の発展を促進して、ジュエリー加工技術で最も使用されるのは研磨とバフ磨きであり、従来の研磨とハブ磨き設備では、小さな領域を清掃することが困難であり、この設備でこの問題を解決する。
+</com:P>
+      </pat:BackgroundArt>
+      <com:CitationBag>
+         <com:PatentCitationBag>
+            <com:P com:pNumber="0003">
+               <com:PatentCitation com:sequenceNumber="1">
+                  <com:PatentCitationText>中国特許出願公開第104589216号明細書</com:PatentCitationText>
+               </com:PatentCitation>
+            </com:P>
+         </com:PatentCitationBag>
+      </com:CitationBag>
+      <pat:InventionSummary>
+         <pat:TechnicalProblem>
+            <com:P com:pNumber="0004">
+  本発明の目的は上記の背景技術に提出された問題を解決するためのビッグデータに基づいたジュエリー加工設備を提供することにある。
+</com:P>
+         </pat:TechnicalProblem>
+         <pat:TechnicalSolution>
+            <com:P com:pNumber="0005">
+  本発明のビッグデータに基づいたジュエリー加工設備はトッププレートを含み、前記トッププレートの下端面に連結ロッドと固定軸が左右対称で固定設置され、前記トッププレートの下端面にラックが固定設置され、前記ラックの下端面にボトムプレートが固定設置され、前記ボトムプレートが前記固定ブロックと固定軸に固定され、前記固定軸のうわべに動力箱が滑り設置され、前記動力箱の左端面に固定ブロックが固定設置され、前記固定ブロックと前記連結ロッドが滑り係合され、前記動力箱の中に前後貫く貫通筐体が固定設置され、前記貫通筐体の左端壁に歯車電機が固定設置され、前記歯車電機の輸出軸が前記貫通筐体の右端壁に回り係合接続され、前記歯車電機の輸出軸のうわべにメインギアが固定設置され、前記メインギアが前記ラックに噛み合い、前記メインギアの右側に前記動力箱に位置される連結筐体が設置され、前記連結筐体の上下端壁に開き口が右向きの滑動筐体が連結設置され、前記連結筐体の右端壁に伸縮電機が固定設置され、前記伸縮電機が前記連結筐体の左端壁に回り係合接続され、前記伸縮電気の輸出軸のうわべに固定板がねじで係合接続設置され、前記固定板の右側に伸縮ブロックが設置され、前記伸縮ブロックの中に開き口が左向きのキャビティ筐体が固定設置され、前記固定板が前記キャビティ筐体の上下端壁に固定され、前記伸縮ブロックが前記滑動筐体に滑り係合接続され、前記キャビティ筐体の右側に前記伸縮ブロックの中に位置される動力筐体が設置され、前記動力筐体の左端壁に滑り通し筐体が連結設置され、前記滑り通し筐体の左端壁に動力電機が固定設置され、前記滑り通し筐体の中に滑動できる接続ブロックが設置され、前記接続ブロックの左端壁に開き口が左向きのねじ穴が固定設置され、前記動力電機の輸出軸が前記ねじ穴にねじで係合接続され、前記接続ブロックの右端面に回転電機が固定設置され、前記回転電機の輸出軸の右端面に回転ブロックが固定設置され、前記回転ブロックの右端面にスイングロッドが固定設置され、前記動力筐体の右端壁に回転ボールが回り設置され、前記回転ボールの左側に伸びレバーが固定設置され、前記伸びレバーと前記スイングロッドが回り係合接続され、前記回転ボールの右側に伸び出しレバーが固定設置され、前記伸び出しレバーの右端面に摩擦ブロックが固定設置され、前記摩擦ブロックの右側に前記ボトムプレートと同じ水平線に位置される固定箱が設置され、前記固定箱の中に開き口が左向きのサイド筐体が固定設置され、前記サイド筐体の上に前記固定箱に位置されるかさ歯車筐体が設置され、前記かさ歯車筐体の左端壁にかさ歯車電機設置され、前記かさ歯車電機の輸出軸の右端面に駆動かさ歯車が固定設置され、前記駆動かさ歯車の下に従動歯車が噛み合い設置され、前記従動かさ歯車の下端面に下へ伸びる動力軸が固定設置され、前記動力軸が回って前記かさ歯車の下端壁を貫いて前記サイド筐体の中に入り込み前記サイド筐体の下端壁に回り係合接続され、前記動力軸のうわべに滑りブロックがねじで係合接続され、前記滑りブロックの左端面に開口ブロックが固定設置され、前記開口ブロックの中に開き口が上向きの開口筐体が固定設置され、前記サイド筐体の上端壁に下へ伸びる滑りロッドが固定設置され、前記滑りロッドが前記開口筐体の中に入り込み前記開口筐体に滑り係合接続され、前記開口ブロックの左端面に連結板が固定設置され、前記連結板の上端面に底板が回り設置され、前記サイド筐体の上端壁に電機が固定設置され、前記電機の輸出軸の下端面に合板が固定設置され、前記合板と底板の間にジュエリーが引っかかり設置され、前記トッププレートの上端面に回転ライト装置が固定設置され、設備の加工精度が向上させる。
+</com:P>
+            <com:P com:pNumber="0006">
+更の技術プラン、前記合板の下端面に滑り止めマットが固定設置され、前記底板の上端面に滑り止めマットが固定設置され、設備の取り付け性能が向上させる。
+</com:P>
+            <com:P com:pNumber="0007">
+更の技術プラン、前記回転ボールが球状構造で、前記回転ボールが前記動力筐体の右端壁に回転し、前記伸びレバーが前記が動力筐体に位置され、前記伸び出しレバーが外部に位置され、設備の実用性が向上させる。
+</com:P>
+            <com:P com:pNumber="0008">
+更の技術プラン、前記トッププレート、連結レバー、固定軸とボトムプレートが一体式構造で、設備構造の安定性が向上させる。
+</com:P>
+            <com:P com:pNumber="0009">
+更の技術プラン、前記摩擦ブロックが研磨材料でできており、前記摩擦ブロックが合板と底板の間にあるジュエリーに近づけると、ジュエリーが研磨されてバフ磨かれ、設備の工芸性が向上させる。
+</com:P>
+            <com:P com:pNumber="0010">
+更の技術プラン、回転ライト装置がトップ固定ブロックを含み、前記トップ固定ブロックの中に歯車筐体が固定設置され、前記歯車筐体の左端壁に転位電機が固定設置され、前記転位電機の輸出軸の右端面に駆動歯車が設置され、前記駆動歯車の下に従動歯車が噛み合い設置され、前記従動歯車の右端面に接続貫通軸が固定設置され、前記接続貫通軸が回って前記歯車筐体の右端壁を貫いて外部に伸び、前記接続貫通軸の右端面に円盤が固定設置され、前記円盤の右端面に照明が固定設置される。
+</com:P>
+         </pat:TechnicalSolution>
+         <pat:AdvantageousEffects>
+            <com:P com:pNumber="0011">
+由于本発明設備が初期状態では、前記固定ブロックと動力箱が前記連結ロッドと固定軸の中心に位置され、前記歯車電機、伸縮電機、動力電機、回転電機、電機とかさ歯車電機が停止状態にあり、前記接続ブロックが前記滑り通し筐体の中心に位置され、前記合板と底板でジュエリーを締めつけ、それによって、各構を初期状態にして次の加工に有利である。
+</com:P>
+            <com:P com:pNumber="0012">
+設備が運行する時、前記電機が前記合板を回転駆動し、前記合板によって前記合板と底板の間にあるジュエリーが高速回転され、前記動力電機が前記接続ブロックを動かして左右に移動させ、前記回転電機が前記回転ブロックを回転駆動し、前記回転ブロックが前記回転ボールを回転ポイントに、前記スイングロッド、回転ボールと伸び出しレバーに協同して、前記摩擦ブロックを回転駆動し、前記歯車電機が前記メインギアを回転駆動してから、前記動力箱を上下に移動させ、前記摩擦ブロックを任意の位置に移動させて、多角度でジュエリーを研磨してバフ磨きして、設備の依頼性を高める。
+</com:P>
+            <com:P com:pNumber="0013">
+ジュエリー加工が完了する時、前記かさ歯車電機が前記駆動かさ歯車を回転駆動し、前記駆動かさ歯車が回転してから前記従動歯車を回転させ、前記従動歯車が回転してから、前記動力軸と協同して回転し、前記滑りブロックが前記動力軸のうわべを下に移動し、前記開口ブロックが下へ滑り、前記合板と底板の取り付けからジュエリーを切り離させ、設備の取り付け機能性を向上させる。
+</com:P>
+            <com:P com:pNumber="0014">
+本発明設備の構造が簡単で、使用も便利であり、この設備がマルチフリースタイル駆動機械機構を采用しており、ジュエリーを多角度で研磨しバフ磨きして、有効に生産効率を高めた。
+</com:P>
+         </pat:AdvantageousEffects>
+      </pat:InventionSummary>
+      <pat:DrawingDescription>
+         <com:P com:pNumber="0015">
+本発明の実施例また既存の技術の中の技術方案をもっとはっきり説明するため、下記に実施例また既存の技術の説明の中に使用する必要がある附図に簡単な紹介を行って、一目でわかることは下記の説明の中の附図はただ本発明のいくつかの実施例で、本領域の普通技術者にとって、創造的な労働を払わないことを前提に、これらの附図に基づいてそのほかの附図を得ることができる。
+</com:P>
+         <com:P com:pNumber="0016">
+            <com:FigureReference com:referencedFigureNumber="1">本発明のビッグデータに基づいたジュエリー加工設備の整体構造模式図である。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="2">図1のA方向の模式図である。</com:FigureReference>
+         </com:P>
+      </pat:DrawingDescription>
+      <pat:EmbodimentDescription>
+         <com:P com:pNumber="0017">
+本発明書に開示した全ての特徴、或いは開示した全ての方法、過程中のステップは、互いに排斥する特徴或いはステップ以外に、いかなる方式で組み合わせることができる。
+</com:P>
+         <com:P com:pNumber="0018">
+本発明書に開示した全ての特徴は、特別な叙述がない限り、そのほかの同等或いは類似する目的を持つ代替特徴に取り替えられる。つまり特別な叙述がない限り、全ての特徴はただ一連の同等或いは類似する特徴の中の一つの例だけである。
+</com:P>
+         <com:P com:pNumber="0019">
+図1-2が示すように、本発明装置のビッグデータに基づいたジュエリー加工設備はトッププレート100を含み、前記トッププレート100の下端面に連結ロッド102と固定軸145が左右対称で固定設置され、前記トッププレート100の下端面にラック101が固定設置され、前記ラック101の下端面にボトムプレート150が固定設置され、前記ボトムプレート150が前記固定ブロック106と固定軸145に固定され、前記固定軸145のうわべに動力箱107が滑り設置され、前記動力箱107の左端面に固定ブロック106が固定設置され、前記固定ブロック106と前記連結ロッド102が滑り係合され、前記動力箱107の中に前後貫く貫通筐体104が固定設置され、前記貫通筐体104の左端壁に歯車電機103が固定設置され、前記歯車電機103の輸出軸が前記貫通筐体104の右端壁に回り係合接続され、前記歯車電機103の輸出軸のうわべにメインギア105が固定設置され、前記メインギア105が前記ラック101に噛み合い、前記メインギア105の右側に前記動力箱107に位置される連結筐体110が設置され、前記連結筐体110の上下端壁に開き口が右向きの滑動筐体108が連結設置され、前記連結筐体110の右端壁に伸縮電機125が固定設置され、前記伸縮電機125が前記連結筐体110の左端壁に回り係合接続され、前記伸縮電気125の輸出軸のうわべに固定板109がねじで係合接続設置され、前記固定板109の右側に伸縮ブロック124が設置され、前記伸縮ブロック124の中に開き口が左向きのキャビティ筐体111が固定設置され、前記固定板109が前記キャビティ筐体111の上下端壁に固定され、前記伸縮ブロック124が前記滑動筐体108に滑り係合接続され、前記キャビティ筐体111の右側に前記伸縮ブロック124の中に位置される動力筐体115が設置され、前記動力筐体115の左端壁に滑り通し筐体113が連結設置され、前記滑り通し筐体113の左端壁に動力電機112が固定設置され、前記滑り通し筐体113の中に滑動できる接続ブロック114が設置され、前記接続ブロック114の左端壁に開き口が左向きのねじ穴123が固定設置され、前記動力電機112の輸出軸が前記ねじ穴123にねじで係合接続され、前記接続ブロック114の右端面に回転電機122が固定設置され、前記回転電機122の輸出軸の右端面に回転ブロック121が固定設置され、前記回転ブロック121の右端面にスイングロッド120が固定設置され、前記動力筐体115の右端壁に回転ボール117が回り設置され、前記回転ボール117の左側に伸びレバー116が固定設置され、前記伸びレバー116と前記スイングロッド120が回り係合接続され、前記回転ボール117の右側に伸び出しレバー118が固定設置され、前記伸び出しレバー118の右端面に摩擦ブロック119が固定設置され、前記摩擦ブロック119の右側に前記ボトムプレート150と同じ水平線に位置される固定箱131が設置され、前記固定箱131の中に開き口が左向きのサイド筐体144が固定設置され、前記サイド筐体144の上に前記固定箱131に位置されるかさ歯車筐体134が設置され、前記かさ歯車筐体134の左端壁にかさ歯車電機132設置され、前記かさ歯車電機132の輸出軸の右端面に駆動かさ歯車133が固定設置され、前記駆動かさ歯車133の下に従動歯車135が噛み合い設置され、前記従動かさ歯車135の下端面に下へ伸びる動力軸138が固定設置され、前記動力軸138が回って前記かさ歯車134の下端壁を貫いて前記サイド筐体144の中に入り込み前記サイド筐体144の下端壁に回り係合接続され、前記動力軸138のうわべに滑りブロック141がねじで係合接続され、前記滑りブロック141の左端面に開口ブロック143が固定設置され、前記開口ブロック143の中に開き口が上向きの開口筐体139が固定設置され、前記サイド筐体144の上端壁に下へ伸びる滑りロッド137が固定設置され、前記滑りロッド137が前記開口筐体139の中に入り込み前記開口筐体139に滑り係合接続され、前記開口ブロック143の左端面に連結板142が固定設置され、前記連結板142の上端面に底板140が回り設置され、前記サイド筐体144の上端壁に電機130が固定設置され、前記電機130の輸出軸の下端面に合板136が固定設置され、前記合板136と底板140の間にジュエリーが引っかかり設置され、前記トッププレート100の上端面に回転ライト装置が固定設置され、設備の加工精度が向上させる。
+</com:P>
+         <com:P com:pNumber="0020">
+有益的には、前記合板136の下端面に滑り止めマットが固定設置され、前記底板140の上端面に滑り止めマットが固定設置され、設備の取り付け性能が向上させる。
+</com:P>
+         <com:P com:pNumber="0021">
+有益的には、前記回転ボール117が球状構造で、前記回転ボール117が前記動力筐体115の右端壁に回転し、前記伸びレバー116が前記が動力筐体115に位置され、前記伸び出しレバー118が外部に位置され、設備の実用性が向上させる。
+</com:P>
+         <com:P com:pNumber="0022">
+有益的には、前記トッププレート100、連結レバー102、固定軸145とボトムプレート150が一体式構造で、設備構造の安定性が向上させる。
+</com:P>
+         <com:P com:pNumber="0023">
+有益的には、前記摩擦ブロック119が研磨材料でできており、前記摩擦ブロック119が合板136と底板140の間にあるジュエリーに近づけると、ジュエリーが研磨されてバフ磨かれ、設備の工芸性が向上させる。
+</com:P>
+         <com:P com:pNumber="0024">
+有益的には、回転ライト装置がトップ固定ブロック404を含み、前記トップ固定ブロック404の中に歯車筐体406が固定設置され、前記歯車筐体406の左端壁に転位電機403が固定設置され、前記転位電機403の輸出軸の右端面に駆動歯車405が設置され、前記駆動歯車405の下に従動歯車402が噛み合い設置され、前記従動歯車402の右端面に接続貫通軸401が固定設置され、前記接続貫通軸401が回って前記歯車筐体406の右端壁を貫いて外部に伸び、前記接続貫通軸401の右端面に円盤400が固定設置され、前記円盤400の右端面に照明407が固定設置される。  
+</com:P>
+         <com:P com:pNumber="0025">
+本発明設備が初期状態では、前記固定ブロック106と動力箱107が前記連結ロッド102と固定軸145の中心に位置され、前記歯車電機103、伸縮電機125、動力電機112、回転電機122、電機130とかさ歯車電機132が停止状態にあり、前記接続ブロック114が前記滑り通し筐体113の中心に位置され、前記合板136と底板140でジュエリーを締めつける。
+</com:P>
+         <com:P com:pNumber="0026">
+設備が運行する時、前記電機130が前記合板136を回転駆動し、前記合板136によって前記合板136と底板140の間にあるジュエリーが高速回転され、前記動力電機112が前記接続ブロック114を動かして左右に移動させ、前記回転電機122が前記回転ブロック121を回転駆動し、前記回転ブロック121が前記回転ボール117を回転ポイントに、前記スイングロッド120、回転ボール117と伸び出しレバー118に協同して、前記摩擦ブロック119を回転駆動し、前記歯車電機103が前記メインギアを回転駆動してから、前記動力箱107を上下に移動させ、前記摩擦ブロック119を任意の位置に移動させて、多角度でジュエリーを研磨してバフ磨きする。
+</com:P>
+         <com:P com:pNumber="0027">
+ジュエリー加工が完了する時、前記かさ歯車電機132が前記駆動かさ歯車133を回転駆動し、前記駆動かさ歯車133が回転してから前記従動歯車135を回転させ、前記従動歯車135が回転してから、前記動力軸138と協同して回転し、前記滑りブロック141が前記動力軸138のうわべを下に移動し、前記開口ブロック143が下へ滑り、前記合板136と底板140の取り付けからジュエリーを切り離させる。
+</com:P>
+         <com:P com:pNumber="0028">
+以上に述べたのはただ本発明の具体的な実施方式で、しかし本発明の保護範囲はここに限らないである。全部の創造的な労働を通じなく思いついた変化と取替は本発明の保護範囲にカバーされる。だから本発明の保護範囲は権利要求書が限定される保護範囲を標準とする。
+</com:P>
+      </pat:EmbodimentDescription>
+   </jppat:Description>
+   <pat:Claims>
+      <pat:Claim>
+         <pat:ClaimNumber>1</pat:ClaimNumber>
+         <pat:ClaimText>
+ビッグデータに基づいたジュエリー加工設備はトッププレートを含み、前記トッププレートの下端面に連結ロッドと固定軸が左右対称で固定設置され、前記トッププレートの下端面にラックが固定設置され、前記ラックの下端面にボトムプレートが固定設置され、前記ボトムプレートが前記固定ブロックと固定軸に固定され、前記固定軸のうわべに動力箱が滑り設置され、前記動力箱の左端面に固定ブロックが固定設置され、前記固定ブロックと前記連結ロッドが滑り係合され、前記動力箱の中に前後貫く貫通筐体が固定設置され、前記貫通筐体の左端壁に歯車電機が固定設置され、前記歯車電機の輸出軸が前記貫通筐体の右端壁に回り係合接続され、前記歯車電機の輸出軸のうわべにメインギアが固定設置され、前記メインギアが前記ラックに噛み合い、前記メインギアの右側に前記動力箱に位置される連結筐体が設置され、前記連結筐体の上下端壁に開き口が右向きの滑動筐体が連結設置され、前記連結筐体の右端壁に伸縮電機が固定設置され、前記伸縮電機が前記連結筐体の左端壁に回り係合接続され、前記伸縮電気の輸出軸のうわべに固定板がねじで係合接続設置され、前記固定板の右側に伸縮ブロックが設置され、前記伸縮ブロックの中に開き口が左向きのキャビティ筐体が固定設置され、前記固定板が前記キャビティ筐体の上下端壁に固定され、前記伸縮ブロックが前記滑動筐体に滑り係合接続され、前記キャビティ筐体の右側に前記伸縮ブロックの中に位置される動力筐体が設置され、前記動力筐体の左端壁に滑り通し筐体が連結設置され、前記滑り通し筐体の左端壁に動力電機が固定設置され、前記滑り通し筐体の中に滑動できる接続ブロックが設置され、前記接続ブロックの左端壁に開き口が左向きのねじ穴が固定設置され、前記動力電機の輸出軸が前記ねじ穴にねじで係合接続され、前記接続ブロックの右端面に回転電機が固定設置され、前記回転電機の輸出軸の右端面に回転ブロックが固定設置され、前記回転ブロックの右端面にスイングロッドが固定設置され、前記動力筐体の右端壁に回転ボールが回り設置され、前記回転ボールの左側に伸びレバーが固定設置され、前記伸びレバーと前記スイングロッドが回り係合接続され、前記回転ボールの右側に伸び出しレバーが固定設置され、前記伸び出しレバーの右端面に摩擦ブロックが固定設置され、前記摩擦ブロックの右側に前記ボトムプレートと同じ水平線に位置される固定箱が設置され、前記固定箱の中に開き口が左向きのサイド筐体が固定設置され、前記サイド筐体の上に前記固定箱に位置されるかさ歯車筐体が設置され、前記かさ歯車筐体の左端壁にかさ歯車電機設置され、前記かさ歯車電機の輸出軸の右端面に駆動かさ歯車が固定設置され、前記駆動かさ歯車の下に従動歯車が噛み合い設置され、前記従動かさ歯車の下端面に下へ伸びる動力軸が固定設置され、前記動力軸が回って前記かさ歯車の下端壁を貫いて前記サイド筐体の中に入り込み前記サイド筐体の下端壁に回り係合接続され、前記動力軸のうわべに滑りブロックがねじで係合接続され、前記滑りブロックの左端面に開口ブロックが固定設置され、前記開口ブロックの中に開き口が上向きの開口筐体が固定設置され、前記サイド筐体の上端壁に下へ伸びる滑りロッドが固定設置され、前記滑りロッドが前記開口筐体の中に入り込み前記開口筐体に滑り係合接続され、前記開口ブロックの左端面に連結板が固定設置され、前記連結板の上端面に底板が回り設置され、前記サイド筐体の上端壁に電機が固定設置され、前記電機の輸出軸の下端面に合板が固定設置され、前記合板と底板の間にジュエリーが引っかかり設置され、前記トッププレートの上端面に回転ライト装置が固定設置され、設備の加工精度が向上させ、前記合板の下端面に滑り止めマットが固定設置され、前記底板の上端面に滑り止めマットが固定設置され、設備の取り付け性能が向上させ、前記回転ボールが球状構造で、前記回転ボールが前記動力筐体の右端壁に回転し、前記伸びレバーが前記が動力筐体に位置され、前記伸び出しレバーが外部に位置され、設備の実用性が向上させ、前記トッププレート、連結レバー、固定軸とボトムプレートが一体式構造で、設備構造の安定性が向上させ、前記摩擦ブロックが研磨材料でできており、前記摩擦ブロックが合板と底板の間にあるジュエリーに近づけると、ジュエリーが研磨されてバフ磨かれ、設備の工芸性が向上させ、回転ライト装置がトップ固定ブロックを含み、前記トップ固定ブロックの中に歯車筐体が固定設置され、前記歯車筐体の左端壁に転位電機が固定設置され、前記転位電機の輸出軸の右端面に駆動歯車が設置され、前記駆動歯車の下に従動歯車が噛み合い設置され、前記従動歯車の右端面に接続貫通軸が固定設置され、前記接続貫通軸が回って前記歯車筐体の右端壁を貫いて外部に伸び、前記接続貫通軸の右端面に円盤が固定設置され、前記円盤の右端面に照明が固定設置される。
+</pat:ClaimText>
+      </pat:Claim>
+   </pat:Claims>
+   <pat:Abstract>
+      <com:P com:pNumber="">【課題】ビッグデータに基づいたジュエリー加工設備を提供する。<com:Br/>【解決手段】トッププレート１００を含み、トッププレートの下端面に連結ロッド１０２と固定軸１４５が左右対称で固定設置され、トッププレートの下端面にラック１０１が固定設置され、ラックの下端面にボトムプレート１５０が固定設置され、ボトムプレートが固定ブロックと固定軸に固定され、固定軸のうわべに動力箱１０７が滑り設置され、動力箱の左端面に固定ブロック１０６が固定設置され、固定ブロックと連結ロッドが滑り係合され、動力箱の中に前後貫く貫通筐体１０４が固定設置され、貫通筐体の左端壁に歯車電機１０３が固定設置され、歯車電機の輸出軸が貫通筐体の右端壁に回り係合接続され、この設備がマルチフリースタイル駆動機械機構を採用しており、ジュエリーを多角度で研磨しバフ磨きする。<com:Br/>【選択図】図１</com:P>
+   </pat:Abstract>
+   <pat:Drawings>
+      <pat:Figure>
+         <pat:FigureNumber>1</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2022008727000002.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">92</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">124</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>2</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>2022008727000003.tif</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">38</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">36</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+   </pat:Drawings>
+   <jppat:WrittenAmendmentBag>
+      <jppat:WrittenAmendment>
+         <jppat:WrittenAmendmentCategory>Amendment</jppat:WrittenAmendmentCategory>
+         <pat:FilingDate>2019-05-28</pat:FilingDate>
+         <jppat:AmendmentsBag>
+            <jppat:AmendmentBag jppat:amendmentNumber="1">
+               <com:DocumentName>A16333</com:DocumentName>
+               <jppat:AmendmentItem>全文</jppat:AmendmentItem>
+               <jppat:AmendmentWay>3</jppat:AmendmentWay>
+               <jppat:AmendmentContentsBag>
+                  <jppat:AmendmentDocumentNameCategory>Claims</jppat:AmendmentDocumentNameCategory>
+                  <pat:Claims>
+                     <pat:Claim>
+                        <pat:ClaimNumber>1</pat:ClaimNumber>
+                        <pat:ClaimText>
+                           <com:U com:uStyle="Single">ジュエリー加工設備であって</com:U>、トッププレートを含み、前記トッププレートの下端面に連結ロッドと固定軸が左右対称で固定設置され、前記トッププレートの下端面にラックが固定設置され、前記ラックの下端面にボトムプレートが固定設置され、<com:U com:uStyle="Single">前記ボトムプレートが前記固定軸に固定的に連結され</com:U>、前記固定軸の<com:U com:uStyle="Single">外表面</com:U>に動力箱が滑り設置され、前記動力箱の左端面に固定ブロックが固定設置され、前記固定ブロックと前記連結ロッドが滑り係合され、前記動力箱の中に前後貫く<com:U com:uStyle="Single">貫通チャンバ</com:U>が固定設置され、前記<com:U com:uStyle="Single">貫通チャンバ</com:U>の左端壁に歯車<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記歯車<com:U com:uStyle="Single">モータ</com:U>の輸出軸が前記<com:U com:uStyle="Single">貫通チャンバ</com:U>の右端壁に回り係合接続され、前記歯車<com:U com:uStyle="Single">モータ</com:U>の輸出軸の<com:U com:uStyle="Single">外表面</com:U>にメインギアが固定設置され、前記メインギアが前記ラックに噛み合い、前記メインギアの右側に前記動力箱<com:U com:uStyle="Single">に位置し</com:U>る連結<com:U com:uStyle="Single">チャンバ</com:U>が設置され、前記連結<com:U com:uStyle="Single">チャンバ</com:U>の上下端壁に開き口が右向きの滑動<com:U com:uStyle="Single">チャンバ</com:U>が連結設置され、前記連結<com:U com:uStyle="Single">チャンバ</com:U>の右端壁に伸縮<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記伸縮<com:U com:uStyle="Single">モータ</com:U>が前記連結<com:U com:uStyle="Single">チャンバ</com:U>の左端壁に回り係合接続され、前記<com:U com:uStyle="Single">伸縮モータ</com:U>の輸出軸の<com:U com:uStyle="Single">外表面</com:U>に固定板がねじで係合接続設置され、前記固定板の右側に伸縮ブロックが設置され、前記伸縮ブロックの中に開き口が左向きのキャビティ<com:U com:uStyle="Single">チャンバ</com:U>が固定設置され、前記固定板が前記キャビティ<com:U com:uStyle="Single">チャンバ</com:U>の上下端壁に固定され、前記伸縮ブロックが前記滑動<com:U com:uStyle="Single">チャンバ</com:U>に滑り係合接続され、前記キャビティ<com:U com:uStyle="Single">チャンバ</com:U>の右側に前記伸縮ブロックの中<com:U com:uStyle="Single">に位置し</com:U>る動力<com:U com:uStyle="Single">チャンバ</com:U>が設置され、前記動力<com:U com:uStyle="Single">チャンバ</com:U>の左端壁に滑り通し<com:U com:uStyle="Single">チャンバ</com:U>が連結設置され、前記滑り通し<com:U com:uStyle="Single">チャンバ</com:U>の左端壁に動力<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記滑り通し<com:U com:uStyle="Single">チャンバ</com:U>の中に滑動できる接続ブロックが設置され、前記接続ブロックの左端壁に開き口が左向きのねじ穴が固定設置され、前記動力<com:U com:uStyle="Single">モータ</com:U>の輸出軸が前記ねじ穴にねじで係合接続され、前記接続ブロックの右端面に回転<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記回転<com:U com:uStyle="Single">モータ</com:U>の輸出軸の右端面に回転ブロックが固定設置され、前記回転ブロックの右端面にスイングロッドが固定設置され、前記動力<com:U com:uStyle="Single">チャンバ</com:U>の右端壁に回転ボールが<com:U com:uStyle="Single">回転可能に設置</com:U>され、前記回転ボールの左側に伸びレバーが固定設置され、前記伸びレバーと前記スイングロッドが回り係合接続され、前記回転ボールの右側に伸び出しレバーが固定設置され、前記伸び出しレバーの右端面に摩擦ブロックが固定設置され、前記摩擦ブロックの右側に前記ボトムプレートと同じ水平線<com:U com:uStyle="Single">に位置し</com:U>る固定箱が設置され、前記固定箱の中に開き口が左向きのサイド<com:U com:uStyle="Single">チャンバ</com:U>が固定設置され、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>の上に前記固定箱<com:U com:uStyle="Single">に位置し</com:U>るかさ歯車<com:U com:uStyle="Single">チャンバ</com:U>が設置され、前記かさ歯車<com:U com:uStyle="Single">チャンバ</com:U>の左端壁にかさ歯車<com:U com:uStyle="Single">モータが設置</com:U>され、前記かさ歯車<com:U com:uStyle="Single">モータ</com:U>の輸出軸の右端面に駆動かさ歯車が固定設置され、前記駆動かさ歯車の下に従動歯車が噛み合い設置され、前記従動かさ歯車の下端面に下へ伸びる動力軸が固定設置され、<com:U com:uStyle="Single">前記動力軸が回転可能に前記かさ歯車チャンバの下端壁を貫通して前記サイドチャンバの中に伸びており</com:U>、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>の下端壁に回り係合接続され、前記動力軸の<com:U com:uStyle="Single">外表面</com:U>に滑りブロックがねじで係合接続され、前記滑りブロックの左端面に開口ブロックが固定設置され、前記開口ブロックの中に開き口が上向きの開口<com:U com:uStyle="Single">チャンバ</com:U>が固定設置され、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>の上端壁に下へ伸びる滑りロッドが固定設置され、前記滑りロッドが前記開口<com:U com:uStyle="Single">チャンバ</com:U>の中に入り込み前記開口<com:U com:uStyle="Single">チャンバ</com:U>に滑り係合接続され、前記開口ブロックの左端面に連結板が固定設置され、前記連結板の上端面に底板が<com:U com:uStyle="Single">回転可能に設置</com:U>され、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>の上端壁に<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記<com:U com:uStyle="Single">モータ</com:U>の輸出軸の下端面に合板が固定設置され、前記合板と底板の間にジュエリーが引っかかり設置され、前記トッププレートの上端面に回転ライト装置が固定設置され、設備の加工精度<com:U com:uStyle="Single">を向上</com:U>させ、前記合板の下端面に滑り止めマットが固定設置され、前記底板の上端面に滑り止めマットが固定設置され、設備の取り付け性能<com:U com:uStyle="Single">を向上</com:U>させ、前記回転ボールが球状構造で、前記回転ボールが前記動力<com:U com:uStyle="Single">チャンバ</com:U>の右端壁に回転し、前記伸びレバーが前記が動力<com:U com:uStyle="Single">チャンバに位置し</com:U>、前記伸び出しレバーが外部<com:U com:uStyle="Single">に位置し</com:U>、設備の実用性<com:U com:uStyle="Single">を向上</com:U>させ、前記トッププレート、連結レバー、固定軸とボトムプレートが一体式構造で、設備構造の安定性<com:U com:uStyle="Single">を向上</com:U>させ、前記摩擦ブロックが研磨材料でできており、前記摩擦ブロックが合板と底板の間にあるジュエリーに近づけると、ジュエリーが<com:U com:uStyle="Single">研磨され</com:U>、設備の工芸性<com:U com:uStyle="Single">を向上</com:U>させ、回転ライト装置がトップ固定ブロックを含み、前記トップ固定ブロックの中に歯車<com:U com:uStyle="Single">チャンバ</com:U>が固定設置され、前記歯車<com:U com:uStyle="Single">チャンバ</com:U>の左端壁に転位<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記転位<com:U com:uStyle="Single">モータ</com:U>の輸出軸の右端面に駆動歯車が設置され、前記駆動歯車の下に従動歯車が噛み合い設置され、前記従動歯車の右端面に接続貫通軸が固定設置され、前記接続貫通軸が<com:U com:uStyle="Single">回転可能に</com:U>前記歯車<com:U com:uStyle="Single">チャンバ</com:U>の右端壁を貫いて外部に伸び、前記接続貫通軸の右端面に円盤が固定設置され、前記円盤の右端面に照明が固定設置される<com:U com:uStyle="Single">ことを特徴とするジュエリー加工設備</com:U>。
+</pat:ClaimText>
+                     </pat:Claim>
+                  </pat:Claims>
+               </jppat:AmendmentContentsBag>
+            </jppat:AmendmentBag>
+            <jppat:AmendmentBag jppat:amendmentNumber="2">
+               <com:DocumentName>A16330</com:DocumentName>
+               <jppat:AmendmentItem>全文</jppat:AmendmentItem>
+               <jppat:AmendmentWay>3</jppat:AmendmentWay>
+               <jppat:AmendmentContentsBag>
+                  <jppat:AmendmentDocumentNameCategory>Description</jppat:AmendmentDocumentNameCategory>
+                  <jppat:Description>
+                     <pat:TechnicalField>
+                        <com:P com:pNumber="0001">
+  本発明は加工分野に関し、具体的には、<com:U com:uStyle="Single">ジュエリー加工設備</com:U>に関する。
+</com:P>
+                     </pat:TechnicalField>
+                     <pat:BackgroundArt>
+                        <com:P com:pNumber="0002">
+科学技術の発展と社会の進歩につれて、国がハイテク技術の発展を促進して、ジュエリー加工技術で最も使用されるのは研磨とバフ磨きであり、従来の研磨とハブ磨き設備では、小さな領域を清掃することが困難であり、この設備でこの問題を解決する。
+</com:P>
+                     </pat:BackgroundArt>
+                     <com:CitationBag>
+                        <com:PatentCitationBag>
+                           <com:P com:pNumber="0003">
+                              <com:PatentCitation com:sequenceNumber="1">
+                                 <com:PatentCitationText>中国特許出願公開第104589216号明細書</com:PatentCitationText>
+                              </com:PatentCitation>
+                           </com:P>
+                        </com:PatentCitationBag>
+                     </com:CitationBag>
+                     <pat:InventionSummary>
+                        <pat:TechnicalProblem>
+                           <com:P com:pNumber="0004">
+  本発明の目的は上記の背景技術に提出された問題を解決するための<com:U com:uStyle="Single">ジュエリー加工設備</com:U>を提供することにある。
+</com:P>
+                        </pat:TechnicalProblem>
+                        <pat:TechnicalSolution>
+                           <com:P com:pNumber="0005">
+  本発明の<com:U com:uStyle="Single">ジュエリー加工設備</com:U>はトッププレートを含み、前記トッププレートの下端面に連結ロッドと固定軸が左右対称で固定設置され、前記トッププレートの下端面にラックが固定設置され、前記ラックの下端面にボトムプレートが固定設置され、<com:U com:uStyle="Single">前記ボトムプレートが前記固定軸に固定的に連結され</com:U>、前記固定軸の<com:U com:uStyle="Single">外表面</com:U>に動力箱が滑り設置され、前記動力箱の左端面に固定ブロックが固定設置され、前記固定ブロックと前記連結ロッドが滑り係合され、前記動力箱の中に前後貫く<com:U com:uStyle="Single">貫通チャンバ</com:U>が固定設置され、前記<com:U com:uStyle="Single">貫通チャンバ</com:U>の左端壁に歯車<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記歯車<com:U com:uStyle="Single">モータ</com:U>の輸出軸が前記<com:U com:uStyle="Single">貫通チャンバ</com:U>の右端壁に回り係合接続され、前記歯車<com:U com:uStyle="Single">モータ</com:U>の輸出軸の<com:U com:uStyle="Single">外表面</com:U>にメインギアが固定設置され、前記メインギアが前記ラックに噛み合い、前記メインギアの右側に前記動力箱<com:U com:uStyle="Single">に位置し</com:U>る連結<com:U com:uStyle="Single">チャンバ</com:U>が設置され、前記連結<com:U com:uStyle="Single">チャンバ</com:U>の上下端壁に開き口が右向きの滑動<com:U com:uStyle="Single">チャンバ</com:U>が連結設置され、前記連結<com:U com:uStyle="Single">チャンバ</com:U>の右端壁に伸縮<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記伸縮<com:U com:uStyle="Single">モータ</com:U>が前記連結<com:U com:uStyle="Single">チャンバ</com:U>の左端壁に回り係合接続され、前記<com:U com:uStyle="Single">伸縮モータ</com:U>の輸出軸の<com:U com:uStyle="Single">外表面</com:U>に固定板がねじで係合接続設置され、前記固定板の右側に伸縮ブロックが設置され、前記伸縮ブロックの中に開き口が左向きのキャビティ<com:U com:uStyle="Single">チャンバ</com:U>が固定設置され、前記固定板が前記キャビティ<com:U com:uStyle="Single">チャンバ</com:U>の上下端壁に固定され、前記伸縮ブロックが前記滑動<com:U com:uStyle="Single">チャンバ</com:U>に滑り係合接続され、前記キャビティ<com:U com:uStyle="Single">チャンバ</com:U>の右側に前記伸縮ブロックの中<com:U com:uStyle="Single">に位置し</com:U>る動力<com:U com:uStyle="Single">チャンバ</com:U>が設置され、前記動力<com:U com:uStyle="Single">チャンバ</com:U>の左端壁に滑り通し<com:U com:uStyle="Single">チャンバ</com:U>が連結設置され、前記滑り通し<com:U com:uStyle="Single">チャンバ</com:U>の左端壁に動力<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記滑り通し<com:U com:uStyle="Single">チャンバ</com:U>の中に滑動できる接続ブロックが設置され、前記接続ブロックの左端壁に開き口が左向きのねじ穴が固定設置され、前記動力<com:U com:uStyle="Single">モータ</com:U>の輸出軸が前記ねじ穴にねじで係合接続され、前記接続ブロックの右端面に回転<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記回転<com:U com:uStyle="Single">モータ</com:U>の輸出軸の右端面に回転ブロックが固定設置され、前記回転ブロックの右端面にスイングロッドが固定設置され、前記動力<com:U com:uStyle="Single">チャンバ</com:U>の右端壁に回転ボールが<com:U com:uStyle="Single">回転可能に設置</com:U>され、前記回転ボールの左側に伸びレバーが固定設置され、前記伸びレバーと前記スイングロッドが回り係合接続され、前記回転ボールの右側に伸び出しレバーが固定設置され、前記伸び出しレバーの右端面に摩擦ブロックが固定設置され、前記摩擦ブロックの右側に前記ボトムプレートと同じ水平線<com:U com:uStyle="Single">に位置し</com:U>る固定箱が設置され、前記固定箱の中に開き口が左向きのサイド<com:U com:uStyle="Single">チャンバ</com:U>が固定設置され、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>の上に前記固定箱<com:U com:uStyle="Single">に位置し</com:U>るかさ歯車<com:U com:uStyle="Single">チャンバ</com:U>が設置され、前記かさ歯車<com:U com:uStyle="Single">チャンバ</com:U>の左端壁にかさ歯車<com:U com:uStyle="Single">モータが設置</com:U>され、前記かさ歯車<com:U com:uStyle="Single">モータ</com:U>の輸出軸の右端面に駆動かさ歯車が固定設置され、前記駆動かさ歯車の下に従動歯車が噛み合い設置され、前記従動かさ歯車の下端面に下へ伸びる動力軸が固定設置され、前記<com:U com:uStyle="Single">動力軸が回転可能に前記かさ歯車チャンバの下端壁を貫通して前記サイドチャンバの中に伸びており、</com:U>前記サイド<com:U com:uStyle="Single">チャンバ</com:U>の下端壁に回り係合接続され、前記動力軸の<com:U com:uStyle="Single">外表面</com:U>に滑りブロックがねじで係合接続され、前記滑りブロックの左端面に開口ブロックが固定設置され、前記開口ブロックの中に開き口が上向きの開口<com:U com:uStyle="Single">チャンバ</com:U>が固定設置され、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>の上端壁に下へ伸びる滑りロッドが固定設置され、前記滑りロッドが前記開口<com:U com:uStyle="Single">チャンバ</com:U>の中に入り込み前記開口<com:U com:uStyle="Single">チャンバ</com:U>に滑り係合接続され、前記開口ブロックの左端面に連結板が固定設置され、前記連結板の上端面に底板が<com:U com:uStyle="Single">回転可能に設置</com:U>され、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>の上端壁に<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記<com:U com:uStyle="Single">モータ</com:U>の輸出軸の下端面に合板が固定設置され、前記合板と底板の間にジュエリーが引っかかり設置され、前記トッププレートの上端面に回転ライト装置が固定設置され、設備の加工精度<com:U com:uStyle="Single">を向上</com:U>させる。
+</com:P>
+                           <com:P com:pNumber="0006">
+更の技術プラン、前記合板の下端面に滑り止めマットが固定設置され、前記底板の上端面に滑り止めマットが固定設置され、設備の取り付け性能<com:U com:uStyle="Single">を向上</com:U>させる。
+</com:P>
+                           <com:P com:pNumber="0007">
+更の技術プラン、前記回転ボールが球状構造で、前記回転ボールが前記動力<com:U com:uStyle="Single">チャンバ</com:U>の右端壁に回転し、前記伸びレバーが前記が動力<com:U com:uStyle="Single">チャンバに位置し</com:U>、前記伸び出しレバーが外部<com:U com:uStyle="Single">に位置し</com:U>、設備の実用性<com:U com:uStyle="Single">を向上</com:U>させる。
+</com:P>
+                           <com:P com:pNumber="0008">
+更の技術プラン、前記トッププレート、連結レバー、固定軸とボトムプレートが一体式構造で、設備構造の安定性<com:U com:uStyle="Single">を向上</com:U>させる。
+</com:P>
+                           <com:P com:pNumber="0009">
+更の技術プラン、前記摩擦ブロックが研磨材料でできており、前記摩擦ブロックが合板と底板の間にあるジュエリーに近づけると、ジュエリーが<com:U com:uStyle="Single">研磨され</com:U>、設備の工芸性<com:U com:uStyle="Single">を向上</com:U>させる。
+</com:P>
+                           <com:P com:pNumber="0010">
+更の技術プラン、回転ライト装置がトップ固定ブロックを含み、前記トップ固定ブロックの中に歯車<com:U com:uStyle="Single">チャンバ</com:U>が固定設置され、前記歯車<com:U com:uStyle="Single">チャンバ</com:U>の左端壁に転位<com:U com:uStyle="Single">モータ</com:U>が固定設置され、前記転位<com:U com:uStyle="Single">モータ</com:U>の輸出軸の右端面に駆動歯車が設置され、前記駆動歯車の下に従動歯車が噛み合い設置され、前記従動歯車の右端面に接続貫通軸が固定設置され、前記接続貫通軸が<com:U com:uStyle="Single">回転可能に</com:U>前記歯車<com:U com:uStyle="Single">チャンバ</com:U>の右端壁を貫いて外部に伸び、前記接続貫通軸の右端面に円盤が固定設置され、前記円盤の右端面に照明が固定設置される。
+</com:P>
+                        </pat:TechnicalSolution>
+                        <pat:AdvantageousEffects>
+                           <com:P com:pNumber="0011">
+由于本発明設備が初期状態では、前記固定ブロックと動力箱が前記連結ロッドと固定軸の中心<com:U com:uStyle="Single">に位置し</com:U>、前記歯車<com:U com:uStyle="Single">モータ</com:U>、伸縮<com:U com:uStyle="Single">モータ</com:U>、動力<com:U com:uStyle="Single">モータ</com:U>、回転<com:U com:uStyle="Single">モータ</com:U>、<com:U com:uStyle="Single">モータ</com:U>とかさ歯車<com:U com:uStyle="Single">モータ</com:U>が停止状態にあり、前記接続ブロックが前記滑り通し<com:U com:uStyle="Single">チャンバ</com:U>の中心<com:U com:uStyle="Single">に位置し</com:U>、前記合板と底板でジュエリーを締めつけ、それによって、各構を初期状態にして次の加工に有利である。
+</com:P>
+                           <com:P com:pNumber="0012">
+設備が運行する時、前記<com:U com:uStyle="Single">モータ</com:U>が前記合板を回転駆動し、前記合板によって前記合板と底板の間にあるジュエリーが高速回転され、前記動力<com:U com:uStyle="Single">モータ</com:U>が前記接続ブロックを動かして左右に移動させ、前記回転<com:U com:uStyle="Single">モータ</com:U>が前記回転ブロックを回転駆動し、前記回転ブロックが前記回転ボールを回転ポイントに、前記スイングロッド、回転ボールと伸び出しレバーに協同して、前記摩擦ブロックを回転駆動し、前記歯車<com:U com:uStyle="Single">モータ</com:U>が前記メインギアを回転駆動してから、前記動力箱を上下に移動させ、前記摩擦ブロックを任意の位置に移動させて、多角度でジュエリーを研磨してバフ磨きして、設備の依頼性を高める。
+</com:P>
+                           <com:P com:pNumber="0013">
+ジュエリー加工が完了する時、前記かさ歯車<com:U com:uStyle="Single">モータ</com:U>が前記駆動かさ歯車を回転駆動し、前記駆動かさ歯車が回転してから前記従動歯車を回転させ、前記従動歯車が回転してから、前記動力軸と協同して回転し、前記滑りブロックが前記動力軸の<com:U com:uStyle="Single">外表面</com:U>を下に移動し、前記開口ブロックが下へ滑り、前記合板と底板の取り付けからジュエリーを切り離させ、設備の取り付け機能性を向上させる。
+</com:P>
+                           <com:P com:pNumber="0014">
+本発明設備の構造が簡単で、使用も便利であり、この設備がマルチフリースタイル駆動機械機構を采用しており、ジュエリーを多角度で研磨しバフ磨きして、有効に生産効率を高めた。
+</com:P>
+                        </pat:AdvantageousEffects>
+                     </pat:InventionSummary>
+                     <pat:DrawingDescription>
+                        <com:P com:pNumber="0015">
+                           <com:FigureReference com:referencedFigureNumber="1">本発明の<com:U com:uStyle="Single">ジュエリー加工設備</com:U>の整体構造模式図である。</com:FigureReference>
+                           <com:FigureReference com:referencedFigureNumber="2">図1のA方向の模式図である。</com:FigureReference>
+                        </com:P>
+                     </pat:DrawingDescription>
+                     <pat:EmbodimentDescription>
+                        <com:P com:pNumber="0016">
+本発明書に開示した全ての特徴、或いは開示した全ての方法、過程中のステップは、互いに排斥する特徴或いはステップ以外に、いかなる方式で組み合わせることができる。
+</com:P>
+                        <com:P com:pNumber="0017">
+本発明書に開示した全ての特徴は、特別な叙述がない限り、そのほかの同等或いは類似する目的を持つ代替特徴に取り替えられる。つまり特別な叙述がない限り、全ての特徴はただ一連の同等或いは類似する特徴の中の一つの例だけである。
+</com:P>
+                        <com:P com:pNumber="0018">
+図1-2が示すように、本発明装置の<com:U com:uStyle="Single">ジュエリー加工設備</com:U>はトッププレート100を含み、前記トッププレート100の下端面に連結ロッド102と固定軸145が左右対称で固定設置され、前記トッププレート100の下端面にラック101が固定設置され、前記ラック101の下端面にボトムプレート150が固定設置され、<com:U com:uStyle="Single">前記ボトムプレート150が前記固定軸145に固定的に連結され</com:U>、前記固定軸145の<com:U com:uStyle="Single">外表面</com:U>に動力箱107が滑り設置され、前記動力箱107の左端面に固定ブロック106が固定設置され、前記固定ブロック106と前記連結ロッド102が滑り係合され、前記動力箱107の中に前後貫く<com:U com:uStyle="Single">貫通チャンバ</com:U>104が固定設置され、前記<com:U com:uStyle="Single">貫通チャンバ</com:U>104の左端壁に歯車<com:U com:uStyle="Single">モータ</com:U>103が固定設置され、前記歯車<com:U com:uStyle="Single">モータ</com:U>103の輸出軸が前記<com:U com:uStyle="Single">貫通チャンバ</com:U>104の右端壁に回り係合接続され、前記歯車<com:U com:uStyle="Single">モータ</com:U>103の輸出軸の<com:U com:uStyle="Single">外表面</com:U>にメインギア105が固定設置され、前記メインギア105が前記ラック101に噛み合い、前記メインギア105の右側に前記動力箱107<com:U com:uStyle="Single">に位置し</com:U>る連結<com:U com:uStyle="Single">チャンバ</com:U>110が設置され、前記連結<com:U com:uStyle="Single">チャンバ</com:U>110の上下端壁に開き口が右向きの滑動<com:U com:uStyle="Single">チャンバ</com:U>108が連結設置され、前記連結<com:U com:uStyle="Single">チャンバ</com:U>110の右端壁に伸縮<com:U com:uStyle="Single">モータ</com:U>125が固定設置され、前記伸縮<com:U com:uStyle="Single">モータ</com:U>125が前記連結<com:U com:uStyle="Single">チャンバ</com:U>110の左端壁に回り係合接続され、前記<com:U com:uStyle="Single">伸縮モータ</com:U>125の輸出軸の<com:U com:uStyle="Single">外表面</com:U>に固定板109がねじで係合接続設置され、前記固定板109の右側に伸縮ブロック124が設置され、前記伸縮ブロック124の中に開き口が左向きのキャビティ<com:U com:uStyle="Single">チャンバ</com:U>111が固定設置され、前記固定板109が前記キャビティ<com:U com:uStyle="Single">チャンバ</com:U>111の上下端壁に固定され、前記伸縮ブロック124が前記滑動<com:U com:uStyle="Single">チャンバ</com:U>108に滑り係合接続され、前記キャビティ<com:U com:uStyle="Single">チャンバ</com:U>111の右側に前記伸縮ブロック124の中<com:U com:uStyle="Single">に位置し</com:U>る動力<com:U com:uStyle="Single">チャンバ</com:U>115が設置され、前記動力<com:U com:uStyle="Single">チャンバ</com:U>115の左端壁に滑り通し<com:U com:uStyle="Single">チャンバ</com:U>113が連結設置され、前記滑り通し<com:U com:uStyle="Single">チャンバ</com:U>113の左端壁に動力<com:U com:uStyle="Single">モータ</com:U>112が固定設置され、前記滑り通し<com:U com:uStyle="Single">チャンバ</com:U>113の中に滑動できる接続ブロック114が設置され、前記接続ブロック114の左端壁に開き口が左向きのねじ穴123が固定設置され、前記動力<com:U com:uStyle="Single">モータ</com:U>112の輸出軸が前記ねじ穴123にねじで係合接続され、前記接続ブロック114の右端面に回転<com:U com:uStyle="Single">モータ</com:U>122が固定設置され、前記回転<com:U com:uStyle="Single">モータ</com:U>122の輸出軸の右端面に回転ブロック121が固定設置され、前記回転ブロック121の右端面にスイングロッド120が固定設置され、前記動力<com:U com:uStyle="Single">チャンバ</com:U>115の右端壁に回転ボール117が<com:U com:uStyle="Single">回転可能に設置</com:U>され、前記回転ボール117の左側に伸びレバー116が固定設置され、前記伸びレバー116と前記スイングロッド120が回り係合接続され、前記回転ボール117の右側に伸び出しレバー118が固定設置され、前記伸び出しレバー118の右端面に摩擦ブロック119が固定設置され、前記摩擦ブロック119の右側に前記ボトムプレート150と同じ水平線<com:U com:uStyle="Single">に位置し</com:U>る固定箱131が設置され、前記固定箱131の中に開き口が左向きのサイド<com:U com:uStyle="Single">チャンバ</com:U>144が固定設置され、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>144の上に前記固定箱131<com:U com:uStyle="Single">に位置し</com:U>るかさ歯車<com:U com:uStyle="Single">チャンバ</com:U>134が設置され、前記かさ歯車<com:U com:uStyle="Single">チャンバ</com:U>134の左端壁にかさ歯車<com:U com:uStyle="Single">モータ132が設置さ</com:U>れ、前記かさ歯車<com:U com:uStyle="Single">モータ</com:U>132の輸出軸の右端面に駆動かさ歯車133が固定設置され、前記駆動かさ歯車133の下に従動歯車135が噛み合い設置され、前記従動かさ歯車135の下端面に下へ伸びる動力軸138が固定設置され、前記<com:U com:uStyle="Single">動力軸138が回転可能に前記かさ歯車チャンバ134の下端壁を貫通して前記サイドチャンバ144の中に伸びており</com:U>、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>144の下端壁に回り係合接続され、前記動力軸138の<com:U com:uStyle="Single">外表面</com:U>に滑りブロック141がねじで係合接続され、前記滑りブロック141の左端面に開口ブロック143が固定設置され、前記開口ブロック143の中に開き口が上向きの開口<com:U com:uStyle="Single">チャンバ</com:U>139が固定設置され、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>144の上端壁に下へ伸びる滑りロッド137が固定設置され、前記滑りロッド137が前記開口<com:U com:uStyle="Single">チャンバ</com:U>139の中に入り込み前記開口<com:U com:uStyle="Single">チャンバ</com:U>139に滑り係合接続され、前記開口ブロック143の左端面に連結板142が固定設置され、前記連結板142の上端面に底板140が<com:U com:uStyle="Single">回転可能に設置</com:U>され、前記サイド<com:U com:uStyle="Single">チャンバ</com:U>144の上端壁に<com:U com:uStyle="Single">モータ</com:U>130が固定設置され、前記<com:U com:uStyle="Single">モータ</com:U>130の輸出軸の下端面に合板136が固定設置され、前記合板136と底板140の間にジュエリーが引っかかり設置され、前記トッププレート100の上端面に回転ライト装置が固定設置され、設備の加工精度<com:U com:uStyle="Single">を向上</com:U>させる。
+</com:P>
+                        <com:P com:pNumber="0019">
+有益的には、前記合板136の下端面に滑り止めマットが固定設置され、前記底板140の上端面に滑り止めマットが固定設置され、設備の取り付け性能<com:U com:uStyle="Single">を向上</com:U>させる。
+</com:P>
+                        <com:P com:pNumber="0020">
+有益的には、前記回転ボール117が球状構造で、前記回転ボール117が前記動力<com:U com:uStyle="Single">チャンバ</com:U>115の右端壁に回転し、前記伸びレバー116が前記が動力<com:U com:uStyle="Single">チャンバ</com:U>115<com:U com:uStyle="Single">に位置し</com:U>、前記伸び出しレバー118が外部<com:U com:uStyle="Single">に位置し</com:U>、設備の実用性<com:U com:uStyle="Single">を向上</com:U>させる。
+</com:P>
+                        <com:P com:pNumber="0021">
+有益的には、前記トッププレート100、連結レバー102、固定軸145とボトムプレート150が一体式構造で、設備構造の安定性<com:U com:uStyle="Single">を向上</com:U>させる。
+</com:P>
+                        <com:P com:pNumber="0022">
+有益的には、前記摩擦ブロック119が研磨材料でできており、前記摩擦ブロック119が合板136と底板140の間にあるジュエリーに近づけると、ジュエリーが<com:U com:uStyle="Single">研磨され</com:U>、設備の工芸性<com:U com:uStyle="Single">を向上</com:U>させる。
+</com:P>
+                        <com:P com:pNumber="0023">
+有益的には、回転ライト装置がトップ固定ブロック404を含み、前記トップ固定ブロック404の中に歯車<com:U com:uStyle="Single">チャンバ</com:U>406が固定設置され、前記歯車<com:U com:uStyle="Single">チャンバ</com:U>406の左端壁に転位<com:U com:uStyle="Single">モータ</com:U>403が固定設置され、前記転位<com:U com:uStyle="Single">モータ</com:U>403の輸出軸の右端面に駆動歯車405が設置され、前記駆動歯車405の下に従動歯車402が噛み合い設置され、前記従動歯車402の右端面に接続貫通軸401が固定設置され、前記接続貫通軸401が<com:U com:uStyle="Single">回転可能に</com:U>前記歯車<com:U com:uStyle="Single">チャンバ</com:U>406の右端壁を貫いて外部に伸び、前記接続貫通軸401の右端面に円盤400が固定設置され、前記円盤400の右端面に照明407が固定設置される。  
+</com:P>
+                        <com:P com:pNumber="0024">
+本発明設備が初期状態では、前記固定ブロック106と動力箱107が前記連結ロッド102と固定軸145の中心<com:U com:uStyle="Single">に位置し</com:U>、前記歯車<com:U com:uStyle="Single">モータ</com:U>103、伸縮<com:U com:uStyle="Single">モータ</com:U>125、動力<com:U com:uStyle="Single">モータ</com:U>112、回転<com:U com:uStyle="Single">モータ</com:U>122、<com:U com:uStyle="Single">モータ</com:U>130とかさ歯車<com:U com:uStyle="Single">モータ</com:U>132が停止状態にあり、前記接続ブロック114が前記滑り通し<com:U com:uStyle="Single">チャンバ</com:U>113の中心<com:U com:uStyle="Single">に位置し</com:U>、前記合板136と底板140でジュエリーを締めつける。
+</com:P>
+                        <com:P com:pNumber="0025">
+設備が運行する時、前記<com:U com:uStyle="Single">モータ</com:U>130が前記合板136を回転駆動し、前記合板136によって前記合板136と底板140の間にあるジュエリーが高速回転され、前記動力<com:U com:uStyle="Single">モータ</com:U>112が前記接続ブロック114を動かして左右に移動させ、前記回転<com:U com:uStyle="Single">モータ</com:U>122が前記回転ブロック121を回転駆動し、前記回転ブロック121が前記回転ボール117を回転ポイントに、前記スイングロッド120、回転ボール117と伸び出しレバー118に協同して、前記摩擦ブロック119を回転駆動し、前記歯車<com:U com:uStyle="Single">モータ</com:U>103が前記メインギアを回転駆動してから、前記動力箱107を上下に移動させ、前記摩擦ブロック119を任意の位置に移動させて、多角度でジュエリーを研磨してバフ磨きする。
+</com:P>
+                        <com:P com:pNumber="0026">
+ジュエリー加工が完了する時、前記かさ歯車<com:U com:uStyle="Single">モータ</com:U>132が前記駆動かさ歯車133を回転駆動し、前記駆動かさ歯車133が回転してから前記従動歯車135を回転させ、前記従動歯車135が回転してから、前記動力軸138と協同して回転し、前記滑りブロック141が前記動力軸138の<com:U com:uStyle="Single">外表面</com:U>を下に移動し、前記開口ブロック143が下へ滑り、前記合板136と底板140の取り付けからジュエリーを切り離させる。
+</com:P>
+                        <com:P com:pNumber="0027">
+以上に述べたのはただ本発明の具体的な実施方式で、しかし本発明の保護範囲はここに限らないである。全部の創造的な労働を通じなく思いついた変化と取替は本発明の保護範囲にカバーされる。だから本発明の保護範囲は権利要求書が限定される保護範囲を標準とする。
+</com:P>
+                     </pat:EmbodimentDescription>
+                  </jppat:Description>
+               </jppat:AmendmentContentsBag>
+            </jppat:AmendmentBag>
+         </jppat:AmendmentsBag>
+      </jppat:WrittenAmendment>
+   </jppat:WrittenAmendmentBag>
+</jppat:UnexaminedPatentPublication>

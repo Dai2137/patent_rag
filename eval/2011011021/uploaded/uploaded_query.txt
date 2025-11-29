@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding='utf-8'?>
+<!-- <?xml-stylesheet type="text/xsl" href="../../../../../XSL/gat-a.xsl"?> -->
+<!DOCTYPE jp-official-gazette PUBLIC "-//JPO//DTD PUBLISHED PATENT/UTILITY MODEL APPLICATION 1.0//EN" "../../../../../DTD/gat-a.dtd">
+<jp-official-gazette kind-of-jp="A" kind-of-st16="A" lang="ja" dtd-version="1.0" country="JP" xmlns:jp="http://www.jpo.go.jp"><bibliographic-data lang="ja" country="JP">
+    <publication-reference>
+      <document-id>
+        <country>JP</country>
+        <doc-number>2011011021</doc-number>
+        <kind>公開特許公報(A)</kind>
+        <date>20110120</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <doc-number>2009173675</doc-number>
+        <date>20090701</date>
+      </document-id>
+    </application-reference>
+    <invention-title>風邪、インフルエンザの細菌を体内進入阻止の方法。飛散阻止の方法。</invention-title>
+    <parties>
+      <jp:applicants-agents-article>
+        <jp:applicants-agents sequence="1">
+          <applicant sequence="1">
+            <addressbook lang="ja">
+              <name>足立  一良</name>
+              <registered-number>507136534</registered-number>
+              <address>
+                <text>兵庫県丹波市氷上町上成松１８９</text>
+              </address>
+            </addressbook>
+          </applicant>
+        </jp:applicants-agents>
+      </jp:applicants-agents-article>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook>
+            <name>足立  一良</name>
+            <address>
+              <text>兵庫県丹波市氷上町上成松１８９</text>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <classification-ipc><edition/><main-clsf>A62B  23/02        20060101AFI20101217BHJP        </main-clsf></classification-ipc>
+    <classification-national><country>JP</country><main-clsf>A62B23/02</main-clsf></classification-national>
+    <number-of-claims jp:adopted-law="claim">4</number-of-claims>
+    <figure-to-publish>
+      <fig-number>1</fig-number>
+    </figure-to-publish>
+    <jp:request-for-examination true-or-false="false"/>
+    <jp:filing-form>書面</jp:filing-form>
+    <jp:total-pages>3</jp:total-pages>
+    <jp:theme-code-info>
+      <jp:theme-code>2E185</jp:theme-code>
+    </jp:theme-code-info>
+    <jp:f-term-info>
+      <jp:f-term>2E185AA07</jp:f-term>
+      <jp:f-term>2E185AA09</jp:f-term>
+      <jp:f-term>2E185BA02</jp:f-term>
+      <jp:f-term>2E185BA13</jp:f-term>
+      <jp:f-term>2E185BA19</jp:f-term>
+      <jp:f-term>2E185CA03</jp:f-term>
+      <jp:f-term>2E185CA09</jp:f-term>
+      <jp:f-term>2E185CB07</jp:f-term>
+      <jp:f-term>2E185CB09</jp:f-term>
+      <jp:f-term>2E185CB13</jp:f-term>
+      <jp:f-term>2E185CB18</jp:f-term>
+      <jp:f-term>2E185CC22</jp:f-term>
+    </jp:f-term-info>
+  </bibliographic-data><jp:image-of-bibliographic-data><img id="000001" he="140" wi="160" file="2011011021.tif" img-format="tif" img-content="drawing"/></jp:image-of-bibliographic-data><jp:image-of-chosen-drawing>
+    <img id="000002" he="42" wi="69" file="2011011021.tif" img-format="tif" img-content="drawing"/>
+  </jp:image-of-chosen-drawing><jp:abstract-correction/><description>
+        
+        <technical-field>
+            <p num="0001">風邪（インフルエンザ）の細菌を簡易な方法で除去装置。</p>
+        </technical-field>
+        <background-art>
+            <p num="0002"><patcit num="1"><text>鼻毛は進入するゴミ、細菌を捕獲、涙腺が分泌する塩水で細菌を消毒する。</text></patcit><patcit num="2"><text>呼吸時、扇風機で塩水を含んだ繊維を通り洗浄した空気を肺活量の２倍以上量マスクの中え（呼吸時マスクの中え外気阻止の為）。</text></patcit><nplcit num="1"><text/></nplcit><nplcit num="2"><text/></nplcit></p>
+        </background-art>
+        <disclosure>
+            <tech-problem>
+                <p num="">風邪、インフルエンザの細菌を飛散、吸入万延阻止の装置。</p>
+            </tech-problem>
+            <tech-solution>
+                <p num="">簡単な装置で、風邪、インフルエンザ感染阻止の方法。</p>
+            </tech-solution>
+            <advantageous-effects>
+                <p num="">携帯用の装置で通院、買い物の移動も安心。</p>
+            </advantageous-effects>
+        </disclosure>
+        <best-mode>
+            <p num="">携帯用と病院用移動も出来る装置（家庭療養用も）</p>
+        </best-mode>
+        <mode-for-invention>
+            <p num=""/>
+        </mode-for-invention>
+        <industrial-applicability>
+            <p num="">簡易な塵埃除去にも活用可。</p>
+        </industrial-applicability>
+        <description-of-drawings>
+            <p num=""><figref num="1">携帯用  器具は簡単にネジ４本で分解、清掃出来る、繊維も取り替え出来る、電源は単３、４本又バッテリイで約８時間稼動用モーター使用、患者との接触時も使用。器具は肩掛けか、腰バンドに着用、鼻孔に酸素吸入用の様に両ミミより着用、マスク内に肺活量の２倍以上の空気送る、繊維には歩行で常に水面がゆれ又毛管現象で塩水潤う、</figref><figref num="2">家庭用、病院療養型、外来患者用。器具は簡単にネジ４本で分解、清掃できる、繊維も取替できる。電源はバッテリイか単１、４本モーターは携帯用の２倍の能力使用。療養型なのでノズルで常に塩水噴霧（円周に）咳とクシャミの時は鼻と口にマスクを密着する。</figref></p>
+        </description-of-drawings>
+    </description><claims>
+        <claim num="1">
+            <claim-text>風邪（インフルエンザ）は万病の元。<br/>
+鼻呼吸の方も口呼吸の方は特に、クシャミ、咳に直面時、数秒呼吸を止めるこたで、風邪（インフルエンザ）の細菌は通り過ぎ、予防する一つの方法が在りますが。<br/>
+（特に鼻毛は細菌の進入を食い止める）<br/>
+口呼吸の方は通院、雑踏の中での予防には限界がある。<br/>
+風邪感染予防は、簡単な方法で、装置で可能です。<br/>
+塩水を含んだ繊維で洗浄した肺活量の２倍以上の空気をマスクの中へ送る、マスクの息苦しさも解消、インフルエンザ、風邪予防になる。<br/>
+又、インフルエンザ、風邪に罹った人は、クシャミ咳を塩水に通す事により、細菌を四方へ飛散しにくくする装置<br/>
+家庭で家族に安心して療養、加えて通院も安心。<br/>
+又妊婦、腎臓疾患、肺気腫の方にも安心器具。</claim-text>
+        </claim>
+        <claim num="2">
+            <claim-text/>
+        </claim>
+        <claim num="1">
+            <claim-text>小型扇風機で繊維に含んだ塩水を通した空気を呼吸する装置。</claim-text>
+        </claim>
+        <claim num="2">
+            <claim-text>インフルエンザ、風邪の細菌を、塩水を含んだ繊維を通して放出する装置。</claim-text>
+        </claim>
+    </claims><abstract>
+  <p num="">【課題】簡易で安価な装置でインフルエンザ（風邪）の感染予防に対応する方法、<br/>【解決手段】風が水分を含んだ繊維の中を通ると水はマイナスイオンを作る事を利用し、インフルエンザ（風邪）の細菌は塩水を含んだ繊維の中を通して「水の表面張力とマイナスイオン」の相乗効果で細菌は全て塩水を含んだ繊維に吸い寄せる装置。着装はマスクの鼻側から、酸素吸入様式に習う、肺活量の２倍以上の風力を送る。また、インフルエンザ（風邪）を患ったひとは、クシャミ、咳の細菌を塩水を含んだ繊維を通す事によりマイナスイオンの作用を活用して繊維に細菌を全て付着させる。病院診察時、家庭療養中、他の患者、家族へ感染させない。患者が菌を他の方へ感染させない器具。口の付近にフイゴの弁を附ける。<br/>【選択図】図１</p>
+</abstract><drawings>
+        <figure num="1">
+            <img id="000003" he="51" wi="83" file="2011011021.tif" img-format="tif" img-content="drawing"/>
+        </figure>
+        <figure num="2">
+            <img id="000004" he="65" wi="85" file="2011011021.tif" img-format="tif" img-content="drawing"/>
+        </figure>
+    </drawings></jp-official-gazette>

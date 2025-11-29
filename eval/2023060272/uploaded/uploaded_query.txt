@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="../../../../../XSL/JPUnexaminedPatentPublication.xsl"?> -->
+<jppat:UnexaminedPatentPublication xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                   xmlns:jppat="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPPatent"
+                                   xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent"
+                                   xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common"
+                                   xmlns:jpcom="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPCommon"
+                                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                   xsi:schemaLocation="http://www.jpo.go.jp/standards/XMLSchema/ST96/JPPatent ../../../../../XSD/JPUnexaminedPatentPublication_V1_0.xsd"
+                                   com:languageCode="ja"
+                                   com:st96Version="V3_1"
+                                   com:ipoVersion="JP_V1_0">
+   <com:IPOfficeCode>JP</com:IPOfficeCode>
+   <jppat:UnexaminedPatentPublicationBibliographicData com:languageCode="ja">
+      <com:IPOfficeCode>JP</com:IPOfficeCode>
+      <jppat:PatentPublicationIdentification>
+         <com:IPOfficeCode>JP</com:IPOfficeCode>
+         <pat:PublicationNumber>2023060272</pat:PublicationNumber>
+         <com:PublicationDate>2023-04-27</com:PublicationDate>
+      </jppat:PatentPublicationIdentification>
+      <pat:PlainLanguageDesignationText>公開特許公報(A)</pat:PlainLanguageDesignationText>
+      <jppat:ApplicationIdentification>
+         <com:ApplicationNumber>
+            <com:ApplicationNumberText>2023035395</com:ApplicationNumberText>
+         </com:ApplicationNumber>
+         <pat:FilingDate>2023-03-08</pat:FilingDate>
+      </jppat:ApplicationIdentification>
+      <pat:InventionTitle>光学系およびそれを有する撮像装置</pat:InventionTitle>
+      <jppat:UnexaminedPatentPublicationPartyBag>
+         <jppat:ApplicantsRegisteredPractitionersBag>
+            <jppat:ApplicantRegisteredPractitionerBag com:sequenceNumber="1">
+               <jppat:Applicant com:sequenceNumber="1">
+                  <com:PartyIdentifier>000001007</com:PartyIdentifier>
+                  <jpcom:Contact>
+                     <com:Name>
+                        <com:EntityName>キヤノン株式会社</com:EntityName>
+                     </com:Name>
+                     <com:PostalAddressBag>
+                        <com:PostalAddress>
+                           <com:PostalAddressText>東京都大田区下丸子３丁目３０番２号</com:PostalAddressText>
+                        </com:PostalAddress>
+                     </com:PostalAddressBag>
+                  </jpcom:Contact>
+               </jppat:Applicant>
+               <jppat:RegisteredPractitioner com:sequenceNumber="1">
+                  <jppat:AgentCategory>Representative</jppat:AgentCategory>
+                  <pat:RegisteredPractitionerRegistrationNumber>100110412</pat:RegisteredPractitionerRegistrationNumber>
+                  <jppat:RegisteredPractitionerCategory>Attorney</jppat:RegisteredPractitionerCategory>
+                  <jpcom:Contact>
+                     <com:Name>
+                        <com:EntityName>藤元  亮輔</com:EntityName>
+                     </com:Name>
+                  </jpcom:Contact>
+               </jppat:RegisteredPractitioner>
+               <jppat:RegisteredPractitioner com:sequenceNumber="2">
+                  <jppat:AgentCategory>Representative</jppat:AgentCategory>
+                  <pat:RegisteredPractitionerRegistrationNumber>100104628</pat:RegisteredPractitionerRegistrationNumber>
+                  <jppat:RegisteredPractitionerCategory>Attorney</jppat:RegisteredPractitionerCategory>
+                  <jpcom:Contact>
+                     <com:Name>
+                        <com:EntityName>水本  敦也</com:EntityName>
+                     </com:Name>
+                  </jpcom:Contact>
+               </jppat:RegisteredPractitioner>
+               <jppat:RegisteredPractitioner com:sequenceNumber="3">
+                  <jppat:AgentCategory>Representative</jppat:AgentCategory>
+                  <pat:RegisteredPractitionerRegistrationNumber>100121614</pat:RegisteredPractitionerRegistrationNumber>
+                  <jppat:RegisteredPractitionerCategory>Attorney</jppat:RegisteredPractitionerCategory>
+                  <jpcom:Contact>
+                     <com:Name>
+                        <com:EntityName>平山  倫也</com:EntityName>
+                     </com:Name>
+                  </jpcom:Contact>
+               </jppat:RegisteredPractitioner>
+            </jppat:ApplicantRegisteredPractitionerBag>
+         </jppat:ApplicantsRegisteredPractitionersBag>
+         <jppat:InventorBag>
+            <jppat:Inventor com:sequenceNumber="1">
+               <jpcom:Contact>
+                  <com:Name>
+                     <com:EntityName>井野  友裕</com:EntityName>
+                  </com:Name>
+                  <com:PostalAddressBag>
+                     <com:PostalAddress>
+                        <com:PostalAddressText>東京都大田区下丸子３丁目３０番２号  キヤノン株式会社内</com:PostalAddressText>
+                     </com:PostalAddress>
+                  </com:PostalAddressBag>
+               </jpcom:Contact>
+            </jppat:Inventor>
+            <jppat:Inventor com:sequenceNumber="2">
+               <jpcom:Contact>
+                  <com:Name>
+                     <com:EntityName>横谷  真樹</com:EntityName>
+                  </com:Name>
+                  <com:PostalAddressBag>
+                     <com:PostalAddress>
+                        <com:PostalAddressText>東京都大田区下丸子３丁目３０番２号  キヤノン株式会社内</com:PostalAddressText>
+                     </com:PostalAddress>
+                  </com:PostalAddressBag>
+               </jpcom:Contact>
+            </jppat:Inventor>
+         </jppat:InventorBag>
+      </jppat:UnexaminedPatentPublicationPartyBag>
+      <jppat:IPCClassification>
+         <com:Edition/>
+         <pat:MainClassification>G02B  13/02        20060101AFI20230420BHJP        </pat:MainClassification>
+         <jppat:AdditionalClassificationInformation>G02B  13/18        20060101ALN20230420BHJP        </jppat:AdditionalClassificationInformation>
+      </jppat:IPCClassification>
+      <jppat:NationalClassification>
+         <com:IPOfficeCode>JP</com:IPOfficeCode>
+         <jppat:MainNationalClassification>
+            <pat:PatentClassificationText>G02B13/02</pat:PatentClassificationText>
+         </jppat:MainNationalClassification>
+         <jppat:AdditionalNationalInformation>
+            <jppat:AdditionalNationalInformationText>G02B13/18</jppat:AdditionalNationalInformationText>
+         </jppat:AdditionalNationalInformation>
+      </jppat:NationalClassification>
+      <jppat:ClaimTotalQuantitySet>
+         <pat:ClaimTotalQuantity>9</pat:ClaimTotalQuantity>
+         <jppat:AdoptedLawCategory>Claim</jppat:AdoptedLawCategory>
+      </jppat:ClaimTotalQuantitySet>
+      <jppat:PublishFigure>
+         <pat:FigureNumber>1</pat:FigureNumber>
+      </jppat:PublishFigure>
+      <jppat:RelatedDocumentBag>
+         <jppat:Division>
+            <jppat:ParentDocument>
+               <jppat:PatentDocumentIdentification>
+                  <jppat:ApplicationIdentification>
+                     <com:ApplicationNumber>
+                        <com:ApplicationNumberText>2019093546</com:ApplicationNumberText>
+                     </com:ApplicationNumber>
+                     <pat:FilingDate>2019-05-17</pat:FilingDate>
+                  </jppat:ApplicationIdentification>
+               </jppat:PatentDocumentIdentification>
+            </jppat:ParentDocument>
+         </jppat:Division>
+      </jppat:RelatedDocumentBag>
+      <jppat:RequestExaminationIndicator>true</jppat:RequestExaminationIndicator>
+      <jppat:FilingForm>ＯＬ</jppat:FilingForm>
+   </jppat:UnexaminedPatentPublicationBibliographicData>
+   <jppat:ChosenDrawingImage>
+      <com:Image com:imageContentCategory="Drawing">
+         <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+         <com:FileName>2023060272000001.jpg</com:FileName>
+         <com:HeightMeasure com:measureUnitCode="Mm">53</com:HeightMeasure>
+         <com:WidthMeasure com:measureUnitCode="Mm">159</com:WidthMeasure>
+      </com:Image>
+   </jppat:ChosenDrawingImage>
+   <jppat:Description>
+      <pat:TechnicalField>
+         <com:P com:pNumber="0001">
+  本発明は、光学系に関し、デジタルビデオカメラ、デジタルスチルカメラ、放送用カメラ、銀塩フィルム用カメラ、監視用カメラ等に好適なものである。
+</com:P>
+      </pat:TechnicalField>
+      <pat:BackgroundArt>
+         <com:P com:pNumber="0002">
+  従来、光学系におけるフォーカシングは、光学系全体を移動、または光学系の一部のレンズを移動させることで行われる。光学系が長焦点距離の望遠レンズでは、レンズが大型化し、高重量となるため、光学系全体を移動させてフォーカシングを行うことは困難である。このため、望遠レンズでは、高重量の前方レンズ群以外の比較的小型で軽量のレンズ群を移動させてフォーカシングを行う、所謂インナーフォーカス方式が採用されている。インナーフォーカス方式の望遠レンズは、物体側より像側へ順に配置された、正の屈折率の第１レンズ群、正または負の屈折率の第２レンズ群、正または負の屈折率の第３レンズ群の３つのレンズ群を有し、第２レンズ群でフォーカシングを行う。
+</com:P>
+         <com:P com:pNumber="0003">
+  また、従来、振動による画像のぶれを補正するためにレンズの一部または全部を光軸垂直方向へ駆動する光学系が提案されている。光学系が長焦点距離の望遠レンズでは、レンズが大型化し、高重量となるため、比較的小型で軽量な後方レンズ群の全部または一部を光軸垂直方向へ駆動して防振を行う方式が採用されている。
+</com:P>
+         <com:P com:pNumber="0004">
+  特許文献１には、物体側より像側へ順に配置された、正の屈折力の第１レンズ群、正の屈折力の第２レンズ群、負の屈折力の第３レンズ群を有し、第３レンズ群の中群で防振補正を行う望遠レンズが開示されている。
+</com:P>
+         <com:P com:pNumber="0005">
+  また、特許文献２には、物体側より像側へ順に配置された、正の屈折力の第１レンズ群、負の屈折力の第２レンズ群、正の屈折力の第３レンズ群を有し、第３レンズ群の中群で防振補正を行う望遠レンズが開示されている。
+</com:P>
+      </pat:BackgroundArt>
+      <com:CitationBag>
+         <com:PatentCitationBag>
+            <com:P com:pNumber="0006">
+               <com:PatentCitation com:sequenceNumber="1">
+                  <com:PatentCitationText>特開２０１２－２４２５０４号公報</com:PatentCitationText>
+               </com:PatentCitation>
+               <com:PatentCitation com:sequenceNumber="2">
+                  <com:PatentCitationText>特開２０１４－２１１４９６号公報</com:PatentCitationText>
+               </com:PatentCitation>
+            </com:P>
+         </com:PatentCitationBag>
+      </com:CitationBag>
+      <pat:InventionSummary>
+         <pat:TechnicalProblem>
+            <com:P com:pNumber="0007">
+  インナーフォーカス方式の光学系では、小型軽量のレンズ群を移動させることで高速なフォーカシングを可能とするが、フォーカスレンズ群の移動に伴いフォーカスレンズ群を通過する光線の高さが大きく変化するため光学性能が変化しやすい。特に、物体側より像側へ順に配置された正の屈折率の第１レンズ群、負の屈折率の第２レンズ群を有し、第２レンズ群でフォーカシングを行う望遠レンズでは、第１レンズ群で大きく発生する、球面収差やコマ収差等の収差を第２レンズ群の収差で打ち消す構成となっている。そのため、第２レンズ群では大きな収差を発生させる必要があり、フォーカシングによる光学性能の悪化が大きくなる。また、偏芯による光学性能の変化も大きくなるため、製造時に高い光学性能を達成することが困難である。
+</com:P>
+            <com:P com:pNumber="0008">
+  また、高重量となる望遠レンズを軽量化し、光学系のレンズ全長を短縮しつつ、防振性能を適切にするために各レンズの屈折力配置を適切に行う必要がある。
+</com:P>
+            <com:P com:pNumber="0009">
+  特許文献１，２では、光学系の軽量化のため少ないレンズ枚数で、フォーカスによる光学性能の悪化を低減しつつ、レンズ全長を短縮する方法については開示していない。
+</com:P>
+            <com:P com:pNumber="0010">
+  本発明は、小型かつ軽量で、フォーカシングによる光学性能の変化を低減可能な光学系およびそれを有する撮像装置を提供することを目的とする。
+</com:P>
+         </pat:TechnicalProblem>
+         <pat:TechnicalSolution>
+            <com:P com:pNumber="0011">
+  本発明の一側面としての光学系は、物体側より像側へ順に配置された、正の屈折力の第１レンズ群、正の屈折力の第２レンズ群、負の屈折力の第３レンズ群からなり、フォーカシングに際して隣り合うレンズ群の間隔が変化する光学系であって、第３レンズ群は、複数の負レンズを有し、フォーカシングに際して第２レンズ群が移動し、無限遠合焦時の光学系の焦点距離をｆ、第３レンズ群の焦点距離をｆ３とするとき、<com:Br/>
+    －０．３２＜ｆ３／ｆ＜－０．０５<com:Br/>
+なる条件式を満足することを特徴とする。
+</com:P>
+         </pat:TechnicalSolution>
+         <pat:AdvantageousEffects>
+            <com:P com:pNumber="0012">
+  本発明によれば、小型かつ軽量で、フォーカシングによる光学性能の変化を低減可能な光学系およびそれを有する撮像装置を提供することができる。
+</com:P>
+         </pat:AdvantageousEffects>
+      </pat:InventionSummary>
+      <pat:DrawingDescription>
+         <com:P com:pNumber="0013">
+            <com:FigureReference com:referencedFigureNumber="1">実施例１の無限遠合焦時のレンズ断面図である。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="2">（Ａ）、（Ｂ）実施例１の無限遠合焦時の収差図、物体距離４．５ｍ合焦時の収差図である。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="3">実施例２の無限遠合焦時のレンズ断面図である。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="4">（Ａ）、（Ｂ）実施例２の無限遠合焦時の収差図、物体距離６ｍ合焦時の収差図である。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="5">実施例３の無限遠合焦時のレンズ断面図である。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="6">（Ａ）、（Ｂ）実施例３の無限遠合焦時の収差図、物体距離４．５ｍ合焦時の収差図である。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="7">実施例４の無限遠合焦時のレンズ断面図である。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="8">（Ａ）、（Ｂ）実施例４の無限遠合焦時の収差図、物体距離４．５ｍ合焦時の収差図である。</com:FigureReference>
+            <com:FigureReference com:referencedFigureNumber="9">本発明の撮像装置の要部概略図である。</com:FigureReference>
+         </com:P>
+      </pat:DrawingDescription>
+      <pat:EmbodimentDescription>
+         <com:P com:pNumber="0014">
+  以下、本発明の実施例について、図面を参照しながら詳細に説明する。各図において、同一の部材については同一の参照番号を付し、重複する説明は省略する。
+</com:P>
+         <com:P com:pNumber="0015">
+  図１は、実施例１の無限遠合焦時のレンズ断面図である。図２（Ａ）、（Ｂ）はそれぞれ、実施例１の無限遠物体合焦時の収差図、物体距離４．５ｍ合焦時の収差図である。実施例１の光学系は、焦点距離５８２ｍｍ、Ｆナンバー１１．３の光学系である。
+</com:P>
+         <com:P com:pNumber="0016">
+  図３は、実施例２の無限遠合焦時のレンズ断面図である。図４（Ａ）、（Ｂ）はそれぞれ、実施例２の無限遠合焦時の収差図、物体距離６ｍ合焦時の収差図である。実施例２の光学系は、焦点距離７７６ｍｍ、Ｆナンバー１１．３の光学系である。
+</com:P>
+         <com:P com:pNumber="0017">
+  図５は、実施例３の無限遠合焦時のレンズ断面図である。図６（Ａ）、（Ｂ）はそれぞれ、実施例３の無限遠合焦時の収差図、物体距離４．５ｍ合焦時の収差図である。実施例３の光学系は、焦点距離５８２ｍｍ、Ｆナンバー１１．３の光学系である。
+</com:P>
+         <com:P com:pNumber="0018">
+  図７は、実施例４の無限遠合焦時のレンズ断面図である。図８（Ａ）、（Ｂ）はそれぞれ、実施例４の無限遠合焦時の収差図、物体距離４．５ｍ合焦時の収差図である。実施例４の光学系は、焦点距離５８２ｍｍ、Ｆナンバー８．２の光学系である。
+</com:P>
+         <com:P com:pNumber="0019">
+  各実施例の光学系は、デジタルビデオカメラ、デジタルスチルカメラ、放送用カメラ、銀塩フィルム用カメラ、監視用カメラ等の撮像装置に用いられる光学系である。なお、各数値実施例の光学系は、投射装置（プロジェクタ）用の投射光学系として用いることもできる。
+</com:P>
+         <com:P com:pNumber="0020">
+  各レンズ断面図において、左方が物体側（前方）で、右方が像側（後方）である。各実施例の光学系は複数のレンズ群を有して構成されている。本願明細書においてレンズ群とは、フォーカシングに際して一体的に移動または静止するレンズのまとまりである。すなわち、各実施例の光学系では、無限遠から近距離へのフォーカシングに際して隣接するレンズ群同士の間隔が変化する。なお、レンズ群は１枚のレンズから構成されていても良いし、複数のレンズから成っていても良い。また、レンズ群は開口絞りを含んでいても良い。
+</com:P>
+         <com:P com:pNumber="0021">
+  各レンズ断面図において、ｉを物体側からのレンズ群の順番とすると、Ｌｉは第ｉレンズ群を示す。ＳＰは開口絞りである。ＩＰは像面であり、各実施例の光学系をデジタルスチルカメラやデジタルビデオカメラの光学系として使用する際にはＣＣＤセンサやＣＭＯＳセンサ等の固体撮像素子（光電変換素子）の撮像面が配置される。各実施例の光学系を銀塩フィルム用カメラの光学系として使用する際には像面ＩＰにはフィルム面に相当する感光面が置かれる。像面ＩＰの物体側には、光学フィルター、フェースプレート、ローパスフィルター、赤外カットフィルターなどに相当する光学ブロックを配置することもできる。
+</com:P>
+         <com:P com:pNumber="0022">
+  球面収差図において、ＦｎｏはＦナンバーであり、ｄ線（波長５８７．６ｎｍ）、ｇ線（波長４３５．８ｎｍ）に対する球面収差量を示している。非点収差図において、Ｓはｄ線に対するサジタル像面における非点収差量、Ｍはｄ線に対するメリディオナル像面における非点収差量を示している。歪曲収差図において、ｄ線に対する歪曲収差量を示している。色収差図では、ｇ線における色収差量を示している。ωは、半画角である。
+</com:P>
+         <com:P com:pNumber="0023">
+  本発明の光学系は、物体側より像側へ順に配置された、正屈折力の第１レンズ群Ｌ１、正屈折力の第２レンズ群Ｌ２、負屈折力の第３レンズ群Ｌ３を備える。第２レンズ群Ｌ２と第３レンズ群Ｌ３との間には、絞りＳＰが設けられている。第２レンズ群Ｌ２を物体側へ移動させることで、無限遠物体から近距離物体へのフォーカシングが行われる。
+</com:P>
+         <com:P com:pNumber="0024">
+  本発明の光学系では、正屈折力の第１レンズ群Ｌ１と正屈折力の第２レンズ群Ｌ２の合成屈折力が正屈折力の前群と、負屈折力の第３レンズ群を後群としたテレフォトタイプの屈折力配置とし、レンズ全長（光学全長）を短縮している。
+</com:P>
+         <com:P com:pNumber="0025">
+  また、近軸軸上光線が高く、球面収差、コマ収差、軸上色収差等が大きく発生する第１レンズ群Ｌ１の屈折力を、正屈折力の第２レンズ群Ｌ２に分担させることで、特に高次の収差の発生を低減することが可能となる。
+</com:P>
+         <com:P com:pNumber="0026">
+  また、偏芯時の光学性能の変化を小さくすることができ、製造容易性を向上させることが可能となる。
+</com:P>
+         <com:P com:pNumber="0027">
+  また、第２レンズ群が負屈折力の屈折力配置に比べて、第１レンズ群Ｌ１の屈折力が小さくなるため、フォーカスレンズ群である第２レンズ群Ｌ２への光線の入射角が緩やかになる。そのため、フォーカシング時の第２レンズ群Ｌ２を通過する光線の高さの変動が小さくなるため、フォーカシングによる光学性能の変化を小さくすることが可能となる。
+</com:P>
+         <com:P com:pNumber="0028">
+  また、本発明の光学系では、第１レンズ群Ｌ１の最も像側のレンズを負レンズで構成している。フォーカスレンズ群の物体側に負屈折力のレンズを配置することで、フォーカスレンズ群への光線の入射角をさらに緩やかにし、フォーカシングによる光学性能の変化を低減することが可能となる。
+</com:P>
+         <com:P com:pNumber="0029">
+  また、第１レンズ群Ｌ１内の屈折力配置をテレフォトタイプの配置とすることができ、レンズを小型化することが可能となる。
+</com:P>
+         <com:P com:pNumber="0030">
+  また、本発明の光学系は、無限合焦時の光学系の焦点距離をｆ、第３レンズ群Ｌ３の焦点距離をｆ３とするとき、以下の条件式（１）を満足する。
+</com:P>
+         <com:P com:pNumber="0031">
+    －０．３２＜ｆ３／ｆ＜－０．０５             （１）<com:Br/>
+  条件式（１）は、レンズ全長を短縮しつつ、光学性能を良好に保つための条件式である。条件式（１）の上限値を超えて第３レンズ群Ｌ３の屈折力が大きくなりすぎると、絞りＳＰに対して非対称なテレフォトタイプの屈折力配置が強くなりすぎるため、像面湾曲、歪曲といった軸外収差が悪化してしまう。逆に、条件式（１）の下限値を下回って第３レンズ群Ｌ３の屈折力が小さくなると、テレフォトタイプの屈折力配置が弱まり、レンズ全長が長くなってしまう。
+</com:P>
+         <com:P com:pNumber="0032">
+  また、各数値実施例において、第３レンズ群Ｌ３は物体側より像側へ順に配置された、負屈折力の第１部分群３Ａ、負屈折力の第２部分群３Ｂ、正屈折力の第３部分群３Ｃからなる。防振（像ぶれ補正）に際して、第２部分群３Ｂが光軸に垂直な方向の成分を含む方向に移動する。
+</com:P>
+         <com:P com:pNumber="0033">
+  第１部分群３Ａを負屈折力とすることで、第３レンズ群Ｌ３の前側主点が物体側になり、レンズ全長を短縮することが可能となる。
+</com:P>
+         <com:P com:pNumber="0034">
+  また、本発明の光学系は、第１部分群３Ａと第２部分群３Ｂとの光軸上の空気間隔をＤ３Ａとするとき、以下の条件式（２）を満足することが好ましい。
+</com:P>
+         <com:P com:pNumber="0035">
+    ０．０１＜Ｄ３Ａ／ｆ＜０．０５               （２）<com:Br/>
+  条件式（２）は、レンズ全長を短縮しつつ、防振敏感度を適切に保つための条件式である。条件式（２）の上限値を超えて第１部分群３Ａと第２部分群３Ｂとの光軸上の空気間隔Ｄ３Ａが長くなりすぎてしまうと、レンズ全長が長くなってしまう。また、第３部分群３Ｃと像面の距離が近くなることで、第３部分群３Ｃの横倍率が小さくなってしまい、防振敏感度が低くなってしまう。また、第２部分群３Ｂが後方に配置されることで周辺光束を取り込むためにレンズ径が大きくなりすぎてしまい、結果として重量が重くなり、防振時に駆動が困難となる。逆に、条件式（２）の下限値を下回って第１レンズ群３Ａと第２部分群３Ｂとの光軸上の空気間隔Ｄ３Ａが短くなると、第３レンズ群Ｌ３と像面の距離が遠くなることで、第３部分群３Ｃの横倍率が大きくなりすぎてしまう。結果として、防振敏感度が高すぎてしまい、撮影時のシャッターショック等の微小な振動で第２部分群３Ｂが微小に動き、像ブレを引き起こしてしまう。
+</com:P>
+         <com:P com:pNumber="0036">
+  また、本発明の光学系は、第２部分群３Ｂの焦点距離をｆ３Ｂとするとき、以下の条件式（３）を満足することが好ましい。
+</com:P>
+         <com:P com:pNumber="0037">
+    －０．３０＜ｆ３Ｂ／ｆ＜－０．０５                  （３）<com:Br/>
+  条件式（３）は、防振敏感度を適切に設定しつつ、レンズ全長を短縮するための条件式である。条件式（３）の上限値を超えて第２部分群３Ｂの屈折力が弱くなりすぎると、防振時にレンズを光軸方向へ大きく動かさなければならなくなる。したがって、レンズの駆動機構が大型化してしまい、結果として光学系が大型化してしまう。逆に、条件式（３）の下限値を下回って第２部分群３Ｂの屈折力が強くなりすぎると、第３レンズ群Ｌ３内で諸収差が補正しきれなくなってしまい、特に非点収差が悪化してしまう。
+</com:P>
+         <com:P com:pNumber="0038">
+  また、本発明の光学系は、無限遠合焦時の光学系のレンズ全長をＬとしたとき、以下の条件式（４）を満足することが好ましい。
+</com:P>
+         <com:P com:pNumber="0039">
+    ０．４０＜Ｌ／ｆ＜０．７０                          （４）<com:Br/>
+  条件式（４）は、レンズ全長を短縮しつつ、光学性能を良好に保つための条件式である。条件式（４）の上限値を超えると、レンズ全長が長くなりすぎて、光学系が大型化してしまう。逆に、条件式（４）の下限値を下回ってレンズ全長が小さくなりすぎると、第１レンズ群Ｌ１で発生する球面収差、コマ収差、軸上色収差、倍率色収差が大きくなりすぎ、各収差を十分に補正することができないため、高い光学性能を達成することが困難となる。高い光学性能を達成するには、第１レンズ群Ｌ１のレンズ枚数を増加する必要があるため、軽量化することができない。
+</com:P>
+         <com:P com:pNumber="0040">
+  また、本発明の光学系は、第１部分群３Ａの焦点距離をｆ３Ａとしたとき、以下の条件式（５）を満足することが好ましい。
+</com:P>
+         <com:P com:pNumber="0041">
+    －１．２０＜ｆ３Ａ／ｆ＜－０．２０                  （５）<com:Br/>
+  条件式（５）は、レンズ全長を短縮しつつ、光学像性能を良好に保つための条件式である。条件式（５）の上限値を超えて第１部分群３Ａのパワーが強くなりすぎると、像面湾曲が悪化してしまい、光学性能が悪化してしまう。逆に、条件式（５）の下限値を下回って第１部分群３Ａのパワーが弱くなりすぎると、第３レンズ群Ｌ３のパワーが弱くなりすぎてしまう。結果としてテレフォトタイプの効果が弱くなってしまい、レンズ全長の短縮が困難となる。
+</com:P>
+         <com:P com:pNumber="0042">
+  また、本発明の光学系は、第２部分群３Ｂの横倍率をβ３Ｂ、第３部分群３Ｃの横倍率をβ３Ｃとしたとき、以下の条件式（６）を満足することが好ましい。
+</com:P>
+         <com:P com:pNumber="0043">
+    －４．００＜（１－β３Ｂ）×β３Ｃ＜－２．００      （６）<com:Br/>
+  条件式（６）は、防振群である第２部分群３Ｂの横倍率と、その像側に配置される第３部分群３Ｃの横倍率との組み合わせを適切に設定するための条件式である。条件式（６）の上限値を超えると、防振補正時の第２部分群３Ｂの移動量が増大し、光学系の径が大きくなるため、好ましくない。逆に、条件式（６）の下限値を超えると、防振補正時の収差変動が増大するため、好ましくない。また、条件式（６）の下限値を超えると、防振敏感度が敏感になりすぎて防振群が像ブレ補正以外で動いてしまった場合に像ブレが発生してしまう。
+</com:P>
+         <com:P com:pNumber="0044">
+  また、条件式（１）乃至（６）の数値範囲をそれぞれ、以下の条件式（１ａ）乃至（６ａ）の範囲とすることが好ましい。
+</com:P>
+         <com:P com:pNumber="0045">
+    －０．２６０＜ｆ３／ｆ＜－０．０７５                （１ａ）<com:Br/>
+    ０．０１２５＜Ｄ３Ａ／ｆ＜０．０３７５              （２ａ）<com:Br/>
+    －０．２００＜ｆ３Ｂ／ｆ＜－０．０５５              （３ａ）<com:Br/>
+    ０．４３＜Ｌ／ｆ＜０．６５                          （４ａ）<com:Br/>
+    －１．１５＜ｆ３Ａ／ｆ＜－０．３０                  （５ａ）<com:Br/>
+    －３．５０＜（１－β３Ｂ）×β３Ｃ＜－２．２０      （６ａ）<com:Br/>
+  また、条件式（１）乃至（６）の数値範囲をそれぞれ、以下の条件式（１ｂ）乃至（６ｂ）の範囲とすることがさらに好ましい。
+</com:P>
+         <com:P com:pNumber="0046">
+    －０．２０＜ｆ３／ｆ＜－０．１０                    （１ｂ）<com:Br/>
+    ０．０１５＜Ｄ３Ａ／ｆ＜０．０２５                  （２ｂ）<com:Br/>
+    －０．１５＜ｆ３Ｂ／ｆ＜－０．０５                  （３ｂ）<com:Br/>
+    ０．４６＜Ｌ／ｆ＜０．６０                          （４ｂ）<com:Br/>
+    －１．１０＜ｆ３Ａ／ｆ＜－０．４０                  （５ｂ）<com:Br/>
+    －３．００＜（１－β３Ｂ）×β３Ｃ＜－２．４０      （６ｂ）<com:Br/>
+  実施例１，２，４の光学系では、さらにレンズ枚数を減らすために、光学系中最も近軸軸上光線、瞳近軸光線が高い位置にある最も物体側の正レンズユニットに回折光学素子を配置することで、少ないレンズ枚数でも色収差を大きく改善する構成となっている。回折光学素子は負のアッベ数（νｄ＝－３．４５３）のため、回折面に正の屈折力を与えることで、第１レンズ群Ｌ１で発生する軸上色収差、倍率色収差の補正が可能となる。回折面が正屈折力のため、第１レンズ群Ｌ１の正屈折力を回折面にも分担させることができるため、球面収差、コマ収差の補正を行うことが可能となる。さらに、回折光学素子の周期構造を変化させることによる非球面効果と合わせて、第１レンズ群Ｌ１の正レンズを最小枚数で構成することが可能となり、軽量化を達成することができる。
+</com:P>
+         <com:P com:pNumber="0047">
+  次に、各レンズ群の構成に関して説明する。実施例１，４では、第１レンズ群Ｌ１は、物体側より像側へ順に配置された、両凸レンズと物体側凹面の負メニスカスレンズの接合レンズ、物体側凹面の負メニスカスレンズより構成される。接合レンズの接合面に回折面を有している。軸上色収差、倍率色収差、フォーカスによる光学性能の変動を低減するための方法については、前述したとおりである。実施例２では、第１レンズ群Ｌ１は、物体側より像側へ順に配置された、物体側凸面の正メニスカスレンズ、両凸レンズと両凹レンズの接合レンズ、物体側凹面の負メニスカスレンズより構成される。接合レンズの接合面に回折面を有している。実施例３では、第１レンズ群Ｌ１は、物体側より像側へ順に配置された、物体側凸面の正メニスカスレンズ、両凸レンズ、物体側凸面の正メニスカスレンズ、両凹レンズより構成される。
+</com:P>
+         <com:P com:pNumber="0048">
+  また、実施例１では、第２レンズ群Ｌ２は、両凸レンズのみで構成される。実施例２から実施例４では、第２レンズ群Ｌ２は、物体側凸面の正メニスカスレンズのみで構成される。第２レンズ群Ｌ２を正レンズ１枚の構成とすることで、レンズ重量を軽くすることが可能となり、高速なフォーカシングを可能にしている。各実施例では、レンズ重量の軽量化、およびフォーカシング速度の向上のため、第２レンズ群Ｌ２を１枚構成としているが、第２レンズ群Ｌ２を複数枚構成とし、高性能化することもの可能である。
+</com:P>
+         <com:P com:pNumber="0049">
+  また、実施例１，２，４では、第３レンズ群Ｌ３は、両凹レンズと両凸レンズの接合レンズで構成された第１部分群３Ａ、両凸レンズと両凹レンズの接合レンズと両凹レンズで構成された第２部分群３Ｂ、両凸レンズの第３部分群３Ｃより構成される。実施例３では、第３レンズ群Ｌ３は、両凹レンズと両凸レンズの接合レンズで構成された第１部分群３Ａ、両凸レンズと両凹レンズの接合レンズと両凹レンズで構成された第２部分群３Ｂ、像側凸の正メニスレンズの第３部分群３Ｃで構成される。
+</com:P>
+         <com:P com:pNumber="0050">
+  全ての実施例において、第２部分群３Ｂを光軸に対して垂直に移動させることにより防振を行っている。また、第２部分群３Ｂは、各実施例では３枚で構成されているが、防振時の色収差変動を抑制するために２枚以上で構成されることが望ましい。
+</com:P>
+         <com:P com:pNumber="0051">
+  以下に、実施例１乃至４にそれぞれ対応する数値実施例１乃至４を示す。各数値実施例の面データにおいて、ｒは各光学面の曲率半径、ｄ（ｍｍ）は第ｍ面と第（ｍ＋１）面との間の軸上間隔（光軸上の距離）を表わしている。ただし、ｍは光入射側から数えた面の番号である。また、ｎｄは各光学部材のｄ線に対する屈折率、νｄは光学部材のアッベ数を表わしている。なお、ある材料のアッベ数νｄは、フラウンホーファ線のｄ線（５８７．６ｎｍ）、Ｆ線（４８６．１ｎｍ）、Ｃ線（６５６．３ｎｍ）、ｇ線（波長４３５．８ｎｍ）における屈折率をＮｄ、ＮＦ、ＮＣとするとき、<com:Br/>
+  νｄ＝（Ｎｄ－１）／（ＮＦ－ＮＣ）<com:Br/>
+で表される。
+</com:P>
+         <com:P com:pNumber="0052">
+  なお、各数値実施例において、ｄ、焦点距離（ｍｍ）、Ｆナンバー、半画角（度）は全て各実施例の光学系が無限遠物体に焦点を合わせた時の値である。バックフォーカス（ＢＦ）は、レンズ最終面（最も像側のレンズ面）から近軸像面までの光軸上の距離を空気換算長により表記したものである。「レンズ全長」は、光学系の最前面（最も物体側のレンズ面）から最終面までの光軸上の距離にバックフォーカスを加えた長さである。「レンズ群」は、複数のレンズから構成される場合に限らず、１枚のレンズから構成される場合も含むものとする。
+</com:P>
+         <com:P com:pNumber="0053">
+  また、回折格子の位相形状ψは、回折光の回折次数をｍ、設計波長をλ０、光軸からの光軸に直交する方向の高さをｈ、位相係数をＣｉ（ｉ＝１，２，３…）とするとき、次式によって表される。
+</com:P>
+         <com:P com:pNumber="0054">
+    ψ（ｈ，ｍ）＝（２π／ｍλ０）×（Ｃ１・ｈ２＋Ｃ２・ｈ４＋Ｃ３・ｈ６＋…）<com:Br/>
+  また、光学面が非球面の場合は、面番号の右側に、（回折）と表示している。非球面形状は、Ｘを光軸方向の面頂点からの変位量、ｈを光軸と垂直な方向の光軸からの高さ、Ｒを近軸曲率半径、ｋを円錐定数、Ａ４、Ａ６、Ａ８、Ａ１０を各次数の非球面係数とするとき、<com:Br/>
+    ｘ＝（ｈ<com:Sup>2</com:Sup>／Ｒ）／［１＋｛１－（１＋ｋ）（ｈ／Ｒ）<com:Sup>2</com:Sup>｝<com:Sup>1/2 </com:Sup>＋Ａ４×ｈ<com:Sup>4</com:Sup>＋Ａ６×ｈ<com:Sup>6</com:Sup>
+            <com:Br/>
+＋Ａ８×ｈ<com:Sup>8</com:Sup>＋Ａ１０×ｈ<com:Sup>10</com:Sup>
+            <com:Br/>
+で表している。なお、各非球面係数における「ｅ±ＸＸ」は「×１０±<com:Sup>ＸＸ</com:Sup>」を意味している。
+</com:P>
+         <com:P com:pNumber="0055">
+  また、各条件式と数値実施例との関係を表１に示す。<com:Br/>
+[数値実施例１]<com:Br/>
+単位 mm<com:Br/>
+            <com:Br/>
+面データ<com:Br/>
+面番号       r        d      nd         νd<com:Br/>
+ 1         58.978   11.86   1.48749    70.2           <com:Br/>
+ 2(回折) -205.536    2.70   1.91082    35.3           <com:Br/>
+ 3       -776.181   61.26                             <com:Br/>
+ 4        -46.263    1.30   1.83481    42.7           <com:Br/>
+ 5       -112.060  (可変)                             <com:Br/>
+ 6        120.340    2.08   1.48749    70.2           <com:Br/>
+ 7       -488.018  (可変)                             <com:Br/>
+ 8(絞り)    ∞       6.43                             <com:Br/>
+ 9        -43.031    1.00   1.90043    37.4           <com:Br/>
+10         43.031    3.82   1.65412    39.7           <com:Br/>
+11        -29.498   12.32                             <com:Br/>
+12        107.096    3.70   1.65412    39.7           <com:Br/>
+13        -22.333    0.80   1.59282    68.6           <com:Br/>
+14        293.053    0.63                             <com:Br/>
+15        -76.788    0.80   1.80400    46.5           <com:Br/>
+16         54.248    1.33                             <com:Br/>
+17         63.147    2.07   1.59551    39.2           <com:Br/>
+18       -767.459  138.29                           <com:Br/>
+像面        ∞   <com:Br/>
+            <com:Br/>
+非球面データ<com:Br/>
+第2面(回折面)<com:Br/>
+A 2=-4.47403e-005  A 4= 1.03980e-008  A 6=-5.47538e-012  A 8= 2.97170e-015  <com:Br/>
+A10=-1.66936e-018  <com:Br/>
+            <com:Br/>
+各種データ<com:Br/>
+  ズーム比      1.00 <com:Br/>
+            <com:Br/>
+焦点距離     582.00  <com:Br/>
+Fナンバー     11.31  <com:Br/>
+半画角（度）   2.13  <com:Br/>
+像高          21.64  <com:Br/>
+レンズ全長   287.05  <com:Br/>
+BF           138.29  <com:Br/>
+            <com:Br/>
+              無限遠合焦時   物体距離4.5m合焦時<com:Br/>
+d 5           17.42            2.51<com:Br/>
+d 7           19.23           34.14<com:Br/>
+            <com:Br/>
+            <com:Br/>
+レンズ群データ<com:Br/>
+群  始面    焦点距離  <com:Br/>
+1    1     386.12  <com:Br/>
+2    6     198.25  <com:Br/>
+3    8     -86.66  <com:Br/>
+            <com:Br/>
+3A     8  -342.02  <com:Br/>
+3B    12   -55.81  <com:Br/>
+3C    17    98.07  <com:Br/>
+            <com:Br/>
+[数値実施例２]<com:Br/>
+単位 mm<com:Br/>
+            <com:Br/>
+面データ<com:Br/>
+面番号       r        d      nd         νd<com:Br/>
+ 1         81.395    9.89   1.48749    70.2           <com:Br/>
+ 2        767.797   30.35                             <com:Br/>
+ 3         83.964    9.43   1.48749    70.2           <com:Br/>
+ 4(回折) -277.706    2.70   1.80400    46.5           <com:Br/>
+ 5        113.168   85.76                             <com:Br/>
+ 6        -49.232    1.30   1.74400    44.8           <com:Br/>
+ 7        -95.332  (可変)                             <com:Br/>
+ 8         67.893    2.25   1.51633    64.1           <com:Br/>
+ 9        448.372  (可変)                             <com:Br/>
+10(絞り)    ∞       6.43                             <com:Br/>
+11        -43.031    1.00   1.90043    37.4           <com:Br/>
+12         43.031    3.82   1.65412    39.7           <com:Br/>
+13        -29.498   12.32                             <com:Br/>
+14        107.096    3.70   1.65412    39.7           <com:Br/>
+15        -22.333    0.80   1.59282    68.6           <com:Br/>
+16        293.053    0.63                             <com:Br/>
+17        -76.788    0.80   1.80400    46.5           <com:Br/>
+18         54.248    1.33                             <com:Br/>
+19         63.147    2.07   1.59551    39.2           <com:Br/>
+20       -767.459  138.10                             <com:Br/>
+像面        ∞   <com:Br/>
+            <com:Br/>
+非球面データ<com:Br/>
+第4面(回折面)<com:Br/>
+A 2=-4.52286e-005  A 4= 6.40571e-009  A 6=-8.87101e-013  A 8=-7.49305e-016  <com:Br/>
+A10= 5.24559e-019  <com:Br/>
+            <com:Br/>
+各種データ<com:Br/>
+  ズーム比      1.00 <com:Br/>
+            <com:Br/>
+焦点距離     775.99  <com:Br/>
+Fナンバー     11.31  <com:Br/>
+半画角（度）   1.60  <com:Br/>
+像高          21.64  <com:Br/>
+レンズ全長   365.39  <com:Br/>
+BF           138.10  <com:Br/>
+            <com:Br/>
+              無限遠合焦時   物体距離6m合焦時<com:Br/>
+d 7           32.49          16.04<com:Br/>
+d 9           20.22          36.67<com:Br/>
+            <com:Br/>
+レンズ群データ<com:Br/>
+群  始面    焦点距離  <com:Br/>
+ 1    1     686.23  <com:Br/>
+ 2    8     154.64  <com:Br/>
+ 3   10     -86.66  <com:Br/>
+            <com:Br/>
+3A   10    -342.02  <com:Br/>
+3B   14     -55.81  <com:Br/>
+3C   19      98.07  <com:Br/>
+            <com:Br/>
+ [数値実施例３]<com:Br/>
+単位 mm<com:Br/>
+            <com:Br/>
+面データ<com:Br/>
+面番号       r        d      nd        νd<com:Br/>
+ 1        133.448    4.39   1.59349    67.0           <com:Br/>
+ 2        245.324    9.88                             <com:Br/>
+ 3         54.814   10.00   1.43875    94.7           <com:Br/>
+ 4       -294.426    8.61                             <com:Br/>
+ 5         59.825    5.12   1.43875    94.7           <com:Br/>
+ 6        631.348    1.04                             <com:Br/>
+ 7       -254.244    1.30   1.74100    52.6           <com:Br/>
+ 8         50.472  (可変)                             <com:Br/>
+ 9         64.215    1.81   1.49700    81.5           <com:Br/>
+10        103.624  (可変)                             <com:Br/>
+11(絞り)    ∞       5.00                             <com:Br/>
+12        -63.723    1.00   1.91082    35.3           <com:Br/>
+13         87.812    3.00   1.73800    32.3           <com:Br/>
+14        -56.968   11.15                             <com:Br/>
+15        115.364    3.17   1.73800    32.3           <com:Br/>
+16        -37.330    2.45   1.49700    81.5           <com:Br/>
+17        180.804    0.79                             <com:Br/>
+18        -66.872    1.38   1.91082    35.3           <com:Br/>
+19         79.176    2.11                             <com:Br/>
+20       -814.769    1.89   1.48749    70.2           <com:Br/>
+21        -67.269    178.41                            <com:Br/>
+像面        ∞   <com:Br/>
+            <com:Br/>
+各種データ<com:Br/>
+  ズーム比      1.00 <com:Br/>
+            <com:Br/>
+焦点距離     582.00  <com:Br/>
+Fナンバー     11.31  <com:Br/>
+半画角（度）   2.13  <com:Br/>
+像高          21.64  <com:Br/>
+レンズ全長   328.50  <com:Br/>
+BF           178.41  <com:Br/>
+            <com:Br/>
+              無限遠合焦時   物体距離4.5m合焦時<com:Br/>
+d 8           73.90            55.33<com:Br/>
+            <com:Br/>
+d10            2.10         20.67<com:Br/>
+            <com:Br/>
+            <com:Br/>
+レンズ群データ<com:Br/>
+群  始面    焦点距離  <com:Br/>
+ 1    1     255.94  <com:Br/>
+ 2    9     334.63  <com:Br/>
+ 3   11     -92.66  <com:Br/>
+            <com:Br/>
+3A   11    -349.57  <com:Br/>
+3B   15     -71.37  <com:Br/>
+3C   20     150.28<com:Br/>
+            <com:Br/>
+[数値実施例４]<com:Br/>
+単位 mm<com:Br/>
+            <com:Br/>
+面データ<com:Br/>
+面番号       r        d      nd         νd<com:Br/>
+ 1         87.387   12.85   1.48749    70.2           <com:Br/>
+ 2(回折) -334.980    3.00   1.83400    37.2           <com:Br/>
+ 3      -2900.216   93.84                             <com:Br/>
+ 4        -68.593    1.30   1.80100    35.0           <com:Br/>
+ 5       -132.015  (可変)                             <com:Br/>
+ 6         89.303    3.07   1.48749    70.2           <com:Br/>
+ 7        417.857  (可変)                             <com:Br/>
+ 8(絞り)    ∞       4.99                             <com:Br/>
+ 9        -91.716    0.99   1.90043    37.4           <com:Br/>
+10         30.296    4.42   1.65412    39.7           <com:Br/>
+11        -42.133  9.99                             <com:Br/>
+12         63.149    4.36   1.65412    39.7           <com:Br/>
+13        -22.130    1.75   1.59282    68.6           <com:Br/>
+14         65.686    1.09                             <com:Br/>
+15        -76.612    0.70   1.80400    46.5           <com:Br/>
+16         42.003  3.01                             <com:Br/>
+17         42.568    3.31   1.51742    52.4           <com:Br/>
+18       -273.996  105.35                            <com:Br/>
+像面        ∞   <com:Br/>
+            <com:Br/>
+非球面データ<com:Br/>
+第2面(回折面)<com:Br/>
+A 2=-3.30742e-005  A 4= 3.39180e-009  A 6=-3.87395e-013  A 8=-4.34279e-016  <com:Br/>
+A10= 1.36105e-019  <com:Br/>
+            <com:Br/>
+各種データ<com:Br/>
+  ズーム比      1.00 <com:Br/>
+            <com:Br/>
+焦点距離     582.00  <com:Br/>
+Fナンバー      8.20  <com:Br/>
+半画角（度）   2.13  <com:Br/>
+像高          21.64  <com:Br/>
+レンズ全長   314.65  <com:Br/>
+BF           105.35  <com:Br/>
+            <com:Br/>
+無限遠合焦時   物体距離4.5m合焦時<com:Br/>
+d 5           21.82          2.50<com:Br/>
+d 7           38.83          58.15<com:Br/>
+            <com:Br/>
+レンズ群データ<com:Br/>
+群  始面    焦点距離  <com:Br/>
+1    1     448.61  <com:Br/>
+2    6     232.27  <com:Br/>
+3    8     -84.76<com:Br/>
+            <com:Br/>
+3A    8    -610.16  <com:Br/>
+3B   12     -41.84  <com:Br/>
+3C   17      71.46  <com:Br/>
+         </com:P>
+         <com:P com:pNumber="0056">
+            <com:Table>
+               <com:TableImage com:imageContentCategory="Drawing" com:tableNumber="1">
+                  <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+                  <com:FileName>2023060272000002.jpg</com:FileName>
+                  <com:HeightMeasure com:measureUnitCode="Mm">60</com:HeightMeasure>
+                  <com:WidthMeasure com:measureUnitCode="Mm">117</com:WidthMeasure>
+               </com:TableImage>
+            </com:Table>
+         </com:P>
+         <com:P com:pNumber="0057">
+［撮像装置］<com:Br/>
+  次に、本発明の光学系を撮像光学系として用いたデジタルスチルカメラ（撮像装置）の実施例に関して図９を用いて説明する。図９は、本発明の撮像装置の要部概略図である。図９において、１０はカメラ本体、１１は実施例１乃至４で説明したいずれかの光学系によって構成された撮像光学系である。１２はカメラ本体に内蔵され、撮像光学系１１によって形成された光学像を受光して光電変換するＣＣＤセンサやＣＭＯＳセンサ等の固体撮像素子（光電変換素子）である。カメラ本体１０はクイックターンミラーを有する所謂一眼レフカメラでもよいし、クイックターンミラーを有さない所謂ミラーレスカメラでもよい。
+</com:P>
+         <com:P com:pNumber="0058">
+  このように本発明の光学系をデジタルスチルカメラ等の撮像装置に適用することにより、全長とレンズ系が小型で、高いフォーカス性能を有する撮像装置を得ることができる。
+</com:P>
+      </pat:EmbodimentDescription>
+      <pat:ReferenceSignBag>
+         <com:P com:pNumber="0059">
+Ｌ１  第１レンズ群<com:Br/>
+Ｌ２  第２レンズ群<com:Br/>
+Ｌ３  第３レンズ群<com:Br/>
+         </com:P>
+      </pat:ReferenceSignBag>
+   </jppat:Description>
+   <pat:Claims>
+      <pat:Claim>
+         <pat:ClaimNumber>1</pat:ClaimNumber>
+         <pat:ClaimText>
+  物体側より像側へ順に配置された、正の屈折力の第１レンズ群、正の屈折力の第２レンズ群、負の屈折力の第３レンズ群からなり、フォーカシングに際して隣り合うレンズ群の間隔が変化する光学系であって、<com:Br/>
+  前記第３レンズ群は、複数の負レンズを有し、<com:Br/>
+  フォーカシングに際して前記第２レンズ群が移動し、<com:Br/>
+  無限遠合焦時の前記光学系の焦点距離をｆ、前記第３レンズ群の焦点距離をｆ３とするとき、<com:Br/>
+    －０．３２＜ｆ３／ｆ＜－０．０５<com:Br/>
+なる条件式を満足することを特徴とする光学系。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>2</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記第３レンズ群は、物体側から像側へ順に配置された、負の屈折力の第１部分群、負の屈折力の第２部分群、正の屈折力の第３部分群からなり、<com:Br/>
+  像ぶれ補正に際して、前記第２部分群が光軸に垂直な方向の成分を含む方向に移動することを特徴とする請求項１に記載の光学系。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>3</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記第１部分群と前記第２部分群との光軸上の間隔をＤ３Ａとするとき、<com:Br/>
+    ０．０１＜Ｄ３Ａ／ｆ＜０．０５<com:Br/>
+なる条件式を満足することを特徴とする請求項２に記載の光学系。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>4</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記第２部分群の焦点距離をｆ３Ｂとするとき、<com:Br/>
+    －０．３０＜ｆ３Ｂ／ｆ＜－０．０５<com:Br/>
+なる条件式を満足することを特徴とする請求項２または３に記載の光学系。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>5</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記第１部分群の焦点距離をｆ３Ａとするとき、<com:Br/>
+    －１．２０＜ｆ３Ａ／ｆ＜－０．２０<com:Br/>
+なる条件式を満足することを特徴とする請求項２から４のいずれか１項に記載の光学系。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>6</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記第２部分群の横倍率をβ３Ｂ、前記第３部分群の横倍率をβ３Ｃとするとき、<com:Br/>
+    －４．００＜（１－β３Ｂ）×β３Ｃ＜－２．００<com:Br/>
+なる条件式を満足することを特徴とする請求項２から５のいずれか１項に記載の光学系。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>7</pat:ClaimNumber>
+         <pat:ClaimText>
+  前記第２部分群は、少なくとも１枚の正レンズと少なくとも１枚の負レンズから構成されることを特徴とする請求項２から６のいずれか１項に記載の光学系。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>8</pat:ClaimNumber>
+         <pat:ClaimText>
+  無限遠合焦時の前記光学系のレンズ全長をＬとするとき、<com:Br/>
+    ０．４０＜Ｌ／ｆ＜０．７０<com:Br/>
+なる条件式を満足することを特徴とする請求項１から７のいずれか１項に記載の光学系。
+</pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim>
+         <pat:ClaimNumber>9</pat:ClaimNumber>
+         <pat:ClaimText>
+  請求項１から８のいずれか１項に記載の光学系と、該光学系によって形成される像を受光する撮像素子を有することを特徴とする撮像装置。<com:Br/>
+         </pat:ClaimText>
+      </pat:Claim>
+   </pat:Claims>
+   <pat:Abstract>
+      <com:P com:pNumber="">
+【課題】小型かつ軽量で、フォーカシングによる光学性能の変化を低減可能な光学系およびそれを有する撮像装置を提供すること。<com:Br/>
+【解決手段】光学系は、物体側より像側へ順に配置された、正の屈折力の第１レンズ群Ｌ１、正の屈折力の第２レンズ群Ｌ２、負の屈折力の第３レンズ群Ｌ３からなり、フォーカシングに際して隣り合うレンズ群の間隔が変化する光学系であって、フォーカシングに際して第２レンズ群Ｌ２が移動し、無限遠合焦時の光学系の焦点距離、および第３レンズ群Ｌ３の焦点距離を各々適切に設定する。<com:Br/>
+【選択図】図１
+</com:P>
+   </pat:Abstract>
+   <pat:Drawings>
+      <pat:Figure>
+         <pat:FigureNumber>1</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023060272000003.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">53</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">159</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>2</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023060272000004.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">221</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">153</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>3</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023060272000005.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">49</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">157</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>4</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023060272000006.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">219</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">153</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>5</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023060272000007.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">50</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">157</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>6</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023060272000008.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">215</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">156</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>7</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023060272000009.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">51</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">156</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>8</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023060272000010.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">219</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">154</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure>
+         <pat:FigureNumber>9</pat:FigureNumber>
+         <com:Image com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>JPEG</com:ImageFormatCategory>
+            <com:FileName>2023060272000011.jpg</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Mm">71</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Mm">92</com:WidthMeasure>
+         </com:Image>
+      </pat:Figure>
+   </pat:Drawings>
+</jppat:UnexaminedPatentPublication>

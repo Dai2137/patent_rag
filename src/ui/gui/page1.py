@@ -412,16 +412,107 @@ def render_common_steps():
                 else:
                     st.warning(f"❌ 対応するevidence_extractionファイルが見つかりません: {reference_doc_num}")
                     continue
-                displey_evidence_section(reference_doc_num, evidence_file)
+                display_evidence_section(reference_doc_num, evidence_file)
 
 
         if st.button("根拠テキスト生成", type="primary"):
             with st.spinner("BigQueryから特許情報を取得中..."):
                 get_full_patent_info_by_doc_numbers(doc_numbers_to_fetch, st.session_state.current_doc_number)
 
-def displey_evidence_section(reference_doc_num, evidence_file):
-    # eval/{doc_number}/doc_full_contentからreference_doc_numのファイル名のjsonを見つけて開く
-    # configの標準的な方法を採用する
+def normalize_text_for_search(text):
+    """
+    テキストを検索用に正規化（スペース・改行を削除）
+
+    Args:
+        text: 正規化するテキスト
+
+    Returns:
+        str: 正規化されたテキスト
+    """
+    if not text:
+        return ""
+
+    # 全角スペース、半角スペース、改行、タブを削除
+    normalized = text.replace("　", "").replace(" ", "").replace("\n", "").replace("\t", "")
+    return normalized
+
+
+def parse_paragraph_id_from_quote(source_paragraph_raw, doc_full_content, quote):
+    """
+    段落IDをパースして、セクション名と段落番号を取得する
+    段落IDが不正な形式の場合は、quoteの内容でdoc_full_contentを検索する
+
+    Args:
+        source_paragraph_raw: 段落IDの生の文字列（例：'[best_mode_0121]' または '[0168]'）
+        doc_full_content: doc_full_contentのJSON辞書
+        quote: 引用文（必須）
+
+    Returns:
+        tuple: (paragraph_name, paragraph_number) または None（エラーの場合）
+
+    Examples:
+        >>> parse_paragraph_id_from_quote("[best_mode_0121]", doc_content, quote)
+        ("best_mode", 121)
+
+        >>> parse_paragraph_id_from_quote("[0168]", doc_content, quote_text)
+        ("best_mode", 165)  # quoteの内容で検索した結果
+    """
+    # "[best_mode_0121]" -> "best_mode_0121"
+    source_paragraph_id = source_paragraph_raw.strip("[]")
+
+    # "_"が含まれている場合：通常の処理
+    if "_" in source_paragraph_id:
+        try:
+            paragraph_name, paragraph_number_str = source_paragraph_id.rsplit("_", 1)
+            paragraph_number = int(paragraph_number_str)
+            return (paragraph_name, paragraph_number)
+        except (ValueError, AttributeError):
+            # パース失敗時は quote で検索にフォールバック
+            pass
+
+    # "_"がない場合、または通常のパースに失敗した場合：quoteで検索
+    if quote:
+        # quoteを正規化
+        normalized_quote = normalize_text_for_search(quote)
+
+        if not normalized_quote:
+            return None
+
+        # doc_full_contentの各セクションを検索
+        section_order = ["technical_field", "background_art", "disclosure", "best_mode"]
+
+        for section_name in section_order:
+            section_content = doc_full_content.get("description", {}).get(section_name)
+
+            # disclosureはネストされた辞書の可能性があるため、スキップ
+            if isinstance(section_content, dict):
+                continue
+
+            if isinstance(section_content, list):
+                for paragraph_index, paragraph_text in enumerate(section_content):
+                    # 段落テキストを正規化
+                    normalized_paragraph = normalize_text_for_search(paragraph_text)
+
+                    # 完全一致または部分一致をチェック
+                    if normalized_quote in normalized_paragraph:
+                        return (section_name, paragraph_index)
+
+        # 見つからない場合
+        return None
+
+    # quoteもない場合
+    return None
+
+
+def display_evidence_section(reference_doc_num, evidence_file):
+    """
+    証拠ファイルから特定のドキュメント番号に関連する証拠を抽出し、
+    明細書の該当箇所をハイライト表示する
+
+    Args:
+        reference_doc_num: 参照先行技術文献番号
+        evidence_file: 証拠データが格納されたJSONファイルのパス
+    """
     paragraph_name_dict = {
         "technical_field": "【技術分野】",
         "background_art": "【背景技術】",
@@ -431,32 +522,65 @@ def displey_evidence_section(reference_doc_num, evidence_file):
 
     current_doc_number = st.session_state.current_doc_number
 
+    # doc_full_contentファイルの読み込み
     doc_full_content_dir = PathManager.get_dir(current_doc_number, DirNames.DOC_FULL_CONTENT)
     doc_full_content_file = doc_full_content_dir / f"{reference_doc_num}.json"
+
     if not doc_full_content_file.exists():
         st.warning(f"❌ doc_full_contentファイルが見つかりません: {doc_full_content_file}")
         return
+
     with open(doc_full_content_file, "r", encoding="utf-8") as f:
         doc_full_content = json.load(f)
 
-    # --- Step 1: 全証拠を収集してparagraph_nameでグループ化 ---
-    evidence_groups = {}  # {paragraph_name: [{"quote": ..., "explanation": ..., "paragraph_number": ...}, ...]}
-
+    # 証拠データの読み込み
     with open(evidence_file, "r", encoding="utf-8") as f:
-        evidence_data = json.load(f)
-    for item in evidence_data:
-        verified_evidence_list = item["verified_evidence"]
-        for evidence_dict in verified_evidence_list:
-            quote = evidence_dict["quote"]
-            source_paragraph_id = evidence_dict["source_paragraph_id"]
-            explanation = evidence_dict["explanation"]
+        evidence_data_list = json.load(f)
 
-            # best_mode_7 から paragraph_name と paragraph_number を取得
-            paragraph_name, paragraph_number = source_paragraph_id.rsplit("_", 1)
-            paragraph_name_japanese = paragraph_name_dict.get(paragraph_name, None)
+    # --- Step 1: 対象ドキュメントの証拠データを検索 ---
+    target_evidence_data = None
+
+    # evidence_data_listが配列の場合
+    if isinstance(evidence_data_list, list):
+        target_evidence_data = next(
+            (item for item in evidence_data_list if item.get("doc_number") == reference_doc_num),
+            None
+        )
+    # 単一オブジェクトの場合
+    elif isinstance(evidence_data_list, dict) and evidence_data_list.get("doc_number") == reference_doc_num:
+        target_evidence_data = evidence_data_list
+
+    if not target_evidence_data:
+        st.info(f"📝 ドキュメント番号 `{reference_doc_num}` に一致する証拠データがありません。")
+        return
+
+    # --- Step 2: 全証拠を収集してparagraph_nameでグループ化 ---
+    evidence_groups = {}  # {paragraph_name: [{"quote": ..., "explanation": ..., ...}, ...]}
+
+    for item in target_evidence_data.get("evidence_items", []):
+        citations = item.get("citations", [])
+        claim_scope = item.get("claim_scope", "")
+
+        for citation in citations:
+            quote = citation.get("quote", "").strip()
+            source_paragraph_raw = citation.get("source_paragraph", "")
+            explanation = citation.get("proves", "")
+
+            if not quote or not source_paragraph_raw:
+                continue
+
+            # 新しい関数を使って段落IDをパース
+            result = parse_paragraph_id_from_quote(source_paragraph_raw, doc_full_content, quote)
+
+            if result is None:
+                st.warning(f"⚠️ 段落IDの形式が不正です: `{source_paragraph_raw}` (該当する段落が見つかりません)")
+                continue
+
+            paragraph_name, paragraph_number = result
+            paragraph_name_japanese = paragraph_name_dict.get(paragraph_name)
 
             if not paragraph_name_japanese:
-                st.markdown(f"- 箇所:{source_paragraph_id}")
+                st.warning(f"⚠️ 未対応のセクション: `{paragraph_name}` (段落ID: {source_paragraph_raw})")
                 continue
 
             # グループ化
@@ -466,66 +590,90 @@ def displey_evidence_section(reference_doc_num, evidence_file):
             evidence_groups[paragraph_name].append({
                 "quote": quote,
                 "explanation": explanation,
-                "paragraph_number": int(paragraph_number),
-                "source_paragraph_id": source_paragraph_id
+                "paragraph_number": paragraph_number,
+                "source_paragraph_id": source_paragraph_raw.strip("[]"),
+                "claim_scope": claim_scope
             })
 
-    # --- Step 2: グループごとに表示 ---
-    for paragraph_name, evidence_list in evidence_groups.items():
+    if not evidence_groups:
+        st.info("📝 表示可能な証拠が見つかりませんでした。")
+        return
+
+    # --- Step 3: グループごとに証拠詳細と該当箇所を表示 ---
+    for paragraph_name, evidence_list in sorted(evidence_groups.items()):
         paragraph_name_japanese = paragraph_name_dict[paragraph_name]
+
+        # doc_full_contentに該当セクションがあるか確認
+        if "description" not in doc_full_content or paragraph_name not in doc_full_content["description"]:
+            st.warning(f"⚠️ 明細書データ内にセクション `{paragraph_name}` が見つかりません。")
+            continue
+
         paragraph_list = doc_full_content["description"][paragraph_name]
 
-        # 各証拠の詳細を表示
-        for evidence in evidence_list:
-            st.markdown(f"- 一致箇所 : {evidence['quote']}")
-            st.markdown(f"- 一致と判断した理由 : {evidence['explanation']}")
-            st.markdown(f"- 箇所 : 明細書 {paragraph_name_japanese} 段落:{evidence['paragraph_number'] + 1}")
-            st.divider()
+        st.markdown(f"### 📄 {paragraph_name_japanese}")
 
-        # --- Step 3: 全段落を一度に表示（複数のquoteをまとめてハイライト） ---
-        start_index = 0
-        end_index = len(paragraph_list)
-        display_text_list = []
+        # 各証拠番号に対応するquoteをマッピング
+        paragraph_quotes = {}  # {paragraph_number: [(quote, claim_scope), ...]}
 
-        # 各段落番号に対応するquoteをマッピング
-        paragraph_quotes = {}  # {paragraph_number: [quote1, quote2, ...]}
         for evidence in evidence_list:
             para_num = evidence["paragraph_number"]
             if para_num not in paragraph_quotes:
                 paragraph_quotes[para_num] = []
-            paragraph_quotes[para_num].append(evidence["quote"])
+            paragraph_quotes[para_num].append({
+                "quote": evidence["quote"],
+                "claim_scope": evidence["claim_scope"],
+                "explanation": evidence["explanation"]
+            })
 
-        # 範囲内の段落をループ処理してリストに追加
-        for i in range(start_index, end_index):
+        # 各証拠の詳細を表示
+        for idx, evidence in enumerate(evidence_list, 1):
+            with st.expander(f"🔍 証拠 {idx}: {evidence['claim_scope']}", expanded=True):
+                st.markdown(f"**一致箇所**")
+                st.code(evidence['quote'], language=None)
+                st.markdown(f"**一致と判断した理由**  \n{evidence['explanation']}")
+                st.markdown(f"**箇所**: 明細書 {paragraph_name_japanese} **段落 {evidence['paragraph_number'] + 1}**")
+
+        st.divider()
+
+        # --- Step 4: 該当セクションの全段落を表示（複数のquoteをハイライト） ---
+        display_text_list = []
+
+        for i in range(len(paragraph_list)):
             raw_paragraph = paragraph_list[i]
 
-            # 該当段落の場合：複数のquoteをハイライト処理 ＋ 太字ラベル
+            # 該当段落の場合：複数のquoteをハイライト処理
             if i in paragraph_quotes:
                 clean_paragraph = raw_paragraph.replace("　", "").replace(" ", "")
 
-                # 複数のquoteをすべてハイライト
-                for quote in paragraph_quotes[i]:
-                    clean_quote = quote.replace("　", "").replace(" ", "")
-                    yellow_highlight = f"<mark>{clean_quote}</mark>"
-                    clean_paragraph = clean_paragraph.replace(clean_quote, yellow_highlight)
+                # 複数のquoteをすべてハイライト（長い順にソートして部分一致を防ぐ）
+                quotes_sorted = sorted(
+                    paragraph_quotes[i],
+                    key=lambda x: len(x["quote"]),
+                    reverse=True
+                )
 
-                # リストに追加（強調表示）
-                display_text_list.append(f"<b>【段落{i+1}】</b> {clean_paragraph}")
+                for quote_info in quotes_sorted:
+                    clean_quote = quote_info["quote"].replace("　", "").replace(" ", "")
+                    if clean_quote and clean_quote in clean_paragraph:
+                        yellow_highlight = f"<mark style='background-color: #ffeb3b;'>{clean_quote}</mark>"
+                        clean_paragraph = clean_paragraph.replace(clean_quote, yellow_highlight, 1)
 
-            # 前後の段落の場合：そのまま表示
+                display_text_list.append(f"<b>【段落 {i+1}】</b> {clean_paragraph}")
             else:
-                display_text_list.append(f"【段落{i+1}】 {raw_paragraph}")
+                # 通常の段落
+                display_text_list.append(f"【段落 {i+1}】 {raw_paragraph}")
 
-        # リストを結合（改行コードでつなぐ）
+        # 全段落を結合して表示
         if display_text_list:
             full_context_text = "<br><br>".join(display_text_list)
         else:
-            full_context_text = "⚠️ 指定された範囲のデータが見つかりませんでした。"
+            full_context_text = "⚠️ 表示可能な段落データがありません。"
 
-        # height=300 で高さを300pxに固定。
-        with st.container(height=300):
-            # 修正後の変数 full_context_text を表示
-            st.markdown(f"- 該当箇所の内容 : <br>明細書 : {paragraph_name_japanese} : <br>{full_context_text}", unsafe_allow_html=True)
+        with st.container(height=400):
+            st.markdown(
+                f"**該当箇所の内容**  \n明細書: {paragraph_name_japanese}  \n\n{full_context_text}",
+                unsafe_allow_html=True
+            )
 
         st.divider()
 

@@ -79,7 +79,7 @@ class QuoteLocatorPrompts:
 {{
   "found": true,
   "section_name": "セクション名（例: best_mode, background_art等）",
-  "paragraph_id": "段落ID（例: [best_mode_0121]）",
+  "paragraph_id": "段落ID",
   "paragraph_index": 段落のインデックス番号（0始まり）,
   "paragraph_text": "段落の全文",
   "start_char": 段落内での引用開始位置（文字数）,
@@ -165,7 +165,7 @@ class LLMQuoteLocator:
 
     def _call_llm_with_retry(self, prompt: str) -> Optional[str]:
         """リトライ機能付きLLM呼び出し"""
-        final_prompt = prompt + "\n\n必ず日本語で出力してください (Output in Japanese)."
+        final_prompt = prompt + "(Output in Japanese)."
 
         for attempt in range(self.max_retries):
             try:
@@ -227,7 +227,7 @@ class LLMQuoteLocator:
         Args:
             quote: 引用文（一字一句そのまま）
             patent_dict: 特許文献の辞書
-            source_paragraph_hint: 段落IDのヒント（例: "[best_mode_0121]"）
+            source_paragraph_hint: 段落ID
 
         Returns:
             QuoteLocation: 引用箇所の位置情報
@@ -280,9 +280,12 @@ class LLMQuoteLocator:
             logger.warning(f"❌ 無効なロケーション情報が返されました")
             logger.debug(f"paragraph_text exists: {bool(paragraph_text)}, start: {start_char}, end: {end_char}")
             return self._create_not_found_location(quote)
+# extracted_quote in patent_text
+# quote in patent_text
 
         # 引用の一致検証
         extracted_quote = paragraph_text[start_char:end_char]
+
         if self._normalize_text(extracted_quote) != self._normalize_text(quote):
             logger.warning(f"⚠️ 抽出された引用が元の引用と一致しません")
             logger.debug(f"Expected: {quote}")

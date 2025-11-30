@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特許引用箇所の強調表示（LLM版）</title>
+    <style>
+        body {
+            font-family: 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+        }
+        .stats {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .stats-item {
+            display: inline-block;
+            margin-right: 30px;
+        }
+        .evidence-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .claim-scope {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        .assertion {
+            background-color: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .citation {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .quote-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        .location-info {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        .highlighted-paragraph {
+            background-color: #ffffff;
+            border: 2px solid #27ae60;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            line-height: 2;
+        }
+        mark {
+            background-color: yellow;
+            font-weight: bold;
+            padding: 2px 4px;
+        }
+        .proves {
+            color: #16a085;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+        .not-found {
+            color: #e74c3c;
+            background-color: #fadbd8;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .separator {
+            border-top: 2px dashed #bdc3c7;
+            margin: 30px 0;
+        }
+        .llm-badge {
+            background-color: #9b59b6;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="header">
+        <h1>📄 特許引用箇所の強調表示レポート<span class="llm-badge">🤖 LLM版</span></h1>
+        <p>特許番号: 2023052340</p>
+        <p>発明の名称: イントラブロックコピーモードとインター予測ツールとの間の相互作用</p>
+    </div>
+    
+
+    <div class="stats">
+        <div class="stats-item"><strong>証拠数:</strong> 7</div>
+        <div class="stats-item"><strong>総引用数:</strong> 1</div>
+        <div class="stats-item"><strong>発見数:</strong> 0</div>
+        <div class="stats-item"><strong>未発見数:</strong> 1</div>
+        <div class="stats-item"><strong>成功率:</strong> 0.0%</div>
+    </div>
+    
+<div class="evidence-item">
+<div class="claim-scope">🔍 証拠 1: 請求項1</div>
+<div class="assertion"><strong>主張:</strong> 本願発明（A）は、ビデオデータのコーディングにおいて、現在のビデオブロックの最後の非ゼロ係数の位置に基づき二次変換の適用を判断する。</div>
+<div class="not-found"><strong>⚠️ 該当箇所なし:</strong> 文献中、ビデオデータのコーディングにおいて、現在のビデオブロックの最後の非ゼロ係数の位置に基づき二次変換の適用を判断するという、主張の核心部分に合致する具体的な記載は見当たらない。関連する技術要素（係数、変換、判断など）はビデオコーディングの文脈で登場するが、主張の要件を満たす処理の開示はない。</div>
+</div>
+<div class="separator"></div>
+<div class="evidence-item">
+<div class="claim-scope">🔍 証拠 2: 請求項1</div>
+<div class="assertion"><strong>主張:</strong> 先行技術（B）は、イントラブロックコピー（IBC）モードの適用と、それに伴う他のコーディングモードのディセーブルに焦点を当てている。</div>
+<div class="citation">
+<h3>引用 1</h3>
+<div class="quote-box">"アフィン動き補償が使用される場合、CPRを使用することは許されない。"</div>
+<div class="proves"><strong>証明内容:</strong> イントラブロックコピー(IBC)モード（CPR）の適用と、それに伴う他のコーディングモード（アフィン動き補償）のディセーブル（許されない）の関係性を示している。</div>
+<div class="not-found">❌ 該当箇所が見つかりませんでした</div>
+</div>
+</div>
+<div class="separator"></div>
+<div class="evidence-item">
+<div class="claim-scope">🔍 証拠 3: 請求項1</div>
+<div class="assertion"><strong>主張:</strong> 当業者は、先行技術（B）におけるコーディングモードの最適化の検討において、ブロック内の係数情報（特にその分布や最終非ゼロ係数の位置）が変換処理の効率に影響を与える可能性を考慮し、それに基づいた二次変換の適用制御を発想する動機付けがある。</div>
+<div class="not-found"><strong>⚠️ 該当箇所なし:</strong> 提供された先行技術文献（best_mode_0000〜best_mode_0431）には、ブロック内の係数情報（特にその分布や最終非ゼロ係数の位置）が変換処理の効率に影響を与える可能性を考慮し、それに基づいた二次変換の適用制御を発想する動機付けに関する具体的な記載は見当たりませんでした。文献は主に、インター予測、マージモード、AMVP、アフィン予測、IBC、GBi、IIP、UMVE、ATMVP、STMVP、CPR、MMVD、SbTMVPなどの予測、ブロック分割、およびそれらの相互作用に関する詳細な説明に終始しており、係数情報の詳細な分析に基づいた二次変換制御の動機付けについては触れられていません。</div>
+</div>
+<div class="separator"></div>
+<div class="evidence-item">
+<div class="claim-scope">🔍 証拠 4: 請求項1</div>
+<div class="assertion"><strong>主張:</strong> 係数が左上付近に集中している（最終非ゼロ係数の位置が左上付近である）場合に、二次変換の効果が薄いと推測し、その適用をスキップまたは最適化するという判断は、係数分布の局所的な特徴と計算コスト削減の観点から、通常の創作能力の範囲で可能である。</div>
+<div class="not-found"><strong>⚠️ 該当箇所なし:</strong> 提供された文献には、係数が左上付近に集中しているという係数分布の局所的な特徴に着目し、その場合に二次変換の効果が薄いと推測して、その適用をスキップまたは最適化するという判断に関する直接的な記載は見当たらない。文献は主にビデオコーディングにおける動き予測、マージモード、アフィン予測、イントラブロックコピー(IBC)などの技術に焦点を当てており、係数分布の特性に基づく変換処理の最適化に関する具体的な開示は確認できなかった。</div>
+</div>
+<div class="separator"></div>
+<div class="evidence-item">
+<div class="claim-scope">🔍 証拠 5: 請求項1</div>
+<div class="assertion"><strong>主張:</strong> 最後の非ゼロ係数の位置に基づく二次変換の適用判断により、計算コストの削減やビットレートの最適化といった効果が期待できる。</div>
+<div class="not-found"><strong>⚠️ 該当箇所なし:</strong> 提供された文献全体を通じて、「最後の非ゼロ係数の位置に基づく二次変換の適用判断」という具体的な技術、および、それによって「計算コストの削減」や「ビットレートの最適化」といった効果が得られることを直接的に説明している記載は見つかりませんでした。関連するビデオコーディング技術（動きベクトル予測、変換、係数処理など）に関する記述は散見されますが、主張されている特定の条件とその効果を裏付ける証拠はありません。</div>
+</div>
+<div class="separator"></div>
+<div class="evidence-item">
+<div class="claim-scope">🔍 証拠 6: 請求項2</div>
+<div class="assertion"><strong>主張:</strong> Claim 2の追加限定である「第１の条件」や「コーディング基準」の導入、および判断結果に基づく変換実行は、ビデオコーディングにおける一般的な設計選択肢であり、技術常識の範囲内である。</div>
+<div class="not-found"><strong>⚠️ 該当箇所なし:</strong> 提示された先行技術文献（technical_field_0000からbest_mode_0423）全体を確認したが、「第１の条件」や「コーディング基準」の導入、および判断結果に基づく変換実行が、ビデオコーディングにおける一般的な設計選択肢であり、技術常識の範囲内であると直接的に記述している箇所は見当たらなかった。ビデオコーディングの一般的な説明や、HEVC、VVCなどの規格における様々な予測技術（インター予測、マージモード、AMVP、ATMVP、STMVP、アフィン予測、GBi、IBCなど）に関する詳細な説明は含まれているものの、主張されている「第１の条件」や「コーディング基準」という特定の用語や、それらが一般的な設計選択肢であるという結論を裏付ける直接的な記載は確認できなかった。</div>
+</div>
+<div class="separator"></div>
+<div class="evidence-item">
+<div class="claim-scope">🔍 証拠 7: 請求項3</div>
+<div class="assertion"><strong>主張:</strong> 二次変換を「脱量子化された残差係数値の結果に適用する」ことは、ビデオコーディングにおける標準的な処理順序・方法であり、技術常識そのものである。</div>
+<div class="not-found"><strong>⚠️ 該当箇所なし:</strong> 提示された文献からは、「二次変換」という用語や、「脱量子化された残差係数値の結果に二次変換を適用する」という処理順序が、ビデオコーディングにおける標準的な処理順序・方法、あるいは技術常識であることを直接的かつ明確に示す記載は見当たらない。一部の文献では「残差係数」 (`best_mode_0005`) や「変換符号化」 (`best_mode_0003`) に言及があるが、これらは主張されている「二次変換」やその適用順序を裏付けるものではない。</div>
+</div>
+
+</body>
+</html>

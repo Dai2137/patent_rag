@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特許引用箇所の強調表示（LLM版）</title>
+    <style>
+        body {
+            font-family: 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+        }
+        .stats {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .stats-item {
+            display: inline-block;
+            margin-right: 30px;
+        }
+        .evidence-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .claim-scope {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        .assertion {
+            background-color: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .citation {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .quote-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        .location-info {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        .highlighted-paragraph {
+            background-color: #ffffff;
+            border: 2px solid #27ae60;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            line-height: 2;
+        }
+        mark {
+            background-color: yellow;
+            font-weight: bold;
+            padding: 2px 4px;
+        }
+        .proves {
+            color: #16a085;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+        .not-found {
+            color: #e74c3c;
+            background-color: #fadbd8;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .separator {
+            border-top: 2px dashed #bdc3c7;
+            margin: 30px 0;
+        }
+        .llm-badge {
+            background-color: #9b59b6;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="header">
+        <h1>📄 特許引用箇所の強調表示レポート<span class="llm-badge">🤖 LLM版</span></h1>
+        <p>特許番号: 2021536169</p>
+        <p>発明の名称: 変換行列選択の係数依存符号化</p>
+    </div>
+    
+
+    <div class="stats">
+        <div class="stats-item"><strong>証拠数:</strong> 3</div>
+        <div class="stats-item"><strong>総引用数:</strong> 3</div>
+        <div class="stats-item"><strong>発見数:</strong> 0</div>
+        <div class="stats-item"><strong>未発見数:</strong> 3</div>
+        <div class="stats-item"><strong>成功率:</strong> 0.0%</div>
+    </div>
+    
+<div class="evidence-item">
+<div class="claim-scope">🔍 証拠 1: 請求項1</div>
+<div class="assertion"><strong>主張:</strong> 先行技術文献(B)は、「最後の非ゼロ係数の位置」をチェックすることにより、複数変換選択（MTS）変換のための変換情報を識別する構文要素の有無を決定し、これにより処理効率化を図ることを開示している。</div>
+<div class="citation">
+<h3>引用 1</h3>
+<div class="quote-box">"１つの例では、ブロック内の非ゼロ係数がどれぐらいあるかカウントする代わりに、（例えば、順走査順序における）最後の非ゼロ係数の位置がチェックされて、ＡＭＴ ＣＵフラグがスキップされているかどうかが決定される。"</div>
+<div class="proves"><strong>証明内容:</strong> 「最後の非ゼロ係数の位置」をチェックすることで、「ＡＭＴ ＣＵフラグ」（変換選択に関する構文要素）の信号化の有無（スキップされるかどうかの決定）を判断し、それにより処理効率化を図ることを開示している。</div>
+<div class="not-found">❌ 該当箇所が見つかりませんでした</div>
+</div>
+</div>
+<div class="separator"></div>
+<div class="evidence-item">
+<div class="claim-scope">🔍 証拠 2: 請求項2</div>
+<div class="assertion"><strong>主張:</strong> 先行技術文献(B)は、特定の条件に基づいて、構文要素が含まれるか否かを決定することを開示している。具体的には、Claim 2では「前記位置が第１の条件を満たさないことの故に、前記構文要素が前記ビットストリーム表現に含まれることからスキップされることを決定すること」が開示され、Claim 12では「前記位置及び少なくとも１つの他のコード化基準が第２の条件を満たさないことの故に、前記構文要素が前記ビットストリーム表現に含まれることを決定すること」が開示されている。</div>
+<div class="not-found"><strong>⚠️ 該当箇所なし:</strong> 提示された先行技術文献（best_mode_0000からbest_mode_0398）全体を調査しましたが、「前記位置が第１の条件を満たさないことの故に、前記構文要素が前記ビットストリーム表現に含まれることからスキップされることを決定すること」や、「前記位置及び少なくとも１つの他のコード化基準が第２の条件を満たさないことの故に、前記構文要素が前記ビットストリーム表現に含まれることを決定すること」といった、特定の「位置」や「コード化基準」が「条件」を満たすか否かに基づいて「構文要素」のビットストリーム表現への包含を「決定」し、スキップまたは含めることを開示する具体的な記載は見つかりませんでした。関連する可能性のある構文要素（例：best_mode_0024の`log2_parallel_merge_level_minus2`）や、条件に基づくモード（例：best_mode_0004のskip mode）に関する記載はありますが、主張で述べられているような、構文要素自体の包含・除外を決定する一般的なメカニズムを示すものではありません。</div>
+</div>
+<div class="separator"></div>
+<div class="evidence-item">
+<div class="claim-scope">🔍 証拠 3: 請求項3</div>
+<div class="assertion"><strong>主張:</strong> 先行技術文献(B)のClaim 13は、「前記転換は、前記構文要素に従った前記MTS変換を前記現在のビデオブロックの脱量子化された残差係数値の結果に適用することを含む」と開示している。</div>
+<div class="citation">
+<h3>引用 1</h3>
+<div class="quote-box">"第１の変換は、ビデオブロックの脱量子化残差係数値の結果に適用される。"</div>
+<div class="proves"><strong>証明内容:</strong> MTS変換（第1の変換）を、現在のビデオブロックの脱量子化された残差係数値の結果に適用すること。</div>
+<div class="not-found">❌ 該当箇所が見つかりませんでした</div>
+</div>
+<div class="citation">
+<h3>引用 2</h3>
+<div class="quote-box">"方法１２００は、第１の決定に基づいて第１の変換を選択的に使用することによって転換を行うこと（１２０４）ことを更に含む。"</div>
+<div class="proves"><strong>証明内容:</strong> 「構文要素に従った」転換（「第1の決定に基づいて」）を実行すること。</div>
+<div class="not-found">❌ 該当箇所が見つかりませんでした</div>
+</div>
+</div>
+
+</body>
+</html>

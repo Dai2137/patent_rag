@@ -142,7 +142,10 @@ def get_abstract_claims_by_query(top_k_df):
             row_dict = dict(row)
             row_dict["top_k"] = n_th_row_index + 1
             abstraccts_claims_list.append(copy.deepcopy(row_dict))
-            
+
+        if DEBUG:# デバッグモード注意
+            print("DEBUG: get_abstract_claims_by_query ")
+            return abstraccts_claims_list
     
     return abstraccts_claims_list
 
@@ -222,6 +225,9 @@ def get_full_patent_info_by_doc_numbers(doc_numbers_list, current_doc_number=Non
             # クエリ結果をJSONファイルに保存
             result_dicts = [dict(row) for row in results]
 
+            # ★ ここを追加：戻り値用リストに貯める
+            patent_info_list.extend(result_dicts)
+
             # current_doc_numberが指定されている場合は、eval/{current_doc_number}/himotuki_doc_contents/ に保存
             if current_doc_number:
                 output_dir = PathManager.get_dir(current_doc_number, DirNames.HIMOTUKI_DOC_CONTENTS)
@@ -235,10 +241,9 @@ def get_full_patent_info_by_doc_numbers(doc_numbers_list, current_doc_number=Non
             print(f"クエリ結果を {output_file} に保存しました")
         except Exception as e:
             print(f"Error querying table {table_name}: {e}")
-    # 未テスト
-    # Lazy import to avoid circular dependency
-    from llm.llm_ground_loder import convert_fullcontent_bigquery_result_to_json
-    convert_fullcontent_bigquery_result_to_json(current_doc_number)
+
+    return patent_info_list
+
 
 def load_get_full_patent_info_by_doc_numbers(current_doc_number):
     """current_doc_numberに対応するquery_results_*.jsonをすべて読み込み、リストで返す"""
